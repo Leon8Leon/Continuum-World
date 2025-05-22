@@ -261,6 +261,59 @@
     iconAnchor: [11, 11]
 });
 
+          var DiamondYellow15 = L.divIcon({
+    	    className: "custom-icon",
+    html: `<svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <g id="color">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="#FFBF00"/>
+            </g>
+            <g id="line">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="none" 
+                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+          </svg>`,
+    iconSize: [18, 18],
+    iconAnchor: [9, 9]
+});
+
+
+var DiamondBlue20 = L.divIcon({
+    	    className: "custom-icon",
+    html: `<svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <g id="color">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="#0099ff"/>
+            </g>
+            <g id="line">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="none" 
+                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+          </svg>`,
+    iconSize: [22, 22],
+    iconAnchor: [11, 11]
+});
+
+
+var DiamondBlue15 = L.divIcon({
+    	    className: "custom-icon",
+    html: `<svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <g id="color">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="#0099ff"/>
+            </g>
+            <g id="line">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="none" 
+                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+          </svg>`,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10]
+});
+
    var DiamondWhite15 = L.divIcon({
     	    className: "custom-icon",
     html: `<svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
@@ -518,70 +571,180 @@ var iconStyles = {
     // Marta Stare Polska 
 
  	
-    Puck: 				{ lat: 54.72013, lng: 18.41081, name: "<b style='font-size:16px;'> 🇵🇱 Puck </b><hr>✦ 2021 🚗 ", icon: redDotIcon10 },
-    Hel: 				{ lat: 54.60752, lng: 18.80147, name: "<b style='font-size:16px;'> 🇵🇱 Hel </b><hr>✦ 2021 🚈 ✦ 🚗", icon: redDotIconSmall },
-    RucianeNida: 		{ lat: 53.64899, lng: 21.56320, name: "<b style='font-size:16px;'> 🇵🇱 Ruciane Nida </b><hr>✦ 2013 🚗 ", icon: redDotIconSmall },
-    Istebna: 			{ lat: 49.56394, lng: 18.89352, name: "<b style='font-size:16px;'> 🇵🇱  Istebna </b><hr>✦ 2022 🚗 ", icon: redDotIconSmall6 },
+    Puck: 				{ lat: 54.72013, lng: 18.41081, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/POL_Puck_COA.svg/1280px-POL_Puck_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:20px;'> 🇵🇱 Puck </b><br>Polska, woj. Pomorskie</div>
+								<hr>✦ 2021 🚗 `, icon: redDotIcon10 },
+    Hel: 				{ lat: 54.60752, lng: 18.80147, name: "<b style='font-size:16px;'> 🇵🇱 Hel </b><hr>✦ 2021 🚈 ✦ 🚗", icon: redDotIconSmall }, //Uwzględniony ponownie
+    RucianeNida: 		{ lat: 53.64899, lng: 21.56320, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:18px;'> 🇵🇱 Ruciane Nida</b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr>✦ 2013 🚗 `, icon: redDotIconSmall },
+    Istebna: 			{ lat: 49.56394, lng: 18.89352, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:18px;'> 🇵🇱 Istebna </b><br>Polska, woj. Śląskie
+								<hr>✦ 2022 🚗 `, icon: redDotIconSmall6 },
     
-    Giżycko: 			{ lat: 54.03669, lng: 21.76782, name: "<b style='font-size:16px;'> 🇵🇱  Giżycko </b><hr>✦ 2013 🚗 ", icon: redDotIcon10 },
-    NoweKawkowo: 		{ lat: 53.856235, lng: 20.210048, name: "<b style='font-size:16px;'> 🇵🇱  Nowe Kawkowo</b><hr>✦ 2013 🚗", icon: redDotIconSmall6 },
-    Kadzidłowo: 		{ lat: 53.71225, lng: 21.48926, name: "<b style='font-size:16px;'> 🇵🇱  Kadzidłowo</b><hr>✦ 2013 🚗 ", icon: redDotIconSmall6 },
-    Szymbark: 			{ lat: 54.21859, lng: 18.10113, name: "<b style='font-size:16px;'> 🇵🇱  Szymbark</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall },
+    Giżycko: 			{ lat: 54.03669, lng: 21.76782, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/POL_Gi%C5%BCycko_COA.svg/800px-POL_Gi%C5%BCycko_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Giżycko </b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr>✦ 2013 🚗 `, icon: redDotIcon10 },
+    NoweKawkowo: 		{ lat: 53.856235, lng: 20.210048, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:18px;'> 🇵🇱 NoweKawkowo </b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr>✦ 2013 🚗`, icon: redDotIconSmall6 },
+    Kadzidłowo: 		{ lat: 53.71225, lng: 21.48926, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:18px;'> 🇵🇱 Kadzidłowo</b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr>✦ 2013 🚗 `, icon: redDotIconSmall6 },
+    Szymbark: 			{ lat: 54.21859, lng: 18.10113, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:18px;'> 🇵🇱 Szymbark</b><br>Polska, woj. Pomorskie
+								<hr>✦ 2012 🚗
+								<hr> Odwrócony dom`, icon: redDotIconSmall },
       
     //Wycieczka do Świetokrzyskiego
-    RezerwatSkałkiPiełko: 			{ lat: 51.1857725759828, lng: 20.669666699154664, name: "<b style='font-size:16px;'> 🇵🇱  Rezerwat Skałki Piełko</b><hr>✦ 2012 🚗 ", icon: greenDotIcon },
-    RezerwatGadatySołtykowskie: 	{ lat: 51.146732410543, lng: 20.663077181225677, name: "<b style='font-size:16px;'> 🇵🇱  Rezerwat Gadaty Sołtykowskie</b><hr>✦ 2012 🚗 ", icon: greenDotIcon },
-    SkarżyskoKamienna: 				{ lat: 51.11532, lng: 20.88166, name: "<b style='font-size:16px;'> 🇵🇱 Skarżysko Kamienna</b><hr>✦ 2012 🚗 ", icon: redDotIcon },
-    Wąchock: 						{ lat: 51.07550725271008, lng: 21.015853645530004, name: "<b style='font-size:16px;'> 🇵🇱  Wąchock</b><hr>✦ 2012 🚗 <hr> Klasztor Cystersów", icon: redDotIcon10 },
-    OstowiecŚwiętokrzyskiKrzemionki: { lat: 50.97372, lng: 21.49578, name: "<b style='font-size:16px;'> 🇵🇱 Rezerwat Krzemionki Opatowskie</b><hr>✦ 2012 🚗 ", icon: greenDotIcon },
-    Bodzeńtyn:   					{ lat: 50.940687509505146, lng: 20.95714286580783, name: "<b style='font-size:16px;'> 🇵🇱 Bodzeńtyn</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall },
-    ŚwiętaKatarzyna:   				{ lat: 50.90715046567872, lng: 20.88382259811689, name: "<b style='font-size:16px;'> 🇵🇱 Święta Katarzyna</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall6 },
-    Łysica614m:   					{ lat: 50.89209727813087, lng: 20.89858886529691, name: "<b style='font-size:16px;'> 🇵🇱 Łysica 🔺 614m 👑</b><hr>✦ 2012 🚶", icon: blackTriangleIcon },
-    ŚwiętyKrzyż:   					{ lat: 50.85936808307987, lng: 21.05427707231355, name: "<b style='font-size:16px;'> 🇵🇱 Święty Krzyż</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall6 },
-    Łagów:   						{ lat: 52.33355555975621, lng: 15.295959886053627, name: "<b style='font-size:16px;'> 🇵🇱 Łagów</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall },
-    WąwózDule:  					{ lat: 50.782587853886206, lng: 21.092218724579237, name: "<b style='font-size:16px;'> 🇵🇱 Wąwóz Dule 🔶 </b><hr> ✦ 2012 🚗", icon: reddiamondSvg },
-    Opatów:   						{ lat: 50.80191013578629, lng: 21.426947722939214, name: "<b style='font-size:16px;'> 🇵🇱 Opatów</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall },
-    Ujazd:   						{ lat: 50.71418211684119, lng: 21.310202970736896, name: "<b style='font-size:16px;'> 🇵🇱 Ujazd</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall },
-    Klimontów:   					{ lat: 50.65775464307536, lng: 21.448170411992095, name: "<b style='font-size:16px;'> 🇵🇱 Klimontów</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall6 },
-    Sandomierz:   					{ lat: 50.679308893838446, lng:  21.74881503352993, name: "<b style='font-size:16px;'> 🇵🇱 Sandomierz</b><hr>✦ 2012 🚗 ", icon: redDotIcon },
-    Rytwiany:   					{ lat: 50.52944859979881, lng: 21.203382320869988, name: "<b style='font-size:16px;'> 🇵🇱 Rytwiany</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall6 },
-    Kurozwęki:   					{ lat: 50.59038652615817, lng: 21.101370927371683, name: "<b style='font-size:16px;'> 🇵🇱 Kurozwęki</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall6 },
-    Szydłów:   						{ lat: 50.591099086347384, lng: 21.00727885049894, name: "<b style='font-size:16px;'> 🇵🇱 Szydłów</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall },
-    Pacanów:   						{ lat: 50.398551738315454, lng: 21.041345108163995, name: "<b style='font-size:16px;'> 🇵🇱 Pacanów</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall6 },
-    SolecZdrój:   					{ lat: 50.36581795032523, lng: 20.891535604814724, name: "<b style='font-size:16px;'> 🇵🇱 Solec-Zdrój</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall },
-    Wiślica:   						{ lat: 50.349755649234616, lng: 20.671048131481957, name: "<b style='font-size:16px;'> 🇵🇱 Wiślica</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall },
-    BuskoZdrój:   					{ lat: 50.47018852347686, lng:20.718919834485227, name: "<b style='font-size:16px;'> 🇵🇱 Busko-Zdrój</b><hr>✦ 2012 🚗 ", icon: redDotIcon10 },
-    Pinczów:   						{ lat: 50.520140038809586, lng: 20.52689753433254, name: "<b style='font-size:16px;'> 🇵🇱 Pinczów</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall },
-    JaskiniaRaj:   					{ lat: 50.82547431669336, lng:  20.499635452645403, name: "<b style='font-size:16px;'> 🇵🇱 Jaskinia Raj 🔶 </b><hr> ✦ 2012 🚗", icon: reddiamondSvg },
-    Chęciny:   						{ lat: 50.80002918389327, lng: 20.461918035035023, name: "<b style='font-size:16px;'> 🇵🇱 Chęciny</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall6 },
-    JaskiniaPiekło:   				{ lat: 50.837519791793085, lng: 20.31072232912752, name: "<b style='font-size:16px;'> 🇵🇱 Jaskinia Piekło 🔶 </b><hr> ✦ 2012 🚗", icon: reddiamondSvg },
-    Zagnańsk:  						{ lat: 50.979949147034155, lng: 20.659112050069297, name: "<b style='font-size:16px;'> 🇵🇱 Zagnańsk</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall6 },
-    Samsonów:   					{ lat: 50.994516259421616, lng: 20.620146636061524, name: "<b style='font-size:16px;'> 🇵🇱 Samsonów</b><hr>✦ 2012 🚗 ", icon: redDotIconSmall6 },
+		
+    RezerwatSkałkiPiełko: 		{ lat: 51.1857725759828, lng: 20.669666699154664, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱  Rezerwat Skałki Piełko</b><hr>✦ 2012 🚗 `, icon: DiamondGreen20 },
+    RezerwatGadatySołtykowskie: { lat: 51.146732410543, lng: 20.663077181225677, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱  Rezerwat Gadaty Sołtykowskie</b><hr>✦ 2012 🚗 `, icon: DiamondGreen20 },
+    SkarżyskoKamienna: 			{ lat: 51.11532, lng: 20.88166, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/POL_Skar%C5%BCysko-Kamienna_COA.svg/800px-POL_Skar%C5%BCysko-Kamienna_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:20px;'> 🇵🇱 Skarżysko Kamienna </b><br>Polska, woj. Świętokrzyskie</div>
+								<hr>✦ 2012 🚗 `, icon: redDotIcon },
+    Wąchock: 					{ lat: 51.07550725271008, lng: 21.015853645530004, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/POL_W%C4%85chock_COA.svg/800px-POL_W%C4%85chock_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Wąchock </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 <hr> Klasztor Cystersów`, icon: redDotIcon10 },
+    OstowiecŚwiętokrzyskiKrzemionki: { lat: 50.97372, lng: 21.49578, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Rezerwat Krzemionki Opatowskie</b><hr>✦ 2012 🚗 `, icon: DiamondGreen20 },
+    Bodzeńtyn:   				{ lat: 50.940687509505146, lng: 20.95714286580783, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/POL_Bodzentyn_COA.svg/800px-POL_Bodzentyn_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Bodzeńtyn </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall },
+    ŚwiętaKatarzyna:   			{ lat: 50.90715046567872, lng: 20.88382259811689, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:16px;'> 🇵🇱 Święta Katarzyna </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
+    Łysica614m:   				{ lat: 50.89209727813087, lng: 20.89858886529691, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Łysica 🔺 614m 👑</b><br>Góry Świętokrzyskie<br>Świętokrzyski Park Narodowy<hr>✦ 2012 🚶`, icon: blackTriangleIcon },
+    ŚwiętyKrzyż:   				{ lat: 50.85936808307987, lng: 21.05427707231355, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:16px;'> 🇵🇱 Święty Krzyż </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
+    Łagów:   					{ lat: 50.77697796589899, lng: 21.08478110306815, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/POL_gmina_%C5%81ag%C3%B3w_%28powiat_kielecki%29_COA.svg/800px-POL_gmina_%C5%81ag%C3%B3w_%28powiat_kielecki%29_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Łagów </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall },
+    WąwózDule:  				{ lat: 50.782587853886206, lng: 21.092218724579237, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wąwóz Dule 🔶 </b><hr> ✦ 2012 🚗`, icon: DiamondGreen20 },
+    Opatów:   					{ lat: 50.80191013578629, lng: 21.426947722939214, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/POL_Opat%C3%B3w_COA.svg/1024px-POL_Opat%C3%B3w_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Opatów </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall },
+    Ujazd:   					{ lat: 50.71418211684119, lng: 21.310202970736896, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:16px;'> 🇵🇱 Ujazd </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗`, icon: redDotIconSmall },
+    Klimontów:   				{ lat: 50.65775464307536, lng: 21.448170411992095, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/POL_gmina_Klimont%C3%B3w_COA.svg/800px-POL_gmina_Klimont%C3%B3w_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Klimontów </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
+    Sandomierz:   				{ lat: 50.679308893838446, lng:  21.74881503352993, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱  Rezerwat Gadaty Sołtykowskie</b><hr>✦ 2012 🚗 `, icon: DiamondGreen20 },
+    SkarżyskoKamienna: 			{ lat: 51.11532, lng: 20.88166, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/POL_Skar%C5%BCysko-Kamienna_COA.svg/800px-POL_Skar%C5%BCysko-Kamienna_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:20px;'> 🇵🇱 Skarżysko Kamienna </b><br>Polska, woj. Świętokrzyskie</div>
+								<hr>✦ 2012 🚗 `, icon: redDotIcon },
+    Rytwiany:   				{ lat: 50.52944859979881, lng: 21.203382320869988, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:18px;'> 🇵🇱 Rytwiany </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
+    Kurozwęki:   				{ lat: 50.59038652615817, lng: 21.101370927371683, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:18px;'> 🇵🇱 Kurozwęki </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
+    Szydłów:   					{ lat: 50.591099086347384, lng: 21.00727885049894, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/POL_Szyd%C5%82%C3%B3w_COA.svg/800px-POL_Szyd%C5%82%C3%B3w_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Szydłów </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall },
+    Pacanów:   					{ lat: 50.398551738315454, lng: 21.041345108163995, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/POL_Pacan%C3%B3w_COA.svg/800px-POL_Pacan%C3%B3w_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Pacanów </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
+    SolecZdrój:   				{ lat: 50.36581795032523, lng: 20.891535604814724, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/POL_gmina_Solec-Zdr%C3%B3j_COA.png/800px-POL_gmina_Solec-Zdr%C3%B3j_COA.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Solec-Zdrój </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall },
+    Wiślica:   					{ lat: 50.349755649234616, lng: 20.671048131481957, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/POL_gmina_Wi%C5%9Blica_COA.svg/800px-POL_gmina_Wi%C5%9Blica_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Wiślica </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall },
+    BuskoZdrój:   				{ lat: 50.47018852347686, lng:20.718919834485227, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/POL_Busko-Zdr%C3%B3j_COA.svg/800px-POL_Busko-Zdr%C3%B3j_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Busko-Zdrój </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIcon10 },
+    Pinczów:   					{ lat: 50.520140038809586, lng: 20.52689753433254, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/POL_Pi%C5%84cz%C3%B3w_COA.svg/800px-POL_Pi%C5%84cz%C3%B3w_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Pinczów </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall },
+    JaskiniaRaj:   				{ lat: 50.82547431669336, lng:  20.499635452645403, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Jaskinia Raj 🔶 </b><br>Góry Świętokrzyskie<hr> ✦ 2012 🚗`, icon: reddiamondSvg },
+    Chęciny:   					{ lat: 50.80002918389327, lng: 20.461918035035023, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/POL_Ch%C4%99ciny_COA.svg/800px-POL_Ch%C4%99ciny_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Chęciny </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
+    JaskiniaPiekło:   			{ lat: 50.837519791793085, lng: 20.31072232912752, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Jaskinia Piekło 🔶 </b><br>Góry Świętokrzyskie<hr> ✦ 2012 🚗`, icon: reddiamondSvg },
+    Zagnańsk:  					{ lat: 50.979949147034155, lng: 20.659112050069297, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Gmina_zagnansk_flaga.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Zagnańsk </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
+    Samsonów:   				{ lat: 50.994516259421616, lng: 20.620146636061524, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:16px;'> 🇵🇱 Samsonów </b><br>Polska, woj. Świętokrzyskie
+								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
       
      	//Mazury
-    RadzyńChełm: 					{ lat: 53.385147071297844,  lng:  18.93723641547503, name: "<b style='font-size:16px;'> 🇵🇱 Radzyń Chełm.</b><hr>✦ 2017 🚗 ", icon: redDotIconSmall },
-    Brodnica:  						{ lat: 53.25969984657508, lng:  19.396005123496714, name: "<b style='font-size:16px;'> 🇵🇱 Brodnica </b><hr>✦ 2017 🚗 <hr>  🗼 +54m Baszta w Brodnicy", icon: redDotIcon10 },
-    Iława:  						{ lat: 53.59603065122786,  lng: 19.568025006648487, name: "<b style='font-size:16px;'> 🇵🇱 Iława</b><hr>✦ 2017 🚗 ", icon: redDotIcon10 },
-    Ostróda:  						{ lat: 53.696268337777376,  lng: 19.96464749184451, name: "<b style='font-size:16px;'> 🇵🇱 Ostróda</b><hr>✦ 2017 🚗 ", icon: redDotIcon10 },
-    Frombork:  						{ lat: 54.35831363465877, lng:  19.680727264380625, name: "<b style='font-size:16px;'> 🇵🇱 Frombork</b><hr>✦ 2017 🚗 ", icon: redDotIconSmall },
-    Żywkowo:  						{ lat: 54.37083623906008,  lng:  20.593384285505802, name: "<b style='font-size:16px;'> 🇵🇱 Żywkowo (Bociany) </b><hr> ✦ 2017 🚗 ", icon: redDotIconSmall },
-    LidzbarkWarm: 					{ lat: 54.12596595888527, lng: 20.580841125318454, name: "<b style='font-size:16px;'> 🇵🇱 Lidzbark Warm.</b><hr>✦ 2017 🚗 ", icon: redDotIcon10 },
-    Orneta:  						{ lat: 54.11542060380714, lng:  20.129505790642494, name: "<b style='font-size:16px;'> 🇵🇱 Orneta </b><hr>✦ 2017 🚗 ", icon: redDotIconSmall },
-    KrosnoWarmia:  					{ lat: 54.13138779311223, lng:  20.16988486779216, name: "<b style='font-size:16px;'> 🇵🇱 Krosno (gm. Orneta) </b><hr>✦ 2017 🚗 ", icon: redDotIconSmall },
-    Gietrzwałd:  					{ lat: 53.74735433366106,  lng:  20.234116288561086, name: "<b style='font-size:16px;'> 🇵🇱 Gietrzwałd </b><hr>✦ 2017 🚗 ", icon: redDotIconSmall },
-    Olsztynek:  					{ lat: 53.58241890260653,  lng: 20.283098601722976, name: "<b style='font-size:16px;'> 🇵🇱 Olsztynek </b><hr>✦ 2017 🚗 ", icon: redDotIconSmall },
-    Sorkwity:  						{ lat: 53.84619315406351, lng:  21.14127464938075, name: "<b style='font-size:16px;'> 🇵🇱 Sorkwity </b><hr>✦ 2017 🚗 ", icon: redDotIconSmall },
-    Mrągowo:  						{ lat: 53.86429999537361,  lng:  21.30547101516011, name: "<b style='font-size:16px;'> 🇵🇱 Mrągowo </b><hr>✦ 2017 🚗 ", icon: redDotIcon10 },
-    Mikołajki:  					{ lat: 53.80237745738531,  lng: 21.571670314788673, name: "<b style='font-size:16px;'> 🇵🇱 Mikołajki </b><hr>✦ 2017 🚗 ", icon: redDotIcon10 },
-    WiezawidokowajezioroŁuknajno:  	{ lat: 53.80166147200469, lng: 21.642334958663156, name: "<b style='font-size:16px;'> 🇵🇱 Wieza widokowa jezioro Łuknajno 🔶 </b><hr>✦ 2017 🚗 <hr> 🗼 ok.12m Wieża drewniana ", icon: DiamondYellow20 },
-    jezŚniardwy:  					{ lat: 53.759054718487896, lng: 21.703103844905534, name: "<b style='font-size:16px;'> 🇵🇱 jez. Śniardwy </b><hr>✦ 2017 🚗 ", icon: blueDiamondIcon }, // Jezioro Śmiardwy 
+    RadzyńChełm: 				{ lat: 53.385147071297844,  lng:  18.93723641547503, name: "<b style='font-size:16px;'> 🇵🇱 Radzyń Chełm.</b><hr>✦ 2017 🚗 ", icon: redDotIconSmall }, //Uwzględniony ponownie
+    Brodnica:  					{ lat: 53.25969984657508, lng:  19.396005123496714, name: "<b style='font-size:16px;'> 🇵🇱 Brodnica </b><hr>✦ 2017 🚗 <hr>  🗼 +54m Baszta w Brodnicy", icon: redDotIcon10 }, //Uwzględniony ponownie
+    Iława:  					{ lat: 53.59603065122786,  lng: 19.568025006648487, name: "<b style='font-size:16px;'> 🇵🇱 Iława</b><hr>✦ 2017 🚗 ", icon: redDotIcon10 }, //Uwzględniony ponownie
+    Ostróda:  					{ lat: 53.696268337777376,  lng: 19.96464749184451, name: "<b style='font-size:16px;'> 🇵🇱 Ostróda</b><hr>✦ 2017 🚗 ", icon: redDotIcon10 }, //Uwzględniony ponownie
+    Frombork:  					{ lat: 54.35831363465877, lng:  19.680727264380625, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/POL_Frombork_COA.svg/800px-POL_Frombork_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Frombork </b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr>✦ 2017 🚗 `, icon: redDotIconSmall },
+    Żywkowo:  					{ lat: 54.37083623906008,  lng:  20.593384285505802, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:16px;'> 🇵🇱 Żywkowo </b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr> ✦ 2017 🚗 <hr> Bociany - wieś bocianów`, icon: redDotIconSmall },
+    LidzbarkWarm: 				{ lat: 54.12596595888527, lng: 20.580841125318454, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/POL_Lidzbark_Warmi%C5%84ski_COA.svg/800px-POL_Lidzbark_Warmi%C5%84ski_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:20px;'> 🇵🇱 Lidzbark Warm. </b><br>Polska, woj. Warmińsko-Mazurskie</div>
+								<hr>✦ 2017 🚗 `, icon: redDotIcon10 },
+    Orneta:  					{ lat: 54.11542060380714, lng:  20.129505790642494, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/POL_Orneta_COA.svg/800px-POL_Orneta_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Orneta </b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr>✦ 2017 🚗 `, icon: redDotIconSmall },
+    KrosnoWarmia:  				{ lat: 54.13138779311223, lng:  20.16988486779216, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:16px;'> 🇵🇱 Krosno </b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr>✦ 2017 🚗 `, icon: redDotIconSmall6 },
+    Gietrzwałd:  				{ lat: 53.74735433366106,  lng:  20.234116288561086, name: `<b style='font-size:16px;'> 🇵🇱 Gietrzwałd </b><hr>✦ 2017 🚗 `, icon: redDotIconSmall }, //Uwzględniony ponownie
+    Olsztynek:  				{ lat: 53.58241890260653,  lng: 20.283098601722976, name: `<b style='font-size:16px;'> 🇵🇱 Olsztynek </b><hr>✦ 2017 🚗 `, icon: redDotIconSmall }, //Uwzględniony ponownie
+    Sorkwity:  					{ lat: 53.84619315406351, lng:  21.14127464938075, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:18px;'> 🇵🇱 Sorkwity </b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr>✦ 2017 🚗 `, icon: redDotIconSmall },
+    Mrągowo:  					{ lat: 53.86429999537361,  lng:  21.30547101516011, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/POL_Mr%C4%85gowo_COA.svg/800px-POL_Mr%C4%85gowo_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:20px;'> 🇵🇱 Mrągowo </b><br>Polska, woj. Warmińsko-Mazurskie</div>
+								<hr>✦ 2017 🚗 `, icon: redDotIcon10 },
+    Mikołajki:  				{ lat: 53.80237745738531,  lng: 21.571670314788673, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/POL_Miko%C5%82ajki_COA.svg/800px-POL_Miko%C5%82ajki_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Mikołajki </b><br>Polska, woj. Warmińsko-Mazurskie
+								<hr>✦ 2017 🚗 `, icon: redDotIcon10 },
+    WiezawidokowajezioroŁuknajno:  	{ lat: 53.80166147200469, lng: 21.642334958663156, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wieza widokowa jezioro Łuknajno</b><hr>✦ 2017 🚗 <hr> 🗼 ok.12m Wieża drewniana `, icon: DiamondYellow15 },
+    jezŚniardwy:  				{ lat: 53.759054718487896, lng: 21.703103844905534, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 jez. Śniardwy </b><br>Mazury<hr>✦ 2017 🚗 `, icon: DiamondBlue20 }, // Jezioro Śmiardwy 
       
  
       
       // Punkty na mapie ROK 2023 - Praga  
-    Hrusice:  				{ lat: 49.91011, lng: 14.74073, name: "<b style='font-size:16px;'> 🇨🇿 Hrusice </b><br>Czechy<hr> ✦ 2023 🚗", icon: redDotIconSmall }, 
-    PiekielnaGóra538m:  	{ lat: 50.40915, lng: 16.48803, name: `<p style='text-align: center; margin: 0'>
-								<b style='font-size:16px;'> 🇵🇱 Piekielna Góra 🔺 538m </b><br>Góry Stołowe<hr> ✦ 2023 🚶 `, icon: triangleSvg },
+    Hrusice:  				{ lat: 49.91011, lng: 14.74073, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Hrusice </b><br>Czechy<hr> ✦ 2023 🚗", icon: redDotIconSmall }, 
+    PiekielnaGóra538m:  	{ lat: 50.40915, lng: 16.48803, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Piekielna Góra 🔺 538m </b><br>Góry Stołowe<hr> ✦ 2023 🚶 `, icon: triangleSvg },
         // Punkty na mapie ROK 2023 - Czeska i Saksońska Szwajcaria
     Jetrichovice:    		{ lat: 50.85245, lng: 14.39424, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Jetřichovice </b><br>Czechy<hr> ✦ 2023 🚗 ", icon: redDotIconSmall },   
 	Rudolfůvkámen484m:    	{ lat: 50.87141, lng: 14.39981, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Rudolfův kámen 🔺 484m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
@@ -595,10 +758,10 @@ var iconStyles = {
     CzeskaSzwajcaria:    	{ lat: 50.8588, lng: 14.3368, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Czeska Szwajcaria</b>", icon: greenDotIcon12 }, 
     SaksońskaSzwajcaria:    { lat: 50.95345, lng: 14.14267, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Saksońska Szwajcaria", icon: greenDotIcon12 }, 
 	MostBastei:    			{ lat: 50.961709, lng: 14.073103, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Most Bastei 🔶 305m </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚶", icon: DiamondYellow20 }, 
-    KurortRathenSkalneLabirynty:    { lat: 50.958900, lng: 14.082606, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Kurort Rathen</b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗⭢🚶 ", icon: redDotIconSmall }, 
+    KurortRathenSkalneLabirynty:    { lat: 50.958900, lng: 14.082606, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Wappen_Rathen.svg/800px-Wappen_Rathen.svg.png" style="height:60px;"><br><b style='font-size:18px;'> 🇩🇪 Kurort Rathen</b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗⭢🚶 `, icon: redDotIconSmall }, 
 	LabskáStráňBelvedér:    { lat: 50.84956, lng: 14.22148, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Labská Stráň - Belvedér 🔶 272m </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚗 ", icon: reddiamondSvg },
 	Tiskéstěny:    			{ lat: 50.787713, lng: 14.028897, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Tiské stěny 🔶 </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚗⭢🚶 ", icon: reddiamondSvg }, 
-	BadSchandau:    		{ lat: 50.91801, lng: 14.15202, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Bad Schandau </b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗 <hr> 🗼 +50m Winda z 1905 r. ", icon: redDotIcon10 }, 
+	BadSchandau:    		{ lat: 50.91801, lng: 14.15202, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Wappen_bad_schandau.png" style="height:60px;"><br><b style='font-size:18px;'> 🇩🇪 Bad Schandau </b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗 <hr> 🗼 +50m Winda z 1905 r. `, icon: redDotIcon10 }, 
 	Děčín:    				{ lat: 50.78109, lng: 14.21253, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/CZEchy-Decin.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇨🇿 Děčín </b><br>Czechy</div>
@@ -639,10 +802,14 @@ var iconStyles = {
      						</div>
     						</div>
                             <hr><p style='text-align: justify; margin: 0'> Zamek na Hradczanach - Katedra św. Wita, Wacława i Wojciecha | Most Karola | Stary Rynek | Kościół św. Mikołaja | Wieża TV | Wzgórze Wyszehrad </p>
-                            <hr> 🗼 +258m Wieża telewizyjna Žižkov 
+                            <hr> 🗼 +216m Wieża telewizyjna Žižkov 
                             <br> ⛪ +96m Katedra św. Wita, Wacława i Wojciecha
                             `, 
                             icon: redSquareIcon },
+		PragaWieżaTV:		{ lat: 50.081021, lng: 14.451066, name: `<p style='text-align: center; margin: 0'>
+        						<img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Prague_07-2016_View_from_Petrinska_Tower_img3.jpg" style="height:200px;">
+                                <hr><p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Wieża telewizyjna Žižkov </b><br>+216m
+								<hr>✦ 2024 🚶🚶‍♀️  `, icon: DiamondYellow15 },
     Ołomuniec: 				{ lat: 49.59381897179271, lng:  17.25075064904165, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Coat_of_arms_of_Olomouc%2C_city_in_the_Czech_Republic.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇨🇿 Ołomuniec </b><br>Czechy</div>
@@ -698,26 +865,26 @@ var iconStyles = {
                             <hr> 🏰 +61m Wieża zamku Bouzov
                             `, 
                             icon: redDotIconSmall },
-    CervenýKostelec: 		{ lat: 50.47634814332872, lng:  16.093297125462808, name: "<b style='font-size:16px;'> 🇨🇿 Červený Kostelec  </b><hr> ✦ 2015 🚗 ", icon: redDotIconSmall },
-    TeplicenadMetují: 		{ lat: 50.59433864121587,  lng:  16.170178509722454, name: "<b style='font-size:16px;'> 🇨🇿 Teplice nad Metují  </b><hr> ✦ 2015 🚗 ", icon: redDotIconSmall6 },  
-    Trutnov: 				{ lat: 50.56533535755517, lng:  15.910725181791195, name: "<b style='font-size:16px;'> 🇨🇿 Trutnov  </b><hr> ✦ 2015 🚗 ", icon: redDotIcon10 },  
-    PecpodŚnieżką: 			{ lat: 50.69402096935029,  lng: 15.732973019217718, name: "<b style='font-size:16px;'> 🇨🇿 Pec pod Śnieżką  </b><hr> ✦ 2015 🚗 ", icon: redDotIconSmall6 },  
-    Harrachov: 				{ lat: 50.77206019892955, lng:  15.432754797248798, name: "<b style='font-size:16px;'> 🇨🇿 Harrachov  </b><hr> ✦ 2022 🚗 ", icon: redDotIconSmall6 },  
-    SzpindlerowyMłyn: 		{ lat: 50.73128329709344,  lng:   15.607836045867849, name: "<b style='font-size:16px;'> 🇨🇿 Szpindlerowy Młyn  </b><hr> ✦ 2022 🚗 ", icon: redDotIconSmall6 },  
-    MaláÚpa: 				{ lat: 50.74477051615968,  lng:   15.820463753486903, name: "<b style='font-size:16px;'> 🇨🇿 Malá Úpa  </b><hr> ✦ 2022 🚗 ", icon: redDotIconSmall6 },  
-    Tanvald: 				{ lat: 50.73748528721925,  lng:   15.307863356593149, name: "<b style='font-size:16px;'> 🇨🇿 Tanvald  </b><hr> ✦ 2022 🚗 ", icon: redDotIconSmall },  
+    CervenýKostelec: 		{ lat: 50.47634814332872, lng:  16.093297125462808, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Cerveny_Kostelec_CoA_CZ.svg/800px-Cerveny_Kostelec_CoA_CZ.svg.png" style="height:60px;"><br><b style='font-size:18px;'> 🇨🇿 Červený Kostelec  </b><br>Czechy<hr> ✦ 2015 🚗 `, icon: redDotIconSmall },
+    TeplicenadMetují: 		{ lat: 50.59433864121587,  lng:  16.170178509722454, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Coat_of_arms_of_Teplice_nad_Metuj%C3%AD.gif" style="height:60px;"><br><b style='font-size:18px;'> 🇨🇿 Teplice nad Metují  </b><br>Czechy<hr> ✦ 2015 🚗 `, icon: redDotIconSmall6 },  
+    Trutnov: 				{ lat: 50.56533535755517, lng:  15.910725181791195, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Trutnov_CoA_CZ_old.svg/800px-Trutnov_CoA_CZ_old.svg.png" style="height:60px;"><br><b style='font-size:18px;'> 🇨🇿 Trutnov  </b><br>Czechy<hr> ✦ 2015 🚗 `, icon: redDotIcon10 },  
+    PecpodŚnieżką: 			{ lat: 50.69402096935029,  lng: 15.732973019217718, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Pec_pod_Snezkou_CoA_CZ.svg/800px-Pec_pod_Snezkou_CoA_CZ.svg.png" style="height:60px;"><br><b style='font-size:18px;'> 🇨🇿 Pec pod Śnieżką  </b><br>Czechy<hr> ✦ 2015 🚗 `, icon: redDotIconSmall6 },  
+    Harrachov: 				{ lat: 50.77206019892955, lng:  15.432754797248798, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Harrachov_znak.jpg" style="height:60px;"><br><b style='font-size:18px;'> 🇨🇿 Harrachov  </b><br>Czechy<hr> ✦ 2022 🚗 `, icon: redDotIconSmall6 },  
+    SzpindlerowyMłyn: 		{ lat: 50.73128329709344,  lng:   15.607836045867849, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Znak_spindleruv_mlyn_krkonose.svg/800px-Znak_spindleruv_mlyn_krkonose.svg.png" style="height:60px;"><br><b style='font-size:18px;'> 🇨🇿 Szpindlerowy Młyn  </b><br>Czechy<hr> ✦ 2022 🚗 `, icon: redDotIconSmall6 },  
+    MaláÚpa: 				{ lat: 50.74477051615968,  lng:   15.820463753486903, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Malá Úpa  </b><br>Czechy<hr> ✦ 2022 🚗 `, icon: redDotIconSmall6 },  
+    Tanvald: 				{ lat: 50.73748528721925,  lng:   15.307863356593149, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Tanvald_CoA_CZ.svg/1024px-Tanvald_CoA_CZ.svg.png" style="height:60px;"><br><b style='font-size:18px;'> 🇨🇿 Tanvald  </b><br>Czechy<hr> ✦ 2022 🚗 `, icon: redDotIconSmall },  
      
 // Słowacja
   	VysokeTatry: 			{ lat: 49.13983, lng: 20.22096, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/409px-SVK_Vysoke_Tatry_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇸🇰 Vysoke Tatry </b> <br>Słowacja</div><hr> ✦ 2020 🚗 <br>✦ 2014 🚐  `, icon: redDotIconSmall },
-    TatranskáPolianka:		{ lat: 49.12310892137386,  lng:  20.185301077112626, name: "<b style='font-size:16px;'> 🇸🇰 Tatranská Polianka </b><hr> ✦ 2014 🚐  ", icon: redDotIconSmall6 },
-    ŠtrbskéPleso:			{ lat: 49.11924557342972,  lng:  20.06288249242696, name: "<b style='font-size:16px;'> 🇸🇰 Štrbské Pleso  </b><hr> ✦ 2014 🚐  ", icon: redDotIconSmall6 },
+    TatranskáPolianka:		{ lat: 49.12310892137386,  lng:  20.185301077112626, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇸🇰 Tatranská Polianka </b><br>Słowacja<hr> ✦ 2014 🚐  `, icon: redDotIconSmall6 },
+    ŠtrbskéPleso:			{ lat: 49.11924557342972,  lng:  20.06288249242696, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇸🇰 Štrbské Pleso  </b><br>Słowacja<hr> ✦ 2014 🚐  `, icon: redDotIconSmall6 },
     Poprad:					{ lat: 49.05217896673052,  lng:   20.295539646249754, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/650px-Poprad_CoA_-_new_version.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇸🇰 Poprad </b> <br>Słowacja</div><hr> ✦ 2014 🚐  `, icon: redDotIcon },
-    StarýSmokovec:			{ lat: 49.13945633853446,   lng:  20.222900119454955, name: "<b style='font-size:16px;'> 🇸🇰 Starý Smokovec  </b><hr> ✦ 2014 🚐  ", icon: redDotIconSmall6 },
-    TatrzańskaŁomnica:		{ lat: 49.16650002569148,   lng:    20.282161644108587, name: "<b style='font-size:16px;'> 🇸🇰 Tatrzańska Łomnica  </b><hr> ✦ 2014 🚐  ", icon: redDotIconSmall6 },
+    StarýSmokovec:			{ lat: 49.13945633853446,   lng:  20.222900119454955, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇸🇰 Starý Smokovec  </b><br>Słowacja<hr> ✦ 2014 🚐  `, icon: redDotIconSmall6 },
+    TatrzańskaŁomnica:		{ lat: 49.16650002569148,   lng:    20.282161644108587, name: `<p style='text-align: center; margin: 0'> <b style='font-size:16px;'> 🇸🇰 Tatrzańska Łomnica  </b><br>Słowacja<hr> ✦ 2014 🚐  `, icon: redDotIconSmall6 },
     Bratysława: 			{ lat: 48.14909841822142,   lng:  17.107369696823522,  name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/1024px-Coat_of_Arms_of_Bratislava.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇸🇰 Bratysława </b> <br>Słowacja</div>
@@ -757,7 +924,7 @@ var iconStyles = {
                             <br> ⛪ +76m Kościół św. Macieja
                             <hr> ✈️ BUD - Port Lotniczy im. Ferenca Liszta`, 
                             icon: redSquareIcon },
-     Székesfehérvár: 		{ lat: 47.14516, lng: 18.41899, name: "🇭🇺 Székesfehérvár ", icon: redDotIconSmall }, 
+     Székesfehérvár: 		{ lat: 47.14516, lng: 18.41899, name: `<p style='text-align: center; margin: 0'><img src="" style="height:0px;"> <b style='font-size:16px;'> 🇭🇺 Székesfehérvár </b><br>Węgry <hr> ✦&nbsp;2024&nbsp;🚗 <hr> Fabryka Grundfos`, icon: redDotIconSmall }, 
 // Rumunia
      Bukareszt: 			{ lat: 44.43513, lng: 26.10334, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/ROU_Bucharest_CoA%20small.svg.png" style="height:60px;"><br><b style='font-size:20px;'> 🇷🇴 Bukareszt </b><br>Rumunia</div>
@@ -817,11 +984,13 @@ var iconStyles = {
                             <hr> ⛪ +92m Kościół św. Piotra 
         					<hr> ✈️ MUC - Lotnisko im. Józefa Staussa `, 
                             icon: redSquareIcon },
-     Locknitz: 				{ lat: 53.45538582647849, lng:  14.213681698196021, name: `<b style='font-size:16px;'> 🇩🇪 Locknitz</b>
+     Locknitz: 				{ lat: 53.45538582647849, lng:  14.213681698196021, name: `<p style='text-align: center; margin: 0'>
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Wappen_Loecknitz.png/800px-Wappen_Loecknitz.png" style="height:60px;">
+							<br><b style='font-size:18px;'>🇩🇪 Locknitz</b><br>Niemcy, Meklemburgia-Pomorze Przednie
                         	<hr><p style='text-align: left; margin: 0'>✦ 2017 🚴</p>
                          	`,
                         	icon: redDotIconSmall6 },
-     Brussow: 				{ lat: 53.400239701206225,  lng: 14.123801280668598, name: `<b style='font-size:16px;'> 🇩🇪 Brüssow</b>
+     Brussow: 				{ lat: 53.400239701206225,  lng: 14.123801280668598, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Brüssow</b><br>Niemcy, Branderburgia
                         	<hr><p style='text-align: left; margin: 0'>✦ 2017 🚴</p>
                          	`,
                         	icon: redDotIconSmall6 },
@@ -831,11 +1000,11 @@ var iconStyles = {
                         	<hr><p style='text-align: left; margin: 0'>✦ 2017 🚴</p>
                          	`,
                         	icon: redDotIcon10 },
-     Joachimsthal: 			{ lat: 52.97790684511051,  lng:  13.747717764436867, name: `<b style='font-size:16px;'> 🇩🇪 Joachimsthal</b>
+     Joachimsthal: 			{ lat: 52.97790684511051,  lng:  13.747717764436867, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Joachimsthal</b><br>Niemcy, Branderburgia
                         	<hr><p style='text-align: left; margin: 0'>✦ 2017 🚴</p>
                          	`,
                         	icon: redDotIconSmall6 },
-     Biesenthal: 			{ lat: 52.76589773037851, lng: 13.647687386155994, name: `<b style='font-size:16px;'> 🇩🇪 Biesenthal</b>
+     Biesenthal: 			{ lat: 52.76589773037851, lng: 13.647687386155994, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Biesenthal</b><br>Niemcy, Branderburgia
                         	<hr><p style='text-align: left; margin: 0'>✦ 2017 🚴</p>
                          	`,
                         	icon: redDotIconSmall6 },
@@ -845,7 +1014,7 @@ var iconStyles = {
                         	<hr><p style='text-align: left; margin: 0'>✦ 2017 🚴</p>
                          	`,
                         	icon: redDotIcon },           
-     Panketal: 				{ lat: 52.65069901104395,  lng:  13.539986849389658, name: `<b style='font-size:16px;'> 🇩🇪 Panketal</b>
+     Panketal: 				{ lat: 52.65069901104395,  lng:  13.539986849389658, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Panketal</b><br>Niemcy, Branderburgia
                         	<hr><p style='text-align: left; margin: 0'>✦ 2017 🚴</p>
                          	`,
                         	icon: redDotIconSmall },
@@ -861,11 +1030,11 @@ var iconStyles = {
                         	<hr><p style='text-align: left; margin: 0'>✦ 2021 🚴</p>
                          	`,
                         	icon: redDotIconSmall },
-     GarzinGarzau: 			{ lat: 52.54843813565582,  lng:  13.9776055694513, name: `<b style='font-size:16px;'> 🇩🇪 Garzin-Garzau</b>
+     GarzinGarzau: 			{ lat: 52.54843813565582,  lng:  13.9776055694513, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Garzin-Garzau</b><br>Niemcy, Branderburgia
                         	<hr><p style='text-align: left; margin: 0'>✦ 2021 🚴</p>
                          	`,
                         	icon: redDotIconSmall6 },
-     Rehfelde: 				{ lat: 52.53498640966207, lng: 13.910277131740653, name: `<b style='font-size:16px;'> 🇩🇪 Rehfelde</b>
+     Rehfelde: 				{ lat: 52.53498640966207, lng: 13.910277131740653, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Rehfelde</b><br>Niemcy, Branderburgia
                         	<hr><p style='text-align: left; margin: 0'>✦ 2021 🚴</p>
                          	`,
                         	icon: redDotIconSmall },
@@ -883,19 +1052,19 @@ var iconStyles = {
 							`,
                         	icon: redDotIconSmall },
 							
-	 Gartz: 				{ lat: 53.208030469912345,   lng:   14.391845971333044, name: `<b style='font-size:16px;'> 🇩🇪 Gartz</b>
+	 Gartz: 				{ lat: 53.208030469912345,   lng:   14.391845971333044, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Gartz</b><br>Niemcy, Branderburgia
                         	<hr><p style='text-align: left; margin: 0'>✦ 2017 🚴</p>
                          	`, icon: redDotIconSmall },
 							
-     Kustrin: 				{ lat: 52.56836917621868,  lng:  14.606884149869344, name: `<b style='font-size:16px;'> 🇩🇪 Kustrin</b>
+     Kustrin: 				{ lat: 52.56836917621868,  lng:  14.606884149869344, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Kustrin</b><br>Niemcy, Branderburgia
                         	<hr><p style='text-align: left; margin: 0'>✦ 2021 🚴</p>
                          	`,
                         	icon: redDotIconSmall6 },
      Lindau:				{ lat: 47.54606, lng: 9.68350, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/DE-ST_15-0-82-430_Lindau_COA.png" style="height:60px;">
                                 <br><b style='font-size:20px;'>  🇩🇪 Lindau </b> <br>Niemcy, Bawaria</div><hr>✦ 2024 🚗 <hr> 🗼 +33m Latarnia Port Lindau<br> `, icon: redDotIcon },
-     BlumberGER:	   		{ lat: 47.84030, lng: 8.53363, name: "<b style='font-size:16px;'> 🇩🇪 Blumberg </b><hr>✦ 2024 🚗", icon: redDotIconSmall6 },
-     JezBodeńskie:			{ lat: 47.5471, lng: 9.5145, name: "<b style='font-size:16px;'> 🇩🇪 🇨🇭 🇦🇹 Jezioro Bodeńskie </b><hr>✦ 2024 🚗 <hr> Alpy", icon: blueDiamondIcon },
+     BlumberGER:	   		{ lat: 47.84030, lng: 8.53363, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Blumberg </b><br>Niemcy, Bawaria<hr>✦ 2024 🚗", icon: redDotIconSmall6 },
+     JezBodeńskie:			{ lat: 47.5471, lng: 9.5145, name: "<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇩🇪 🇨🇭 🇦🇹 Jezioro Bodeńskie </b><br>Niemcy, Szwajcaria, Austria<hr>✦ 2024 🚗", icon: blueDiamondIcon },
      Rostock: 				{ lat: 54.09084799446086,   lng:  12.14640655375654, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Rostock_Wappen.svg2.png" style="height:60px;">
                                 <br><b style='font-size:20px;'>  🇩🇪 Rostock </b> <br>Niemcy, <br> Maklemburgia - Pomorze Przednie</div>
@@ -977,9 +1146,9 @@ var iconStyles = {
                         	<hr><p style='text-align: justify; margin: 0'> jez. Genwskie | Promenady na Jeziorem | Winnice | Funicular Mont Pelerin</p> 
                         	`,
                             icon: redDotIcon },
-     Veytaux:   			{ lat: 46.42072145073275, lng:  6.928316306644177, name: "<b style='font-size:16px;'> 🇨🇭 Veytaux </b><hr>✦ 2011 🚴 <hr> Zamek Chillon | Widelec", icon: redDotIconSmall },
-     Villeneuve:   			{ lat: 46.39683500448392,  lng:  6.927978825913664, name: "<b style='font-size:16px;'> 🇨🇭 Villeneuve </b><hr>✦ 2011 🚴 ", icon: redDotIconSmall }, 
-     SaintMaurice:   		{ lat: 46.21461610898001,  lng:  7.005416348347852, name: "<b style='font-size:16px;'> 🇨🇭 Saint-Maurice </b><hr>✦ 2011 🚴 ", icon: redDotIconSmall6 },
+     Veytaux:   			{ lat: 46.42072145073275, lng:  6.928316306644177, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Veytaux </b><br>Szwajcaria<hr>✦ 2011 🚴 <hr> Zamek Chillon | Widelec", icon: redDotIconSmall },
+     Villeneuve:   			{ lat: 46.39683500448392,  lng:  6.927978825913664, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Villeneuve </b><br>Szwajcaria<hr>✦ 2011 🚴 ", icon: redDotIconSmall }, 
+     SaintMaurice:   		{ lat: 46.21461610898001,  lng:  7.005416348347852, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Saint-Maurice </b><br>Szwajcaria<hr>✦ 2011 🚴 ", icon: redDotIconSmall6 },
      Martigny:   			{ lat: 46.10559569996094,  lng:  7.073796204898223, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Martigny.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Martigny </b> <br> Szwajcaria</div><hr>✦ 2011 🚴 `, icon: redDotIcon10 },
@@ -1008,19 +1177,18 @@ var iconStyles = {
      CransMontana:   		{ lat: 46.311806443122066,  lng:  7.480062225136731, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/CHE_Crans-Montana_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Crans-Montana </b> <br> Szwajcaria</div><hr>✦ 2011 🚞 `, icon: redDotIconSmall },  
-     
      Vallorbe:   			{ lat: 46.7118099590439, lng:  6.379767726890071, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/1024px-Vallorbe-coat_of_arms.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Vallorbe </b> <br> Szwajcaria</div><hr>✦ 2021 🚗 <br>✦ 2018 🚗 `, icon: redDotIcon10 }, 
      Sion:   				{ lat: 46.23285304487962,  lng:  7.360157176603367, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Sion-coat_of_arms.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Sion </b> <br> Szwajcaria</div><hr>✦ 2018 🚈⭢🚴 `, icon: redDotIcon }, 
-     ZaporaDixence1:   		{ lat: 46.081221775545586,  lng:  7.402573756003012, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Grande Dixence </b><hr>✦ 2018 🚈⭢🚌 ", icon: DiamondYellow20 }, 
-     ZaporaDixence2:   		{ lat: 46.081221775545586,  lng:  7.402573756003012, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Grande Dixence </b><hr>✦ 2018 🚈⭢🚌 ", icon: DiamondYellow20 },
-     ZaporaSalanfe1:   		{ lat: 46.14151972411882, lng:  6.969445016706418, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Salanfe </b><hr>✦ 2011 🚈⭢🚞⭢🚶 ", icon: DiamondYellow20 }, 
-     ZaporaSalanfe2:   		{ lat: 46.14151972411882, lng:  6.969445016706418, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Salanfe Dixence </b><hr>✦ 2011 🚈⭢🚞⭢🚶 ", icon: DiamondYellow20 },
-     ZaporaTseuzier1:   	{ lat: 46.34796253396223, lng:  7.437393975744444, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Tseuzier </b><hr>✦ 2011 🚶 ", icon: DiamondYellow20 }, 
-     ZaporaTseuzier2:   	{ lat: 46.34796253396223, lng:  7.437393975744444, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Tseuzier </b><hr>✦ 2011 🚶 ", icon: DiamondYellow20 },
+     ZaporaDixence1:   		{ lat: 46.081221775545586,  lng:  7.402573756003012, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Zapora Grande Dixence </b><br>Szwajcaria<hr>✦ 2018 🚈⭢🚌 ", icon: DiamondYellow20 }, 
+     ZaporaDixence2:   		{ lat: 46.081221775545586,  lng:  7.402573756003012, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Zapora Grande Dixence </b><br>Szwajcaria<hr>✦ 2018 🚈⭢🚌 ", icon: DiamondYellow20 },
+     ZaporaSalanfe1:   		{ lat: 46.14151972411882, lng:  6.969445016706418, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Zapora Salanfe </b><br>Szwajcaria<hr>✦ 2011 🚈⭢🚞⭢🚶 ", icon: DiamondYellow20 }, 
+     ZaporaSalanfe2:   		{ lat: 46.14151972411882, lng:  6.969445016706418, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Zapora Salanfe Dixence </b><br>Szwajcaria<hr>✦ 2011 🚈⭢🚞⭢🚶 ", icon: DiamondYellow20 },
+     ZaporaTseuzier1:   	{ lat: 46.34796253396223, lng:  7.437393975744444, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Zapora Tseuzier </b><br>Szwajcaria<hr>✦ 2011 🚶 ", icon: DiamondYellow20 }, 
+     ZaporaTseuzier2:   	{ lat: 46.34796253396223, lng:  7.437393975744444, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Zapora Tseuzier </b><br>Szwajcaria<hr>✦ 2011 🚶 ", icon: DiamondYellow20 },
      Zermatt:   			{ lat: 46.02047242431533,  lng:  7.749091919139617, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Zermatt-coat_of_arms.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Zermatt </b> <br> Szwajcaria</div><hr>✦ 2021 🚈⭢🚞 <br> ✦ 2018 🚈⭢🚞`, icon: redDotIcon10 }, 
@@ -1030,40 +1198,40 @@ var iconStyles = {
      Lauterbrunnen:   		{ lat: 46.59334162812393, lng:  7.909070479549848, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Lauterbrunnen-coat_of_arms.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Lauterbrunnen </b> <br> Szwajcaria</div><hr>✦ 2018 🚈⭢🚞 `, icon: redDotIconSmall }, 
-     Mürren:   				{ lat: 46.56051970551374,  lng:  7.892261962574073, name: "<b style='font-size:16px;'> 🇨🇭 Mürren </b><hr>✦ 2018 🚈⭢🚞⭢🚠⭢🚞 ", icon: redDotIconSmall },
+     Mürren:   				{ lat: 46.56051970551374,  lng:  7.892261962574073, name: `<p style='text-align: center; margin: 0'><img src="" style="height:0px;"><b style='font-size:18px;'> 🇨🇭 Mürren </b><br>Szwajcaria<hr>✦ 2018 🚈⭢🚞⭢🚠⭢🚞 `, icon: redDotIconSmall },
      Kandersteg:   			{ lat: 46.49458156307795,  lng:  7.675331783799289, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Kandersteg-coat_of_arms.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Kandersteg </b> <br> Szwajcaria</div><hr>✦ 2018 🚈 `, icon: redDotIconSmall }, 
-     Griesalp:   			{ lat: 46.54771939226579, lng: 7.7617825473361535, name: "<b style='font-size:16px;'> 🇨🇭 Griesalp </b><hr>✦ 2018 🚶 ", icon: redDotIconSmall6 },
-     SaintSulpice:   		{ lat: 46.5101405812621,  lng:  6.5572671796047635, name: "<b style='font-size:16px;'> 🇨🇭 Saint-Sulpice </b><hr>✦ 2021 🚴 <br> ✦ 2018 🚴 ", icon: redDotIconSmall6 }, 
+     Griesalp:   			{ lat: 46.54771939226579, lng: 7.7617825473361535, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Griesalp </b><br>Szwajcaria<hr>✦ 2018 🚶 ", icon: redDotIconSmall6 },
+     SaintSulpice:   		{ lat: 46.5101405812621,  lng:  6.5572671796047635, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Saint-Sulpice </b><br>Szwajcaria<hr>✦ 2021 🚴 <br> ✦ 2018 🚴 ", icon: redDotIconSmall6 }, 
      Morges:   				{ lat: 46.50802447925848,  lng:  6.498301761236129, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Morges-coat_of_arms.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Morges </b> <br> Szwajcaria</div><hr>✦ 2022 🚴 <br>✦ 2021 🚴<br>✦ 2018 🚴 `, icon: redDotIcon10 }, 
-     SaintPrex:   			{ lat: 46.48284570967633,  lng: 6.45881122731891, name: "<b style='font-size:16px;'> 🇨🇭 Saint-Prex </b><hr>✦ 2018 🚴 ", icon: redDotIconSmall },
-     Écublens:   			{ lat: 46.52988902886265,  lng:  6.562527689263105, name: "<b style='font-size:16px;'> 🇨🇭 Écublens </b><hr>✦ 2018 🚴 ", icon: redDotIconSmall },
-     Allaman:   			{ lat: 46.47105303225177,  lng:  6.3962210666031485, name: "<b style='font-size:16px;'> 🇨🇭 Allaman </b><hr>✦ 2021 🚴 <br>✦ 2018 🚴 ", icon: redDotIconSmall },
-     Rolle:   				{ lat: 46.46135739033949,  lng:  6.339701142078658, name: "<b style='font-size:16px;'> 🇨🇭 Rolle </b><hr>✦ 2018 🚴 ", icon: redDotIconSmall }, 
-     Gland:   				{ lat: 46.42034201677721, lng:  6.27079976998155, name: "<b style='font-size:16px;'> 🇨🇭 Gland </b><hr>✦ 2018 🚴 ", icon: redDotIconSmall },
+     SaintPrex:   			{ lat: 46.48284570967633,  lng: 6.45881122731891, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Saint-Prex </b><br>Szwajcaria<hr>✦ 2018 🚴 ", icon: redDotIconSmall },
+     Écublens:   			{ lat: 46.52988902886265,  lng:  6.562527689263105, name: "<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇨🇭 Écublens </b><br>Szwajcaria<hr>✦ 2018 🚴 ", icon: redDotIconSmall },
+     Allaman:   			{ lat: 46.47105303225177,  lng:  6.3962210666031485, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/CHE_Allaman_COA.svg/800px-CHE_Allaman_COA.svg.png" style="height:60px;"><b style='font-size:18px;'> 🇨🇭 Allaman </b><br>Szwajcaria<hr>✦ 2021 🚴 <br>✦ 2018 🚴 `, icon: redDotIconSmall },
+     Rolle:   				{ lat: 46.46135739033949,  lng:  6.339701142078658, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Rolle </b><br>Szwajcaria<hr>✦ 2018 🚴 ", icon: redDotIconSmall }, 
+     Gland:   				{ lat: 46.42034201677721, lng:  6.27079976998155, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Gland </b><br>Szwajcaria<hr>✦ 2018 🚴 ", icon: redDotIconSmall },
      Nyon:   				{ lat: 46.38325005905485, lng:  6.23474873871812, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Nyon-coat_of_arms.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Nyon </b> <br> Szwajcaria</div><hr>✦ 2018 🚴 `, icon: redDotIcon10 },
-     LesMosses:   			{ lat: 46.3950361914266,  lng:  7.102136654431821, name: "<b style='font-size:16px;'> 🇨🇭 Les Mosses </b><hr>✦ 2019 🚗 ", icon: redDotIconSmall6 },
-     TanayCH:   			{ lat: 46.34437273648438,  lng:  6.834578497609448, name: "<b style='font-size:16px;'> 🇨🇭 Tanay </b><hr>✦ 2019 🚗⭢🚶 ", icon: redDotIconSmall6 },  
-     MörelFilet:   			{ lat: 46.356741477917,  lng:  8.045965658025759, name: "<b style='font-size:16px;'> 🇨🇭 Mörel-Filet </b><hr>✦ 2021 🚗 <br>✦ 2019 🚗  ", icon: redDotIconSmall6 }, 
-     Rideralp:   			{ lat: 46.376825760551185,  lng:  8.025028274548937, name: "<b style='font-size:16px;'> 🇨🇭 Rideralp </b><hr>✦ 2021 🚗⭢🚠 <br>✦ 2019 🚗⭢🚡⭢🚡 ", icon: redDotIconSmall6 }, 
-     Leysin:   				{ lat: 46.343266258084235,  lng:  7.012691053710803, name: "<b style='font-size:16px;'> 🇨🇭 Leysin </b><hr>✦ 2022 🚗<br>✦ 2021 🚗 ", icon: redDotIconSmall }, 
-     Sembrancher:   		{ lat: 46.07589610423827, lng:  7.161037391228123, name: "<b style='font-size:16px;'> 🇨🇭 Sembrancher </b><hr>✦ 2021 🚗 ", icon: redDotIconSmall6 }, 
-     Champex:   			{ lat: 46.029678924094725,  lng:  7.116441744707943, name: "<b style='font-size:16px;'> 🇨🇭 Champex </b><hr>✦ 2021 🚶 ", icon: redDotIconSmall6 }, 
-     CauxobokMontreux:   	{ lat: 46.43439318360579,  lng:  6.947227071841116, name: "<b style='font-size:16px;'> 🇨🇭 Caux </b><hr>✦ 2021 🚗 ", icon: redDotIconSmall6 }, 
-     Battmeralp:   			{ lat: 46.390705098638726,  lng:  8.06248871127387, name: "<b style='font-size:16px;'> 🇨🇭 Battmeralp </b><hr>✦ 2021 🚶 ", icon: redDotIconSmall6 }, 
-     VillarssurOllon:   	{ lat: 46.2984232028156,  lng:  7.055147286227242, name: "<b style='font-size:16px;'> 🇨🇭 Villars-sur-Ollon </b><hr>✦ 2021 🚗 ", icon: redDotIconSmall }, 
-	 ChavannesprèsRenens:   { lat: 46.5315450437058,  lng:  6.573639136843863, name: "<b style='font-size:16px;'> 🇨🇭 Chavannes-près-Renens </b><hr>✦ 2022 🚗<b style='font-size:10px;'>x2</b>|🚴 <br>✦ 2021 🚗|🚴 ", icon: redDotIconSmall }, 
-     RenensLozanna:   		{ lat: 46.53406915791646,  lng:  6.5931745892851605, name: "<b style='font-size:16px;'> 🇨🇭 Renens </b><hr>✦ 2021 🚶|🚴|🚈 ", icon: redDotIconSmall }, 
-     Bussigny:   			{ lat: 46.55170439258088, lng:  6.559680627307581, name: "<b style='font-size:16px;'> 🇨🇭 Bussigny </b><hr>✦ 2021 🚴 ", icon: redDotIconSmall }, 
-     jezKandersteg:   		{ lat: 46.49831486902945,  lng:  7.72649588016957, name: "<b style='font-size:16px;'> 🇨🇭 jez. Oeschinensee </b><hr>✦ 2018 🚈⭢🚡⭢🚶 ", icon: blueDiamondIcon10 },
+     LesMosses:   			{ lat: 46.3950361914266,  lng:  7.102136654431821, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Les Mosses </b><br>Szwajcaria<hr>✦ 2019 🚗 ", icon: redDotIconSmall6 },
+     TanayCH:   			{ lat: 46.34437273648438,  lng:  6.834578497609448, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Tanay </b><br>Szwajcaria<hr>✦ 2019 🚗⭢🚶 ", icon: redDotIconSmall6 },  
+     MörelFilet:   			{ lat: 46.356741477917,  lng:  8.045965658025759, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Mörel-Filet </b><br>Szwajcaria<hr>✦ 2021 🚗 <br>✦ 2019 🚗  ", icon: redDotIconSmall6 }, 
+     Rideralp:   			{ lat: 46.376825760551185,  lng:  8.025028274548937, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Rideralp </b><br>Szwajcaria<hr>✦ 2021 🚗⭢🚠 <br>✦ 2019 🚗⭢🚡⭢🚡 ", icon: redDotIconSmall6 }, 
+     Leysin:   				{ lat: 46.343266258084235,  lng:  7.012691053710803, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Leysin </b><br>Szwajcaria<hr>✦ 2022 🚗<br>✦ 2021 🚗 ", icon: redDotIconSmall }, 
+     Sembrancher:   		{ lat: 46.07589610423827, lng:  7.161037391228123, name: "<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇨🇭 Sembrancher </b><br>Szwajcaria<hr>✦ 2021 🚗 ", icon: redDotIconSmall6 }, 
+     Champex:   			{ lat: 46.029678924094725,  lng:  7.116441744707943, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Champex </b><br>Szwajcaria<hr>✦ 2021 🚶 ", icon: redDotIconSmall6 }, 
+     CauxobokMontreux:   	{ lat: 46.43439318360579,  lng:  6.947227071841116, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Caux </b><br>Szwajcaria<hr>✦ 2021 🚗 ", icon: redDotIconSmall6 }, 
+     Battmeralp:   			{ lat: 46.390705098638726,  lng:  8.06248871127387, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Battmeralp </b><br>Szwajcaria<hr>✦ 2021 🚶 ", icon: redDotIconSmall6 }, 
+     VillarssurOllon:   	{ lat: 46.2984232028156,  lng:  7.055147286227242, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Villars-sur-Ollon </b><br>Szwajcaria<hr>✦ 2021 🚗 ", icon: redDotIconSmall }, 
+	 ChavannesprèsRenens:   { lat: 46.5315450437058,  lng:  6.573639136843863, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Chavannes-près-Renens </b><br>Szwajcaria<hr>✦ 2022 🚗<b style='font-size:10px;'>x2</b>|🚴 <br>✦ 2021 🚗|🚴 ", icon: redDotIconSmall }, 
+     RenensLozanna:   		{ lat: 46.53406915791646,  lng:  6.5931745892851605, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Renens </b><br>Szwajcaria<hr>✦ 2021 🚶|🚴|🚈 ", icon: redDotIconSmall }, 
+     Bussigny:   			{ lat: 46.55170439258088, lng:  6.559680627307581, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Bussigny </b><br>Szwajcaria<hr>✦ 2021 🚴 ", icon: redDotIconSmall }, 
+     jezKandersteg:   		{ lat: 46.49831486902945,  lng:  7.72649588016957, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 jez. Oeschinensee </b><br>Szwajcaria<hr>✦ 2018 🚈⭢🚡⭢🚶 ", icon: DiamondBlue20 },
      
      PrzełomRenu1:   		{ lat: 47.67705, lng: 8.61601, name: "<b style='font-size:16px;'> 🇨🇭 Przełom Renu ", icon: blueDiamondIconEMOJI1 }, 
-     PrzełomRenu2:   		{ lat: 47.67705, lng: 8.61601, name: `<b style='font-size:16px;'> 🇨🇭 Szafuza - Przełom Renu </b>
+     PrzełomRenu2:   		{ lat: 47.67705, lng: 8.61601, name: `<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇨🇭 Szafuza - Przełom Renu </b><br>Szwajcaria
     						<hr>
                             ✦ 2024 🚗
                             <hr>
@@ -1083,11 +1251,11 @@ var iconStyles = {
      Szafuza:   			{ lat: 47.6976, lng: 8.6394, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Schaffhausen-coat_of_arms.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Szafuza </b> <br> Szwajcaria</div><hr>✦ 2024 🚗 <hr> ✦ Przełom Renu`, icon: redDotIcon }, 
-     JezGenewskie:   		{ lat: 46.4478, lng: 6.7082, name: "<b style='font-size:16px;'> 🇨🇭🇫🇷 Jezioro Genewskie </b><hr>✦ 2024 ✦ 2022 ✦ 2021<b style='font-size:10px;'>x2</b> ✦ 2019 ✦ 2018 ✦ 2015 ✦ 2011", icon: blueDiamondIcon },
-     ParkingBrunnen:   		{ lat: 46.984155002029645, lng: 8.611913361877635, name: "<b style='font-size:16px;'> 🇨🇭 Parking Brunnen </b><hr>✦ 2024 🚗 ", icon: reddiamondSvg },
-     Jez4KAntonów:   		{ lat: 46.9409, lng: 8.5982, name: "<b style='font-size:16px;'> 🇨🇭 Jezioro Czterech Kantonów </b><hr>✦ 2024 🚗 ", icon: blueDiamondIcon },
-     PrzełŚwGottarda:		{ lat: 46.55833, lng: 8.56380, name: "<b style='font-size:16px;'>🇨🇭 Przełęcz św. Gottarda 🔻 2106m  </b><hr>✦ 2024 🚗 ", icon: upsideDownTriangleSvg  }, 
-     BergSUI:   			{ lat: 47.57933, lng: 9.16655, name: "<b style='font-size:16px;'> 🇨🇭 Berg </b><hr>✦ 2024 🚗", icon: redDotIconSmall6 },
+     JezGenewskie:   		{ lat: 46.4478, lng: 6.7082, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭🇫🇷 Jezioro Genewskie </b><br>Szwajcaria<hr>✦ 2024 ✦ 2022 ✦ 2021<b style='font-size:10px;'>x2</b> ✦ 2019 ✦ 2018 ✦ 2015 ✦ 2011", icon: blueDiamondIcon },
+     ParkingBrunnen:   		{ lat: 46.984155002029645, lng: 8.611913361877635, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Parking Brunnen </b><br>Alpy<hr>✦ 2024 🚗 ", icon: reddiamondSvg },
+     Jez4KAntonów:   		{ lat: 46.9409, lng: 8.5982, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Jezioro Czterech Kantonów </b><br>Szwajcaria<hr>✦ 2024 🚗 ", icon: blueDiamondIcon },
+     PrzełŚwGottarda:		{ lat: 46.55833, lng: 8.56380, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Przełęcz św. Gottarda 🔻 2106m  </b><br>Alpy<hr>✦ 2024 🚗 ", icon: upsideDownTriangleSvg  }, 
+     BergSUI:   			{ lat: 47.57933, lng: 9.16655, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Berg </b><br>Szwajcaria<hr>✦ 2024 🚗", icon: redDotIconSmall6 },
       
     // Włochy  San Marino  Watykan
      Mediolan:				{ lat: 45.4642, lng: 9.1900, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
@@ -1239,7 +1407,7 @@ var iconStyles = {
                          	icon: redDotIconsurplus },
   	SestriLevante: 		{ lat: 44.27277, lng: 9.39640, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Sestri_Levante_Coat_of_arms_2.png/800px-Sestri_Levante_Coat_of_arms_2.png" style="height:80px;">
-								<br><b style='font-size:20px;'> 🇮🇹 Sestri Levante </b><br> Genua, Liguria</div>
+								<br><b style='font-size:20px;'> 🇮🇹 Sestri Levante </b><br> Włochy, Liguria</div>
                            	<hr> 
                         	<div style="display: flex; justify-content: space-between;">
       						<div>
@@ -1255,7 +1423,7 @@ var iconStyles = {
                         	<hr><p style='text-align: justify; margin: 0'> </p>
                             `,
                          	icon: redDotIcon },
-  	Monterosso: 		{ lat: 44.14645, lng: 9.65531, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Monterosso </b>
+  	Monterosso: 		{ lat: 44.14645, lng: 9.65531, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Monterosso </b><br> Włochy, Luguria
                            	<hr> 
                         	<div style="display: flex; justify-content: space-between;">
       						<div>
@@ -1271,7 +1439,7 @@ var iconStyles = {
                         	<hr><p style='text-align: justify; margin: 0'> </p>
                             `,
                          	icon: redDotIconSmall },
-  	Vernazza: 			{ lat: 44.13494, lng: 9.68355, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Vernazza </b>
+  	Vernazza: 			{ lat: 44.13494, lng: 9.68355, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Vernazza </b><br> Włochy, Luguria
                            	<hr> 
                         	<div style="display: flex; justify-content: space-between;">
       						<div>
@@ -1287,7 +1455,7 @@ var iconStyles = {
                         	<hr><p style='text-align: justify; margin: 0'> </p>
                             `,
                          	icon: redDotIconSmall },
-  	Corniglia: 			{ lat: 44.119881, lng: 9.708481, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Corniglia </b>
+  	Corniglia: 			{ lat: 44.119881, lng: 9.708481, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Corniglia </b><br> Włochy, Luguria
                            	<hr> 
                         	<div style="display: flex; justify-content: space-between;">
       						<div>
@@ -1303,7 +1471,7 @@ var iconStyles = {
                         	<hr><p style='text-align: justify; margin: 0'> </p>
                             `,
                          	icon: redDotIconSmall },
-  	Manarola: 			{ lat: 44.106539, lng: 9.727728, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Manarola </b>
+  	Manarola: 			{ lat: 44.106539, lng: 9.727728, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Manarola </b><br> Włochy, Luguria
                            	<hr> 
                         	<div style="display: flex; justify-content: space-between;">
       						<div>
@@ -1319,7 +1487,7 @@ var iconStyles = {
                         	<hr><p style='text-align: justify; margin: 0'> </p>
                             `,
                          	icon: redDotIconSmall },
-  	Riomaggiore: 		{ lat: 44.099259, lng: 9.737878, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Riomaggiore </b>
+  	Riomaggiore: 		{ lat: 44.099259, lng: 9.737878, name: `<b style='font-size:16px;'> 🇮🇹 Cinque Terre - Riomaggiore </b><br> Włochy, Luguria
                            	<hr> 
                         	<div style="display: flex; justify-content: space-between;">
       						<div>
@@ -1371,11 +1539,11 @@ var iconStyles = {
      NovaraIT:	   			{ lat: 45.44664, lng: 8.62066, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Novara-Stemma.svg/800px-Novara-Stemma.svg.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇮🇹 Novara </b><br> Włochy, Piemont</div><hr>✦ 2024 🚗`, icon: redDotIcon },
-     JezioroComo:   		{ lat: 45.9748, lng: 9.2302, name: "<b style='font-size:16px;'> 🇮🇹 Jezioro Como </b><hr>✦ 2024 🚗", icon: blueDiamondIcon },
-     JezioroMaggiore: 		{ lat: 45.8699, lng: 8.5807, name: "<b style='font-size:16px;'> 🇮🇹 Jezioro Maggiore </b><hr>✦ 2024 🚗 ", icon: blueDiamondIcon },
-     PuntaHellbronner3466m: { lat: 45.845834, lng: 6.931858, name: "<b style='font-size:16px;'> 🇮🇹  Punta Hellbronner 🔺 3466m </b><hr>✦ 2024 🚠⭢🚠 ", icon: triangleSvg },
-     PrzełŚwBernarda2473m:  { lat: 45.86868, lng: 7.16497, name: "<b style='font-size:16px;'> 🇨🇭🇮🇹 Przełęcz św. Bernarda 🔻 2473m </b><hr>✦ 2024 🚗 ", icon: upsideDownTriangleSvg  },
-     SassodelFerro1062m:   	{ lat: 45.91160, lng: 8.64349, name: "<b style='font-size:16px;'> 🇮🇹 Sasso del Ferro 🔺 1062m </b><hr>✦ 2024 🚡⭢🚶 ", icon: triangleSvg }, 
+     JezioroComo:   		{ lat: 45.9748, lng: 9.2302, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Jezioro Como </b><br> Włochy, Lombardia<hr>✦ 2024 🚗", icon: blueDiamondIcon },
+     JezioroMaggiore: 		{ lat: 45.8699, lng: 8.5807, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Jezioro Maggiore </b><br> Włochy, Lombardia/Piemont<hr>✦ 2024 🚗 ", icon: blueDiamondIcon },
+     PuntaHellbronner3466m: { lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner 🔺 3466m </b><br> Alpy<hr>✦ 2024 🚠⭢🚠 ", icon: triangleSvg },
+     PrzełŚwBernarda2473m:  { lat: 45.86868, lng: 7.16497, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭🇮🇹 Przełęcz św. Bernarda 🔻 2473m </b><br> Alpy<hr>✦ 2024 🚗 ", icon: upsideDownTriangleSvg  },
+     SassodelFerro1062m:   	{ lat: 45.91160, lng: 8.64349, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Sasso del Ferro 🔺 1062m </b><br> Alpy<hr>✦ 2024 🚡⭢🚶 ", icon: triangleSvg }, 
      Varenna:   			{ lat: 46.010175, lng: 9.283351, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Stemma_di_Varenna.svg/800px-Stemma_di_Varenna.svg.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇮🇹 Varenna </b><br> Włochy, Lombardia</div><hr>✦ 2024 🚗`, icon: redDotIconSmall },
@@ -1387,8 +1555,8 @@ var iconStyles = {
 								<br><b style='font-size:20px;'> 🇮🇹 Lecco </b><br> Włochy, Lombardia</div><hr>✦ 2024 🚗`, icon: redDotIcon }, 
      Verbania:   			{ lat: 45.9331, lng: 8.5595, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Verbania-Stemma.svg/800px-Verbania-Stemma.svg.png" style="height:80px;">
-								<br><b style='font-size:20px;'> 🇮🇹 Verbania </b><br> Verbania, Piemont</div><hr>✦ 2024 🚗 ○●⭐`, icon: redDotIcon },
-     IntraIT:				{ lat: 45.937800302513004, lng: 8.569218231597935, name: "<b style='font-size:16px;'> 🇮🇹 Intra </b><hr>✦ 2024 🚗", icon: redDotIcon10 },
+								<br><b style='font-size:20px;'> 🇮🇹 Verbania </b><br> Verbania, Piemont</div><hr>✦ 2024 🚗`, icon: redDotIcon },
+     IntraIT:				{ lat: 45.937800302513004, lng: 8.569218231597935, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Intra </b><hr>✦ 2024 🚗", icon: redDotIcon10 },
      Genua:   				{ lat: 44.4056, lng: 8.9463, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Coat_of_Arms_of_Genoa-2.svg/1024px-Coat_of_Arms_of_Genoa-2.svg.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇮🇹 Genua </b><br> Włochy, Liguria</div><hr>✦ 2024 🚗 <hr><p style='text-align: justify; margin: 0'> Port Genueński | Kaminice Genueńskie | Ulica Pałaców | Ciasne Stare Miasto | Zabytkowe windny miejskie | Pesto | Boccadasse | Mosty, tunele i podziemne pociągi</p>`, icon: redDotIconMedium },
@@ -1543,7 +1711,7 @@ var iconStyles = {
                             <hr><p style='text-align: justify; margin: 0'>  Burcht van Leiden </p>
                             `,
                          	icon: redDotIconsurplus },
-      	AlphenaandenRijn: 	{ lat: 52.129869193291576,    lng:    4.657993665093667, name: `<b style='font-size:16px;'> 🇳🇱 Alphen aan den Rijn </b>
+      	AlphenaandenRijn: 	{ lat: 52.129869193291576,    lng:    4.657993665093667, name: `<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇳🇱 Alphen aan den Rijn </b><br>Holandia
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
       						<div>
@@ -1555,7 +1723,7 @@ var iconStyles = {
     						</div>
                             `,
                          	icon: redDotIcon },
-      	IJsselstein: 		{ lat: 52.01779652022784,   lng:    5.040340053667218, name: `<b style='font-size:16px;'> 🇳🇱 IJsselstein </b>
+      	IJsselstein: 		{ lat: 52.01779652022784,   lng:    5.040340053667218, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 IJsselstein </b><br>Holandia
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
       						<div>
@@ -1585,29 +1753,29 @@ var iconStyles = {
                             `,
                          	icon: redDotIconMedium },
       
-      	AlphenaandenRijn: 			{ lat: 52.12948376472095,  lng:  4.654451304800907, name: "<b style='font-size:16px;'> 🇳🇱 Alphen aan den Rijn </b><hr> ✦ 2017 🚴", icon: redDotIcon10 },
-      	Bodegraven: 				{ lat: 52.082159333651255, lng:  4.74362730893762, name: "<b style='font-size:16px;'> 🇳🇱 Bodegraven </b><hr> ✦ 2017 🚴", icon: redDotIconSmall },
-      	NieuwerkerkaandenIJssel: 	{ lat: 51.97457012683037,  lng:  4.618610959215483, name: "<b style='font-size:16px;'> 🇳🇱 Nieuwerkerk aan den IJssel </b><hr> ✦ 2017 🚴", icon: redDotIconSmall },
-      	BerkelenRodenrijs: 			{ lat: 51.99100744215093,  lng:  4.473243448934662, name: "<b style='font-size:16px;'> 🇳🇱 Berkel en Rodenrijs </b><hr> ✦ 2017 🚴", icon: redDotIconSmall },
-      	Pijnacker: 					{ lat: 52.0196521445155,  lng:  4.430926489121697, name: "<b style='font-size:16px;'> 🇳🇱 Pijnacker </b><hr> ✦ 2017 🚴", icon: redDotIconSmall },
-      	Rijswijk: 					{ lat: 52.03789337164388,  lng:   4.323523396622303, name: "<b style='font-size:16px;'> 🇳🇱 Rijswijk </b><hr> ✦ 2017 🚴", icon: redDotIcon10 },
-      	KatwijkaanZee: 				{ lat: 52.19901941710039,   lng:    4.412066133029782, name: "<b style='font-size:16px;'> 🇳🇱 Katwijk aan Zee </b><hr> ✦ 2017 🚴", icon: redDotIconSmall },
-      	Valkenburg: 				{ lat: 52.1795121399701,   lng:    4.433776661758284, name: "<b style='font-size:16px;'> 🇳🇱 Valkenburg </b><hr> ✦ 2017 🚴", icon: redDotIconSmall6 },
-      	Moordrecht: 				{ lat: 51.98700223656093,   lng: 4.667438435835307, name: "<b style='font-size:16px;'> 🇳🇱 Moordrecht </b><hr> ✦ 2017 🚴", icon: redDotIconSmall6 },
-      	Bergschenhoek: 				{ lat: 51.98544755140768,   lng:  4.506218976640839, name: "<b style='font-size:16px;'> 🇳🇱 Bergschenhoek </b><hr> ✦ 2017 🚴", icon: redDotIconSmall6 },
-      	Hellevoetsluis: 			{ lat: 51.831837788347876,   lng:   4.1321557376161415, name: "<b style='font-size:16px;'> 🇳🇱 Hellevoetsluis </b><hr> ✦ 2017 🚐", icon: redDotIconSmall },
-      	Maeslantkering1: 			{ lat: 51.95474017861898,  lng:   4.164723127451288, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Maeslantkering </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	Maeslantkering2: 			{ lat: 51.95474017861898,  lng:   4.164723127451288, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Maeslantkering </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta1: 				{ lat: 51.8281580614774,    lng:     4.045343512838076, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Rijkswaterstaat </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta2: 				{ lat: 51.8281580614774,    lng:     4.045343512838076, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Rijkswaterstaat </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta3: 				{ lat: 51.76504601255858,    lng:    3.8486212125529184, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Brouwersdam </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta4: 				{ lat: 51.76504601255858,    lng:    3.8486212125529184, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Brouwersdam </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta5: 				{ lat: 51.653081384028404,    lng:    3.7210040748517565, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Oosterscheldekering </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta6: 				{ lat: 51.653081384028404,    lng:    3.7210040748517565, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Oosterscheldekering </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PunktPortRotterdam:			{ lat: 51.966841072024984,    lng: 4.130616998688811, name: "<b style='font-size:16px;'> 🇳🇱 Port Rotterdam - Cypel </b><hr> ✦ 2017 🚐", icon: reddiamondSvg },
-      	PunktPortRotterdam:			{ lat: 51.966841072024984,    lng: 4.130616998688811, name: "<b style='font-size:16px;'> 🇳🇱 Port Rotterdam - Cypel </b><hr> ✦ 2017 🚐", icon: reddiamondSvg },
-      	MeijindelBerkheide: 			{ lat: 52.1491,  lng:  4.3468, name: "<b style='font-size:16px;'> 🇳🇱 Meijindel-Berkheide </b><hr> ✦ 2017 🚴", icon: greenDotIcon12 },
-      	GoudaReeuwijksePlassen: 			{ lat: 52.03813,   lng:   4.74644, name: "<b style='font-size:16px;'> 🇳🇱 Reeuwijkse Plassen </b><hr> ✦ 2017 🚴", icon: blueDiamondIcon },
+      	AlphenaandenRijn: 			{ lat: 52.12948376472095,  lng:  4.654451304800907, name: "<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇳🇱 Alphen aan den Rijn </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIcon10 },
+      	Bodegraven: 				{ lat: 52.082159333651255, lng:  4.74362730893762, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Bodegraven </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIconSmall },
+      	NieuwerkerkaandenIJssel: 	{ lat: 51.97457012683037,  lng:  4.618610959215483, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Nieuwerkerk aan den IJssel </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIconSmall },
+      	BerkelenRodenrijs: 			{ lat: 51.99100744215093,  lng:  4.473243448934662, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Berkel en Rodenrijs </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIconSmall },
+      	Pijnacker: 					{ lat: 52.0196521445155,  lng:  4.430926489121697, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Pijnacker </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIconSmall },
+      	Rijswijk: 					{ lat: 52.03789337164388,  lng:   4.323523396622303, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Rijswijk </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIcon10 },
+      	KatwijkaanZee: 				{ lat: 52.19901941710039,   lng:    4.412066133029782, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Katwijk aan Zee </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIconSmall },
+      	Valkenburg: 				{ lat: 52.1795121399701,   lng:    4.433776661758284, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Valkenburg </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIconSmall6 },
+      	Moordrecht: 				{ lat: 51.98700223656093,   lng: 4.667438435835307, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Moordrecht </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIconSmall6 },
+      	Bergschenhoek: 				{ lat: 51.98544755140768,   lng:  4.506218976640839, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Bergschenhoek </b><br>Holandia<hr> ✦ 2017 🚴", icon: redDotIconSmall6 },
+      	Hellevoetsluis: 			{ lat: 51.831837788347876,   lng:   4.1321557376161415, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Hellevoetsluis </b><br>Holandia<hr> ✦ 2017 🚐", icon: redDotIconSmall },
+      	Maeslantkering1: 			{ lat: 51.95474017861898,  lng:   4.164723127451288, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Maeslantkering </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	Maeslantkering2: 			{ lat: 51.95474017861898,  lng:   4.164723127451288, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Maeslantkering </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta1: 				{ lat: 51.8281580614774,    lng:     4.045343512838076, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Rijkswaterstaat </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta2: 				{ lat: 51.8281580614774,    lng:     4.045343512838076, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Rijkswaterstaat </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta3: 				{ lat: 51.76504601255858,    lng:    3.8486212125529184, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Brouwersdam </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta4: 				{ lat: 51.76504601255858,    lng:    3.8486212125529184, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Brouwersdam </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta5: 				{ lat: 51.653081384028404,    lng:    3.7210040748517565, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Oosterscheldekering </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta6: 				{ lat: 51.653081384028404,    lng:    3.7210040748517565, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Oosterscheldekering </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PunktPortRotterdam:			{ lat: 51.966841072024984,    lng: 4.130616998688811, name: "<b style='font-size:16px;'> 🇳🇱 Port Rotterdam - Cypel </b><br>Holandia<hr> ✦ 2017 🚐", icon: reddiamondSvg },
+      	PunktPortRotterdam:			{ lat: 51.966841072024984,    lng: 4.130616998688811, name: "<b style='font-size:16px;'> 🇳🇱 Port Rotterdam - Cypel </b><br>Holandia<hr> ✦ 2017 🚐", icon: reddiamondSvg },
+      	MeijindelBerkheide: 			{ lat: 52.1491,  lng:  4.3468, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Meijindel-Berkheide </b><br>Holandia<hr> ✦ 2017 🚴", icon: DiamondGreen20 },
+      	GoudaReeuwijksePlassen: 			{ lat: 52.03813,   lng:   4.74644, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Reeuwijkse Plassen </b><br>Holandia<hr> ✦ 2017 🚴", icon: DiamondBlue20 },
     // Belgia
       Antwerpia: 			{ lat: 51.21953348587584,    lng:    4.413193834773213, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Antwerpia.png" style="height:60px;">
@@ -1741,9 +1909,9 @@ var iconStyles = {
                             <hr> 🏭 +124m Copenhill - Spalarnia śmieci 
                          	`,
                                  icon: redSquareIcon },
-      Storebaeltsbroen: 	{ lat: 55.33146791586895,    lng:  10.967168270290271,  name: "<b style='font-size:16px;'> 🇩🇰 Storebæltsbroen (Most nad Wielkim Bełtem) </b><hr>✦ 2025 🚗 <hr> most wschodni: 6790m, most zachodni: 6611m", icon: DiamondYellow20 },
-      Oresundsbroen: 		{ lat: 55.5762702508758,    lng:   12.830754923502525,  name: "<b style='font-size:16px;'> 🇩🇰 🇸🇪 Most Øresundsbroen (Most nad Sundem) </b><hr>✦ 2025 🚈 <hr> długość 7845m", icon: DiamondYellow20 },
-      FaroBridge: 			{ lat: 54.95199397234257,   lng:   11.987328001285855,  name: "<b style='font-size:16px;'> 🇩🇰 Mosty Farø  </b><hr>✦ 2025 🚗 <hr> most południowy 1726m, most północny 1596m", icon: DiamondYellow20 },
+      Storebaeltsbroen: 	{ lat: 55.33146791586895,    lng:  10.967168270290271,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Storebæltsbroen </b><br>(Most nad Wielkim Bełtem) </b><br>Dania/Szwecja<hr>✦ 2025 🚗 <hr> most wschodni: 6790m <br>most zachodni: 6611m", icon: DiamondYellow20 },
+      Oresundsbroen: 		{ lat: 55.5762702508758,    lng:   12.830754923502525,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 🇸🇪 Most Øresundsbroen </b><br>(Most nad Sundem) </b><br>Dania<hr>✦ 2025 🚈 <hr> długość 7845m", icon: DiamondYellow20 },
+      FaroBridge: 			{ lat: 54.95199397234257,   lng:   11.987328001285855,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Mosty Farø  </b><br>Dania<hr>✦ 2025 🚗 <hr> most południowy 1726m <br> most północny 1596m", icon: DiamondYellow20 },
                                                      
     // Szwecja                                             
       	Malmo: 				{ lat: 55.60446515188319,  lng:   13.00323203593924, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
@@ -1849,7 +2017,7 @@ var iconStyles = {
     // Finlandia
       Helsinki: 			{ lat: 60.171506115152745,  lng: 24.94547718707506, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/1024px-Helsinki.vaakuna.svg.png" style="height:60px;">
-                                <br><b style='font-size:20px;'> 🇫🇮 Helsinki </b><br>Estonia</div>
+                                <br><b style='font-size:20px;'> 🇫🇮 Helsinki </b><br>Finlandia</div>
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
       						<div>
@@ -1873,12 +2041,12 @@ var iconStyles = {
 								<br><b style='font-size:20px;'> 🇬🇪 Tbilisi </b><br>Gruzja</div>
 								<hr> ✦ 2019 ✈️|🚙 
 								<hr> ✈️ TBS - Port lotniczy Tbilisi`, icon: redDotIconMedium },
-      Stepancminda: 		{ lat: 42.6584380561762,  lng: 44.64001015614895, name: "<b style='font-size:16px;'> 🇬🇪 Stepancminda </b><hr> ✦ 2019 🚙", icon: redDotIcon10 },
+      Stepancminda: 		{ lat: 42.6584380561762,  lng: 44.64001015614895, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Stepancminda </b><br>Gruzja<hr> ✦ 2019 🚙", icon: redDotIcon10 },
       Gori: 				{ lat: 41.983119766166766,  lng:  44.11141551921698, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/1024px-Coat_of_Arms_of_Gori%2C_Georgia2.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇬🇪 Gori </b><br>Gruzja</div>
 								<hr> ✦ 2019 🚙`, icon: redDotIcon },
-      Uplisciche: 			{ lat: 41.96702156922869, lng:  44.2079247638874, name: "<b style='font-size:16px;'> 🇬🇪 Uplisciche </b><hr> ✦ 2019 🚙", icon: redDotIconSmall6 },
+      Uplisciche: 			{ lat: 41.96702156922869, lng:  44.2079247638874, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Uplisciche </b><br>Gruzja<hr> ✦ 2019 🚙", icon: redDotIconSmall6 },
       Cziatura: 			{ lat: 42.29036407984594,  lng:  43.28127913448995, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Chiatura2.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇬🇪 Cziatura </b><br>Gruzja</div>
@@ -1887,9 +2055,9 @@ var iconStyles = {
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/800px-COA_of_Kutaisi.svg2.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇬🇪 Kutaisi </b><br>Gruzja</div>
 								<hr> ✦ 2019 🚙`, icon: redDotIconsurplus },
-      Lentekhi: 			{ lat: 42.79352879989975,  lng:  42.71808705950475, name: "<b style='font-size:16px;'> 🇬🇪 Lentekhi </b><hr> ✦ 2019 🚙", icon: redDotIconSmall },
-      Ushguli: 				{ lat: 42.91855828469146,  lng:  43.014994079052585, name: "<b style='font-size:16px;'> 🇬🇪 Ushguli </b><hr> ✦ 2019 🚙", icon: redDotIconSmall },
-      Mestia: 				{ lat: 43.03876704827137, lng:  42.69484691192588, name: "<b style='font-size:16px;'> 🇬🇪 Mestia </b><hr> ✦ 2019 🚙", icon: redDotIconSmall },
+      Lentekhi: 			{ lat: 42.79352879989975,  lng:  42.71808705950475, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Lentekhi </b><br>Gruzja<hr> ✦ 2019 🚙", icon: redDotIconSmall },
+      Ushguli: 				{ lat: 42.91855828469146,  lng:  43.014994079052585, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Ushguli </b><br>Gruzja<hr> ✦ 2019 🚙 <hr> Odizolowane Miasto Górskie <br> UNESCO", icon: redDotIconSmall },
+      Mestia: 				{ lat: 43.03876704827137, lng:  42.69484691192588, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Mestia </b><br>Gruzja<hr> ✦ 2019 🚙", icon: redDotIconSmall },
       Poti: 				{ lat: 42.141917296489446,  lng:  41.67300057052651, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Poti_COA1.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇬🇪 Poti </b><br>Gruzja</div>
@@ -1902,18 +2070,18 @@ var iconStyles = {
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Coat_of_Arms_of_Akhaltsikhe.svg2.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇬🇪 Achalciche </b><br>Gruzja</div>
 								<hr> ✦ 2019 🚙`, icon: redDotIconSmall },
-      Wardzia: 				{ lat: 41.381187923835135,  lng:  43.28461177692177, name: "<b style='font-size:16px;'> 🇬🇪 Wardzia </b><hr> ✦ 2019 🚙", icon: redDotIconSmall6 },
-      Khorsair: 				{ lat: 42.54690353079207,  lng:  44.4087756327461, name: "<b style='font-size:16px;'> 🇬🇪 Khorsair 🔺 3733m </b> <hr>✦ 2019 🚶", icon: triangleSvg },
-      Karetta: 					{ lat: 42.97588594587021, lng: 43.04677646485326, name: "<b style='font-size:16px;'> 🇬🇪 Karetta 🔺 3524m </b> <hr>✦ 2019 🚶", icon: triangleSvg },
-      Koruldi: 					{ lat: 43.09903125926643, lng: 42.69218548938973, name: "<b style='font-size:16px;'> 🇬🇪 Koruldi 🔺 3328m </b> <hr>✦ 2019 🚶", icon: triangleSvg },
-      KarisKedi: 				{ lat: 42.663367287899455,  lng:  44.581486771595095, name: "<b style='font-size:16px;'> 🇬🇪 Karis Kedi 🔺 2885m </b> <hr>✦ 2019 🚶", icon: triangleSvg },
-      LentekhiUszguli: 			{ lat: 42.91609070911033,  lng:  43.100306497085114, name: "<b style='font-size:16px;'> 🇬🇪 Zaragi Lentekhi - Uszguli 🔻 2555m </b><hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
-      DżwrisugheltechiliPrzełKrzyżowa: 	{ lat: 42.50534414432951,  lng:  44.45258977387741, name: "<b style='font-size:16px;'> 🇬🇪 Dżwris ugheltechili (Przeł. Krzyżowa) 🔻 2379m </b><hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
-      CmindaSameba: 			{ lat: 42.66243800793211,  lng:  44.61972523180962, name: "<b style='font-size:16px;'> 🇬🇪 Cminda Sameba 🔺 2170m </b> <hr>✦ 2019 🚶", icon: triangleSvg },
-      ParavaniWardziaTbilisi: 	{ lat: 41.434649572625055,  lng:  43.8392373364696, name: "<b style='font-size:16px;'> 🇬🇪 Paravani (Wardzia-Tbilisi) 🔻 2160m </b><hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
-      GoderdziBatumiAchalciche: { lat: 41.63036080814704,  lng:  42.282315692702724, name: "<b style='font-size:16px;'> 🇬🇪 Goderdzi (Batumi-Achalciche) 🔻 2027m </b><hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
-      Lentekhi: 				{ lat: 42.79081729693146,  lng:  42.718540053949, name: "<b style='font-size:16px;'> 🇬🇪 Lentekhi 🔺 850m </b> <hr>✦ 2019 🚶>", icon: triangleSvg },
-      GudauriViewPoint: 		{ lat: 42.49223279350445, lng: 44.452362665375006, name: "<b style='font-size:16px;'> 🇬🇪 Gudauri View Point 2384m </b><hr>✦ 2019 🚙", icon: reddiamondSvg },
+      Wardzia: 				{ lat: 41.381187923835135,  lng:  43.28461177692177, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Wardzia </b><br>Gruzja<hr> ✦ 2019 🚙", icon: redDotIconSmall6 },
+      Khorsair: 				{ lat: 42.54690353079207,  lng:  44.4087756327461, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Khorsair 🔺 3733m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
+      Karetta: 					{ lat: 42.97588594587021, lng: 43.04677646485326, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Karetta 🔺 3524m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
+      Koruldi: 					{ lat: 43.09903125926643, lng: 42.69218548938973, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Koruldi 🔺 3328m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
+      KarisKedi: 				{ lat: 42.663367287899455,  lng:  44.581486771595095, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Karis Kedi 🔺 2885m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
+      LentekhiUszguli: 			{ lat: 42.91609070911033,  lng:  43.100306497085114, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Zaragi Lentekhi - Uszguli 🔻 2555m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
+      DżwrisugheltechiliPrzełKrzyżowa: 	{ lat: 42.50534414432951,  lng:  44.45258977387741, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Dżwris ugheltechili (Przeł. Krzyżowa) 🔻 2379m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
+      CmindaSameba: 			{ lat: 42.66243800793211,  lng:  44.61972523180962, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Cminda Sameba 🔺 2170m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
+      ParavaniWardziaTbilisi: 	{ lat: 41.434649572625055,  lng:  43.8392373364696, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Paravani (Wardzia-Tbilisi) 🔻 2160m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
+      GoderdziBatumiAchalciche: { lat: 41.63036080814704,  lng:  42.282315692702724, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Goderdzi (Batumi-Achalciche) 🔻 2027m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
+      Lentekhi: 				{ lat: 42.79081729693146,  lng:  42.718540053949, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Lentekhi 🔺 850m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
+      GudauriViewPoint: 		{ lat: 42.49223279350445, lng: 44.452362665375006, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Gudauri View Point 2384m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: reddiamondSvg },
       
       X1: 					{ lat: 0.0001, lng: 0.0001, name: "<b style='font-size:16px;'> 🇬🇪 XXXXXXXXX </b>", icon: redDotIconSmall },
       X1: 					{ lat: 0.0001, lng: 0.0001, name: "<b style='font-size:16px;'> 🇬🇪 XXXXXXXXX </b>", icon: redDotIconSmall },
@@ -1960,14 +2128,14 @@ var iconStyles = {
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Flag_of_Fujikawaguchiko_Yamanashi.JPG" style="height:50px;">
 								<br><b style='font-size:20px;'> 🇯🇵 Fujikawaguchiko </b><br>Japonia, Kanto</div>
 								<hr> ✦ 2014 🚄⭢🚝`, icon: redDotIcon10 },
-      	Jeziorokawaguchiko: 	{ lat: 35.51680221508688,  lng:   138.760005523355, name: "<b style='font-size:16px;'> 🇯🇵 Jezioro Kawaguchiko </b><hr> ✦ 2014 🚄⭢🚝", icon: blueDiamondIcon },
-      	Fujiyoshida: 			{ lat: 35.48437044604461,  lng: 138.79982743790677, name: "<b style='font-size:16px;'> 🇯🇵 Fujiyoshida </b><hr> ✦ 2014 🚶", icon: redDotIcon10 },       
-      	ArakurayamaSengenPark: 	{ lat: 35.50222932944393,  lng:  138.8016784133814, name: "<b style='font-size:16px;'> 🇯🇵 Arakurayama Sengen </b><hr> ✦ 2014 🚶", icon: greenDotIcon },       
-      	KawaguchikoTenjoyamaPark: 	{ lat: 35.50674580968137,  lng:  138.77993086936314, name: "<b style='font-size:16px;'> 🇯🇵 Kawaguchiko Tenjoyama Park </b><hr> ✦ 2014 🚶", icon: greenDotIcon },
-      	TakedaShingenWarringStatesPlazaPicturesqueLookout: { lat: 35.50399987480349,  lng: 138.77858569027, name: "<b style='font-size:16px;'> 🇯🇵 Takeda Shingen - Platforma widokowa </b><hr> ✦ 2014 🚶", icon: reddiamondSvg },
-      	Tenjo: 					{ lat: 35.50350641819735,  lng:  138.78105859387588, name: "<b style='font-size:16px;'> 🇯🇵 Tenjo 🔺 1104m </b><hr>✦ 2014 🚠⭢🚶|🚶", icon: triangleSvg },       
-      	ChureitoPagoda: 		{ lat: 35.50136852250246,  lng:  138.80201905135175, name: "<b style='font-size:16px;'> 🇯🇵 Chureito Pagoda <br><hr> ✦ 2014 🚶", icon: reddiamondSvg },       
-      	Fudżi: 					{ lat: 35.363235295607424,  lng:  138.73351804131997, name: "<b style='font-size:16px;'> 🇯🇵 Fudżi 🔺 <hr> </b> Tylko widok: - z samolotu, ze szczytu Tenjo, Z Roppongi Hills, z wieżowca siedziby rządu Japonii, z Pagody Chureito", icon: triangleSvg },       
+      	Jeziorokawaguchiko: 	{ lat: 35.51680221508688,  lng:   138.760005523355, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Jezioro Kawaguchiko </b><br>Japonia, Chubu<hr> ✦ 2014 🚄⭢🚝", icon: DiamondBlue20 },
+      	Fujiyoshida: 			{ lat: 35.48437044604461,  lng: 138.79982743790677, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Fujiyoshida </b><br>Japonia, Chubu<hr> ✦ 2014 🚶", icon: redDotIcon10 },       
+      	ArakurayamaSengenPark: 	{ lat: 35.50222932944393,  lng:  138.8016784133814, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Arakurayama Sengen </b><br>Japonia, Chubu<hr> ✦ 2014 🚶", icon: DiamondGreen15 },       
+      	KawaguchikoTenjoyamaPark: 	{ lat: 35.50674580968137,  lng:  138.77993086936314, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Kawaguchiko Tenjoyama Park </b><br>Japonia, Chubu<hr> ✦ 2014 🚶", icon: DiamondGreen15 },
+      	TakedaShingenWarringStatesPlazaPicturesqueLookout: { lat: 35.50399987480349,  lng: 138.77858569027, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Takeda Shingen - Platforma widokowa </b><br>Alpy Japońskie<hr> ✦ 2014 🚶", icon: reddiamondSvg },
+      	Tenjo: 					{ lat: 35.50350641819735,  lng:  138.78105859387588, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Tenjo 🔺 1104m </b><br>Alpy Japońskie<hr>✦ 2014 🚠⭢🚶|🚶", icon: triangleSvg },       
+      	ChureitoPagoda: 		{ lat: 35.50136852250246,  lng:  138.80201905135175, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Chureito Pagoda <br><br>Alpy Japońskie<hr> ✦ 2014 🚶", icon: reddiamondSvg },       
+      	Fudżi: 					{ lat: 35.363235295607424,  lng:  138.73351804131997, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Fudżi 🔺 <hr> </b> Tylko widok: - z samolotu, ze szczytu Tenjo, Z Roppongi Hills, z wieżowca siedziby rządu Japonii, z Pagody Chureito", icon: triangleSvg },       
       	Jokohama: 				{ lat: 35.444401044697,  lng: 139.63835124658638, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Flag_of_Yokohama%2C_Kanagawa.svg.png" style="height:50px;">
 								<br><b style='font-size:20px;'> 🇯🇵 Jokohama </b><br>Japonia, Kanto</div>
@@ -2076,8 +2244,8 @@ var iconStyles = {
 								`, icon: redSquareIcon30 },
       	NiagaraFallsCAN:		{ lat: 43.08956827967048,  lng:  -79.0840708763807, name: "<b style='font-size:16px;'> 🇨🇦 Niagara Falls (ON) </b><hr>✦ 2018 🚌⭢🚶", icon: redDotIcon },	
       	NiagaraFallsUSA:		{ lat: 43.087314553728724,  lng:  -79.065743540454, name: "<b style='font-size:16px;'> 🇺🇸 Niagara Falls (NY) </b><hr>✦ 2018 🚌⭢🚶", icon: redDotIcon },
-      	WodospadNiagara1: 		{ lat: 43.07727186155516,  lng:  -79.07520172935627,  name: "<b style='font-size:16px;'> 🇨🇦🇺🇸 Wodospad Niagara </b><hr>✦ 2018 🚌⭢🚶", icon: blueDiamondIconEMOJI1 },
-      	WodospadNiagara2: 		{ lat: 43.07727186155516,  lng:  -79.07520172935627, name: "<b style='font-size:16px;'> 🇨🇦🇺🇸 Wodospad Niagara </b><hr>✦ 2018 🚌⭢🚶", icon: blueDiamondIconEMOJI2 },
+      	WodospadNiagara1: 		{ lat: 43.07727186155516,  lng:  -79.07520172935627,  name: "<b style='font-size:16px;'> 🇨🇦🇺🇸 Wodospad Niagara </b><hr>✦ 2018 🚌⭢🚶", icon: DiamondBlue20 },
+      	WodospadNiagara2: 		{ lat: 43.07727186155516,  lng:  -79.07520172935627, name: "<b style='font-size:16px;'> 🇨🇦🇺🇸 Wodospad Niagara </b><hr>✦ 2018 🚌⭢🚶", icon: DiamondBlue20 },
       	jezMichigan: 			{ lat: 42.43889022688123,  lng: -87.05264261145041, name: "<b style='font-size:16px;'> 🇺🇸 jez. Michigan </b><hr>✦ 2018 🚌", icon: blueDiamondIcon },
       	jezOntario: 			{ lat: 43.599365741652115,   lng:  -78.7034655588464, name: "<b style='font-size:16px;'> 🇨🇦🇺🇸  jez. Ontario </b><hr>✦ 2018 ✈️⭢🚶⭢🚢", icon: blueDiamondIcon },
       
@@ -2106,12 +2274,12 @@ var iconStyles = {
       	GenerałScherman: 		{ lat: 36.58171231574503,  lng:  -118.75144269503541, name: "<b style='font-size:16px;'> 🇺🇸 Sekwoja Generał Scherman </b><hr>✦ 2022 🚶", icon: DiamondGreen20 },
       	SekwojaSentinel: 		{ lat: 36.56492029804388,  lng:  -118.77307672805036, name: "<b style='font-size:16px;'> 🇺🇸 Sekwoja Sentinel </b><hr>✦ 2022 🚶", icon: DiamondGreen20 },
       	SzlakWielkichdrzew: 	{ lat: 36.567907623273946,  lng:  -118.76832882725472, name: "<b style='font-size:16px;'> 🇺🇸 Szlak Wielkich Drzew </b><hr>✦ 2022 🚶", icon: DiamondGreen20 },
-      	WodospadNSierraNevada1: { lat: 37.724887529359265,   lng:   -119.53309304907377,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Nevada 1820m </b><br> (181m)<hr>✦ 2022 🚶", icon: blueDiamondIconEMOJI1 },
-      	WodospadNSierraNevada2: { lat: 37.724887529359265,   lng:   -119.53309304907377,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Nevada 1820m </b><br> (181m)<hr>✦ 2022 🚶", icon: blueDiamondIconEMOJI2 },
-      	WodospadVernal1: 		{ lat: 37.727526324826925,   lng:  -119.54405298727045,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Vernal 1545m </b><br> (94m) <hr>✦ 2022 🚶", icon: blueDiamondIconEMOJI1 },
-      	WodospadVernal2: 		{ lat: 37.727526324826925,   lng:  -119.54405298727045, name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Vernal 1545m </b><br> (94m) <hr>✦ 2022 🚶", icon: blueDiamondIconEMOJI2 },
-      	WodospadYosemite1: 		{ lat: 37.75668348043851,   lng:   -119.59713204379601,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Yosemite 2080m </b><br>(440 + 206 + 98m) <hr>✦ 2022 🚶", icon: blueDiamondIconEMOJI1 },
-      	WodospadYosemite2: 		{ lat: 37.75668348043851,   lng:   -119.59713204379601, name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Yosemite 2080m </b><br>(440 + 206 + 98m)  <hr>✦ 2022 🚶", icon: blueDiamondIconEMOJI2 },
+      	WodospadNSierraNevada1: { lat: 37.724887529359265,   lng:   -119.53309304907377,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Nevada 1820m </b><br> (181m)<hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadNSierraNevada2: { lat: 37.724887529359265,   lng:   -119.53309304907377,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Nevada 1820m </b><br> (181m)<hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadVernal1: 		{ lat: 37.727526324826925,   lng:  -119.54405298727045,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Vernal 1545m </b><br> (94m) <hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadVernal2: 		{ lat: 37.727526324826925,   lng:  -119.54405298727045, name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Vernal 1545m </b><br> (94m) <hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadYosemite1: 		{ lat: 37.75668348043851,   lng:   -119.59713204379601,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Yosemite 2080m </b><br>(440 + 206 + 98m) <hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadYosemite2: 		{ lat: 37.75668348043851,   lng:   -119.59713204379601, name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Yosemite 2080m </b><br>(440 + 206 + 98m)  <hr>✦ 2022 🚶", icon: DiamondBlue20 },
       	TwinPeaks1: 			{ lat: 37.75459248240934, lng:  -122.44696850839989, name: "<b style='font-size:16px;'> 🇺🇸 Twin Peaks (płn) 🔺 271m </b><hr>✦ 2022 🚗⭢🚶", icon: triangleSvg },
       	TwinPeaks2: 			{ lat: 37.75141027708702,  lng:  -122.4480916966929, name: "<b style='font-size:16px;'> 🇺🇸 Twin Peaks (płd) 🔺 274m </b><hr>✦ 2022 🚗⭢🚶", icon: triangleSvg },
       	HawkHill: 				{ lat: 37.82580597193453,  lng: -122.49827810025083, name: "<b style='font-size:16px;'> 🇺🇸 Hawk Hill 🔺 281m </b><hr>✦ 2022 🚴", icon: triangleSvg },
@@ -2167,7 +2335,7 @@ var iconStyles = {
 								<hr>✦ 2023 ✈️⭢🚗 <br>✦ 2022 ✈️⭢🚗 <hr><p style='text-align: justify; margin: 0'> Piramida | Rzeka Mississippi | Park Makieta Mississippi </p> <hr>🏢 +98m  Memphis Pyramid `, icon: redDotIconMedium },   // Memphis, USA
 		// Denver
         RedRockPark: 			{ lat: 39.665368, lng: -105.205754, name: "<b style='font-size:16px;'> 🇺🇸 Red Rock Park </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Red Rock Park
-        TunelEisehowera: 		{ lat: 39.67894, lng: -105.92024, name: "<b style='font-size:16px;'> 🇺🇸 Tunel Eisehowera </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Tunel Eisehowera
+        TunelEisehowera: 		{ lat: 39.67894, lng: -105.92024, name: "<b style='font-size:16px;'> 🇺🇸 Tunel Eisehowera </b><hr>✦ 2023 🚙", icon: DiamondYellow20 }, // Tunel Eisehowera
         SilverthorneHW: 		{ lat: 39.601720, lng: -106.088877, name: "<b style='font-size:16px;'> 🇺🇸 Silverthorne HW </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Silverthorne HW
       	// Canyonlands
         GrandViewPoint: 		{ lat: 38.30341, lng: -109.86774, name: "<b style='font-size:16px;'> 🇺🇸 Grand View Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Grand View Point
@@ -2220,9 +2388,9 @@ var iconStyles = {
         ParkNarodowyCanyonlands:{ lat: 38.33344, lng: -109.82260, name: "<b style='font-size:16px;'> 🇺🇸 Park Narodowy Canyonlands </b><hr>✦ 2023 🚙", icon: greenDotIcon12 }, // Park Narodowy Canyonlands
         DolinaŚmierci: 			{ lat: 36.1501, lng: -116.9234, name: "<b style='font-size:16px;'> 🇺🇸 Dolina Śmierci </b><hr>✦ 2023 🚙", icon: greenDotIcon12 }, // Dolina Śmierci
         WielkiKanionColorado: 	{ lat: 36.0785, lng: -111.9665, name: "<b style='font-size:16px;'> 🇺🇸 Wielki Kanion Colorado </b><hr>✦ 2023 🚙", icon: greenDotIcon12 }, // Wielki Kanion Colorado
-        Page: 					{ lat: 36.9147, lng: -111.4558, name: "<b style='font-size:16px;'> 🇺🇸 Page </b><hr>✦ 2023 🚙", icon: redDotIcon }, // Page
-        Moab: 					{ lat: 38.5733, lng: -109.5498, name: "<b style='font-size:16px;'> 🇺🇸 Moab </b><hr>✦ 2023 🚙", icon: redDotIcon }, // Moab
-       	FurnaceCreek: 			{ lat: 36.46066, lng: -116.86664, name: "<b style='font-size:16px;'> 🇺🇸 Furnace Creek </b><hr>✦ 2023 🚙", icon: redDotIcon10 }, // Furnace Creek
+        Page: 					{ lat: 36.9147, lng: -111.4558, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Page </b><br>USA, Arizona<hr>✦ 2023 🚙", icon: redDotIcon }, // Page
+        Moab: 					{ lat: 38.5733, lng: -109.5498, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Moab </b><br>USA, Utah<hr>✦ 2023 🚙", icon: redDotIcon }, // Moab
+       	FurnaceCreek: 			{ lat: 36.46066, lng: -116.86664, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Furnace Creek </b><br>USA, California<hr>✦ 2023 🚙", icon: redDotIcon10 }, // Furnace Creek
         Collierville: 			{ lat: 35.0402, lng: -89.7085, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Seal_of_Collierville%2C_Tennessee.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇺🇸 Collierville </b><br>Tennessee</div>
@@ -2231,11 +2399,9 @@ var iconStyles = {
         // Los Angeles
         ObserwatoriumGriffitha: {lat: 34.11823149555428, lng: -118.30036603860084, name: "<b style='font-size:16px;'> 🇺🇸 Obserwatorium Griffitha </b><hr>✦ 2023 🚗 <br>✦ 2022 🚶 ", icon: reddiamondSvg },
        
-       
-       	// Budapeszt Grundfos
       	 
     // Afryka
-	// BUDOWY ENVIROTECH
+	// BUDOWY 
       GrudziądzSzpitalPsychiatryczny: 					{ lat: 53.45418342503643,  lng:  18.786015587982646, name: "<b style='font-size:16px;'> 2013 Grudziądz - Szpital Psychiatryczny </b>", icon: redDotIcon },
       KotuńSUW: 										{ lat: 52.17029316579377,  lng:  22.050563085542482, name: "<b style='font-size:16px;'> 2014 Kotuń - SUW </b>", icon: redDotIcon },
       BrzezinyOczyszczalniaścieków: 					{ lat: 51.82321655773426,  lng:  19.75442272498276, name: "<b style='font-size:16px;'> 2014 Brzeziny - Oczyszczalnia ścieków </b>", icon: redDotIcon },
@@ -2270,8 +2436,8 @@ var iconStyles = {
         
 //Wszystkie POLSKIE MIASTA KRZYSZTOF do 2023r.
 LotniskoPoznań:					{ lat: 52.41658346495391,  lng:  16.828782279341983, name: `<p style='text-align: center; margin: 0'>
-        						<img src="" style="height:0px;">
-                                <b style='font-size:32px;'>POZ ️🇵🇱 </b><br> Port Lotniczy im. Henryka Wieniawskiego </b>
+        						<img src="" style="width:0px;">
+                                <b style='font-size:32px;'>POZ ️🇵🇱 </b><br> Port Lotniczy Poznań–Ławica <br> im. Henryka Wieniawskiego </b>
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
@@ -2665,7 +2831,18 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
                                 <br><b style='font-size:20px;'> 🇵🇱 Park Narodowy Gór Stołowych </b><br>Polska, woj. Dolnośląskie </div> 
                                 <hr>✦ 2018 🚗<br>✦ 2010 🚴<br>✦ 199X 🚌
 								`, icon: greenDotIcon12 },	
-
+ŚwiętokrzyskiParkNarodowy:		{ lat: 50.897335041687015,  lng:   20.950004827054377, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
+        						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Swietokrzyski_Park_Narodowy.svg/1024px-Swietokrzyski_Park_Narodowy.svg.png" style="height:60px;">
+                                <br><b style='font-size:20px;'> 🇵🇱 Świętokrzyski Park Narodowy </b><br>Polska, woj. Świętokrzyskie </div> 
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->-
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->✦ 2012 🚗
+								</div>
+								`, icon: greenDotIcon12 },
 								
 
 //PO wojeództwo WIELKOPOLSKIE
@@ -2999,7 +3176,7 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/POL_Pi%C5%82a_COA_1.svg/800px-POL_Pi%C5%82a_COA_1.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Piła </b><br>Polska, woj. Wielkopolskie</div>
                                 <hr> ✦ 2023 🚴 <br>✦ 2022 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2021 🚴 <br>✦ 2020 🚴 <br>✦ 2019 🚴 <br>✦ 2018 🚴 <br>✦ 2017 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2013 🚴<b style='font-size:10px;'>x2</b> <hr> Park na wyspie | Rezerwat Kuźnik `, icon: redDotIcon },
-      		RezerwatKuźnik: 	{ lat: 53.19647, lng: 16.74385, name: "<b style='font-size:16px;'> 🇵🇱 Rezerwat Kuźnik", icon: greenDotIcon },
+      		RezerwatKuźnik: 	{ lat: 53.19647, lng: 16.74385, name: "<b style='font-size:16px;'> 🇵🇱 Rezerwat Kuźnik", icon: DiamondGreen20 },
       	Kaczory: 				{ lat: 53.10206808871952, lng: 16.883706371180725, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/POL_gmina_Kaczory_COA_1.svg/800px-POL_gmina_Kaczory_COA_1.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Kaczory</b><br>Polska, woj. Wielkopolskie
@@ -4864,7 +5041,10 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
                                 <br><b style='font-size:20px;'> 🇵🇱 Legnica </b><br>Polska, woj. Dolnośląskie</div>
                                 <hr>✦ 2019 🚗`, icon: redDotIconsurplus },
       	// lubański	Lubań	Świeradów-Zdr.	Leśna	Olszyna								Platerówka	Siekierczyn
-      	ŚwieradówZdr: 			{ lat: 50.90833411533097,  lng:  15.343255733928977, name: "<b style='font-size:16px;'> 🇵🇱 Świeradów-Zdrój </b><hr>✦ 2022 🚗", icon: redDotIconSmall },
+      	ŚwieradówZdr: 			{ lat: 50.90833411533097,  lng:  15.343255733928977, name: `<p style='text-align: center; margin: 0'>
+								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/POL_%C5%9Awierad%C3%B3w-Zdr%C3%B3j_COA.svg/800px-POL_%C5%9Awierad%C3%B3w-Zdr%C3%B3j_COA.svg.png" style="height:60px;">
+								<br><b style='font-size:18px;'> 🇵🇱 Świeradów-Zdrój</b><br>Polska, woj. Dolnośląskie
+								<hr>✦ 2022 🚗`, icon: redDotIconSmall },
       	// lwówecki	Lwówek Śl.	Gryfów Śl.	Lubomierz	Mirsk	Wleń							-
 		// milicki	Milicz											Cieszków	Krośnice
 		// oleśnicki	Oleśnica	Bierutów	Międzybórz	Syców	Twardogóra							Dobroszyce	Dziadowa Kłoda
@@ -5953,8 +6133,8 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
       	Rakoń: 						{ lat: 49.21607064856034, lng:  19.75786442241442, name: "<b style='font-size:16px;'>🇵🇱 Rakoń 🔺 1897m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },  
       	ŚwistowaCzuba: 				{ lat: 49.21639551622798, lng: 20.057403641540237, name: "<b style='font-size:16px;'>🇵🇱 Świstowa Czuba 🔺 1763m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
       	Grześ: 						{ lat: 49.2366663312331,  lng:  19.766404978940873, name: "<b style='font-size:16px;'>🇵🇱 Grześ 🔺 1653m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },  
-      	CzarnyStawpodRysami: 		{ lat: 49.19035852552018, lng: 20.073626980652072, name: "<b style='font-size:16px;'>🇵🇱 Czarny Staw pod Rysami 1583m  </b><hr>✦ 2021 🚶 <br> ✦ 2000 🚶 ", icon: blueDiamondIcon10 },
-      	MorskieOko: 				{ lat: 49.19997241592262,  lng: 20.071685349841175, name: "<b style='font-size:16px;'>🇵🇱 Morskie Oko 1395m  </b><hr> ✦ 2022 🚶 <br> ✦ 2021 🚶<br> ✦ 2000 🚶", icon: blueDiamondIcon10 },  
+      	CzarnyStawpodRysami: 		{ lat: 49.19035852552018, lng: 20.073626980652072, name: "<b style='font-size:16px;'>🇵🇱 Czarny Staw pod Rysami 1583m  </b><hr>✦ 2021 🚶 <br> ✦ 2000 🚶 ", icon: DiamondBlue15 },
+      	MorskieOko: 				{ lat: 49.19997241592262,  lng: 20.071685349841175, name: "<b style='font-size:16px;'>🇵🇱 Morskie Oko 1395m  </b><hr> ✦ 2022 🚶 <br> ✦ 2021 🚶<br> ✦ 2000 🚶", icon: DiamondBlue15 },  
       	Gubałówka: 					{ lat: 49.306650426702554,  lng:  19.933081684032395, name: "<b style='font-size:16px;'>🇵🇱 Gubałówka 🔺 1129m  </b><hr> ✦ 2003 🚞 ", icon: triangleSvg },
       	JaskiniaBielska: 			{ lat: 49.22944301449738,  lng:20.308943196710345, name: "<b style='font-size:16px;'>🇸🇰 Jaskinia Bielska 🔶 1002m </b><hr> ✦ 2022 🚶 ", icon: reddiamondSvg },  
       
@@ -5988,16 +6168,16 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
       	MalýŠpičák684: 				{ lat: 50.745771703756446, lng: 15.290275894563068, name: "<b style='font-size:16px;'> 🇨🇿 Malý Špičák 🔺 684m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
       	Polskiewrota660: 			{ lat: 50.3984221888442,  lng:  16.34989406492238, name: "<b style='font-size:16px;'> 🇵🇱 Polskie Wrota 🔻 660m </b><hr> ✦ 2010 🚴 ", icon: upsideDownTriangleSvg },
       	
-      	WodospadSzklarki: 			{ lat: 50.83022176402639,  lng: 15.556769568631712, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Szklarki </b><hr> ✦ 1993 🚶 ", icon: blueDiamondIconEMOJI1 },
-      	WodospadSzklarki2: 			{ lat: 50.83022176402639,  lng: 15.556769568631712, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Szklarki </b><hr> ✦ 1993 🚶 ", icon: blueDiamondIconEMOJI2 },
-      	WodospadKaAmieńczyka: 		{ lat: 50.81375655290148,  lng:  15.496924800613105, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Kamieńczyka  </b><hr> ✦ 2023 🚶❄️ ", icon: blueDiamondIconEMOJI1 },
-      	WodospadKaAmieńczyka2: 		{ lat: 50.81375655290148,  lng:  15.496924800613105, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Kamieńczyka  </b><hr> ✦ 2023 🚶❄️ ", icon: blueDiamondIconEMOJI2 },
-      	WodospadWilczki: 			{ lat: 50.2294567633266, lng:  16.76078886051144, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Wilczki 🔺 1281m </b><hr> ✦ 2021 🚶 ", icon: blueDiamondIconEMOJI1 },
-      	WodospadWilczki2: 			{ lat: 50.2294567633266, lng:  16.76078886051144, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Wilczki 🔺 1281m </b><hr> ✦ 2021 🚶 ", icon: blueDiamondIconEMOJI2 },
-      	Mumlavskyvodopád: 			{ lat: 50.77113639974774,  lng:  15.453356775933797, name: "<b style='font-size:16px;'> 🇨🇿 Mumlavský vodopád </b><hr> ✦ 2022 🚶 ", icon: blueDiamondIconEMOJI1 },
-      	Mumlavskyvodopád2: 			{ lat: 50.77113639974774,  lng:  15.453356775933797, name: "<b style='font-size:16px;'> 🇨🇿 Mumlavský vodopád </b><hr> ✦ 2022 🚶 ", icon: blueDiamondIconEMOJI2 },
-      	WodospadPanczawski: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: blueDiamondIconEMOJI1 },
-      	WodospadPanczawski2: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: blueDiamondIconEMOJI2 },
+      	WodospadSzklarki: 			{ lat: 50.83022176402639,  lng: 15.556769568631712, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Szklarki </b><hr> ✦ 1993 🚶 ", icon: DiamondBlue15 },
+      	WodospadSzklarki2: 			{ lat: 50.83022176402639,  lng: 15.556769568631712, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Szklarki </b><hr> ✦ 1993 🚶 ", icon: DiamondBlue15 },
+      	WodospadKaAmieńczyka: 		{ lat: 50.81375655290148,  lng:  15.496924800613105, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Kamieńczyka  </b><hr> ✦ 2023 🚶❄️ ", icon: DiamondBlue15 },
+      	WodospadKaAmieńczyka2: 		{ lat: 50.81375655290148,  lng:  15.496924800613105, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Kamieńczyka  </b><hr> ✦ 2023 🚶❄️ ", icon: DiamondBlue15 },
+      	WodospadWilczki: 			{ lat: 50.2294567633266, lng:  16.76078886051144, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Wilczki 🔺 1281m </b><hr> ✦ 2021 🚶 ", icon: DiamondBlue15 },
+      	WodospadWilczki2: 			{ lat: 50.2294567633266, lng:  16.76078886051144, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Wilczki 🔺 1281m </b><hr> ✦ 2021 🚶 ", icon: DiamondBlue15 },
+      	Mumlavskyvodopád: 			{ lat: 50.77113639974774,  lng:  15.453356775933797, name: "<b style='font-size:16px;'> 🇨🇿 Mumlavský vodopád </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
+      	Mumlavskyvodopád2: 			{ lat: 50.77113639974774,  lng:  15.453356775933797, name: "<b style='font-size:16px;'> 🇨🇿 Mumlavský vodopád </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
+      	WodospadPanczawski: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
+      	WodospadPanczawski2: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
       	SkyBridge721: 				{ lat: 50.15151971448964,   lng:    16.833623084907202, name: "<b style='font-size:16px;'> 🇨🇿 Sky Bridge 721 🔶 </b><hr> ✦ 2022 🚶 ", icon: DiamondYellow20 },
       	Střmen630m:					{ lat: 50.5941225, lng: 16.1382764, name: "<b style='font-size:16px;'> 🇨🇿 Střmen 🔺 684m </b><hr> ✦ 2014 🚶❄️ ", icon: triangleSvg },
       	Teplickéskály:				{ lat: 50.589662161941575,  lng:  16.123543331430714, name: "<b style='font-size:16px;'> 🇨🇿 Teplické skály 🔶</b><hr> ✦ 2014 🚶❄️ ", icon: reddiamondSvg },
@@ -6030,10 +6210,10 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
      	Szarcuła759: 				{ lat: 49.60400985816209, lng:  18.914380474726283, name: "<b style='font-size:16px;'> 🇵🇱 Szarcuła 🔻 759m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg }, 
       	Przysłop664: 				{ lat: 49.68608481270266, lng: 19.563412345625288, name: "<b style='font-size:16px;'> 🇵🇱 Przysłop 🔻 664m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg },
       	Polczakówka: 				{ lat: 49.62076679654182,  lng:  19.984801108027824, name: "<b style='font-size:16px;'> 🇵🇱 Polczakówka 🔺 588m +25m 🗼</b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	ZaporaWisłaCzarne1:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: blueDiamondIconEMOJI1 }, 
-     	ZaporaWisłaCzarne2:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: blueDiamondIconEMOJI2 },
-      	ZaporaCzorsztyn1:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<b style='font-size:16px;'> 🇵🇱 Zapora wodna na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: blueDiamondIconEMOJI1 }, 
-     	ZaporaCzorsztyn2:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<b style='font-size:16px;'> 🇵🇱 Zapora wodna na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: blueDiamondIconEMOJI2 },
+      	ZaporaWisłaCzarne1:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: DiamondYellow20 }, 
+     	ZaporaWisłaCzarne2:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: DiamondYellow20 },
+      	ZaporaCzorsztyn1:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 }, 
+     	ZaporaCzorsztyn2:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 },
       
 
       
@@ -6129,6 +6309,7 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
        markerTemplates.Kielce,
        markerTemplates.Zagnańsk,
        markerTemplates.Samsonów,
+	   markerTemplates.ŚwiętokrzyskiParkNarodowy,
        //Mazury 2017
        markerTemplates.RadzyńChełm,
        markerTemplates.Brodnica,
@@ -7252,6 +7433,7 @@ markerTemplates.DolinaŚmierci,
 markerTemplates.WielkiKanionColorado,
 markerTemplates.Page,
 markerTemplates.Moab,
+markerTemplates.FurnaceCreek,
 
 markerTemplates.Collierville,
 markerTemplates.GlenCanyonRecreationArea,
@@ -7268,6 +7450,7 @@ markerTemplates.Skierniewice,
 	],
       2023: [
 markerTemplates.Praga,
+markerTemplates.PragaWieżaTV,
 markerTemplates.Warszawa, 
 markerTemplates.Poznań,
 markerTemplates.Mosina,
