@@ -260,6 +260,40 @@
     iconSize: [22, 22],
     iconAnchor: [11, 11]
 });
+
+   var DiamondWhite15 = L.divIcon({
+    	    className: "custom-icon",
+    html: `<svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <g id="color">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="#ebf5fa"/>
+            </g>
+            <g id="line">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="none" 
+                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+          </svg>`,
+    iconSize: [26, 26],
+    iconAnchor: [13, 13]
+});
+
+   var DiamondBlack10 = L.divIcon({
+    	    className: "custom-icon",
+    html: `<svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <g id="color">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="#420404"/>
+            </g>
+            <g id="line">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="none" 
+                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+          </svg>`,
+    iconSize: [12, 12],
+    iconAnchor: [6, 6]
+});
       
         // Ikony markerów
       
@@ -452,7 +486,7 @@ drawCirclePOZNAN(map, centerPointPOZNAN, 50000);
              // Mapowanie nazw ikon na ich definicje
 var iconStyles = {
     blueDiamondIcon: blueDiamondIcon, 
-    blueDiamondIconEMOJI1: blueDiamondIconEMOJI1,  // Wodospad, Tama, Most
+    blueDiamondIconEMOJI1: blueDiamondIconEMOJI1,  // Wodospad
     blueDiamondIconEMOJI2: blueDiamondIconEMOJI2, // Uzupełenienie
     blueDiamondIcon10: blueDiamondIcon10,
     redDotIconSmall: redDotIconSmall, // Zaliczone Miasto lub sam nocleg bez zwiedzania, przejazd samochodem bez zatrzymania nie liczy się
@@ -470,6 +504,10 @@ var iconStyles = {
     upsideDownBlackTriangleIcon: upsideDownBlackTriangleIcon, //Przełęcz, Depresja
     steelPogeIcon: steelPogeIcon, // BRAK
     Black_square_45degree_angle: Black_square_45degree_angle //BRAK
+	// DiamondYellow20 - mosty, tamy, inne konstrukcje inżynierskie
+	// DiamondGreen15 - pomnik przyrody
+	// DiamondGreen20 - pomnik przyrody / rezerwat
+	// 
 };
 
     
@@ -556,8 +594,8 @@ var iconStyles = {
     JanowskiWierch349m:    	{ lat: 50.86096, lng: 14.26974, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Janowski Wierch 🔺 349m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 <hr>🗼 +40m Wieża GSM z tarasem widokowym", icon: triangleSvg },  
     CzeskaSzwajcaria:    	{ lat: 50.8588, lng: 14.3368, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Czeska Szwajcaria</b>", icon: greenDotIcon12 }, 
     SaksońskaSzwajcaria:    { lat: 50.95345, lng: 14.14267, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Saksońska Szwajcaria", icon: greenDotIcon12 }, 
-	MostBastei:    			{ lat: 50.961709, lng: 14.073103, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Most Bastei 🔶 305m </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚶", icon: reddiamondSvg }, 
-    KurortRathenSkalneLabirynty:    { lat: 50.958900, lng: 14.082606, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Kurort Rathen - Skalne Labirynty </b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗⭢🚶 ", icon: redDotIconSmall }, 
+	MostBastei:    			{ lat: 50.961709, lng: 14.073103, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Most Bastei 🔶 305m </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚶", icon: DiamondYellow20 }, 
+    KurortRathenSkalneLabirynty:    { lat: 50.958900, lng: 14.082606, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Kurort Rathen</b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗⭢🚶 ", icon: redDotIconSmall }, 
 	LabskáStráňBelvedér:    { lat: 50.84956, lng: 14.22148, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Labská Stráň - Belvedér 🔶 272m </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚗 ", icon: reddiamondSvg },
 	Tiskéstěny:    			{ lat: 50.787713, lng: 14.028897, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Tiské stěny 🔶 </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚗⭢🚶 ", icon: reddiamondSvg }, 
 	BadSchandau:    		{ lat: 50.91801, lng: 14.15202, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Bad Schandau </b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗 <hr> 🗼 +50m Winda z 1905 r. ", icon: redDotIcon10 }, 
@@ -977,12 +1015,12 @@ var iconStyles = {
      Sion:   				{ lat: 46.23285304487962,  lng:  7.360157176603367, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Sion-coat_of_arms.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Sion </b> <br> Szwajcaria</div><hr>✦ 2018 🚈⭢🚴 `, icon: redDotIcon }, 
-     ZaporaDixence1:   		{ lat: 46.081221775545586,  lng:  7.402573756003012, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Grande Dixence </b><hr>✦ 2018 🚈⭢🚌 ", icon: blueDiamondIconEMOJI1 }, 
-     ZaporaDixence2:   		{ lat: 46.081221775545586,  lng:  7.402573756003012, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Grande Dixence </b><hr>✦ 2018 🚈⭢🚌 ", icon: blueDiamondIconEMOJI2 },
-     ZaporaSalanfe1:   		{ lat: 46.14151972411882, lng:  6.969445016706418, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Salanfe </b><hr>✦ 2011 🚈⭢🚞⭢🚶 ", icon: blueDiamondIconEMOJI1 }, 
-     ZaporaSalanfe2:   		{ lat: 46.14151972411882, lng:  6.969445016706418, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Salanfe Dixence </b><hr>✦ 2011 🚈⭢🚞⭢🚶 ", icon: blueDiamondIconEMOJI2 },
-     ZaporaTseuzier1:   	{ lat: 46.34796253396223, lng:  7.437393975744444, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Tseuzier </b><hr>✦ 2011 🚶 ", icon: blueDiamondIconEMOJI1 }, 
-     ZaporaTseuzier2:   	{ lat: 46.34796253396223, lng:  7.437393975744444, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Tseuzier </b><hr>✦ 2011 🚶 ", icon: blueDiamondIconEMOJI2 },
+     ZaporaDixence1:   		{ lat: 46.081221775545586,  lng:  7.402573756003012, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Grande Dixence </b><hr>✦ 2018 🚈⭢🚌 ", icon: DiamondYellow20 }, 
+     ZaporaDixence2:   		{ lat: 46.081221775545586,  lng:  7.402573756003012, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Grande Dixence </b><hr>✦ 2018 🚈⭢🚌 ", icon: DiamondYellow20 },
+     ZaporaSalanfe1:   		{ lat: 46.14151972411882, lng:  6.969445016706418, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Salanfe </b><hr>✦ 2011 🚈⭢🚞⭢🚶 ", icon: DiamondYellow20 }, 
+     ZaporaSalanfe2:   		{ lat: 46.14151972411882, lng:  6.969445016706418, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Salanfe Dixence </b><hr>✦ 2011 🚈⭢🚞⭢🚶 ", icon: DiamondYellow20 },
+     ZaporaTseuzier1:   	{ lat: 46.34796253396223, lng:  7.437393975744444, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Tseuzier </b><hr>✦ 2011 🚶 ", icon: DiamondYellow20 }, 
+     ZaporaTseuzier2:   	{ lat: 46.34796253396223, lng:  7.437393975744444, name: "<b style='font-size:16px;'> 🇨🇭 Zapora Tseuzier </b><hr>✦ 2011 🚶 ", icon: DiamondYellow20 },
      Zermatt:   			{ lat: 46.02047242431533,  lng:  7.749091919139617, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Zermatt-coat_of_arms.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇨🇭 Zermatt </b> <br> Szwajcaria</div><hr>✦ 2021 🚈⭢🚞 <br> ✦ 2018 🚈⭢🚞`, icon: redDotIcon10 }, 
@@ -1606,8 +1644,8 @@ var iconStyles = {
      						</div>
     						</div>
                             <hr><p style='text-align: justify; margin: 0'>  Narodowa Bazylika Najświętszego Serca w Brukseli | Stary Rynek - Wielki Plac w Brukseli | Ratusz w Brukseli | Pałąc Sprawiedliwości w Brukseli | Atomium | Royal Palace of Brussels | Brama Halle | Katedra św. Michała i św. Guduli w Brukseli | Siusiający Chłopiec | Cinquantenaire</p>
-                            <hr> 🗼  Atomium
-                            <br> ⛪  Narodowa Bazylika Najświętszego Serca w Brukseli
+                            <hr> 🗼 +102m Atomium
+                            <br> ⛪ +93m Narodowa Bazylika Najświętszego Serca w Brukseli
                             `,
                          	icon: redSquareIcon },
       Gandawa: 			{ lat: 51.050112684177684,     lng:    3.7283424515786217, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
@@ -1626,7 +1664,7 @@ var iconStyles = {
      						</div>
     						</div>
                             <hr><p style='text-align: justify; margin: 0'>  Niesamowite Stare Miasto | Katedra św. Bawona w Gandawie | Dzwonnica Gandawy | Kosciół św. Michała | Monument of the Van Eyck Brothers</p>
-                            <hr> 🏰 Dzwonnica Gandawy
+                            <hr> 🏰 +91m Dzwonnica Gandawy
                             `,
                          	icon: redDotIconMedium },
       Brugia: 			{ lat: 51.210437685923374,      lng:     3.2211447202907233, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
@@ -1645,7 +1683,7 @@ var iconStyles = {
      						</div>
     						</div>
                             <hr><p style='text-align: justify; margin: 0'>  Stare Miasto | Bazylika Świętej Krwi | Belfry of Bruges | Kościół Najświętszej Marii Panny w Brugii | Katedra Świętego Zbawiciela w Brugii | Kanały z promenadami</p>
-                            <hr> 🏰 Belfry of Bruges
+                            <hr> 🏰 +83m Belfry of Bruges
                             `,
                          	icon: redDotIconsurplus },
       Leuven: 			{ lat: 50.878913057776884,     lng:     4.705363624312502, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
@@ -1682,7 +1720,7 @@ var iconStyles = {
      						</div>
     						</div>
                             <hr><p style='text-align: justify; margin: 0'> Katedra św. Rumbolda w Mechelen | Stare Miasto</p>
-                            <hr> ⛪  Katedra św. Rumbolda w Mechelen
+                            <hr> ⛪ +118m Katedra św. Rumbolda
                             `,
                          	icon: redDotIconsurplus },
       
@@ -2112,7 +2150,7 @@ var iconStyles = {
     	LosAngeles: 			{ lat: 34.0522, lng: -118.2437, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Seal_of_Los_Angeles.svg.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇺🇸 Los Angeles </b><br>California</div>
-								<hr>✦ 2023 🚙 <br> ✦ 2022 ✈️⭢🚗 <hr><p style='text-align: justify; margin: 0'> Holywood Sign | Holywood Hills | Centrum Los Angeles | Santa Monica | Griffin Observator </p> `, icon: redSquareIcon30 },    // Los Angeles, USA
+								<hr>✦ 2023 🚙 <br> ✦ 2022 ✈️⭢🚗 <hr><p style='text-align: justify; margin: 0'> Hollywood Sign | Holywood Hills | Centrum Los Angeles | Santa Monica | Griffin Observator </p> `, icon: redSquareIcon30 },    // Los Angeles, USA
     	Denver: 				{ lat: 39.7392, lng: -104.9903, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Seal_of_Denver%2C_Colorado.svg.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇺🇸 Denver </b><br>Colorado</div>
@@ -2120,7 +2158,9 @@ var iconStyles = {
     	LasVegas: 				{ lat: 36.1699, lng: -115.1398, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Seal_of_Las_Vegas%2C_Nevada.svg.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇺🇸 Las Vegas </b><br>Nevada</div>
-								<hr>✦ 2023 🚙`, icon: redSquareIcon },      // Las Vegas, USA      
+								<hr>✦ 2023 🚙
+								<hr><p style='text-align: justify; margin: 0'> Znak Welcome Las Vegas | Kasyno Caesar | Kasyno MGM | Kasyno Piramida | Stratosphere Tower | Las Vegas Mono Rail | Kasyno Nowy York </p>
+								<hr>🗼 +350m Stratosphere Tower`, icon: redSquareIcon },      // Las Vegas, USA      
     	Memphis: 				{ lat: 35.1495, lng: -90.0490, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Memphis_TE_Seal-.svg.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇺🇸 Memphis </b><br>Tennessee</div>
@@ -2229,6 +2269,337 @@ var iconStyles = {
 	                   
         
 //Wszystkie POLSKIE MIASTA KRZYSZTOF do 2023r.
+LotniskoPoznań:					{ lat: 52.41658346495391,  lng:  16.828782279341983, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>POZ ️🇵🇱 </b><br> Port Lotniczy im. Henryka Wieniawskiego </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2023 ✈️|✈️
+								<br>✦ 2022 ✈️|✈️|✈️
+								<br>✦ 2019 ✈️|✈️
+								<br>✦ 2018 ✈️|✈️
+								<br>✦ 2014 ✈️|✈️
+								<br>✦ 2011 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>✦ 2023 ✈️|✈️
+								<br>✦ 2012 ✈️
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoWarszawa:				{ lat: 52.164905101230765,  lng:  20.968833593632002, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>WAW ️🇵🇱 </b><br> Port Lotniczy im. Chopina w Warszawie </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2019 ✈️|✈️
+								<br>✦ 2018 ✈️|✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoMonachium:				{ lat: 48.35482700699165,  lng:   11.781377371261119, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>MUC 🇩🇪 </b><br> Port Lotniczy Monachium </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2023 ✈️|✈️  ✈️|✈️
+								<br>✦ 2022 ✈️|✈️
+								<br>✦ 2014 ✈️|✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoFrankfurt:				{ lat: 50.037651403689935,   lng:    8.552777880702859, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>FRA 🇩🇪 </b><br> Port Lotniczy Frankfurt </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2022 ✈️|✈️
+								<br>✦ 2028 ✈️|✈️  ✈️|✈️
+								<br>✦ 2014 ✈️|✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },								
+LotniskoBerlin:					{ lat: 52.36416377166994,  lng:    13.508446487828683, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>SXF⭢BER 🇩🇪 </b><br> Port Lotniczy Berlin </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2011 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoHelsinki:				{ lat: 60.31807730034896,  lng:   24.949964884159176, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>HEL 🇫🇮 </b><br> Port Lotniczy Helsinki </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2018 ✈️|✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },								
+LotniskoMediolanBergamo:		{ lat: 45.66634235517646, lng:   9.69691035261598, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>BGY 🇮🇹 </b><br> Port Lotniczy Mediolan-Bergamo </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2023 ✈️|✈️
+								<br>✦ 2022 ✈️|✈️
+								<br>✦ 2014 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoLondynStanted:			{ lat: 51.886671282652635, lng:   0.2525158314534273, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>STN 🇬🇧 </b><br> Port Lotniczy Londyn-Stansted </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2022 ✈️
+								<br>✦ 2019 ✈️|✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoLondynHeathrow:			{ lat: 51.47169085245397,   lng:   -0.47016316186292356, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>LHR 🇬🇧 </b><br> Port Lotniczy Londyn-Heathrow </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2022 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoTbilisi:				{ lat: 41.66985964442316, lng:    44.96389267867694, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>TBS 🇬🇪 </b><br> Port Lotniczy Tbilisi </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2019 ✈️|✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoRyga:					{ lat: 56.92288009609892,   lng:  23.977552792668362, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>RIX 🇱🇻</b><br> Port Lotniczy Ryga </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2018 ✈️|✈️ | ✈️|✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoTokioNarita:				{ lat: 35.77088275172299, lng:  140.38507691108555, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>NRT 🇯🇵 </b><br> Port Lotniczy Tokio-Narita</b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2014 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoTokioHaneda:				{ lat: 35.548940473102505, lng:  139.77784406341286, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>HND 🇯🇵 </b><br> Port Lotniczy Tokio-Haneda </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2014 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoNowyJorkJFK:				{ lat: 40.64859503463668,  lng:  -73.7861923071135, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>JFK 🇺🇸 </b><br> Port Lotniczy Nowy Jork JFK </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2018 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoNewark:					{ lat: 40.692445553500185, lng:  -74.18320622866638, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>EWR 🇺🇸 </b><br> Port Lotniczy Nowy Jork - Newark </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2023 ✈️ | ✈️
+								<br>✦ 2022 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoChicago:				{ lat: 41.97848571498421,  lng:   -87.90390760848031, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>ORD 🇺🇸 </b><br> Port Lotniczy Chicago-O'Hare </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2018 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoWaszyngton:				{ lat: 38.85156891554507,  lng:    -77.03907640418252, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>DCA 🇺🇸 </b><br> Port Lotniczy Waszyngton </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2018 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoToronto:				{ lat: 43.680590848929306, lng:   -79.62653652821287, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>YYZ 🇨🇦 </b><br> Port Lotniczy Toronto-Pearson </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2018 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoDenver:					{ lat: 39.85805383316085, lng:   -104.67295846853854, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>DEN 🇺🇸 </b><br> Port Lotniczy Denver </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2023 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoMemphis:				{ lat: 35.044422943224724,  lng:  -89.98171623101935, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>MEM 🇺🇸 </b><br> Port Lotniczy Memphis </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2023 ✈️ | ✈️
+								<br>✦ 2022 ✈️ | ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoLasVegas:				{ lat: 36.08346874006746,   lng:   -115.14986120451542, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>LAS 🇺🇸 </b><br> Port Lotniczy Las Vegas </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2023
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },
+LotniskoLosAngeles:				{ lat: 33.944009834841005,  lng:  -118.40595573782934, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>LAX 🇺🇸 </b><br> Port Lotniczy Los Angeles </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2023 ✈️
+								<br>✦ 2022 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },								
+LotniskoSanFrancisco:			{ lat: 37.61652872952738,  lng:   -122.3861099282279, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>SFO 🇺🇸 </b><br> Port Lotniczy San Francisco </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2022 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },								
+LotniskoGenewa:					{ lat: 46.23108881051261,   lng:   6.107046136019036, name: `<p style='text-align: center; margin: 0'>
+        						<img src="" style="height:0px;">
+                                <b style='font-size:32px;'>GVA 🇨🇭 </b><br> Port Lotniczy Genewa </b>
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2022 ✈️ <br>✦ 2011 ✈️
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								</div>
+								`, icon: DiamondWhite15 },									
+
 DrawieńskiParkNarodowy: 		{ lat: 53.0404826291511,  lng:  15.957060943510738, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/POL_Drawie%C5%84ski_Park_Narodowy_LOGO.svg/1024px-POL_Drawie%C5%84ski_Park_Narodowy_LOGO.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Drawieński Park Narodowy </b><br>Polska, woj. Wielkopolskie, Zachodniopomorskie, Lubuskie</div> 
@@ -2661,7 +3032,18 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
       	Pleszew: 				{ lat: 51.8962862043387, lng: 17.786598806070437, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/POL_Pleszew_COA.svg/800px-POL_Pleszew_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Pleszew </b><br>Polska, woj. Wielkopolskie</div>
-                                <hr>✦ 2025 🚗<hr> ✦ 2013 🚴`, icon: redDotIcon10 },
+                                <hr>✦ 2025 🚗
+								<hr>
+								<div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->✦ 2013 🚴
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->✦ 🚗<b style='font-size:10px;'>(wiele)</b>
+								</div>
+								</div> 
+								`, icon: redDotIcon10 },
       	Chocz: 					{ lat: 51.97597737487917, lng: 17.86926136769253, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/POL_gmina_Chocz_COA.svg/800px-POL_gmina_Chocz_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Chocz</b><br>Polska, woj. Wielkopolskie
@@ -2686,13 +3068,12 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
                             ✦ 🏠 (Grunwald) 11.2024-2025  <br>✦ 🏠 (Malta) 2023-2024 
                             <br> ✦ 2025 🚶🚶🏼‍♀️<b style='font-size:10px;'>x4 (duże wyprawy) </b>
                             <br> ✦ 2024 🚴🚴‍♀️<b style='font-size:10px;'>x2 (duże wyprawy)</b> 
-                            <br> ✦ 2024 🚴<b style='font-size:10px;'>x1 (duże wyprawy)</b>  
                             <br> ✦ 2023 🚴🚴‍♀️<b style='font-size:10px;'>x3 (duże wyprawy)</b>
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
       						<div>
         					<!-- Pierwsza kolumna -->
-        					✦ 🏠 ✦ 2008-2023 🚴<b style='font-size:10px;'>x128 (duże wyprawy)</b> 
+        					✦ 🏠 <br> ✦ 2024 🚴<b style='font-size:10px;'>x1 (duże wyprawy)</b> <br>✦ 2008-2023 🚴<b style='font-size:10px;'>x128 (duże wyprawy)</b> 
       						</div>
                             <div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
       						<div>
@@ -2717,13 +3098,12 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
       	Luboń: 				{ lat: 52.34478, lng: 16.88178, name: `<p style='text-align: center; margin: 0'>
 							<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/750px-POL_Lubo%C5%84_COA.svg.png" style="height:60px;">
 							<br><b style='font-size:18px;'> 🇵🇱 Luboń</b><br>Polska, woj. Wielkopolskie
-								
-        					<hr> ✦ 2024 🚴 <br>✦ 2023 🚴🚴‍♀️
+        					<hr>✦ 2023 🚴🚴‍♀️
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
       						<div>
         					<!-- Pierwsza kolumna -->
-        					✦ 2023 🚴<b style='font-size:10px;'>x5</b> <br>✦ 2022 🚴<b style='font-size:10px;'>x3</b> 
+        					✦ 2024 🚴 <br> ✦ 2023 🚴<b style='font-size:10px;'>x5</b> <br>✦ 2022 🚴<b style='font-size:10px;'>x3</b> 
                             <br>✦ 2021 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2020 🚴<b style='font-size:10px;'>x3</b> 
                             <br>✦ 2019 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2018 🚴<b style='font-size:10px;'>x2</b>  <br>✦ 2017 🚴<b style='font-size:10px;'>x2</b> 
                             <br>✦ 2016 🚴<b style='font-size:10px;'>x3</b> <br>✦ 2015 🚴 <br>✦ 2014 🚴 <br>✦ 2013 🚴 <br>✦ 2012 🚴 
@@ -2740,13 +3120,12 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
       	 Puszczykowo: 			{ lat: 52.29000, lng: 16.85895, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/523px-POL_Puszczykowo_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Puszczykowo</b><br>Polska, woj. Wielkopolskie
-								
-                            <hr> ✦ 2024 🚴 <br>✦ 2023 🚴🚴‍♀️
+                            <hr>✦ 2023 🚴🚴‍♀️
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
       						<div>
         					<!-- Pierwsza kolumna -->
-        					✦ 2023 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2022 🚴 <br>✦ 2021 🚴 <br>✦ 2020 🚴 
+        					✦ 2024 🚴 <br> ✦ 2023 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2022 🚴 <br>✦ 2021 🚴 <br>✦ 2020 🚴 
                             <br>✦ 2019 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2018 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2017 🚴<b style='font-size:10px;'>x2</b>
                             <br>✦ 2016 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2015 🚴 <br>✦ 2014 🚴 
                             <br>✦ 2013 🚴  <br>✦ 2012 🚴 <br>✦ 2011 🚴 
@@ -2777,12 +3156,12 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/744px-POL_Mosina_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Mosina</b><br>Polska, woj. Wielkopolskie
 								
-                            <hr> ✦ 2024 🚴 <br>✦ 2023 🚴🚴‍♀️
+                            <hr>✦ 2023 🚴🚴‍♀️
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
       						<div>
         					<!-- Pierwsza kolumna -->
-        					✦ 2023 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2022 🚴 <br>✦ 2021 🚴 
+        					✦ 2024 🚴 <br> ✦ 2023 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2022 🚴 <br>✦ 2021 🚴 
                             <br>✦ 2020 🚴 <br>✦ 2019 🚴<b style='font-size:10px;'>x3</b> <br>✦ 2018 🚴 
                             <br>✦ 2017 🚴<b style='font-size:10px;'>x3</b>  
                             <br>✦ 2016 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2014 🚴 <br>✦ 2013 🚴 
@@ -2819,39 +3198,37 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/POL_Swarz%C4%99dz_COA.svg/800px-POL_Swarz%C4%99dz_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Swarzędz</b><br>Polska, woj. Wielkopolskie
 								<hr>✦ 2023 🚴🚴‍♀️<hr>✦ 2023 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2022 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2019 🚴 <br>✦ 2017 🚴 <br> ✦ b.d. przed 2008`, icon: redDotIcon10 },
-      	Czerwonak: 			{ lat: 52.46855, lng: 16.97976, name: `<p style='text-align: center; margin: 0'>
+      	Czerwonak: 				{ lat: 52.46855, lng: 16.97976, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/750px-POL_gmina_Czerwonak_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Czerwonak</b><br>Polska, woj. Wielkopolskie
-								 
-                            <hr> ✦ 2024 🚴 <br>✦ 2023 🚴
-                            <hr>
-                            <div style="display: flex; justify-content: space-between;">
-      						<div>
-        					<!-- Pierwsza kolumna -->
-        					✦ 2024 🚴|🚴🚴‍ <br>✦ 2023 🚴 <br>✦ 2020 🚴 <br>✦ 2019 🚴 <br>✦ 2017 🚴 <br>✦ 2009 🚴
-      						</div>
-                            <div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
-      						<div>
-        					<!-- Druga kolumna -->
-        					✦ 🚗|🚌|🚈 (wiele)
-     						</div>
-    						</div>
-                            <hr><p style='text-align: justify; margin: 0'> Puszcza Zielonka </p>
-                            `,
-                            icon: redDotIconSmall },
+								<hr> ✦ 2024 🚴🚴‍
+								<hr>
+								<div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2024 🚴<br>✦ 2023 🚴 <br>✦ 2020 🚴 <br>✦ 2019 🚴 <br>✦ 2017 🚴 <br>✦ 2009 🚴
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								✦ 🚗|🚌|🚈 (wiele)
+								</div>
+								</div>
+								<hr><p style='text-align: justify; margin: 0'> Puszcza Zielonka </p>
+								`,icon: redDotIconSmall },
       		Owińska: 			{ lat: 52.509228, lng: 16.971678, name: `<p style='text-align: center; margin: 0'>
 								<b style='font-size:18px;'> 🇵🇱 Owińska</b><br>Polska, woj. Wielkopolskie 
-								<hr> ✦ 2024 🚴 <br>✦ 2023 🚴 <br>✦ 2010-2022 🚴<b style='font-size:10px;'>~2x</b> <hr>🗼 +25m Wieża widokowa na Moście Owińska`, icon: redDotIconSmall },
+								<hr> ✦ 2024 🚴+🚗 <hr>✦ 2023 🚴 <br>✦ 2010-2022 🚴<b style='font-size:10px;'>~2x</b> <hr>🗼 +25m Wieża widokowa na Moście Owińska`, icon: redDotIconSmall },
       		DziewiczaGóra: 		{ lat: 52.480065, lng: 17.011267, name: `<p style='text-align: center; margin: 0'>
 								<b style='font-size:16px;'> 🇵🇱  Dziewicza Góra 🔺 144m </b><br>Puszcza Zielonka
-								<hr>✦ 2024 🚴‍♂️ <hr>✦ 2010-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b> <hr>🗼 +40m Wieża obserwacyjna`, icon: triangleSvg },
+								<hr>✦ 2024 🚴‍🚴‍‍♂️ <hr>✦ 2010-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b> <hr>🗼 +40m Wieża obserwacyjna`, icon: triangleSvg },
 			GóraMorasko: 		{ lat: 52.48453688935954, lng:  16.893705228275977, name: `<p style='text-align: center; margin: 0'>
 								<b style='font-size:16px;'> 🇵🇱  Góra Morasko 🔺 154m </b><br>Miasto Poznań
 								<hr>✦ 2010-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b>`, icon: triangleSvg },
 			OsowaGóra: 			{ lat: 52.25557308379195,  lng:   16.832593543567977, name: `<p style='text-align: center; margin: 0'>
 								<b style='font-size:16px;'> 🇵🇱  Osowa Góra 🔺 132m </b><br>Wielkopolski Park Narodowy
 								<hr>✦ 2023 🚴🚴‍♀️‍<hr>✦ 2008-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b>`, icon: triangleSvg },					
-      		PuszczaZielonka: 	{ lat: 52.55392, lng: 17.11224, name: `<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇵🇱 Puszcza Zielonka </b><br>Polska, woj. Wielkopolskie<hr>✦ 2024 🚴‍♂️ <hr>✦ 2010-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b>`, icon: greenDotIcon12 },
+      		PuszczaZielonka: 	{ lat: 52.55392, lng: 17.11224, name: `<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇵🇱 Puszcza Zielonka </b><br>Polska, woj. Wielkopolskie<hr>✦ 2024 🚴🚴‍♂️ <hr>✦ 2024 🚴 <br> ✦ 2010-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b>`, icon: greenDotIcon12 },
       	Dopiewo: 				{ lat: 52.3535654490606, lng: 16.67106611427134, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/POL_gmina_Dopiewo_COA.svg/800px-POL_gmina_Dopiewo_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Dopiewo</b><br>Polska, woj. Wielkopolskie
@@ -2877,7 +3254,16 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
       	SuchyLas: 				{ lat: 52.47519682103414, lng:  16.877775012388607, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/POL_gmina_Suchy_Las_COA.svg/800px-POL_gmina_Suchy_Las_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Suchy Las</b><br>Polska, woj. Wielkopolskie
-								<hr> ✦ 2021 🚴 <br>✦ 2020 🚴  <br>✦ 2010 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2002-2008 🚴<b style='font-size:10px;'>min1</b>`, icon: redDotIconSmall },
+								<hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->✦ 2021 🚴 <br>✦ 2020 🚴  <br>✦ 2010 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2002-2008 🚴<b style='font-size:10px;'>min1</b>
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->✦ 2024 🚗<b style='font-size:10px;'>(wiele)</b>
+								</div>
+								</div>
+								 `, icon: redDotIconSmall },
       	TarnowoPodgórne: 		{ lat: 52.46276762243655, lng: 16.672997861694547, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/POL_gmina_Tarnowo_Podg%C3%B3rne_COA.svg/800px-POL_gmina_Tarnowo_Podg%C3%B3rne_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Tarnowo Podgórne</b><br>Polska, woj. Wielkopolskie
@@ -3087,7 +3473,17 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
         Brodnica: 				{ lat: 53.25980253244096, lng:  19.397378398760452, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/POL_Brodnica_COA.svg/120px-POL_Brodnica_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Brodnica </b><br>Polska, woj. Kujawsko-Pomorskie</div>
-                                <hr> ✦ 2012 🚴`, icon: redDotIcon },
+                                <hr> 
+								<div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->✦ 2012 🚴
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->✦ 2017 🚗 <br>  🗼 +54m Baszta w Brodnicy
+								</div>
+								</div>
+								`, icon: redDotIcon },
       	JabłonowoPom: 			{ lat: 53.38994401495025,  lng: 19.155160520958976, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/744px-POL_Jab%C5%82onowo_Pomorskie_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Jabłonowo Pom.</b><br>Polska, woj. Kujawsko-Pomorskie
@@ -3159,7 +3555,17 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
         RadzyńChełm: 			{ lat: 53.38506767881365,  lng:  18.935851487895018, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/500px-POL_Radzy%C5%84_Che%C5%82mi%C5%84ski_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Radzyń Chełm.</b><br>Polska, woj. Kujawsko-Pomorskie
-								<hr> ✦ 2012 🚴<b style='font-size:10px;'>x2</b>`, icon: redDotIconSmall },
+								<hr>
+								<div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->✦ 2012 🚴<b style='font-size:10px;'>x2</b>
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->✦ 2017 🚗
+								</div>
+								</div>
+								`, icon: redDotIconSmall },
       	Gruta: 					{ lat: 53.455613570972986, lng: 18.961279221953156, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
 								<b style='font-size:18px;'> 🇵🇱 Gruta</b><br>Polska, woj. Kujawsko-Pomorskie
@@ -3554,10 +3960,23 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
 								<br><b style='font-size:18px;'> 🇵🇱 Sztutowo</b><br>Polska, woj. Pomorskie
 								<hr> ✦ 2017 🚴`, icon: redDotIconSmall6 },
       	// Powiat pucki	Puck	Hel	Jastarnia	Władysławowo								Kosakowo	Krokowa
-      	Hel: 					{ lat: 54.60871771348401, lng: 18.796897766787165, name: `<p style='text-align: center; margin: 0'>
-								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/750px-POL_Hel_COA.svg.png" style="height:60px;">
-								<br><b style='font-size:18px;'> 🇵🇱 Hel</b><br>Polska, woj. Pomorskie
-								<hr> ✦ 2002 🚢`, icon: redDotIconSmall },      
+      	Hel: 					{ lat: 54.60871771348401, lng: 18.796897766787165, name: `
+								<p style='text-align: center; margin: 0'>
+        						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/750px-POL_Hel_COA.svg.png" style="height:60px;">
+                                <br><b style='font-size:18px;'> 🇵🇱 Hel </b><br>Polska, woj. Pomorskie   
+								<hr>
+								<div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->
+								✦ 2002 🚢
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->
+								✦ 2021 🚈 ✦ 🚗
+								</div>
+								</div>
+								`, icon: redDotIconSmall },      
         Władysławowo: 			{ lat: 54.790683393054046, lng: 18.405379934922994, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/850px-POL_W%C5%82adys%C5%82awowo_COA2.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Władysławowo</b><br>Polska, woj. Pomorskie
@@ -4542,7 +4961,17 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
         Iława: 					{ lat: 53.59599357545301,  lng:  19.56832774551599, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/POL_I%C5%82awa_COA.svg/800px-POL_I%C5%82awa_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Iława </b><br>Polska, woj. Warmińsko-Mazurskie</div>
-                                <hr>✦ 2016 🚴<br>✦ 2012 🚴`, icon: redDotIcon10 },
+                                <hr>
+								<div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->✦ 2016 🚴<br>✦ 2012 🚴
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->✦ 2017 🚗
+								</div>
+								</div>
+								`, icon: redDotIcon10 },
       	// kętrzyński	Kętrzyn	Korsze	Reszel									Barciany	Srokowo	
 		// lidzbarski	Lidzbark Warm.	Orneta										Kiwity	Lubinowo	
 		// mrągowski	Mrągowo	Mikołajki										Piecki	Sorkwity	
@@ -4576,16 +5005,40 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
         Olsztynek:  			{ lat: 53.58241890260653,  lng: 20.283098601722976, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Olsztynek_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Olsztynek</b><br>Polska, woj. Warmińsko-Mazurskie
-								<hr>✦ 2016 🚴`, icon: redDotIconSmall },
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->✦ 2016 🚴
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->✦ 2017 🚗
+								</div>
+								</div>`, icon: redDotIconSmall },
       	Gietrzwałd: 			{ lat: 53.74571549295793, lng:  20.24067668318304, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
 								<b style='font-size:18px;'> 🇵🇱 Gietrzwałd</b><br>Polska, woj. Warmińsko-Mazurskie
-								<hr>✦ 2012 🚴`, icon: redDotIconSmall6 },
+								<hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->✦ 2012 🚴
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->✦ 2017 🚗
+								</div>
+								</div>`, icon: redDotIconSmall6 },
       	// ostródzki	Ostróda	Miłakowo	Miłomłyn	Morąg								Dąbrówno	Grunwald	Łukta	Małdyty
       	Ostróda: 				{ lat: 53.69622349191102,  lng: 19.964748253679524, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/POL_Ostr%C3%B3da_COA.svg/800px-POL_Ostr%C3%B3da_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Ostróda </b><br>Polska, woj. Warmińsko-Mazurskie</div>
-                                <hr>✦ 2016 🚴<br>✦ 2012 🚴`, icon: redDotIconSmall },    
+                                <hr><div style="display: flex; justify-content: space-between;">
+								<div>
+								<!-- Pierwsza kolumna -->✦ 2016 🚴<br>✦ 2012 🚴
+								</div>
+								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
+								<div>
+								<!-- Druga kolumna -->✦ 2017 🚗
+								</div>
+								</div>`, icon: redDotIcon10 },    
       	Miłomłyn: 				{ lat: 53.76472285012546,  lng:  19.838632431547, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/545px-POL_Mi%C5%82om%C5%82yn_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Miłomłyn</b><br>Polska, woj. Warmińsko-Mazurskie
@@ -4753,7 +5206,7 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
      						</div>
     						</div>
                             <hr><p style='text-align: justify; margin: 0'> Zamek Lublin | Brama Krakowska | Stare Miasto </p>
-                            <hr> 🏰 +ok25mm Brama Krakowska
+                            <hr> 🏰 +ok.25m Brama Krakowska
                             <br> 🏰 +20m Wieża Zamkowa`, icon: redDotIconMedium },
       	Jastków: 				{ lat: 51.31004294677427,  lng:  22.442410472614434, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_gmina_Jastk%C3%B3w_COA.svg.png" style="height:60px;">
@@ -5545,7 +5998,7 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
       	Mumlavskyvodopád2: 			{ lat: 50.77113639974774,  lng:  15.453356775933797, name: "<b style='font-size:16px;'> 🇨🇿 Mumlavský vodopád </b><hr> ✦ 2022 🚶 ", icon: blueDiamondIconEMOJI2 },
       	WodospadPanczawski: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: blueDiamondIconEMOJI1 },
       	WodospadPanczawski2: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: blueDiamondIconEMOJI2 },
-      	SkyBridge721: 				{ lat: 50.15151971448964,   lng:    16.833623084907202, name: "<b style='font-size:16px;'> 🇨🇿 Sky Bridge 721 🔶 </b><hr> ✦ 2022 🚶 ", icon: reddiamondSvg },
+      	SkyBridge721: 				{ lat: 50.15151971448964,   lng:    16.833623084907202, name: "<b style='font-size:16px;'> 🇨🇿 Sky Bridge 721 🔶 </b><hr> ✦ 2022 🚶 ", icon: DiamondYellow20 },
       	Střmen630m:					{ lat: 50.5941225, lng: 16.1382764, name: "<b style='font-size:16px;'> 🇨🇿 Střmen 🔺 684m </b><hr> ✦ 2014 🚶❄️ ", icon: triangleSvg },
       	Teplickéskály:				{ lat: 50.589662161941575,  lng:  16.123543331430714, name: "<b style='font-size:16px;'> 🇨🇿 Teplické skály 🔶</b><hr> ✦ 2014 🚶❄️ ", icon: reddiamondSvg },
       	Adršpach:					{ lat: 50.61038530066005,  lng: 16.11647755772387, name: "<b style='font-size:16px;'> 🇨🇿 Adršpach 🔶 </b><hr> ✦ 2014 🚶❄️ ", icon: reddiamondSvg },
@@ -5642,6 +6095,9 @@ Parknarodowygórstołowych: 		{ lat: 50.459436379907665,  lng:  16.3963161618588
        markerTemplates.NoweKawkowo,
        markerTemplates.Kadzidłowo,
        markerTemplates.Szymbark,
+	   markerTemplates.Pleszew,
+	   markerTemplates.SuchyLas,
+	   markerTemplates.LotniskoPoznań,
        
        //Świętokrzyskie 2012
        markerTemplates.RezerwatSkałkiPiełko,
@@ -5711,8 +6167,31 @@ markerTemplates.Sieraków,
 markerTemplates.Wronki,
 markerTemplates.SokołówPodl,
 markerTemplates.ZielonaGóra,
-markerTemplates.Szczecin,       
-       
+markerTemplates.Szczecin,
+markerTemplates.LotniskoPoznań,
+markerTemplates.LotniskoWarszawa,
+markerTemplates.LotniskoMonachium,     
+markerTemplates.LotniskoSanFrancisco,
+markerTemplates.LotniskoLosAngeles,
+markerTemplates.LotniskoLasVegas,
+markerTemplates.LotniskoMemphis,
+markerTemplates.LotniskoDenver,
+markerTemplates.LotniskoToronto,
+markerTemplates.LotniskoWaszyngton,
+markerTemplates.LotniskoChicago,
+markerTemplates.LotniskoNewark,
+markerTemplates.LotniskoNowyJorkJFK,
+markerTemplates.LotniskoTokioHaneda,
+markerTemplates.LotniskoTokioNarita,
+markerTemplates.LotniskoRyga,
+markerTemplates.LotniskoTbilisi,
+markerTemplates.LotniskoLondynHeathrow,
+markerTemplates.LotniskoLondynStanted,
+markerTemplates.LotniskoMediolanBergamo,
+markerTemplates.LotniskoHelsinki,
+markerTemplates.LotniskoBerlin,
+markerTemplates.LotniskoFrankfurt, 
+markerTemplates.LotniskoGenewa, 
        
 // KRAJE OBCE - NIEMCY przed 08.2023
 markerTemplates.Locknitz,
