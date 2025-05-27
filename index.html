@@ -257,8 +257,8 @@
                     stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
             </g>
           </svg>`,
-    iconSize: [24, 24],
-    iconAnchor: [12, 12]
+    iconSize: [22, 22],
+    iconAnchor: [11, 11]
 });
           var DiamondTower15 = L.divIcon({
     	    className: "custom-icon",
@@ -311,6 +311,23 @@
           </svg>`,
     iconSize: [16, 16],
     iconAnchor: [0, 3]
+});
+
+        var DiamondPurple15Center = L.divIcon({
+    	    className: "custom-icon",
+    html: `<svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <g id="color">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="#CC00CC"/>
+            </g>
+            <g id="line">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="none" 
+                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+          </svg>`,
+    iconSize: [16, 16],
+    iconAnchor: [8, 8]
 });
 
       var DiamondSquare15ONTOP = L.divIcon({
@@ -823,8 +840,8 @@ var iconStyles = {
 	Vyhlídkovémísto450m:    { lat: 50.884108, lng: 14.280177, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Vyhlídkové místo </b><br> 424m <hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
     JanowskiWierch349m:    	{ lat: 50.86096, lng: 14.26974, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Janowski Wierch </b><br> 349m <hr> ✦ 2023 🚶 <hr>🗼 +40m Wieża GSM z tarasem widokowym", icon: triangleSvg },  
     JanowskiWierch349mTower:{ lat: 50.86096, lng: 14.26974, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Janowski Wierch </b><br> 349m <hr> ✦ 2023 🚶 <hr>🗼 +40m Wieża GSM z tarasem widokowym", icon: DiamondTower15 },
-	CzeskaSzwajcaria:    	{ lat: 50.8588, lng: 14.3368, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Czeska Szwajcaria</b> <hr>✦ 2023 🚗", icon: darkgreenDotIcon12 }, 
-    SaksońskaSzwajcaria:    { lat: 50.95345, lng: 14.14267, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Saksońska Szwajcaria </b> <hr>✦ 2023 🚗", icon: darkgreenDotIcon12 }, 
+	CzeskaSzwajcaria:    	{ lat: 50.8588, lng: 14.3368, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Park Narodowy Czeska Szwajcaria</b> <hr>✦ 2023 🚗", icon: darkgreenDotIcon12 }, 
+    SaksońskaSzwajcaria:    { lat: 50.95345, lng: 14.14267, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Park Narodowy Saksońska Szwajcaria </b> <hr>✦ 2023 🚗", icon: darkgreenDotIcon12 }, 
 	MostBastei:    			{ lat: 50.961709, lng: 14.073103, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Most Bastei </b><br> 305m <hr> ✦ 2023 🚶", icon: DiamondYellow20 }, 
     KurortRathenSkalneLabirynty:    { lat: 50.958900, lng: 14.082606, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Wappen_Rathen.svg/800px-Wappen_Rathen.svg.png" style="height:60px;"><br><b style='font-size:18px;'> 🇩🇪 Kurort Rathen</b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗⭢🚶 `, icon: redDotIconSmall }, 
 	LabskáStráňBelvedér:    { lat: 50.84956, lng: 14.22148, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Labská Stráň - Belvedér </b><br> 272m <hr> ✦ 2023 🚗 ", icon: reddiamondSvg },
@@ -1613,9 +1630,9 @@ var iconStyles = {
 	 PuntaHellbronner3466mTower:		{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: DiamondTower15 },
 	PuntaHellbronner3466mCable:			{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: DiamondPurple15 },
 	PuntaHellbronner3466mSchronisko: 	{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: DiamondSquare15ONTOP },
-	PuntaHellbronnerPavillonCable:		{ lat: 45.82913388615193,  lng:  6.949922580389097, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Pavillon The Mountain<br>Skyway Monte Bianco  </b><br> 2173m<hr>✦ 2024 🚠 ", icon: DiamondPurple15 },
+	PuntaHellbronnerPavillonCable:		{ lat: 45.82913388615193,  lng:  6.949922580389097, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Pavillon The Mountain<br>Skyway Monte Bianco  </b><br> 2173m<hr>✦ 2024 🚠 ", icon: DiamondPurple15Center },
 	PuntaHellbronnerPavillonSchronisko:	{ lat: 45.82913388615193,  lng:  6.949922580389097, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Pavillon The Mountain<br>Skyway Monte Bianco  </b><br> 2173m<hr>✦ 2024 🚠 ", icon: DiamondSquare15 },
-	PuntaHellbronnerCourmayeurCable:	{ lat: 45.815877587084216, lng:  6.956015759762207, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Courmayeur <br>Skyway Monte Bianco  </b><br> 1300m <hr>✦ 2024 🚗 ", icon: DiamondPurple15 },	
+	PuntaHellbronnerCourmayeurCable:	{ lat: 45.815877587084216, lng:  6.956015759762207, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Courmayeur <br>Skyway Monte Bianco  </b><br> 1300m <hr>✦ 2024 🚗 ", icon: DiamondPurple15Center },	
      PrzełŚwBernarda2473m:  { lat: 45.86868, lng: 7.16497, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭🇮🇹 Przełęcz św. Bernarda </b><br>2473m<hr>✦ 2024 🚗 ", icon: upsideDownTriangleSvg  },
      SassodelFerro1062m:   	{ lat: 45.91160, lng: 8.64349, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Sasso del Ferro </b><br>1062m<hr>✦ 2024 🚡⭢🚶 ", icon: triangleSvg }, 
      Varenna:   			{ lat: 46.010175, lng: 9.283351, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
@@ -7770,7 +7787,7 @@ markerTemplates.ŚwistowaCzuba,
 markerTemplates.Grześ,
 markerTemplates.CzarnyStawpodRysami,
 markerTemplates.MorskieOko,
-markerTemplates.SchroniskoMorskieOko,
+//markerTemplates.SchroniskoMorskieOko,
 markerTemplates.Gubałówka,
 markerTemplates.JaskiniaBielska,
 
@@ -8153,11 +8170,11 @@ markerTemplates.NovaraIT,
 markerTemplates.JezioroComo,
 markerTemplates.JezioroMaggiore,
 markerTemplates.PuntaHellbronnerPavillonCable,
-markerTemplates.PuntaHellbronnerPavillonSchronisko,
-markerTemplates.PuntaHellbronnerCourmayeurCable,
+//markerTemplates.PuntaHellbronnerPavillonSchronisko,
+//markerTemplates.PuntaHellbronnerCourmayeurCable,
 markerTemplates.PuntaHellbronner3466mTower,
 markerTemplates.PuntaHellbronner3466mCable,
-markerTemplates.PuntaHellbronner3466mSchronisko,
+//markerTemplates.PuntaHellbronner3466mSchronisko,
 markerTemplates.PuntaHellbronner3466m,
 markerTemplates.PrzełŚwBernarda2473m,
 markerTemplates.SassodelFerro1062m,
@@ -8180,7 +8197,7 @@ markerTemplates.Jez4KAntonów,
 markerTemplates.PrzełŚwGottarda,
 markerTemplates.AiguilleduMidi3842mTower,
 markerTemplates.AiguilleduMidi3842mCable,
-markerTemplates.AiguilleduMidi3842mSchronisko,
+//markerTemplates.AiguilleduMidi3842mSchronisko,
 markerTemplates.AiguilleduMidi3842m,
 markerTemplates.Lindau,
          
