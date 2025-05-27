@@ -266,6 +266,7 @@
             <g id="color">
               <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
                     transform="translate(-15.0581 35.6464) rotate(-45)" fill="#FFBF00"/>
+					
             </g>
             <g id="line">
               <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
@@ -274,7 +275,7 @@
             </g>
           </svg>`,
     iconSize: [16, 16],
-    iconAnchor: [6, 6]
+    iconAnchor: [6, 16] //bok pion
 });
 
 
@@ -293,6 +294,47 @@
           </svg>`,
     iconSize: [18, 18],
     iconAnchor: [9, 9]
+});
+
+          var DiamondPurple15 = L.divIcon({
+    	    className: "custom-icon",
+    html: `<svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <g id="color">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="#CC00CC"/>
+            </g>
+            <g id="line">
+              <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772" 
+                    transform="translate(-15.0581 35.6464) rotate(-45)" fill="none" 
+                    stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+          </svg>`,
+    iconSize: [16, 16],
+    iconAnchor: [0, 3]
+});
+
+      var DiamondSquare15ONTOP = L.divIcon({
+  className: "custom-icon",
+  html: `
+    <svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+      <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772"
+            fill="#FF6600" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </svg>
+  `,
+  iconSize: [16, 16],
+  iconAnchor: [8, 0]
+});
+
+      var DiamondSquare15 = L.divIcon({
+  className: "custom-icon",
+  html: `
+    <svg width="100%" height="100%" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+      <rect x="21.7114" y="22.2114" width="27.5772" height="27.5772"
+            fill="#FF6600" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </svg>
+  `,
+  iconSize: [16, 16],
+  iconAnchor: [8, 8]
 });
 
 
@@ -364,6 +406,8 @@ var DiamondBlue15 = L.divIcon({
     iconSize: [12, 12],
     iconAnchor: [6, 6]
 });
+
+    
       
         // Ikony markerów
       
@@ -647,7 +691,7 @@ var iconStyles = {
 								<img src="" style="height:0px;">
 								<b style='font-size:16px;'> 🇵🇱 Święta Katarzyna </b><br>Polska, woj. Świętokrzyskie
 								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
-    Łysica614m:   				{ lat: 50.89209727813087, lng: 20.89858886529691, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Łysica 🔺 614m 👑</b><br>Góry Świętokrzyskie<br>Świętokrzyski Park Narodowy<hr>✦ 2012 🚶`, icon: blackTriangleIcon },
+    Łysica614m:   				{ lat: 50.89209727813087, lng: 20.89858886529691, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Łysica </b><br> 614m 👑<hr>✦ 2012 🚶<hr>Świętokrzyski Park Narodowy`, icon: blackTriangleIcon },
     ŚwiętyKrzyż:   				{ lat: 50.85936808307987, lng: 21.05427707231355, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
 								<b style='font-size:16px;'> 🇵🇱 Święty Krzyż </b><br>Polska, woj. Świętokrzyskie
@@ -656,7 +700,7 @@ var iconStyles = {
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/POL_gmina_%C5%81ag%C3%B3w_%28powiat_kielecki%29_COA.svg/800px-POL_gmina_%C5%81ag%C3%B3w_%28powiat_kielecki%29_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Łagów </b><br>Polska, woj. Świętokrzyskie
 								<hr>✦ 2012 🚗 `, icon: redDotIconSmall },
-    WąwózDule:  				{ lat: 50.782587853886206, lng: 21.092218724579237, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wąwóz Dule 🔶 </b><hr> ✦ 2012 🚗`, icon: DiamondGreen20 },
+    WąwózDule:  				{ lat: 50.782587853886206, lng: 21.092218724579237, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wąwóz Dule </b><hr> ✦ 2012 🚗`, icon: DiamondGreen20 },
     Opatów:   					{ lat: 50.80191013578629, lng: 21.426947722939214, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/POL_Opat%C3%B3w_COA.svg/1024px-POL_Opat%C3%B3w_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Opatów </b><br>Polska, woj. Świętokrzyskie
@@ -706,12 +750,12 @@ var iconStyles = {
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/POL_Pi%C5%84cz%C3%B3w_COA.svg/800px-POL_Pi%C5%84cz%C3%B3w_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Pinczów </b><br>Polska, woj. Świętokrzyskie
 								<hr>✦ 2012 🚗 `, icon: redDotIconSmall },
-    JaskiniaRaj:   				{ lat: 50.82547431669336, lng:  20.499635452645403, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Jaskinia Raj 🔶 </b><br>Góry Świętokrzyskie<hr> ✦ 2012 🚗`, icon: reddiamondSvg },
+    JaskiniaRaj:   				{ lat: 50.82547431669336, lng:  20.499635452645403, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Jaskinia Raj </b><br>Góry Świętokrzyskie<hr> ✦ 2012 🚗`, icon: reddiamondSvg },
     Chęciny:   					{ lat: 50.80002918389327, lng: 20.461918035035023, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/POL_Ch%C4%99ciny_COA.svg/800px-POL_Ch%C4%99ciny_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Chęciny </b><br>Polska, woj. Świętokrzyskie
 								<hr>✦ 2012 🚗 `, icon: redDotIconSmall6 },
-    JaskiniaPiekło:   			{ lat: 50.837519791793085, lng: 20.31072232912752, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Jaskinia Piekło 🔶 </b><br>Góry Świętokrzyskie<hr> ✦ 2012 🚗`, icon: reddiamondSvg },
+    JaskiniaPiekło:   			{ lat: 50.837519791793085, lng: 20.31072232912752, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Jaskinia Piekło </b><br>Góry Świętokrzyskie<hr> ✦ 2012 🚗`, icon: reddiamondSvg },
     Zagnańsk:  					{ lat: 50.979949147034155, lng: 20.659112050069297, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Gmina_zagnansk_flaga.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Zagnańsk </b><br>Polska, woj. Świętokrzyskie
@@ -767,24 +811,24 @@ var iconStyles = {
       
       // Punkty na mapie ROK 2023 - Praga  
     Hrusice:  				{ lat: 49.91011, lng: 14.74073, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Hrusice </b><br>Czechy<hr> ✦ 2023 🚗", icon: redDotIconSmall }, 
-    PiekielnaGóra538m:  	{ lat: 50.40915, lng: 16.48803, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Piekielna Góra 🔺 538m </b><br>Góry Stołowe<hr> ✦ 2023 🚶 `, icon: triangleSvg },
+    PiekielnaGóra538m:  	{ lat: 50.40915, lng: 16.48803, name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Piekielna Góra </b><br> 538m <hr> ✦ 2023 🚶 `, icon: triangleSvg },
         // Punkty na mapie ROK 2023 - Czeska i Saksońska Szwajcaria
     Jetrichovice:    		{ lat: 50.85245, lng: 14.39424, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Jetřichovice </b><br>Czechy<hr> ✦ 2023 🚗 ", icon: redDotIconSmall },   
-	Rudolfůvkámen484m:    	{ lat: 50.87141, lng: 14.39981, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Rudolfův kámen 🔺 484m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
-	VilemíninaStěna439m:    { lat: 50.86675, lng: 14.40602, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Vilemínina Stěna 🔺 439m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 ", icon: triangleSvg },
-	MariinaSkála428m:    	{ lat: 50.86044, lng: 14.40496, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Mariina Skála 🔺 428m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
-	Falkenštejn295m:    	{ lat: 50.854807, lng: 14.405404, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Falkenštejn 🔺 295m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
+	Rudolfůvkámen484m:    	{ lat: 50.87141, lng: 14.39981, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Rudolfův kámen </b><br> 484m </b><hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
+	VilemíninaStěna439m:    { lat: 50.86675, lng: 14.40602, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Vilemínina Stěna </b><br> 439m </b><hr> ✦ 2023 🚶 ", icon: triangleSvg },
+	MariinaSkála428m:    	{ lat: 50.86044, lng: 14.40496, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Mariina Skála </b><br> 428m <hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
+	Falkenštejn295m:    	{ lat: 50.854807, lng: 14.405404, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Falkenštejn </b><br> 295m <hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
     Hřensko:    			{ lat: 50.87568, lng: 14.23697, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Hřensko </b><hr> ✦ 2023 🚶 ", icon: redDotIconSmall },   
-	BramaPravčicka373m:    	{ lat: 50.883712, lng: 14.281264, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Brama Pravčicka 🔶 373m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 ", icon: reddiamondSvg }, 
-	Vyhlídkovémísto450m:    { lat: 50.884108, lng: 14.280177, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Vyhlídkové místo 🔺 450m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
-    JanowskiWierch349m:    	{ lat: 50.86096, lng: 14.26974, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Janowski Wierch 🔺 349m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 <hr>🗼 +40m Wieża GSM z tarasem widokowym", icon: triangleSvg },  
-    JanowskiWierch349mTower:{ lat: 50.86096, lng: 14.26974, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Janowski Wierch 🔺 349m </b><br>Czeska Szwajcaria<hr> ✦ 2023 🚶 <hr>🗼 +40m Wieża GSM z tarasem widokowym", icon: DiamondTower15 },
+	BramaPravčicka373m:    	{ lat: 50.883712, lng: 14.281264, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Brama Pravčicka </b><br> 373m <hr> ✦ 2023 🚶 ", icon: reddiamondSvg }, 
+	Vyhlídkovémísto450m:    { lat: 50.884108, lng: 14.280177, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Vyhlídkové místo </b><br> 424m <hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
+    JanowskiWierch349m:    	{ lat: 50.86096, lng: 14.26974, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Janowski Wierch </b><br> 349m <hr> ✦ 2023 🚶 <hr>🗼 +40m Wieża GSM z tarasem widokowym", icon: triangleSvg },  
+    JanowskiWierch349mTower:{ lat: 50.86096, lng: 14.26974, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Janowski Wierch </b><br> 349m <hr> ✦ 2023 🚶 <hr>🗼 +40m Wieża GSM z tarasem widokowym", icon: DiamondTower15 },
 	CzeskaSzwajcaria:    	{ lat: 50.8588, lng: 14.3368, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Czeska Szwajcaria</b> <hr>✦ 2023 🚗", icon: darkgreenDotIcon12 }, 
     SaksońskaSzwajcaria:    { lat: 50.95345, lng: 14.14267, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Saksońska Szwajcaria </b> <hr>✦ 2023 🚗", icon: darkgreenDotIcon12 }, 
-	MostBastei:    			{ lat: 50.961709, lng: 14.073103, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Most Bastei 🔶 305m </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚶", icon: DiamondYellow20 }, 
+	MostBastei:    			{ lat: 50.961709, lng: 14.073103, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇪 Most Bastei </b><br> 305m <hr> ✦ 2023 🚶", icon: DiamondYellow20 }, 
     KurortRathenSkalneLabirynty:    { lat: 50.958900, lng: 14.082606, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Wappen_Rathen.svg/800px-Wappen_Rathen.svg.png" style="height:60px;"><br><b style='font-size:18px;'> 🇩🇪 Kurort Rathen</b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗⭢🚶 `, icon: redDotIconSmall }, 
-	LabskáStráňBelvedér:    { lat: 50.84956, lng: 14.22148, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Labská Stráň - Belvedér 🔶 272m </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚗 ", icon: reddiamondSvg },
-	Tiskéstěny:    			{ lat: 50.787713, lng: 14.028897, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Tiské stěny 🔶 </b><br>Saksońska Szwajcaria<hr> ✦ 2023 🚗⭢🚶 ", icon: reddiamondSvg }, 
+	LabskáStráňBelvedér:    { lat: 50.84956, lng: 14.22148, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Labská Stráň - Belvedér </b><br> 272m <hr> ✦ 2023 🚗 ", icon: reddiamondSvg },
+	Tiskéstěny:    			{ lat: 50.787713, lng: 14.028897, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Tiské stěny </b><br><hr> ✦ 2023 🚗⭢🚶 ", icon: reddiamondSvg }, 
 	BadSchandau:    		{ lat: 50.91801, lng: 14.15202, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Wappen_bad_schandau.png" style="height:60px;"><br><b style='font-size:18px;'> 🇩🇪 Bad Schandau </b><br>Niemcy, Saksonia<hr> ✦ 2023 🚗 <hr> 🗼 +50m Winda z 1905 r. `, icon: redDotIcon10 }, 
 	Děčín:    				{ lat: 50.78109, lng: 14.21253, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/CZEchy-Decin.png" style="height:60px;">
@@ -1233,7 +1277,7 @@ var iconStyles = {
 								<br><b style='font-size:20px;'> 🇨🇭 Morges </b> <br> Szwajcaria</div><hr>✦ 2022 🚴 <br>✦ 2021 🚴<br>✦ 2018 🚴 `, icon: redDotIcon10 }, 
      SaintPrex:   			{ lat: 46.48284570967633,  lng: 6.45881122731891, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Saint-Prex </b><br>Szwajcaria<hr>✦ 2018 🚴 ", icon: redDotIconSmall },
      Écublens:   			{ lat: 46.52988902886265,  lng:  6.562527689263105, name: "<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇨🇭 Écublens </b><br>Szwajcaria<hr>✦ 2018 🚴 ", icon: redDotIconSmall },
-     Allaman:   			{ lat: 46.47105303225177,  lng:  6.3962210666031485, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/CHE_Allaman_COA.svg/800px-CHE_Allaman_COA.svg.png" style="height:60px;"><b style='font-size:18px;'> 🇨🇭 Allaman </b><br>Szwajcaria<hr>✦ 2021 🚴 <br>✦ 2018 🚴 `, icon: redDotIconSmall },
+     Allaman:   			{ lat: 46.47105303225177,  lng:  6.3962210666031485, name: `<p style='text-align: center; margin: 0'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/CHE_Allaman_COA.svg/800px-CHE_Allaman_COA.svg.png" style="height:60px;"><br><b style='font-size:18px;'> 🇨🇭 Allaman </b><br>Szwajcaria<hr>✦ 2021 🚴 <br>✦ 2018 🚴 `, icon: redDotIconSmall },
      Rolle:   				{ lat: 46.46135739033949,  lng:  6.339701142078658, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Rolle </b><br>Szwajcaria<hr>✦ 2018 🚴 ", icon: redDotIconSmall }, 
      Gland:   				{ lat: 46.42034201677721, lng:  6.27079976998155, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭 Gland </b><br>Szwajcaria<hr>✦ 2018 🚴 ", icon: redDotIconSmall },
      Nyon:   				{ lat: 46.38325005905485, lng:  6.23474873871812, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
@@ -1565,9 +1609,15 @@ var iconStyles = {
 								<br><b style='font-size:20px;'> 🇮🇹 Novara </b><br> Włochy, Piemont</div><hr>✦ 2024 🚗`, icon: redDotIcon },
      JezioroComo:   		{ lat: 45.9748, lng: 9.2302, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Jezioro Como </b><br> Włochy, Lombardia<hr>✦ 2024 🚗", icon: blueDiamondIcon },
      JezioroMaggiore: 		{ lat: 45.8699, lng: 8.5807, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Jezioro Maggiore </b><br> Włochy, Lombardia/Piemont<hr>✦ 2024 🚗 ", icon: blueDiamondIcon },
-     PuntaHellbronner3466m: { lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner 🔺 3466m </b><br> Alpy<hr>✦ 2024 🚠⭢🚠 ", icon: triangleSvg },
-     PrzełŚwBernarda2473m:  { lat: 45.86868, lng: 7.16497, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭🇮🇹 Przełęcz św. Bernarda 🔻 2473m </b><br> Alpy<hr>✦ 2024 🚗 ", icon: upsideDownTriangleSvg  },
-     SassodelFerro1062m:   	{ lat: 45.91160, lng: 8.64349, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Sasso del Ferro 🔺 1062m </b><br> Alpy<hr>✦ 2024 🚡⭢🚶 ", icon: triangleSvg }, 
+     PuntaHellbronner3466m: 			{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: triangleSvg },
+	 PuntaHellbronner3466mTower:		{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: DiamondTower15 },
+	PuntaHellbronner3466mCable:			{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: DiamondPurple15 },
+	PuntaHellbronner3466mSchronisko: 	{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: DiamondSquare15ONTOP },
+	PuntaHellbronnerPavillonCable:		{ lat: 45.82913388615193,  lng:  6.949922580389097, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Pavillon The Mountain<br>Skyway Monte Bianco  </b><br> 2173m<hr>✦ 2024 🚠 ", icon: DiamondPurple15 },
+	PuntaHellbronnerPavillonSchronisko:	{ lat: 45.82913388615193,  lng:  6.949922580389097, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Pavillon The Mountain<br>Skyway Monte Bianco  </b><br> 2173m<hr>✦ 2024 🚠 ", icon: DiamondSquare15 },
+	PuntaHellbronnerCourmayeurCable:	{ lat: 45.815877587084216, lng:  6.956015759762207, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Courmayeur <br>Skyway Monte Bianco  </b><br> 1300m <hr>✦ 2024 🚗 ", icon: DiamondPurple15 },	
+     PrzełŚwBernarda2473m:  { lat: 45.86868, lng: 7.16497, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇭🇮🇹 Przełęcz św. Bernarda </b><br>2473m<hr>✦ 2024 🚗 ", icon: upsideDownTriangleSvg  },
+     SassodelFerro1062m:   	{ lat: 45.91160, lng: 8.64349, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Sasso del Ferro </b><br>1062m<hr>✦ 2024 🚡⭢🚶 ", icon: triangleSvg }, 
      Varenna:   			{ lat: 46.010175, lng: 9.283351, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Stemma_di_Varenna.svg/800px-Stemma_di_Varenna.svg.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇮🇹 Varenna </b><br> Włochy, Lombardia</div><hr>✦ 2024 🚗`, icon: redDotIconSmall },
@@ -1607,7 +1657,10 @@ var iconStyles = {
                         	<hr> 🗼 +312m Wieża Eiffla
                             `,
                             icon: redSquareIcon30 },
-      AiguilleduMidi3842m:	{ lat: 45.878686, lng: 6.887913, name: "<b style='font-size:16px;'> 🇫🇷 Aiguille du Midi 🔺 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 <hr> Alpy", icon: triangleSvg },  
+      AiguilleduMidi3842m:	{ lat: 45.878686, lng: 6.887913, name: "<b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: triangleSvg },
+	AiguilleduMidi3842mTower:	{ lat: 45.878686, lng: 6.887913, name: "<b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: DiamondTower15 },
+	AiguilleduMidi3842mCable:	{ lat: 45.878686, lng: 6.887913, name: "<b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: DiamondPurple15 },
+	AiguilleduMidi3842mSchronisko: { lat: 45.878686, lng: 6.887913, name: "<b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: DiamondSquare15ONTOP },  
     // Holandia
       Amsterdam: 			{ lat: 52.367975546891806,  lng:   4.902300978728007, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/amsterdam.png" style="height:60px;">
@@ -1790,14 +1843,14 @@ var iconStyles = {
       	Hellevoetsluis: 			{ lat: 51.831837788347876,   lng:   4.1321557376161415, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Hellevoetsluis </b><br>Holandia<hr> ✦ 2017 🚐", icon: redDotIconSmall },
       	Maeslantkering1: 			{ lat: 51.95474017861898,  lng:   4.164723127451288, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Maeslantkering </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
       	Maeslantkering2: 			{ lat: 51.95474017861898,  lng:   4.164723127451288, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Maeslantkering </b><hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta1: 				{ lat: 51.8281580614774,    lng:     4.045343512838076, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Rijkswaterstaat </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta2: 				{ lat: 51.8281580614774,    lng:     4.045343512838076, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Rijkswaterstaat </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta3: 				{ lat: 51.76504601255858,    lng:    3.8486212125529184, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Brouwersdam </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta4: 				{ lat: 51.76504601255858,    lng:    3.8486212125529184, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Brouwersdam </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta5: 				{ lat: 51.653081384028404,    lng:    3.7210040748517565, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Oosterscheldekering </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PlanDelta6: 				{ lat: 51.653081384028404,    lng:    3.7210040748517565, name: "<b style='font-size:16px;'> 🇳🇱 Plan Delta - Oosterscheldekering </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
-      	PunktPortRotterdam:			{ lat: 51.966841072024984,    lng: 4.130616998688811, name: "<b style='font-size:16px;'> 🇳🇱 Port Rotterdam - Cypel </b><br>Holandia<hr> ✦ 2017 🚐", icon: reddiamondSvg },
-      	PunktPortRotterdam:			{ lat: 51.966841072024984,    lng: 4.130616998688811, name: "<b style='font-size:16px;'> 🇳🇱 Port Rotterdam - Cypel </b><br>Holandia<hr> ✦ 2017 🚐", icon: reddiamondSvg },
+      	PlanDelta1: 				{ lat: 51.8281580614774,    lng:     4.045343512838076, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Rijkswaterstaat </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta2: 				{ lat: 51.8281580614774,    lng:     4.045343512838076, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Rijkswaterstaat </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta3: 				{ lat: 51.76504601255858,    lng:    3.8486212125529184, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Brouwersdam </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta4: 				{ lat: 51.76504601255858,    lng:    3.8486212125529184, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Brouwersdam </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta5: 				{ lat: 51.653081384028404,    lng:    3.7210040748517565, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Oosterscheldekering </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PlanDelta6: 				{ lat: 51.653081384028404,    lng:    3.7210040748517565, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Plan Delta - Oosterscheldekering </b><br>Holandia<hr> ✦ 2017 🚐", icon: DiamondYellow20 },
+      	PunktPortRotterdam:			{ lat: 51.966841072024984,    lng: 4.130616998688811, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Port Rotterdam - Cypel </b><br>Holandia<hr> ✦ 2017 🚐", icon: reddiamondSvg },
+      	PunktPortRotterdam:			{ lat: 51.966841072024984,    lng: 4.130616998688811, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Port Rotterdam - Cypel </b><br>Holandia<hr> ✦ 2017 🚐", icon: reddiamondSvg },
       	MeijindelBerkheide: 			{ lat: 52.1491,  lng:  4.3468, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Meijindel-Berkheide </b><br>Holandia<hr> ✦ 2017 🚴", icon: DiamondGreen20 },
       	GoudaReeuwijksePlassen: 			{ lat: 52.03813,   lng:   4.74644, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇳🇱 Reeuwijkse Plassen </b><br>Holandia<hr> ✦ 2017 🚴", icon: DiamondBlue20 },
     // Belgia
@@ -2095,17 +2148,17 @@ var iconStyles = {
 								<br><b style='font-size:20px;'> 🇬🇪 Achalciche </b><br>Gruzja</div>
 								<hr> ✦ 2019 🚙`, icon: redDotIconSmall },
       Wardzia: 				{ lat: 41.381187923835135,  lng:  43.28461177692177, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Wardzia </b><br>Gruzja<hr> ✦ 2019 🚙", icon: redDotIconSmall6 },
-      Khorsair: 				{ lat: 42.54690353079207,  lng:  44.4087756327461, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Khorsair 🔺 3733m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
-      Karetta: 					{ lat: 42.97588594587021, lng: 43.04677646485326, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Karetta 🔺 3524m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
-      Koruldi: 					{ lat: 43.09903125926643, lng: 42.69218548938973, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Koruldi 🔺 3328m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
-      KarisKedi: 				{ lat: 42.663367287899455,  lng:  44.581486771595095, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Karis Kedi 🔺 2885m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
-      LentekhiUszguli: 			{ lat: 42.91609070911033,  lng:  43.100306497085114, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Zaragi Lentekhi - Uszguli 🔻 2555m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
-      DżwrisugheltechiliPrzełKrzyżowa: 	{ lat: 42.50534414432951,  lng:  44.45258977387741, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Dżwris ugheltechili (Przeł. Krzyżowa) 🔻 2379m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
-      CmindaSameba: 			{ lat: 42.66243800793211,  lng:  44.61972523180962, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Cminda Sameba 🔺 2170m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
-      ParavaniWardziaTbilisi: 	{ lat: 41.434649572625055,  lng:  43.8392373364696, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Paravani (Wardzia-Tbilisi) 🔻 2160m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
-      GoderdziBatumiAchalciche: { lat: 41.63036080814704,  lng:  42.282315692702724, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Goderdzi (Batumi-Achalciche) 🔻 2027m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
-      Lentekhi: 				{ lat: 42.79081729693146,  lng:  42.718540053949, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Lentekhi 🔺 850m </b><br>Kaukaz<hr>✦ 2019 🚶", icon: triangleSvg },
-      GudauriViewPoint: 		{ lat: 42.49223279350445, lng: 44.452362665375006, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Gudauri View Point 2384m </b><br>Kaukaz<hr>✦ 2019 🚙", icon: reddiamondSvg },
+      Khorsair: 				{ lat: 42.54690353079207,  lng:  44.4087756327461, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Khorsair </b><br> 3733m <hr>✦ 2019 🚶", icon: triangleSvg },
+      Karetta: 					{ lat: 42.97588594587021, lng: 43.04677646485326, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Karetta </b><br> 3524m <hr>✦ 2019 🚶", icon: triangleSvg },
+      Koruldi: 					{ lat: 43.09903125926643, lng: 42.69218548938973, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Koruldi </b><br> 3328m <hr>✦ 2019 🚶", icon: triangleSvg },
+      KarisKedi: 				{ lat: 42.663367287899455,  lng:  44.581486771595095, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Karis Kedi </b><br> 2885m <hr>✦ 2019 🚶", icon: triangleSvg },
+      LentekhiUszguli: 			{ lat: 42.91609070911033,  lng:  43.100306497085114, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Zaragi Lentekhi - Uszguli </b><br> 2555m <hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
+      DżwrisugheltechiliPrzełKrzyżowa: 	{ lat: 42.50534414432951,  lng:  44.45258977387741, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Dżwris ugheltechili (Przeł. Krzyżowa) </b><br> 2379m <hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
+      CmindaSameba: 			{ lat: 42.66243800793211,  lng:  44.61972523180962, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Cminda Sameba </b><br> 2170m <hr>✦ 2019 🚶", icon: triangleSvg },
+      ParavaniWardziaTbilisi: 	{ lat: 41.434649572625055,  lng:  43.8392373364696, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Paravani (Wardzia-Tbilisi) </b><br> 2160m <hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
+      GoderdziBatumiAchalciche: { lat: 41.63036080814704,  lng:  42.282315692702724, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Goderdzi (Batumi-Achalciche) </b><br> 2027m <hr>✦ 2019 🚙", icon: upsideDownTriangleSvg },
+      Lentekhi: 				{ lat: 42.79081729693146,  lng:  42.718540053949, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Lentekhi </b><br> 850m <hr>✦ 2019 🚶", icon: triangleSvg },
+      GudauriViewPoint: 		{ lat: 42.49223279350445, lng: 44.452362665375006, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇬🇪 Gudauri View Point 2384m <hr>✦ 2019 🚙", icon: reddiamondSvg },
       
       X1: 					{ lat: 0.0001, lng: 0.0001, name: "<b style='font-size:16px;'> 🇬🇪 XXXXXXXXX </b>", icon: redDotIconSmall },
       X1: 					{ lat: 0.0001, lng: 0.0001, name: "<b style='font-size:16px;'> 🇬🇪 XXXXXXXXX </b>", icon: redDotIconSmall },
@@ -2157,9 +2210,9 @@ var iconStyles = {
       	ArakurayamaSengenPark: 	{ lat: 35.50222932944393,  lng:  138.8016784133814, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Arakurayama Sengen </b><br>Japonia, Chubu<hr> ✦ 2014 🚶", icon: DiamondGreen15 },       
       	KawaguchikoTenjoyamaPark: 	{ lat: 35.50674580968137,  lng:  138.77993086936314, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Kawaguchiko Tenjoyama Park </b><br>Japonia, Chubu<hr> ✦ 2014 🚶", icon: DiamondGreen15 },
       	TakedaShingenWarringStatesPlazaPicturesqueLookout: { lat: 35.50399987480349,  lng: 138.77858569027, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Takeda Shingen - Platforma widokowa </b><br>Alpy Japońskie<hr> ✦ 2014 🚶", icon: reddiamondSvg },
-      	Tenjo: 					{ lat: 35.50350641819735,  lng:  138.78105859387588, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Tenjo 🔺 1104m </b><br>Alpy Japońskie<hr>✦ 2014 🚠⭢🚶|🚶", icon: triangleSvg },       
-      	ChureitoPagoda: 		{ lat: 35.50136852250246,  lng:  138.80201905135175, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Chureito Pagoda <br><br>Alpy Japońskie<hr> ✦ 2014 🚶", icon: reddiamondSvg },       
-      	Fudżi: 					{ lat: 35.363235295607424,  lng:  138.73351804131997, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Fudżi 🔺 <hr> </b> Tylko widok: - z samolotu, ze szczytu Tenjo, Z Roppongi Hills, z wieżowca siedziby rządu Japonii, z Pagody Chureito", icon: triangleSvg },       
+      	Tenjo: 					{ lat: 35.50350641819735,  lng:  138.78105859387588, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Tenjo </b><br> 1104m <hr>✦ 2014 🚠⭢🚶|🚶", icon: triangleSvg },       
+      	ChureitoPagoda: 		{ lat: 35.50136852250246,  lng:  138.80201905135175, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Chureito Pagoda <hr> ✦ 2014 🚶", icon: reddiamondSvg },       
+      	Fudżi: 					{ lat: 35.363235295607424,  lng:  138.73351804131997, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Fudżi </b><br> <hr> </b> Tylko widok: - z samolotu, ze szczytu Tenjo, Z Roppongi Hills, z wieżowca siedziby rządu Japonii, z Pagody Chureito", icon: triangleSvg },       
       	Jokohama: 				{ lat: 35.444401044697,  lng: 139.63835124658638, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Flag_of_Yokohama%2C_Kanagawa.svg.png" style="height:50px;">
 								<br><b style='font-size:20px;'> 🇯🇵 Jokohama </b><br>Japonia, Kanto</div>
@@ -2188,23 +2241,23 @@ var iconStyles = {
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/100px-Flag_of_Onomichi%2C_Hiroshima.svg.png" style="height:50px;">
 								<br><b style='font-size:20px;'> 🇯🇵 Onomichi </b><br>Japonia, Chugoku</div>
 								<hr> ✦ 2014 🚝`, icon: redDotIconsurplus },
-      	SetonaikaiNationalPark: 	{ lat: 34.22202734642491, lng:  133.09379352343467, name: "<b style='font-size:16px;'> 🇯🇵 Setonaikai Park Narodowy </b><br>瀬戸内海国立公園 </b><hr> ✦ 2014 🚴", icon: darkgreenDotIcon12 },
-      	KurushimaKaikyo1stBridge1: 	{ lat: 34.12658925161769,  lng:  133.01845595523886, name: "<b style='font-size:16px;'> 🇯🇵 Kurushima Kaikyo Bridges I Most 4105m</b><hr>✦ 2014 🚌", icon: DiamondYellow20 },
-      	HakataŌshima2Bridge1: 		{ lat: 34.19426619349373,  lng:  133.0691315459437, name: "<b style='font-size:16px;'> 🇯🇵 Hakata-Ōshima Bridge II Most 1196m</b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	KurushimaKaikyo3bridge1: 	{ lat: 34.21582892504819,  lng: 133.05585649773585, name: "<b style='font-size:16px;'> 🇯🇵 Ōshima Bridge III Most 328m</b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	TataraBridge1: 				{ lat: 34.260581780093666,  lng:  133.0625931817792, name: "<b style='font-size:16px;'> 🇯🇵 Tatara Bridge IV Most 1480m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	IkuchiBridge1: 				{ lat: 34.30428238682933, lng:  133.1486932914734, name: "<b style='font-size:16px;'> 🇯🇵 Ikuchi Bridge V Most 790m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	InnoshimaBridge1: 			{ lat: 34.358247986896494,  lng:  133.17684044691265, name: "<b style='font-size:16px;'> 🇯🇵 Innoshima Bridge 1339m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	KurushimaKaikyo1stBridge2: 	{ lat: 34.12658925161769,  lng:  133.01845595523886, name: "<b style='font-size:16px;'> 🇯🇵 Kurushima Kaikyo Bridges I Most 4105m</b><hr>✦ 2014 🚌", icon: DiamondYellow20 },
-      	HakataŌshima2Bridge2: 		{ lat: 34.19426619349373,  lng:  133.0691315459437, name: "<b style='font-size:16px;'> 🇯🇵 Hakata-Ōshima Bridge II Most 1196m</b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	KurushimaKaikyo3bridge2: 	{ lat: 34.21582892504819,  lng:  133.05585649773585, name: "<b style='font-size:16px;'> 🇯🇵 Ōshima Bridge III Most 328m</b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	TataraBridge2: 				{ lat: 34.260581780093666,  lng: 133.0625931817792 , name: "<b style='font-size:16px;'> 🇯🇵 Tatara Bridge IV Most 1480m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	IkuchiBridge2: 				{ lat: 34.30428238682933,  lng:  133.1486932914734, name: "<b style='font-size:16px;'> 🇯🇵 Ikuchi Bridge V Most 790m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	InnoshimaBridge2: 			{ lat: 34.358247986896494,  lng:  133.17684044691265, name: "<b style='font-size:16px;'> 🇯🇵 Innoshima Bridge 1339m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
-      	Miyajima: 				{ lat: 34.288050996281555,  lng:  132.33188394970563, name: "<b style='font-size:16px;'> 🇯🇵 Miyajima <br></b><hr> ✦ 2014 🚢⭢🚶 <hr> ⛩️ Miyajima Tori", icon: greenDotIcon },
-      	Misen: 					{ lat: 34.28014152531205, lng:  132.3203263929954, name: "<b style='font-size:16px;'> 🇯🇵 Misen 🔺 535m </b><hr>✦ 2014 🚶 <hr> 🗼 +6m Wieża Obserwacyjna", icon: triangleSvg },
-		MisenTower: 			{ lat: 34.28014152531205, lng:  132.3203263929954, name: "<b style='font-size:16px;'> 🇯🇵 Misen 🔺 535m </b><hr>✦ 2014 🚶 <hr> 🗼 +6m Wieża Obserwacyjna", icon: DiamondTower15 },
-      	HiroshimaBay: 			{ lat: 34.28315361000327,  lng: 132.4034833198988, name: "<b style='font-size:16px;'> 🇯🇵 Zatoka Hiroshima <br><hr> ✦ 2014 🚢 ", icon: blueDiamondIcon },
+      	SetonaikaiNationalPark: 	{ lat: 34.22202734642491, lng:  133.09379352343467, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Setonaikai Park Narodowy </b><br>瀬戸内海国立公園 </b><hr> ✦ 2014 🚴", icon: darkgreenDotIcon12 },
+      	KurushimaKaikyo1stBridge1: 	{ lat: 34.12658925161769,  lng:  133.01845595523886, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Kurushima Kaikyo Bridges I Most 4105m</b><hr>✦ 2014 🚌", icon: DiamondYellow20 },
+      	HakataŌshima2Bridge1: 		{ lat: 34.19426619349373,  lng:  133.0691315459437, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Hakata-Ōshima Bridge II Most 1196m</b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	KurushimaKaikyo3bridge1: 	{ lat: 34.21582892504819,  lng: 133.05585649773585, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Ōshima Bridge III Most 328m</b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	TataraBridge1: 				{ lat: 34.260581780093666,  lng:  133.0625931817792, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Tatara Bridge IV Most 1480m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	IkuchiBridge1: 				{ lat: 34.30428238682933, lng:  133.1486932914734, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Ikuchi Bridge V Most 790m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	InnoshimaBridge1: 			{ lat: 34.358247986896494,  lng:  133.17684044691265, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Innoshima Bridge 1339m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	KurushimaKaikyo1stBridge2: 	{ lat: 34.12658925161769,  lng:  133.01845595523886, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Kurushima Kaikyo Bridges I Most 4105m</b><hr>✦ 2014 🚌", icon: DiamondYellow20 },
+      	HakataŌshima2Bridge2: 		{ lat: 34.19426619349373,  lng:  133.0691315459437, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Hakata-Ōshima Bridge II Most 1196m</b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	KurushimaKaikyo3bridge2: 	{ lat: 34.21582892504819,  lng:  133.05585649773585, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Ōshima Bridge III Most 328m</b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	TataraBridge2: 				{ lat: 34.260581780093666,  lng: 133.0625931817792 , name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Tatara Bridge IV Most 1480m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	IkuchiBridge2: 				{ lat: 34.30428238682933,  lng:  133.1486932914734, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Ikuchi Bridge V Most 790m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	InnoshimaBridge2: 			{ lat: 34.358247986896494,  lng:  133.17684044691265, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Innoshima Bridge 1339m </b><hr>✦ 2014 🚴", icon: DiamondYellow20 },
+      	Miyajima: 				{ lat: 34.288050996281555,  lng:  132.33188394970563, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Miyajima <br></b><hr> ✦ 2014 🚢⭢🚶 <hr> ⛩️ Miyajima Tori", icon: greenDotIcon },
+      	Misen: 					{ lat: 34.28014152531205, lng:  132.3203263929954, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Misen </b><br> 535m </b><hr>✦ 2014 🚶 <hr> 🗼 +6m Wieża Obserwacyjna", icon: triangleSvg },
+		MisenTower: 			{ lat: 34.28014152531205, lng:  132.3203263929954, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Misen </b><br> 535m </b><hr>✦ 2014 🚶 <hr> 🗼 +6m Wieża Obserwacyjna", icon: DiamondTower15 },
+      	HiroshimaBay: 			{ lat: 34.28315361000327,  lng: 132.4034833198988, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Zatoka Hiroshima <br><hr> ✦ 2014 🚢 ", icon: blueDiamondIcon },
       	Hiroshima: 				{ lat: 34.39351495507439,  lng:  132.45708203749507, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Flag_of_Hiroshima.svg.png" style="height:50px;">
 								<br><b style='font-size:20px;'> 🇯🇵 Hiroshima </b><br>Japonia, Chugoku</div>
@@ -2217,13 +2270,13 @@ var iconStyles = {
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Flag_of_Nagano%2C_Nagano.png" style="height:50px;">
 								<br><b style='font-size:20px;'> 🇯🇵 Nagano </b><br>Japonia, Chubu</div>
 								<hr>✦ 2014 🚌`, icon: redDotIconsurplus },
-      	Yamanochi: 				{ lat: 36.74177534033696,  lng:  138.41389588342574, name: "<b style='font-size:16px;'> 🇯🇵 Yamanochi - Yudanaka </b><hr>✦ 2014 🚝", icon: redDotIconSmall6 },
-      	Yakedake: 				{ lat: 36.22902163670016, lng:  137.58873339066128, name: "<b style='font-size:16px;'> 🇯🇵 Yakedake 🔺 2446m </b><hr>✦ 2014 🚠⭢🚶", icon: triangleSvg },
+      	Yamanochi: 				{ lat: 36.74177534033696,  lng:  138.41389588342574, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Yamanochi - Yudanaka </b><hr>✦ 2014 🚝", icon: redDotIconSmall6 },
+      	Yakedake: 				{ lat: 36.22902163670016, lng:  137.58873339066128, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Yakedake </b><br> 2446m </b><hr>✦ 2014 🚠⭢🚶", icon: triangleSvg },
       	Takayama: 				{ lat: 36.14152228619924,  lng:  137.25360962839164, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Flag_of_Takayama%2C_Gifu.png" style="height:50px;">
 								<br><b style='font-size:20px;'> 🇯🇵 Takayama </b><br>Japonia, Chubu</div>
 								<hr>✦ 2014 🚄`, icon: redDotIconSmall },
-      	HirayuOnsen: 			{ lat: 36.191281084401986,  lng:  137.55436772410354, name: "<b style='font-size:16px;'> 🇯🇵 Hirayu Onsen </b><hr>✦ 2014 🚌⭢🚶", icon: redDotIconSmall6 },
+      	HirayuOnsen: 			{ lat: 36.191281084401986,  lng:  137.55436772410354, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇯🇵 Hirayu Onsen </b><hr>✦ 2014 🚌⭢🚶", icon: redDotIconSmall6 },
       	
       
     // USA  Kanada
@@ -2267,12 +2320,12 @@ var iconStyles = {
 								<hr> 🏢 +527m  Willis Tower 
 								<br> 🏢 +457m John Hancock Center</p> 
 								`, icon: redSquareIcon30 },
-      	NiagaraFallsCAN:		{ lat: 43.08956827967048,  lng:  -79.0840708763807, name: "<b style='font-size:16px;'> 🇨🇦 Niagara Falls (ON) </b><hr>✦ 2018 🚌⭢🚶", icon: redDotIcon },	
-      	NiagaraFallsUSA:		{ lat: 43.087314553728724,  lng:  -79.065743540454, name: "<b style='font-size:16px;'> 🇺🇸 Niagara Falls (NY) </b><hr>✦ 2018 🚌⭢🚶", icon: redDotIcon },
-      	WodospadNiagara1: 		{ lat: 43.07727186155516,  lng:  -79.07520172935627,  name: "<b style='font-size:16px;'> 🇨🇦🇺🇸 Wodospad Niagara </b><hr>✦ 2018 🚌⭢🚶", icon: DiamondBlue20 },
-      	WodospadNiagara2: 		{ lat: 43.07727186155516,  lng:  -79.07520172935627, name: "<b style='font-size:16px;'> 🇨🇦🇺🇸 Wodospad Niagara </b><hr>✦ 2018 🚌⭢🚶", icon: DiamondBlue20 },
-      	jezMichigan: 			{ lat: 42.43889022688123,  lng: -87.05264261145041, name: "<b style='font-size:16px;'> 🇺🇸 jez. Michigan </b><hr>✦ 2018 🚌", icon: blueDiamondIcon },
-      	jezOntario: 			{ lat: 43.599365741652115,   lng:  -78.7034655588464, name: "<b style='font-size:16px;'> 🇨🇦🇺🇸  jez. Ontario </b><hr>✦ 2018 ✈️⭢🚶⭢🚢", icon: blueDiamondIcon },
+      	NiagaraFallsCAN:		{ lat: 43.08956827967048,  lng:  -79.0840708763807, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇦 Niagara Falls (ON) </b><hr>✦ 2018 🚌⭢🚶", icon: redDotIcon },	
+      	NiagaraFallsUSA:		{ lat: 43.087314553728724,  lng:  -79.065743540454, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Niagara Falls (NY) </b><hr>✦ 2018 🚌⭢🚶", icon: redDotIcon },
+      	WodospadNiagara1: 		{ lat: 43.07727186155516,  lng:  -79.07520172935627,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇦🇺🇸 Wodospad Niagara </b><hr>✦ 2018 🚌⭢🚶", icon: DiamondBlue20 },
+      	WodospadNiagara2: 		{ lat: 43.07727186155516,  lng:  -79.07520172935627, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇦🇺🇸 Wodospad Niagara </b><hr>✦ 2018 🚌⭢🚶", icon: DiamondBlue20 },
+      	jezMichigan: 			{ lat: 42.43889022688123,  lng: -87.05264261145041, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 jez. Michigan </b><hr>✦ 2018 🚌", icon: blueDiamondIcon },
+      	jezOntario: 			{ lat: 43.599365741652115,   lng:  -78.7034655588464, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇦🇺🇸  jez. Ontario </b><hr>✦ 2018 ✈️⭢🚶⭢🚢", icon: blueDiamondIcon },
       
       // ROK USA 2022
       	Fresno: 				{ lat: 36.73811180449255, lng:  -119.78976731344267, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
@@ -2293,37 +2346,37 @@ var iconStyles = {
 								<hr>✦ 2022 🚗 <hr><p style='text-align: justify; margin: 0'>  Most Golden Gate | Park Golden Gate | Centrum San Fancisco | Twin Peaks </p> 
 								<hr>🗼 +64m Coit Tower 
 								`, icon: redSquareIcon30 },
-      	ParkNarodowySekwoi: 	{ lat: 36.55638252528711,  lng:   -118.74384567805448, name: "<b style='font-size:16px;'> 🇺🇸 Park Narodowy Sekwoi </b><hr>✦ 2022 🚗⭢🚶", icon: darkgreenDotIcon12 },
-      	ParkNarodowyYosemite: 	{ lat: 37.72351729467171, lng:  -119.63580346350803, name: "<b style='font-size:16px;'> 🇺🇸 Park Narodowy Yosemite </b><hr>✦ 2022 🚗⭢🚶", icon: darkgreenDotIcon12 },
-      	MoroRock: 				{ lat: 36.544492793586834,  lng:  -118.76523814399039, name: "<b style='font-size:16px;'> 🇺🇸 Moro Rock 🔺 2050m </b><hr>✦ 2022 🚶", icon: triangleSvg },
-      	GenerałScherman: 		{ lat: 36.58171231574503,  lng:  -118.75144269503541, name: "<b style='font-size:16px;'> 🇺🇸 Sekwoja Generał Scherman </b><hr>✦ 2022 🚶", icon: DiamondGreen20 },
-      	SekwojaSentinel: 		{ lat: 36.56492029804388,  lng:  -118.77307672805036, name: "<b style='font-size:16px;'> 🇺🇸 Sekwoja Sentinel </b><hr>✦ 2022 🚶", icon: DiamondGreen20 },
-      	SzlakWielkichdrzew: 	{ lat: 36.567907623273946,  lng:  -118.76832882725472, name: "<b style='font-size:16px;'> 🇺🇸 Szlak Wielkich Drzew </b><hr>✦ 2022 🚶", icon: DiamondGreen20 },
-      	WodospadNSierraNevada1: { lat: 37.724887529359265,   lng:   -119.53309304907377,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Nevada 1820m </b><br> (181m)<hr>✦ 2022 🚶", icon: DiamondBlue20 },
-      	WodospadNSierraNevada2: { lat: 37.724887529359265,   lng:   -119.53309304907377,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Nevada 1820m </b><br> (181m)<hr>✦ 2022 🚶", icon: DiamondBlue20 },
-      	WodospadVernal1: 		{ lat: 37.727526324826925,   lng:  -119.54405298727045,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Vernal 1545m </b><br> (94m) <hr>✦ 2022 🚶", icon: DiamondBlue20 },
-      	WodospadVernal2: 		{ lat: 37.727526324826925,   lng:  -119.54405298727045, name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Vernal 1545m </b><br> (94m) <hr>✦ 2022 🚶", icon: DiamondBlue20 },
-      	WodospadYosemite1: 		{ lat: 37.75668348043851,   lng:   -119.59713204379601,  name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Yosemite 2080m </b><br>(440 + 206 + 98m) <hr>✦ 2022 🚶", icon: DiamondBlue20 },
-      	WodospadYosemite2: 		{ lat: 37.75668348043851,   lng:   -119.59713204379601, name: "<b style='font-size:16px;'> 🇺🇸 Wodospad Yosemite 2080m </b><br>(440 + 206 + 98m)  <hr>✦ 2022 🚶", icon: DiamondBlue20 },
-      	TwinPeaks1: 			{ lat: 37.75459248240934, lng:  -122.44696850839989, name: "<b style='font-size:16px;'> 🇺🇸 Twin Peaks (płn) 🔺 271m </b><hr>✦ 2022 🚗⭢🚶", icon: triangleSvg },
-      	TwinPeaks2: 			{ lat: 37.75141027708702,  lng:  -122.4480916966929, name: "<b style='font-size:16px;'> 🇺🇸 Twin Peaks (płd) 🔺 274m </b><hr>✦ 2022 🚗⭢🚶", icon: triangleSvg },
-      	HawkHill: 				{ lat: 37.82580597193453,  lng: -122.49827810025083, name: "<b style='font-size:16px;'> 🇺🇸 Hawk Hill 🔺 281m </b><hr>✦ 2022 🚴", icon: triangleSvg },
-      	GoldenGate1: 			{ lat: 37.8200849104574,   lng:   -122.47763100820185,  name: "<b style='font-size:16px;'> 🇺🇸 Most Golden Gate </b><hr>✦ 2022 🚴", icon: DiamondYellow20 },
-      	GoldenGate2: 			{ lat: 37.8200849104574,   lng:   -122.47763100820185, name: "<b style='font-size:16px;'> 🇺🇸 Most Golden Gate </b><hr>✦ 2022 🚴", icon: DiamondYellow20 },
-      	SanFranciscoOaklandBayBridge1: 	{ lat: 37.798508933943694,   lng:   -122.3767757095471,  name: "<b style='font-size:16px;'> San Francisco–Oakland Bay Bridge </b><hr>✦ 2022 🚗", icon: DiamondYellow20 },
-      	SanFranciscoOaklandBayBridge2: 	{ lat: 37.798508933943694,   lng:   -122.3767757095471, name: "<b style='font-size:16px;'> 🇺🇸 San Francisco–Oakland Bay Bridge </b><hr>✦ 2022 🚗", icon: DiamondYellow20 },
-      	TheBayBridge1: 			{ lat: 37.819541901434135,   lng:   -122.3485056185594,  name: "<b style='font-size:16px;'> The Bay Bridge </b><hr>✦ 2022 🚗", icon: DiamondYellow20 },
-      	TheBayBridge2: 			{ lat: 37.819541901434135,   lng:   -122.3485056185594, name: "<b style='font-size:16px;'> 🇺🇸 The Bay Bridge </b><hr>✦ 2022 🚗", icon: DiamondYellow20 },
-        BatteySpecerScenic: 	{ lat: 37.827840868408344,  lng:  -122.4809338485411, name: "<b style='font-size:16px;'> 🇺🇸 Battery Spencer </b><hr>✦ 2022 🚴 ", icon: reddiamondSvg },
-      	BatteyLancesterScenic: 	{ lat: 37.80821009016925, lng:  -122.47567261977332, name: "<b style='font-size:16px;'> 🇺🇸 Battery Lancaster </b><hr>✦ 2022 🚗⭢🚶", icon: reddiamondSvg },
-      	GoldenGatePark: 		{ lat: 37.76881442868606,  lng:  -122.48190470044503, name: "<b style='font-size:16px;'> 🇺🇸 Park Golden Gate </b><hr>✦ 2022 🚗 ", icon: greenDotIcon },
-      	GoldenGateParkRezerwat: { lat: 37.76881442868606,  lng:  -122.48190470044503, name: "<b style='font-size:16px;'> 🇺🇸 Golden Gate Rezerwat </b><hr>✦ 2022 🚗 ", icon: greenDotIcon },
-      	YosemitePoint: 			{ lat: 37.75662419076479, lng:  -119.59341039703165, name: "<b style='font-size:16px;'> 🇺🇸 Yosemite Point 2115m </b><hr>✦ 2022 🚶", icon: reddiamondSvg },
-      	TunnelVieWYosemitePoint: { lat: 37.716129405364164,  lng:  -119.67823405627658, name: "<b style='font-size:16px;'> 🇺🇸 Tunnel View Yosemite  1343m </b><hr>✦ 2022 🚗", icon: reddiamondSvg },
-      	MtLee: 					{ lat: 34.134618556181465,  lng:  -118.321750774044, name: "<b style='font-size:16px;'> 🇺🇸 Mt. Lee 🔺 521m </b><hr>✦ 2022 🚶", icon: triangleSvg },
-      	MtHolywood: 			{ lat: 34.12822221526598,  lng:  -118.30118926644099, name: "<b style='font-size:16px;'> 🇺🇸 Mt. Holywood 🔺 492m </b><hr>✦ 2022 🚶", icon: triangleSvg },
-        YosemiteVillage: 		{ lat: 37.7466985719873,   lng:   -119.59064279588227, name: "<b style='font-size:16px;'> 🇺🇸 Yosemite Village </b><hr>✦ 2022 🚗", icon: redDotIconSmall6 },
-		CurryVillage: 			{ lat: 37.738040478018235,   lng:   -119.5702359922974, name: "<b style='font-size:16px;'> 🇺🇸 Curry Village </b><hr>✦ 2022 🚗", icon: redDotIconSmall6 },
+      	ParkNarodowySekwoi: 	{ lat: 36.55638252528711,  lng:   -118.74384567805448, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Park Narodowy Sekwoi </b><hr>✦ 2022 🚗⭢🚶", icon: darkgreenDotIcon12 },
+      	ParkNarodowyYosemite: 	{ lat: 37.72351729467171, lng:  -119.63580346350803, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Park Narodowy Yosemite </b><hr>✦ 2022 🚗⭢🚶", icon: darkgreenDotIcon12 },
+      	MoroRock: 				{ lat: 36.544492793586834,  lng:  -118.76523814399039, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Moro Rock </b><br> 2050m </b><hr>✦ 2022 🚶", icon: triangleSvg },
+      	GenerałScherman: 		{ lat: 36.58171231574503,  lng:  -118.75144269503541, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Sekwoja Generał Scherman </b><hr>✦ 2022 🚶", icon: DiamondGreen20 },
+      	SekwojaSentinel: 		{ lat: 36.56492029804388,  lng:  -118.77307672805036, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Sekwoja Sentinel </b><hr>✦ 2022 🚶", icon: DiamondGreen20 },
+      	SzlakWielkichdrzew: 	{ lat: 36.567907623273946,  lng:  -118.76832882725472, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Szlak Wielkich Drzew </b><hr>✦ 2022 🚶", icon: DiamondGreen20 },
+      	WodospadNSierraNevada1: { lat: 37.724887529359265,   lng:   -119.53309304907377,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Wodospad Nevada </b><br>1820m </b><br> (181m)<hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadNSierraNevada2: { lat: 37.724887529359265,   lng:   -119.53309304907377,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Wodospad Nevada </b><br>1820m </b><br> (181m)<hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadVernal1: 		{ lat: 37.727526324826925,   lng:  -119.54405298727045,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Wodospad Vernal </b><br>1545m </b><br> (94m) <hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadVernal2: 		{ lat: 37.727526324826925,   lng:  -119.54405298727045, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Wodospad Vernal </b><br>1545m </b><br> (94m) <hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadYosemite1: 		{ lat: 37.75668348043851,   lng:   -119.59713204379601,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Wodospad Yosemite </b><br>2080m </b><br>(440 + 206 + 98m) <hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	WodospadYosemite2: 		{ lat: 37.75668348043851,   lng:   -119.59713204379601, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Wodospad Yosemite </b><br>2080m </b><br>(440 + 206 + 98m)  <hr>✦ 2022 🚶", icon: DiamondBlue20 },
+      	TwinPeaks1: 			{ lat: 37.75459248240934, lng:  -122.44696850839989, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Twin Peaks (płn) </b><br> 271m </b><hr>✦ 2022 🚗⭢🚶", icon: triangleSvg },
+      	TwinPeaks2: 			{ lat: 37.75141027708702,  lng:  -122.4480916966929, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Twin Peaks (płd) </b><br> 274m </b><hr>✦ 2022 🚗⭢🚶", icon: triangleSvg },
+      	HawkHill: 				{ lat: 37.82580597193453,  lng: -122.49827810025083, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Hawk Hill </b><br> 281m </b><hr>✦ 2022 🚴", icon: triangleSvg },
+      	GoldenGate1: 			{ lat: 37.8200849104574,   lng:   -122.47763100820185,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Most Golden Gate </b><hr>✦ 2022 🚴", icon: DiamondYellow20 },
+      	GoldenGate2: 			{ lat: 37.8200849104574,   lng:   -122.47763100820185, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Most Golden Gate </b><hr>✦ 2022 🚴", icon: DiamondYellow20 },
+      	SanFranciscoOaklandBayBridge1: 	{ lat: 37.798508933943694,   lng:   -122.3767757095471,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> San Francisco–Oakland Bay Bridge </b><hr>✦ 2022 🚗", icon: DiamondYellow20 },
+      	SanFranciscoOaklandBayBridge2: 	{ lat: 37.798508933943694,   lng:   -122.3767757095471, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 San Francisco–Oakland Bay Bridge </b><hr>✦ 2022 🚗", icon: DiamondYellow20 },
+      	TheBayBridge1: 			{ lat: 37.819541901434135,   lng:   -122.3485056185594,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> The Bay Bridge </b><hr>✦ 2022 🚗", icon: DiamondYellow20 },
+      	TheBayBridge2: 			{ lat: 37.819541901434135,   lng:   -122.3485056185594, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 The Bay Bridge </b><hr>✦ 2022 🚗", icon: DiamondYellow20 },
+        BatteySpecerScenic: 	{ lat: 37.827840868408344,  lng:  -122.4809338485411, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Battery Spencer </b><hr>✦ 2022 🚴 ", icon: reddiamondSvg },
+      	BatteyLancesterScenic: 	{ lat: 37.80821009016925, lng:  -122.47567261977332, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Battery Lancaster </b><hr>✦ 2022 🚗⭢🚶", icon: reddiamondSvg },
+      	GoldenGatePark: 		{ lat: 37.76881442868606,  lng:  -122.48190470044503, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Park Golden Gate </b><hr>✦ 2022 🚗 ", icon: greenDotIcon },
+      	GoldenGateParkRezerwat: { lat: 37.76881442868606,  lng:  -122.48190470044503, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Golden Gate Rezerwat </b><hr>✦ 2022 🚗 ", icon: greenDotIcon },
+      	YosemitePoint: 			{ lat: 37.75662419076479, lng:  -119.59341039703165, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Yosemite Point </b><br>2115m </b><hr>✦ 2022 🚶", icon: reddiamondSvg },
+      	TunnelVieWYosemitePoint: { lat: 37.716129405364164,  lng:  -119.67823405627658, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Tunnel View Yosemite  1343m </b><hr>✦ 2022 🚗", icon: reddiamondSvg },
+      	MtLee: 					{ lat: 34.134618556181465,  lng:  -118.321750774044, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Mt. Lee </b><br> 521m </b><hr>✦ 2022 🚶", icon: triangleSvg },
+      	MtHolywood: 			{ lat: 34.12822221526598,  lng:  -118.30118926644099, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Mt. Holywood </b><br> 492m </b><hr>✦ 2022 🚶", icon: triangleSvg },
+        YosemiteVillage: 		{ lat: 37.7466985719873,   lng:   -119.59064279588227, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Yosemite Village </b><hr>✦ 2022 🚗", icon: redDotIconSmall6 },
+		CurryVillage: 			{ lat: 37.738040478018235,   lng:   -119.5702359922974, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Curry Village </b><hr>✦ 2022 🚗", icon: redDotIconSmall6 },
    
       
       
@@ -2359,62 +2412,62 @@ var iconStyles = {
 								<br><b style='font-size:20px;'> 🇺🇸 Memphis </b><br>Tennessee</div>
 								<hr>✦ 2023 ✈️⭢🚗 <br>✦ 2022 ✈️⭢🚗 <hr><p style='text-align: justify; margin: 0'> Piramida | Rzeka Mississippi | Park Makieta Mississippi </p> <hr>🏢 +98m  Memphis Pyramid `, icon: redDotIconMedium },   // Memphis, USA
 		// Denver
-        RedRockPark: 			{ lat: 39.665368, lng: -105.205754, name: "<b style='font-size:16px;'> 🇺🇸 Red Rock Park </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Red Rock Park
-        TunelEisehowera: 		{ lat: 39.67894, lng: -105.92024, name: "<b style='font-size:16px;'> 🇺🇸 Tunel Eisehowera </b><hr>✦ 2023 🚙", icon: DiamondYellow20 }, // Tunel Eisehowera
-        SilverthorneHW: 		{ lat: 39.601720, lng: -106.088877, name: "<b style='font-size:16px;'> 🇺🇸 Silverthorne HW </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Silverthorne HW
+        RedRockPark: 			{ lat: 39.665368, lng: -105.205754, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Red Rock Park </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Red Rock Park
+        TunelEisehowera: 		{ lat: 39.67894, lng: -105.92024, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Tunel Eisehowera </b><hr>✦ 2023 🚙", icon: DiamondYellow20 }, // Tunel Eisehowera
+        SilverthorneHW: 		{ lat: 39.601720, lng: -106.088877, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Silverthorne HW </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Silverthorne HW
       	// Canyonlands
-        GrandViewPoint: 		{ lat: 38.30341, lng: -109.86774, name: "<b style='font-size:16px;'> 🇺🇸 Grand View Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Grand View Point
-        GrandViewPointOverlook: { lat: 38.31024, lng: -109.85676, name: "<b style='font-size:16px;'> 🇺🇸 Grand View Point Overlook </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Grand View Point Overlook
-        BuckCanyonOverlook: 	{ lat: 38.345948, lng: -109.860379, name: "<b style='font-size:16px;'> 🇺🇸 Buck Canyon Overlook </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Buck Canyon Overlook
-        GreenRiverOverlook: 	{ lat: 38.378176, lng: -109.888204, name: "<b style='font-size:16px;'> 🇺🇸 Green River Overlook </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Green River Overlook
-        MesaArch: 				{ lat: 38.388066, lng: -109.863625, name: "<b style='font-size:16px;'> 🇺🇸 Mesa Arch </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Mesa Arch
-        ShaferCanyonOverlook: 	{ lat: 38.452799, lng: -109.817984, name: "<b style='font-size:16px;'> 🇺🇸 Shafer Canyon Overlook </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Shafer Canyon Overlook
-        DeadHorsePoint: 		{ lat: 38.469366, lng: -109.739513, name: "<b style='font-size:16px;'> 🇺🇸 Dead Horse Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Dead Horse Point
+        GrandViewPoint: 		{ lat: 38.30341, lng: -109.86774, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Grand View Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Grand View Point
+        GrandViewPointOverlook: { lat: 38.31024, lng: -109.85676, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Grand View Point Overlook </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Grand View Point Overlook
+        BuckCanyonOverlook: 	{ lat: 38.345948, lng: -109.860379, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Buck Canyon Overlook </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Buck Canyon Overlook
+        GreenRiverOverlook: 	{ lat: 38.378176, lng: -109.888204, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Green River Overlook </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Green River Overlook
+        MesaArch: 				{ lat: 38.388066, lng: -109.863625, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Mesa Arch </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Mesa Arch
+        ShaferCanyonOverlook: 	{ lat: 38.452799, lng: -109.817984, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Shafer Canyon Overlook </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Shafer Canyon Overlook
+        DeadHorsePoint: 		{ lat: 38.469366, lng: -109.739513, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Dead Horse Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Dead Horse Point
         // Arches
-        ParkAvenueViewPoint: 	{ lat: 38.62530, lng: -109.59989, name: " <b style='font-size:16px;'> 🇺🇸 Park Avenue View Point</b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Park Avenue View Point
-        BalancedRock: 			{ lat: 38.700964, lng: -109.564692, name: "<b style='font-size:16px;'> 🇺🇸 Balanced Rock </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Balanced Rock
-        DoubleArch: 			{ lat: 38.691686, lng: -109.540392, name: "<b style='font-size:16px;'> 🇺🇸 Double Arch </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Double Arch
-        WindowsArches: 			{ lat: 38.685430, lng: -109.533134, name: "<b style='font-size:16px;'> 🇺🇸 Windows Arches </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Windows Arches
-        DelicateArch: 			{ lat: 38.743530, lng: -109.499257, name: "<b style='font-size:16px;'> 🇺🇸 Delicate Arch </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Delicate Arch
-        SandDuneArch: 			{ lat: 38.764376, lng: -109.581110, name: "<b style='font-size:16px;'> 🇺🇸 Sand Dune Arch </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Sand Dune Arch
-        LandscapeArch: 			{ lat: 38.791155, lng: -109.606937, name: "<b style='font-size:16px;'> 🇺🇸 Landscape Arch </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Landscape Arch
-        DoubleOArch: 			{ lat: 38.799189, lng: -109.621193, name: "<b style='font-size:16px;'> 🇺🇸 Double O Arch </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Double O Arch
+        ParkAvenueViewPoint: 	{ lat: 38.62530, lng: -109.59989, name: " <p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Park Avenue View Point</b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Park Avenue View Point
+        BalancedRock: 			{ lat: 38.700964, lng: -109.564692, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Balanced Rock </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Balanced Rock
+        DoubleArch: 			{ lat: 38.691686, lng: -109.540392, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Double Arch </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Double Arch
+        WindowsArches: 			{ lat: 38.685430, lng: -109.533134, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Windows Arches </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Windows Arches
+        DelicateArch: 			{ lat: 38.743530, lng: -109.499257, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Delicate Arch </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Delicate Arch
+        SandDuneArch: 			{ lat: 38.764376, lng: -109.581110, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Sand Dune Arch </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Sand Dune Arch
+        LandscapeArch: 			{ lat: 38.791155, lng: -109.606937, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Landscape Arch </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Landscape Arch
+        DoubleOArch: 			{ lat: 38.799189, lng: -109.621193, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Double O Arch </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Double O Arch
         // Monument Valley
-        ViewofValleyofGods: 	{ lat: 37.27682, lng: -109.93598, name: "<b style='font-size:16px;'> 🇺🇸 View of Valley of Gods </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // View of Valley of Gods
-        MexicanHat: 			{ lat: 37.17365, lng: -109.84895, name: "<b style='font-size:16px;'> 🇺🇸 Mexican Hat </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Mexican Hat
-        ForrestGumpPoint: 		{ lat: 37.10148, lng: -109.99085, name: "<b style='font-size:16px;'> 🇺🇸 Forrest Gump Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Forrest Gump Point
-        MonumentValleyViewPoint:{ lat: 36.982522, lng: -110.111622, name: "<b style='font-size:16px;'> 🇺🇸 Monument Valley View Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Monument Valley View Point
+        ViewofValleyofGods: 	{ lat: 37.27682, lng: -109.93598, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 View of Valley of Gods </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // View of Valley of Gods
+        MexicanHat: 			{ lat: 37.17365, lng: -109.84895, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Mexican Hat </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Mexican Hat
+        ForrestGumpPoint: 		{ lat: 37.10148, lng: -109.99085, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Forrest Gump Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Forrest Gump Point
+        MonumentValleyViewPoint:{ lat: 36.982522, lng: -110.111622, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Monument Valley View Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Monument Valley View Point
         // Page
-        KanionAntylopylower: 	{ lat: 36.903157, lng: -111.413094, name: "<b style='font-size:16px;'> 🇺🇸 Kanion Antylopy (lower) </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Kanion Antylopy (lower)
-        HorseshoeBend: 			{ lat: 36.88072, lng: -111.51099, name: "<b style='font-size:16px;'> 🇺🇸 Horseshoe Bend </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Horseshoe Bend
-        GlenCanyonDamOverlook: 	{ lat: 36.924277, lng: -111.478572, name: "<b style='font-size:16px;'> 🇺🇸 Glen Canyon Dam Overlook </b><hr>✦ 2023 🚙", icon: DiamondYellow20 }, // Glen Canyon Dam Overlook
-        WahweapViewpoint: 		{ lat: 36.968915, lng: -111.499010, name: "<b style='font-size:16px;'> 🇺🇸 Wahweap Viewpoint </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Wahweap Viewpoint
+        KanionAntylopylower: 	{ lat: 36.903157, lng: -111.413094, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Kanion Antylopy (lower) </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Kanion Antylopy (lower)
+        HorseshoeBend: 			{ lat: 36.88072, lng: -111.51099, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Horseshoe Bend </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Horseshoe Bend
+        GlenCanyonDamOverlook: 	{ lat: 36.924277, lng: -111.478572, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Glen Canyon Dam Overlook </b><hr>✦ 2023 🚙", icon: DiamondYellow20 }, // Glen Canyon Dam Overlook
+        WahweapViewpoint: 		{ lat: 36.968915, lng: -111.499010, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Wahweap Viewpoint </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Wahweap Viewpoint
         // Wielki Kanion Kolorado
-        DesertViewWatchtower: 	{ lat: 36.04230, lng: -111.82541, name: "<b style='font-size:16px;'> 🇺🇸 Desert View Watchtower </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Desert View Watchtower
-        NavajoPoint: 			{ lat: 36.038394, lng: -111.837580, name: "<b style='font-size:16px;'> 🇺🇸 Navajo Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Navajo Point
-        MoranPoint: 			{ lat: 36.00495, lng: -111.92412, name: "<b style='font-size:16px;'> 🇺🇸 Moran Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Moran Point
-        GrandviewPoint: 		{ lat: 35.998155, lng: -111.987838, name: "<b style='font-size:16px;'> 🇺🇸 Grandview Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Grandview Point
-        YakiPoint: 				{ lat: 36.058345, lng: -112.083201, name: "<b style='font-size:16px;'> 🇺🇸 Yaki Point </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Yaki Point
-        OohAahPoint: 			{ lat: 36.061507, lng: -112.087042, name: "<b style='font-size:16px;'> 🇺🇸 Ooh Aah Point </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Ooh Aah Point
-        CedarRidge: 			{ lat: 36.065978, lng: -112.090893, name: "<b style='font-size:16px;'> 🇺🇸 Cedar Ridge </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Cedar Ridge
-        MatherPoint: 			{ lat: 36.061511, lng: -112.108140, name: "<b style='font-size:16px;'> 🇺🇸 Mather Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Mather Point
+        DesertViewWatchtower: 	{ lat: 36.04230, lng: -111.82541, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Desert View Watchtower </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Desert View Watchtower
+        NavajoPoint: 			{ lat: 36.038394, lng: -111.837580, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Navajo Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Navajo Point
+        MoranPoint: 			{ lat: 36.00495, lng: -111.92412, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Moran Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Moran Point
+        GrandviewPoint: 		{ lat: 35.998155, lng: -111.987838, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Grandview Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Grandview Point
+        YakiPoint: 				{ lat: 36.058345, lng: -112.083201, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Yaki Point </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Yaki Point
+        OohAahPoint: 			{ lat: 36.061507, lng: -112.087042, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Ooh Aah Point </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Ooh Aah Point
+        CedarRidge: 			{ lat: 36.065978, lng: -112.090893, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Cedar Ridge </b><hr>✦ 2023 🚙⭢🚶", icon: reddiamondSvg }, // Cedar Ridge
+        MatherPoint: 			{ lat: 36.061511, lng: -112.108140, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Mather Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Mather Point
         // Dolina Śmierci
-        BadwaterBasin: 			{ lat: 36.230012, lng: -116.767631, name: "<b style='font-size:16px;'> 🇺🇸 Badwater Basin </b><hr>✦ 2023 🚙", icon: upsideDownTriangleSvg }, // Badwater Basin
-        ArtistsPalette: 		{ lat: 36.36421, lng: -116.80080, name: "<b style='font-size:16px;'> 🇺🇸 Artist's Palette </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Artist's Palette
-        DesolationCanyon: 		{ lat: 36.39626, lng: -116.83717, name: "<b style='font-size:16px;'> 🇺🇸 Desolation Canyon </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Desolation Canyon
-        GoldenCanyon: 			{ lat: 36.420877, lng: -116.846455, name: "<b style='font-size:16px;'> 🇺🇸 Golden Canyon </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Golden Canyon
-        MosquitoFlatSandDunes: 	{ lat: 36.606847, lng: -117.115502, name: "<b style='font-size:16px;'> 🇺🇸 Mosquito Flat Sand Dunes </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Mosquito Flat Sand Dunes
-        ZabriskiePoint: 		{ lat: 36.42009, lng: -116.81233, name: "<b style='font-size:16px;'> 🇺🇸 Zabriskie Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Zabriskie Point
-        DantesPoint: 			{ lat: 36.22072, lng: -116.72678, name: "<b style='font-size:16px;'> 🇺🇸 Dante's Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Dante's Point
+        BadwaterBasin: 			{ lat: 36.230012, lng: -116.767631, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Badwater Basin </b><hr>✦ 2023 🚙", icon: upsideDownTriangleSvg }, // Badwater Basin
+        ArtistsPalette: 		{ lat: 36.36421, lng: -116.80080, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Artist's Palette </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Artist's Palette
+        DesolationCanyon: 		{ lat: 36.39626, lng: -116.83717, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Desolation Canyon </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Desolation Canyon
+        GoldenCanyon: 			{ lat: 36.420877, lng: -116.846455, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Golden Canyon </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Golden Canyon
+        MosquitoFlatSandDunes: 	{ lat: 36.606847, lng: -117.115502, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Mosquito Flat Sand Dunes </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Mosquito Flat Sand Dunes
+        ZabriskiePoint: 		{ lat: 36.42009, lng: -116.81233, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Zabriskie Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Zabriskie Point
+        DantesPoint: 			{ lat: 36.22072, lng: -116.72678, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Dante's Point </b><hr>✦ 2023 🚙", icon: reddiamondSvg }, // Dante's Point
         // Parki Narodowe
-        MonumentValley: 		{ lat: 36.97417, lng: -110.08309, name: "<b style='font-size:16px;'> 🇺🇸 Monument Valley </b><hr>✦ 2023 🚙", icon: greenDotIcon12 }, // Monument Valley
-        ValleyofGods: 			{ lat: 37.31106, lng: -109.84989, name: "<b style='font-size:16px;'> 🇺🇸 Valley of Gods </b><hr>✦ 2023 🚙", icon: greenDotIcon12 }, // Valley of Gods
-		ParkNarodowyArches: 	{ lat: 38.64731, lng: -109.55618, name: "<b style='font-size:16px;'> 🇺🇸 Park Narodowy Arches </b><hr>✦ 2023 🚙", icon: darkgreenDotIcon12 }, // Park Narodowy Arches
-        ParkNarodowyCanyonlands:{ lat: 38.33344, lng: -109.82260, name: "<b style='font-size:16px;'> 🇺🇸 Park Narodowy Canyonlands </b><hr>✦ 2023 🚙", icon: darkgreenDotIcon12 }, // Park Narodowy Canyonlands
-        DolinaŚmierci: 			{ lat: 36.1501, lng: -116.9234, name: "<b style='font-size:16px;'> 🇺🇸 Dolina Śmierci </b><hr>✦ 2023 🚙", icon: darkgreenDotIcon12 }, // Dolina Śmierci
-        WielkiKanionColorado: 	{ lat: 36.0785, lng: -111.9665, name: "<b style='font-size:16px;'> 🇺🇸 Wielki Kanion Colorado </b><hr>✦ 2023 🚙", icon: darkgreenDotIcon12 }, // Wielki Kanion Colorado
-        Page: 					{ lat: 36.9147, lng: -111.4558, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Page </b><br>USA, Arizona<hr>✦ 2023 🚙", icon: redDotIcon }, // Page
-        Moab: 					{ lat: 38.5733, lng: -109.5498, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Moab </b><br>USA, Utah<hr>✦ 2023 🚙", icon: redDotIcon }, // Moab
+        MonumentValley: 		{ lat: 36.97417, lng: -110.08309, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Monument Valley </b><hr>✦ 2023 🚙", icon: greenDotIcon12 }, // Monument Valley
+        ValleyofGods: 			{ lat: 37.31106, lng: -109.84989, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Valley of Gods </b><hr>✦ 2023 🚙", icon: greenDotIcon12 }, // Valley of Gods
+		ParkNarodowyArches: 	{ lat: 38.64731, lng: -109.55618, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Park Narodowy Arches </b><hr>✦ 2023 🚙", icon: darkgreenDotIcon12 }, // Park Narodowy Arches
+        ParkNarodowyCanyonlands:{ lat: 38.33344, lng: -109.82260, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Park Narodowy Canyonlands </b><hr>✦ 2023 🚙", icon: darkgreenDotIcon12 }, // Park Narodowy Canyonlands
+        DolinaŚmierci: 			{ lat: 36.1501, lng: -116.9234, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Dolina Śmierci </b><hr>✦ 2023 🚙", icon: darkgreenDotIcon12 }, // Dolina Śmierci
+        WielkiKanionColorado: 	{ lat: 36.0785, lng: -111.9665, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Wielki Kanion Colorado </b><hr>✦ 2023 🚙", icon: darkgreenDotIcon12 }, // Wielki Kanion Colorado
+        Page: 					{ lat: 36.9147, lng: -111.4558, name: "<p style='text-align: center; margin: 0'><p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Page </b><br>USA, Arizona<hr>✦ 2023 🚙", icon: redDotIcon }, // Page
+        Moab: 					{ lat: 38.5733, lng: -109.5498, name: "<p style='text-align: center; margin: 0'><p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Moab </b><br>USA, Utah<hr>✦ 2023 🚙", icon: redDotIcon }, // Moab
        	FurnaceCreek: 			{ lat: 36.46066, lng: -116.86664, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇺🇸 Furnace Creek </b><br>USA, California<hr>✦ 2023 🚙", icon: redDotIcon10 }, // Furnace Creek
         Collierville: 			{ lat: 35.0402, lng: -89.7085, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Seal_of_Collierville%2C_Tennessee.png" style="height:80px;">
@@ -2465,24 +2518,38 @@ LotniskoPoznań:					{ lat: 52.41658346495391,  lng:  16.828782279341983, name: 
                                 <b style='font-size:32px;'>POZ ️🇵🇱 </b><br> Port Lotniczy Poznań–Ławica <br> im. Henryka Wieniawskiego </b>
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
-								<!-- Pierwsza kolumna -->
-								✦ 2023 🛬 🇩🇪 MUC Monachium
-								<br>✦ 2023 🛫 🇩🇪 MUC Monachium
-								<br>✦ 2022 🛬 🇩🇪 FRA Frankfurt
-								<br>✦ 2022 🛫 🇩🇪 MUC Monachium
-								<br>✦ 2022 🛫 🇬🇧 STN Londyn
-								<br>✦ 2019 🛬 🇬🇧 STN Londyn
-								<br>✦ 2019 🛫 🇬🇧 STN Londyn
-								<br>✦ 2018 🛬 🇩🇪 FRA Frankfurt
-								<br>✦ 2018 🛫 🇩🇪 FRA Frankfurt
-								<br>✦ 2014 🛬 🇩🇪 FRA Frankfurt
-								<br>✦ 2014 🛫 🇩🇪 MUC Monachium
-								<br>✦ 2011 🛬 🇮🇹 BGY Mediolan 
+								<!-- 1 kolumna -->
+								2023
+								<br>2022
+								<br>2022
+								<br>2019
+								<br>2018 
+								<br>2014
+								<br>2011 
+								</div><div>
+								<!-- 2 kolumna -->
+								&nbsp;🛫 🇩🇪 MUC 
+								<br>&nbsp;🛫 🇩🇪 MUC 
+								<br>&nbsp;🛫 🇬🇧 STN 
+								<br>&nbsp;🛫 🇬🇧 STN 
+								<br>&nbsp;🛫️ 🇩🇪 FRA 
+								<br>&nbsp;🛫 🇩🇪 MUC 
+								<br>  
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛬 🇩🇪 MUC
+								<br>&nbsp;🛬 🇩🇪 FRA 
+								<br>
+								<br>&nbsp;🛬 🇬🇧 STN 
+								<br>&nbsp;🛬 🇩🇪 FRA 
+								<br>&nbsp;🛬 🇩🇪 FRA 
+								<br>&nbsp;🛬 🇮🇹 BGY 
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
-								<!-- Druga kolumna -->
-								</div>✦ 2023 ✈️|✈️
+								<!-- 4 kolumna -->
+								</div>✦ 2020 ✈️|✈️
 								<br>✦ 2012 ✈️
 								</div>
 								`, icon: DiamondWhite15 },
@@ -2491,13 +2558,23 @@ LotniskoWarszawa:				{ lat: 52.164905101230765,  lng:  20.968833593632002, name:
                                 <b style='font-size:32px;'>WAW ️🇵🇱 </b><br> Port Lotniczy im. Chopina w Warszawie </b>
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
-								<!-- Pierwsza kolumna -->
-								✦ 2019 ✈️|✈️
-								<br>✦ 2018 ✈️|✈️
+								<!-- 1 kolumna -->
+								2019
+								<br>2018
+								</div><div>
+								<!-- 2 kolumna -->
+								&nbsp;🛫 🇬🇪 TBS 
+								<br>&nbsp;🛫 🇱🇻 RIX
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛬 🇬🇪 TBS
+								<br>&nbsp;🛬 🇱🇻 RIX 
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
 								<!-- Druga kolumna -->
+								-
 								</div>
 								`, icon: DiamondWhite15 },
 LotniskoMonachium:				{ lat: 48.35482700699165,  lng:   11.781377371261119, name: `<p style='text-align: center; margin: 0'>
@@ -2506,13 +2583,30 @@ LotniskoMonachium:				{ lat: 48.35482700699165,  lng:   11.781377371261119, name
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2023 ✈️|✈️  ✈️|✈️
-								<br>✦ 2022 ✈️|✈️
-								<br>✦ 2014 ✈️|✈️
+								2023
+								<br>2022
+								<br>2022
+								<br>2014
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇺🇸 LAX 
+								<br>&nbsp;🛬 🇵🇱 POZ
+								<br>&nbsp;🛬 🇵🇱 POZ
+								<br>&nbsp;🛬 🇵🇱 POZ
+								
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇵🇱 POZ
+								<br>&nbsp;🛫 🇺🇸 EWR 
+								<br>&nbsp;🛫 🇺🇸 EWR
+								<br>&nbsp;🛫 🇯🇵 HND 								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
-								<!-- Druga kolumna -->
+								<!-- 4 kolumna -->
+								2020 ✈️ 
 								</div>
 								`, icon: DiamondWhite15 },
 LotniskoFrankfurt:				{ lat: 50.037651403689935,   lng:    8.552777880702859, name: `<p style='text-align: center; margin: 0'>
@@ -2521,13 +2615,28 @@ LotniskoFrankfurt:				{ lat: 50.037651403689935,   lng:    8.552777880702859, na
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2022 ✈️|✈️
-								<br>✦ 2028 ✈️|✈️  ✈️|✈️
-								<br>✦ 2014 ✈️|✈️
+								2022
+								<br>2018
+								<br>2018
+								<br>2014
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇺🇸 SFO 
+								<br>&nbsp;🛬 🇺🇸 ORD
+								<br>&nbsp;🛬 🇵🇱 POZ
+								<br>&nbsp;🛬 🇯🇵 NRT
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇵🇱 POZ
+								<br>&nbsp;🛫 🇵🇱 POZ 
+								<br>&nbsp;🛫 🇺🇸 JFK
+								<br>&nbsp;🛫 🇵🇱 POZ  								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
-								<!-- Druga kolumna -->
+								<!-- 4 kolumna -->
 								</div>
 								`, icon: DiamondWhite15 },								
 LotniskoBerlin:					{ lat: 52.36416377166994,  lng:    13.508446487828683, name: `<p style='text-align: center; margin: 0'>
@@ -2536,11 +2645,19 @@ LotniskoBerlin:					{ lat: 52.36416377166994,  lng:    13.508446487828683, name:
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2011 ✈️
+								2011
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛫 🇨🇭 GVA 
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+																
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
-								<!-- Druga kolumna -->
+								<!-- 4 kolumna -->
 								</div>
 								`, icon: DiamondWhite15 },
 LotniskoHelsinki:				{ lat: 60.31807730034896,  lng:   24.949964884159176, name: `<p style='text-align: center; margin: 0'>
@@ -2549,11 +2666,19 @@ LotniskoHelsinki:				{ lat: 60.31807730034896,  lng:   24.949964884159176, name:
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2018 ✈️|✈️
+								2018
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇱🇻 RIX 
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇱🇻 RIX 								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
-								<!-- Druga kolumna -->
+								<!-- 4 kolumna -->
 								</div>
 								`, icon: DiamondWhite15 },								
 LotniskoMediolanBergamo:		{ lat: 45.66634235517646, lng:   9.69691035261598, name: `<p style='text-align: center; margin: 0'>
@@ -2562,11 +2687,18 @@ LotniskoMediolanBergamo:		{ lat: 45.66634235517646, lng:   9.69691035261598, nam
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2011 ✈️
+								2011
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇵🇱 POZ  								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
-								<!-- Druga kolumna -->
+								<!-- 4 kolumna -->
 								</div>
 								`, icon: DiamondWhite15 },
 LotniskoLondynStanted:			{ lat: 51.886671282652635, lng:   0.2525158314534273, name: `<p style='text-align: center; margin: 0'>
@@ -2575,12 +2707,22 @@ LotniskoLondynStanted:			{ lat: 51.886671282652635, lng:   0.2525158314534273, n
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2022 ✈️
-								<br>✦ 2019 ✈️|✈️
+								2022
+								<br>2019
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇵🇱 POZ 
+								<br>&nbsp;🛬 🇵🇱 POZ
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								
+								<br>&nbsp;🛫 🇵🇱 POZ 								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
-								<!-- Druga kolumna -->
+								<!-- 4 kolumna -->
 								</div>
 								`, icon: DiamondWhite15 },
 LotniskoLondynHeathrow:			{ lat: 51.47169085245397,   lng:   -0.47016316186292356, name: `<p style='text-align: center; margin: 0'>
@@ -2589,7 +2731,15 @@ LotniskoLondynHeathrow:			{ lat: 51.47169085245397,   lng:   -0.4701631618629235
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2022 ✈️
+								2022
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								 
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇨🇭 GVA								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2601,12 +2751,20 @@ LotniskoTbilisi:				{ lat: 41.66985964442316, lng:    44.96389267867694, name: `
                                 <b style='font-size:32px;'>TBS 🇬🇪 </b><br> Port Lotniczy Tbilisi </b>
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
-								<!-- Pierwsza kolumna -->
-								✦ 2019 ✈️|✈️
+								<!-- 1 kolumna -->
+								2019
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇵🇱 WAW
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇵🇱 WAW
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
-								<!-- Druga kolumna -->
+								<!-- 4 kolumna -->
 								</div>
 								`, icon: DiamondWhite15 },
 LotniskoRyga:					{ lat: 56.92288009609892,   lng:  23.977552792668362, name: `<p style='text-align: center; margin: 0'>
@@ -2615,11 +2773,22 @@ LotniskoRyga:					{ lat: 56.92288009609892,   lng:  23.977552792668362, name: `<
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2018 ✈️|✈️ | ✈️|✈️
+								2018
+								<br> 2018
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇵🇱 WAW
+								<br> &nbsp;🛬 🇫🇮 HEL
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇫🇮 HEL
+								<br>&nbsp;🛫 🇵🇱 WAW
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
-								<!-- Druga kolumna -->
+								<!-- 4 kolumna -->
 								</div>
 								`, icon: DiamondWhite15 },
 LotniskoTokioNarita:				{ lat: 35.77088275172299, lng:  140.38507691108555, name: `<p style='text-align: center; margin: 0'>
@@ -2628,7 +2797,15 @@ LotniskoTokioNarita:				{ lat: 35.77088275172299, lng:  140.38507691108555, name
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2014 ✈️
+								2014
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								 
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇩🇪 FRA								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2641,7 +2818,15 @@ LotniskoTokioHaneda:				{ lat: 35.548940473102505, lng:  139.77784406341286, nam
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2014 ✈️
+								2014
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇩🇪 MUC
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+																
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2654,7 +2839,15 @@ LotniskoNowyJorkJFK:				{ lat: 40.64859503463668,  lng:  -73.7861923071135, name
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2018 ✈️
+								2018
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇩🇪 FRA
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+																
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2667,8 +2860,18 @@ LotniskoNewark:					{ lat: 40.692445553500185, lng:  -74.18320622866638, name: `
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2023 ✈️ | ✈️
-								<br>✦ 2022 ✈️
+								2023
+								<br>2022
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇩🇪 MUC
+								<br>&nbsp;🛬 🇩🇪 MUC
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇺🇸 MEM
+								<br> &nbsp;🛫 🇺🇸 MEM								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2681,7 +2884,15 @@ LotniskoChicago:				{ lat: 41.97848571498421,  lng:   -87.90390760848031, name: 
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2018 ✈️
+								2018
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								 
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇩🇪 FRA								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2694,7 +2905,15 @@ LotniskoWaszyngton:				{ lat: 38.85156891554507,  lng:    -77.03907640418252, na
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2018 ✈️
+								2018
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								 
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇨🇦 YYZ							
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2707,7 +2926,15 @@ LotniskoToronto:				{ lat: 43.680590848929306, lng:   -79.62653652821287, name: 
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2018 ✈️
+								2018
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇺🇸 DCA
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+																
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2733,8 +2960,18 @@ LotniskoMemphis:				{ lat: 35.044422943224724,  lng:  -89.98171623101935, name: 
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2023 ✈️ | ✈️
-								<br>✦ 2022 ✈️ | ✈️
+								2023
+								<br>2022
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇺🇸 EWR
+								<br> &nbsp;🛬 🇺🇸 EWR
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇺🇸 DEN
+								<br>&nbsp;🛫 🇺🇸 LAX								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2747,7 +2984,7 @@ LotniskoLasVegas:				{ lat: 36.08346874006746,   lng:   -115.14986120451542, nam
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2023
+								2023
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2760,8 +2997,18 @@ LotniskoLosAngeles:				{ lat: 33.944009834841005,  lng:  -118.40595573782934, na
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2023 ✈️
-								<br>✦ 2022 ✈️
+								2023
+								<br>2022
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								<br>&nbsp;🛬 🇺🇸 MEM
+								
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								
+								&nbsp;🛫 🇩🇪 MUC								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2774,7 +3021,15 @@ LotniskoSanFrancisco:			{ lat: 37.61652872952738,  lng:   -122.3861099282279, na
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2022 ✈️
+								2022
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								 
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+								&nbsp;🛫 🇩🇪 FRA								
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -2787,7 +3042,18 @@ LotniskoGenewa:					{ lat: 46.23108881051261,   lng:   6.107046136019036, name: 
                                 <hr><div style="display: flex; justify-content: space-between;">
 								<div>
 								<!-- Pierwsza kolumna -->
-								✦ 2022 ✈️ <br>✦ 2011 ✈️
+								2022
+								<br>2011
+								</div>
+								<div>
+								<!-- 2 kolumna -->
+								&nbsp;🛬 🇬🇧 LHR
+								<br>&nbsp;🛬 🇩🇪 SXF
+								
+								</div>
+								<div>
+								<!-- 3 kolumna -->
+
 								</div>
 								<div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
 								<div>
@@ -3243,7 +3509,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
                                 <br><b style='font-size:20px;'> 🇵🇱 Kępno </b><br>Polska, woj. Wielkopolskie</div>
                                 <hr> ✦ 2012 🚴`, icon: redDotIcon10 },
             KobylaGóra284m:		{ lat: 51.35472834705076, lng:   17.88306773131466, name: `<p style='text-align: center; margin: 0'>
-								<b style='font-size:16px;'> 🇵🇱 Kobyla Góra 🔺 284m </b><br>Wzgórza Ostrzeszowskie <br> Najwyższe wzniesienie Wielkopolski<hr>✦ 2012 🚴‍ `, icon: triangleSvg },
+								<b style='font-size:16px;'> 🇵🇱 Kobyla Góra </b><br> 284m <hr>✦ 2012 🚴‍ <hr>Wzgórza Ostrzeszowskie <br> Najwyższe wzniesienie Wielkopolski`, icon: triangleSvg },
       	// kolski	Koło	Dąbie	Kłodawa	Przedecz								Babiak	Chodów	Grzegorzew	Kościelec	Olszówka	Osiek Mały
       	// koniński	Konin	Golina	Kleczew	Rychwał	Sompolno	Ślesin						Grodziec	Kazimierz Biskupi	Kramsk	Krzymów	Rzgów	Skulsk	Stare Miasto	Wierzbinek	Wilczyn
       	Konin: 					{ lat: 52.2230, lng: 18.2555, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
@@ -3652,17 +3918,17 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								<b style='font-size:18px;'> 🇵🇱 Owińska</b><br>Polska, woj. Wielkopolskie 
 								<hr> ✦ 2024 🚴+🚗 <hr>✦ 2023 🚴 <br>✦ 2010-2022 🚴<b style='font-size:10px;'>~2x</b> <hr>🗼 +25m Wieża widokowa na Moście Owińska`, icon: DiamondTower15 },
       		DziewiczaGóra: 		{ lat: 52.480065, lng: 17.011267, name: `<p style='text-align: center; margin: 0'>
-								<b style='font-size:16px;'> 🇵🇱  Dziewicza Góra 🔺 144m </b><br>Puszcza Zielonka
+								<b style='font-size:16px;'> 🇵🇱  Dziewicza Góra </b><br> 144m
 								<hr>✦ 2024 🚴‍🚴‍‍♂️ <hr>✦ 2010-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b> <hr>🗼 +40m Wieża obserwacyjna`, icon: triangleSvg },
 			DziewiczaGóraTower: { lat: 52.480065, lng: 17.011267, name: `<p style='text-align: center; margin: 0'>
-								<b style='font-size:16px;'> 🇵🇱  Dziewicza Góra 🔺 144m </b><br>Puszcza Zielonka
+								<b style='font-size:16px;'> 🇵🇱  Dziewicza Góra </b><br> 144m
 								<hr>✦ 2024 🚴‍🚴‍‍♂️ <hr>✦ 2010-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b> <hr>🗼 +40m Wieża obserwacyjna`, icon: DiamondTower15 },					
 			GóraMorasko: 		{ lat: 52.48453688935954, lng:  16.893705228275977, name: `<p style='text-align: center; margin: 0'>
-								<b style='font-size:16px;'> 🇵🇱  Góra Morasko 🔺 154m </b><br>Miasto Poznań
+								<b style='font-size:16px;'> 🇵🇱  Góra Morasko </b><br> 154m 
 								<hr>✦ 2010-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b>`, icon: triangleSvg },
 			OsowaGóra: 			{ lat: 52.25557308379195,  lng:   16.832593543567977, name: `<p style='text-align: center; margin: 0'>
-								<b style='font-size:16px;'> 🇵🇱  Osowa Góra 🔺 132m </b><br>Wielkopolski Park Narodowy
-								<hr>✦ 2023 🚴🚴‍♀️‍<hr>✦ 2008-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b>`, icon: triangleSvg },					
+								<b style='font-size:16px;'> 🇵🇱  Osowa Góra </b><br> 132m
+								<hr>✦ 2023 🚴🚴‍♀️‍<hr>✦ 2008-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b><hr>Wielkopolski Park Narodowy`, icon: triangleSvg },					
       		PuszczaZielonka: 	{ lat: 52.55392, lng: 17.11224, name: `<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇵🇱 Puszcza Zielonka </b><br>Polska, woj. Wielkopolskie<hr>✦ 2024 🚴🚴‍♂️ <hr>✦ 2024 🚴 <br> ✦ 2010-2023 🚴‍♂️<b style='font-size:10px;'>(wiele)</b>`, icon: greenDotIcon12 },
       	Dopiewo: 				{ lat: 52.3535654490606, lng: 16.67106611427134, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/POL_gmina_Dopiewo_COA.svg/800px-POL_gmina_Dopiewo_COA.svg.png" style="height:60px;">
@@ -6334,170 +6600,171 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       // Szczyty KR z 2023 roku - dodać wszsytkie inne szczyty
       
       // ALPY WSZYSTKIE STARE SZCZYTY I PRZEŁĘCZE 
-      	PointedelaPlaineMorte: 		{ lat: 46.37102726231709, lng:  7.485629172327358, name: "<b style='font-size:16px;'>🇨🇭 Pointe de la Plaine Morte 🔺 2927m  </b><hr> ✦ 2011 🚶 ", icon: triangleSvg },
-      	PointedeVatseret: 			{ lat: 46.37698108005669, lng:  7.481318492806906, name: "<b style='font-size:16px;'>🇨🇭 Pointe de Vatseret 🔶 2811m  </b><hr> ✦ 2011 🚶 ", icon: reddiamondSvg },
-      	LodowiecPlaineMorte:		{ lat: 46.38461953404937,  lng:  7.510431565767344, name: "<b style='font-size:16px;'>🇨🇭 Lodowiec Plaine Morte </b><hr> ✦ 2011 🚶", icon: bluediamondSvg },
-      	Bellalui: 					{ lat: 46.34962355586293,  lng:  7.48751370551724, name: "<b style='font-size:16px;'>🇨🇭 Bellalui 🔺 2548m  </b><hr> ✦ 2011 🚠 ", icon: triangleSvg },
-      	LaGolette: 					{ lat: 46.12633929394181,  lng:  6.975310412809945, name: "<b style='font-size:16px;'>🇨🇭 La Golette 🔻 2464m  </b><hr> ✦ 2011 🚶 ", icon: upsideDownTriangleSvg },
-      	PetitMountBonvin: 			{ lat: 46.35011468344045,  lng:  7.52646021330371, name: "<b style='font-size:16px;'>🇨🇭 Petit Mount Bonvin 🔺 2412m  </b><hr> ✦ 2011 🚶 ", icon: triangleSvg },
-      	TourdeSauvabelin: 			{ lat: 46.53528073392894,  lng:  6.638435451821393, name: "<b style='font-size:16px;'>🇨🇭 Tour de Sauvabelin 🔺 670m +35m 🗼  </b><hr>✦ 2021 🚶 <br> ✦ 2011 🚶", icon: triangleSvg },
-		TourdeSauvabelinTower: 		{ lat: 46.53528073392894,  lng:  6.638435451821393, name: "<b style='font-size:16px;'>🇨🇭 Tour de Sauvabelin 🔺 670m +35m 🗼  </b><hr>✦ 2021 🚶 <br> ✦ 2011 🚶", icon: DiamondTower15 },
-      	KleinMatterhorn: 			{ lat: 45.93867873902962,  lng:  7.7297692456806955, name: "<b style='font-size:16px;'>🇨🇭 Klein Matterhorn 🔺 3883m  </b><hr> ✦ 2018 🚈⭢🚞⭢🚶⭢🚡⭢🚡⭢🚠 ", icon: triangleSvg },
-      	LodowiecTheodul:			{ lat: 45.94508738905906,   lng:   7.717489132598885, name: "<b style='font-size:16px;'>🇨🇭 Lodowiec Theodul </b><hr> ✦ 2021 🚶 ", icon: bluediamondSvg },
-      	Hörnlihutte: 				{ lat: 45.982675301046505,  lng:  7.6757886771091455, name: "<b style='font-size:16px;'>🇨🇭 Hörnlihutte 🔺 3279m  </b><hr> ✦ 2018 🚶 ", icon: triangleSvg },
-      	Schilthorn: 				{ lat: 46.559519844011746,  lng:  7.826352835360632, name: "<b style='font-size:16px;'>🇨🇭 Schilthorn 🔺 2970m  </b><hr> ✦ 2018 🚈⭢🚞⭢🚠⭢🚞⭢🚠⭢🚶", icon: triangleSvg },
-      	Birg2677: 					{ lat: 46.56268965518327,  lng:  7.854081195287387, name: "<b style='font-size:16px;'>🇨🇭 Birg 🔺 2677m  </b><hr> ✦ 2018 🚈⭢🚞⭢🚠⭢🚞⭢🚠 ", icon: triangleSvg },
-      	ColdesRoux: 				{ lat: 46.07061181744269,  lng:  7.381386147592209, name: "<b style='font-size:16px;'>🇨🇭 Col des Roux 🔻 2804m  </b><hr> ✦ 2018 🚶 ", icon: upsideDownTriangleSvg },
-      	Hohtürli: 					{ lat: 46.51130810910286,  lng: 7.769752157066164, name: "<b style='font-size:16px;'>🇨🇭 Hohtürli 🔻 2778m  </b><hr> ✦ 2018 🚶 ", icon: upsideDownTriangleSvg },
-      	GrotyVallorbe: 				{ lat: 46.69842134654345, lng:  6.345212791839908, name: "<b style='font-size:16px;'>🇨🇭 Groty Vallorbe 🔶 </b><hr> ✦ 2021 🚶 <br>✦ 2018 🚶 ", icon: reddiamondSvg },
-      	GrotyVallorbe2: 			{ lat: 46.69953634789418,  lng:  6.3407449458513145, name: "<b style='font-size:16px;'>🇨🇭 Grotte aux Fées de Vallorbe 🔶 </b><hr> ✦ 2021 🚶  ", icon: reddiamondSvg },
+      	PointedelaPlaineMorte: 		{ lat: 46.37102726231709, lng:  7.485629172327358, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Pointe de la Plaine Morte </b><br> 2927m  </b><hr> ✦ 2011 🚶 ", icon: triangleSvg },
+      	PointedeVatseret: 			{ lat: 46.37698108005669, lng:  7.481318492806906, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Pointe de Vatseret </b><br> 2811m  </b><hr> ✦ 2011 🚶 ", icon: reddiamondSvg },
+      	LodowiecPlaineMorte:		{ lat: 46.38461953404937,  lng:  7.510431565767344, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Lodowiec Plaine Morte </b><hr> ✦ 2011 🚶", icon: bluediamondSvg },
+      	Bellalui: 					{ lat: 46.34962355586293,  lng:  7.48751370551724, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Bellalui </b><br> 2548m  </b><hr> ✦ 2011 🚠 ", icon: triangleSvg },
+      	LaGolette: 					{ lat: 46.12633929394181,  lng:  6.975310412809945, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 La Golette </b><br> 2464m  </b><hr> ✦ 2011 🚶 ", icon: upsideDownTriangleSvg },
+      	PetitMountBonvin: 			{ lat: 46.35011468344045,  lng:  7.52646021330371, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Petit Mount Bonvin </b><br> 2412m  </b><hr> ✦ 2011 🚶 ", icon: triangleSvg },
+      	TourdeSauvabelin: 			{ lat: 46.53528073392894,  lng:  6.638435451821393, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Tour de Sauvabelin </b><br> 670m </b><hr>✦ 2021 🚶 <br> ✦ 2011 🚶<hr> 🗼 +35m Drewniana Wieża Widokowa", icon: triangleSvg },
+		TourdeSauvabelinTower: 		{ lat: 46.53528073392894,  lng:  6.638435451821393, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Tour de Sauvabelin </b><br> 670m </b><hr>✦ 2021 🚶 <br> ✦ 2011 🚶<hr> 🗼 +35m Drewniana Wieża Widokowa", icon: DiamondTower15 },
+      	KleinMatterhorn: 			{ lat: 45.93867873902962,  lng:  7.7297692456806955, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Klein Matterhorn </b><br> 3883m  </b><hr> ✦ 2018 🚈⭢🚞⭢🚶⭢🚡⭢🚡⭢🚠 ", icon: triangleSvg },
+      	LodowiecTheodul:			{ lat: 45.94508738905906,   lng:   7.717489132598885, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Lodowiec Theodul </b><hr> ✦ 2021 🚶 ", icon: bluediamondSvg },
+      	Hörnlihutte: 				{ lat: 45.982675301046505,  lng:  7.6757886771091455, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Hörnlihutte </b><br> 3279m  </b><hr> ✦ 2018 🚶 ", icon: triangleSvg },
+      	Schilthorn: 				{ lat: 46.559519844011746,  lng:  7.826352835360632, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Schilthorn </b><br> 2970m  </b><hr> ✦ 2018 🚈⭢🚞⭢🚠⭢🚞⭢🚠⭢🚶", icon: triangleSvg },
+      	Birg2677: 					{ lat: 46.56268965518327,  lng:  7.854081195287387, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Birg </b><br> 2677m  </b><hr> ✦ 2018 🚈⭢🚞⭢🚠⭢🚞⭢🚠 ", icon: triangleSvg },
+      	ColdesRoux: 				{ lat: 46.07061181744269,  lng:  7.381386147592209, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Col des Roux </b><br> 2804m  </b><hr> ✦ 2018 🚶 ", icon: upsideDownTriangleSvg },
+      	Hohtürli: 					{ lat: 46.51130810910286,  lng: 7.769752157066164, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Hohtürli </b><br> 2778m  </b><hr> ✦ 2018 🚶 ", icon: upsideDownTriangleSvg },
+      	GrotyVallorbe: 				{ lat: 46.69842134654345, lng:  6.345212791839908, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Groty Vallorbe </b><hr> ✦ 2021 🚶 <br>✦ 2018 🚶 ", icon: reddiamondSvg },
+      	GrotyVallorbe2: 			{ lat: 46.69953634789418,  lng:  6.3407449458513145, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Grotte aux Fées de Vallorbe </b><hr> ✦ 2021 🚶  ", icon: reddiamondSvg },
       	
-      	LodowiecAletsch: 			{ lat: 46.44045631966206, lng:  8.074625330188818, name: "<b style='font-size:16px;'>🇨🇭 Lodowiec Aletsch </b><hr> ✦ 2021 🚠⭢🚶 <br> ✦ 2019 🚡⭢🚡⭢🚶 ", icon: bluediamondSvg },
-      	Moosfluh: 					{ lat: 46.39612909737174, lng:  8.047479320799933, name: "<b style='font-size:16px;'>🇨🇭 Moosfluh 🔺 2333m  </b><hr> ✦ 2021 🚶 <br> ✦ 2019 🚶 ", icon: triangleSvg },
-      	PicChaussy: 				{ lat: 46.37747634301139,  lng:  7.1091103356727965, name: "<b style='font-size:16px;'>🇨🇭 Pic Chaussy 🔺 2351m  </b><hr> ✦ 2019 🚶 ", icon: triangleSvg },
-      	LesCornettesduBiseX: 		{ lat: 46.33211046713243,  lng:  6.786356637336258, name: "<b style='font-size:16px;'>🇨🇭 Les Cornettes du Bise ❌ 2308m  </b><hr> ✦ 2019 🚶❄️ ", icon: reddiamondSvg },
-      	LesJumelles: 				{ lat: 46.35300949430082,  lng:  6.811385685281018, name: "<b style='font-size:16px;'>🇨🇭 Les Jumelles 🔺 2215m  </b><hr> ✦ 2019 🚶 ", icon: triangleSvg },
+      	LodowiecAletsch: 			{ lat: 46.44045631966206, lng:  8.074625330188818, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Lodowiec Aletsch </b><hr> ✦ 2021 🚠⭢🚶 <br> ✦ 2019 🚡⭢🚡⭢🚶 ", icon: bluediamondSvg },
+      	Moosfluh: 					{ lat: 46.39612909737174, lng:  8.047479320799933, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Moosfluh </b><br> 2333m  </b><hr> ✦ 2021 🚶 <br> ✦ 2019 🚶 ", icon: triangleSvg },
+      	PicChaussy: 				{ lat: 46.37747634301139,  lng:  7.1091103356727965, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Pic Chaussy </b><br> 2351m  </b><hr> ✦ 2019 🚶 ", icon: triangleSvg },
+      	LesCornettesduBiseX: 		{ lat: 46.33211046713243,  lng:  6.786356637336258, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Les Cornettes du Bise </b><br>niezdobyty <br> 2308m  </b><hr> ✦ 2019 🚶❄️ ", icon: reddiamondSvg },
+      	LesJumelles: 				{ lat: 46.35300949430082,  lng:  6.811385685281018, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Les Jumelles </b><br> 2215m  </b><hr> ✦ 2019 🚶 ", icon: triangleSvg },
       
-      	DömelesDiablerets: 			{ lat: 46.315015688518315,  lng:  7.208063579643002, name: "<b style='font-size:16px;'>🇨🇭 Döme les Diablerets 🔺 3016m  </b><hr> ✦ 2021 🚠⭢🚶 ", icon: triangleSvg },
-      	ScexRouge: 					{ lat: 46.32716895917155,  lng:  7.2028007079424, name: "<b style='font-size:16px;'>🇨🇭 Scex Rouge 🔺 2971m  </b><hr> ✦ 2021 🚠 ", icon: triangleSvg },
-      	TourSaintMartin: 			{ lat: 46.309582427494,  lng: 7.224462842686763, name: "<b style='font-size:16px;'>🇨🇭 Tour Saint-Martin 🔺 2840m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-    	GlacierdeTsanfleuron: 		{ lat: 46.32084994845318,  lng:  7.227306342528683, name: "<b style='font-size:16px;'>🇨🇭 Glacier de Tsanfleuron </b><hr> ✦ 2021 🚶 ", icon: bluediamondSvg },
-      	LeCatogne: 					{ lat: 46.0558536046037,  lng:  7.1060533872343, name: "<b style='font-size:16px;'>🇨🇭 Le Catogne 🔺 2598m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-      	TourdeMayen: 				{ lat: 46.37544655856628,  lng: 7.006176213171973, name: "<b style='font-size:16px;'>🇨🇭 Tour de Mayen 🔺 2326m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-      	LesTruex: 					{ lat: 46.38267371885439,  lng:  7.009999536097462, name: "<b style='font-size:16px;'>🇨🇭 Les Truex 🔺 2194m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-      	TourdeFamelon: 				{ lat: 46.384678163132854,  lng: 7.019404909044933, name: "<b style='font-size:16px;'>🇨🇭 TourdeFamelon 🔺 2138m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
+      	DömelesDiablerets: 			{ lat: 46.315015688518315,  lng:  7.208063579643002, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Döme les Diablerets </b><br> 3016m  </b><hr> ✦ 2021 🚠⭢🚶 ", icon: triangleSvg },
+      	ScexRouge: 					{ lat: 46.32716895917155,  lng:  7.2028007079424, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Scex Rouge </b><br> 2971m  </b><hr> ✦ 2021 🚠 ", icon: triangleSvg },
+      	TourSaintMartin: 			{ lat: 46.309582427494,  lng: 7.224462842686763, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Tour Saint-Martin </b><br> 2840m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
+    	GlacierdeTsanfleuron: 		{ lat: 46.32084994845318,  lng:  7.227306342528683, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Glacier de Tsanfleuron </b><hr> ✦ 2021 🚶 ", icon: bluediamondSvg },
+      	LeCatogne: 					{ lat: 46.0558536046037,  lng:  7.1060533872343, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Le Catogne </b><br> 2598m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
+      	TourdeMayen: 				{ lat: 46.37544655856628,  lng: 7.006176213171973, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Tour de Mayen </b><br> 2326m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
+      	LesTruex: 					{ lat: 46.38267371885439,  lng:  7.009999536097462, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Les Truex </b><br> 2194m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
+      	TourdeFamelon: 				{ lat: 46.384678163132854,  lng: 7.019404909044933, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 TourdeFamelon </b><br> 2138m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
       
-      	Gornergrat: 				{ lat: 45.9839006355811,  lng:  7.782954687113336, name: "<b style='font-size:16px;'>🇨🇭 Gornergrat 🔺 3135m  </b><hr> ✦ 2021 🚈⭢🚌⭢🚞⭢🚶⭢🚞⭢🚶 ", icon: triangleSvg },
-      	LodowiecGrenz:				{ lat: 45.954679160253306,   lng:   7.809279755089216, name: "<b style='font-size:16px;'>🇨🇭 Lodowiec Grenz </b><hr> ✦ 2021 🚶 ", icon: bluediamondSvg },
-      	PointedesMartinets: 		{ lat: 46.210004970252655,  lng:  7.070670818711389, name: "<b style='font-size:16px;'>🇨🇭 Pointe des Martinets 🔺 2653m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-      	ColdesMartinets: 			{ lat: 46.20524074170137,  lng:  7.070435207966743, name: "<b style='font-size:16px;'>🇨🇭 Col des Martinets 🔻 2615m  </b><hr> ✦ 2021 🚶 ", icon: upsideDownTriangleSvg },
-      	SceniVievpointnerBex: 		{ lat: 46.248037477523795,  lng:  7.074325357605326, name: "<b style='font-size:16px;'>🇨🇭 Outdoor shelter - Les Plans-sur-Bex 🔶 1468m  </b><hr> ✦ 2021 🚶 ", icon: reddiamondSvg },
-      	Bettmerhorn: 				{ lat: 46.411794485572315,  lng:  8.075552925653744, name: "<b style='font-size:16px;'>🇨🇭 Bettmerhorn 🔶 2647m  </b><hr> ✦ 2021 🚶", icon: reddiamondSvg },
-      	Gummfluh: 					{ lat: 46.44184102348531, lng: 7.1926257782099245, name: "<b style='font-size:16px;'>🇨🇭 Gummfluh 🔺 2458m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },  
-     	RochersdeNaye: 				{ lat: 46.43436520313625,  lng: 6.968670964791552, name: "<b style='font-size:16px;'>🇨🇭 Rochers de Naye 🔺 2042m  </b><hr> ✦ 2021 🚗⭢🚞⭢🚶 ", icon: triangleSvg },
-      	DentdeJaman: 				{ lat: 46.44584888428797,  lng:  6.971998095971608, name: "<b style='font-size:16px;'>🇨🇭 Dent de Jaman 🔺 1874m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-      	ColdeBretaye: 				{ lat: 46.32196678693941,  lng:  7.072924378634494, name: "<b style='font-size:16px;'>🇨🇭 Col de Bretaye 🔻 1806m  </b><hr> ✦ 2021 🚞 ", icon: upsideDownTriangleSvg },
-      	MontPelerin: 				{ lat: 46.49734014117946,  lng:  6.8176283387951235, name: "<b style='font-size:16px;'>🇨🇭 Mont Pelerin 🔺 1080m +123m 🗼  </b><hr> ✦ 2021 🚞⭢🚶 ", icon: triangleSvg },
-		MontPelerinTower: 			{ lat: 46.49734014117946,  lng:  6.8176283387951235, name: "<b style='font-size:16px;'>🇨🇭 Mont Pelerin 🔺 1080m +123m 🗼  </b><hr> ✦ 2021 🚞⭢🚶 ", icon: DiamondTower15 },
-      	SignaldeBougy: 				{ lat: 46.48551980365528, lng:  6.358310146601967, name: "<b style='font-size:16px;'>🇨🇭 Signal de Bougy 🔺 700m  </b><hr> ✦ 2021 🚴 ", icon: triangleSvg },
+      	Gornergrat: 				{ lat: 45.9839006355811,  lng:  7.782954687113336, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Gornergrat </b><br> 3135m  </b><hr> ✦ 2021 🚈⭢🚌⭢🚞⭢🚶⭢🚞⭢🚶 ", icon: triangleSvg },
+      	LodowiecGrenz:				{ lat: 45.954679160253306,   lng:   7.809279755089216, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Lodowiec Grenz </b><hr> ✦ 2021 🚶 ", icon: bluediamondSvg },
+      	PointedesMartinets: 		{ lat: 46.210004970252655,  lng:  7.070670818711389, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Pointe des Martinets </b><br> 2653m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
+      	ColdesMartinets: 			{ lat: 46.20524074170137,  lng:  7.070435207966743, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Col des Martinets </b><br> 2615m  </b><hr> ✦ 2021 🚶 ", icon: upsideDownTriangleSvg },
+      	SceniVievpointnerBex: 		{ lat: 46.248037477523795,  lng:  7.074325357605326, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Outdoor shelter - Les Plans-sur-Bex </b><br> 1468m  </b><hr> ✦ 2021 🚶 ", icon: reddiamondSvg },
+      	Bettmerhorn: 				{ lat: 46.411794485572315,  lng:  8.075552925653744, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Bettmerhorn </b><br> 2647m  </b><hr> ✦ 2021 🚶", icon: reddiamondSvg },
+      	Gummfluh: 					{ lat: 46.44184102348531, lng: 7.1926257782099245, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Gummfluh </b><br> 2458m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },  
+     	RochersdeNaye: 				{ lat: 46.43436520313625,  lng: 6.968670964791552, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Rochers de Naye </b><br> 2042m  </b><hr> ✦ 2021 🚗⭢🚞⭢🚶 ", icon: triangleSvg },
+      	DentdeJaman: 				{ lat: 46.44584888428797,  lng:  6.971998095971608, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Dent de Jaman </b><br> 1874m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
+      	ColdeBretaye: 				{ lat: 46.32196678693941,  lng:  7.072924378634494, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Col de Bretaye </b><br> 1806m  </b><hr> ✦ 2021 🚞 ", icon: upsideDownTriangleSvg },
+      	MontPelerin: 				{ lat: 46.49734014117946,  lng:  6.8176283387951235, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Mont Pelerin </b><br> 1080m <hr> ✦ 2021 🚞⭢🚶 <hr> 🗼 +123m Wieża Telewizyjna ", icon: triangleSvg },
+		MontPelerinTower: 			{ lat: 46.49734014117946,  lng:  6.8176283387951235, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Mont Pelerin </b><br> 1080m <hr> ✦ 2021 🚞⭢🚶 <hr> 🗼 +123m Wieża Telewizyjna ", icon: DiamondTower15 },
+      	SignaldeBougy: 				{ lat: 46.48551980365528, lng:  6.358310146601967, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Signal de Bougy </b><br> 700m  </b><hr> ✦ 2021 🚴 ", icon: triangleSvg },
       
-      	LeSuchet: 					{ lat: 46.34420249547477,  lng:  7.030914868315888, name: "<b style='font-size:16px;'>🇨🇭 Le Suchet 🔺 1285m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	LeSuchet: 					{ lat: 46.34420249547477,  lng:  7.030914868315888, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇨🇭 Le Suchet </b><br> 1285m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
       
       	 
       
       // TATRY (SPECJALNA STREFA)
-      	Beskid2012m: 				{ lat: 49.22825, lng: 19.98801, name: "<b style='font-size:16px;'> 🇵🇱 Beskid 🔺 2012m </b><hr> ✦ 2023 🚶⛈️ ", icon: triangleSvg },               
-	    KasprowyWierch1987m: 		{ lat: 49.23185, lng: 19.98153, name: "<b style='font-size:16px;'> 🇵🇱 Kasprowy Wierch 🔺 1987m </b><hr> ✦ 2023 🚶 ✦ 2000 🚶 ", icon: triangleSvg },      
-	    SławkowskiSzczyt2452m: 		{ lat: 49.16610, lng: 20.18459, name: "<b style='font-size:16px;'> 🇸🇰 Sławkowski Szczyt 🔺 2452m </b><hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
+      	Beskid2012m: 				{ lat: 49.22825, lng: 19.98801, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Beskid </b><br> 2012m </b><hr> ✦ 2023 🚶⛈️ ", icon: triangleSvg },               
+	    KasprowyWierch1987m: 		{ lat: 49.23185, lng: 19.98153, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Kasprowy Wierch </b><br> 1987m </b><hr> ✦ 2023 🚶 ✦ 2000 🚶 ", icon: triangleSvg },      
+	    SławkowskiSzczyt2452m: 		{ lat: 49.16610, lng: 20.18459, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇸🇰 Sławkowski Szczyt </b><br> 2452m </b><hr> ✦ 2023 🚶 ", icon: triangleSvg }, 
       
-      	Krywań: 					{ lat: 49.1629653352761,  lng:   20.001332064990446, name: "<b style='font-size:16px;'>🇸🇰 Krywań 🔺 2494m  </b><hr> ✦ 2020 🚶 ", icon: triangleSvg },
-      	Rysy2470: 					{ lat: 49.18013297498406,  lng:  20.087457739838438, name: "<b style='font-size:16px;'>🇵🇱 Rysy ❌ 2470m  </b><hr> ✦ 2021 🚶 ", icon: reddiamondSvg }, 
-      	MałaWysoka: 				{ lat: 49.17548181711281,  lng: 20.143636054724517, name: "<b style='font-size:16px;'>🇸🇰 Mała Wysoka 🔺 2429m  </b><hr> ✦ 2014 🚴⭢🚶 ", icon: triangleSvg },
-      	CzerwonaŁawka: 				{ lat: 49.18838863309219,  lng:  20.18538573348813, name: "<b style='font-size:16px;'>🇸🇰 Czerwona Ławka 🔻 2352m  </b><hr> ✦ 2020 🚶", icon: upsideDownTriangleSvg },  
-      	BystraŁawka: 				{ lat: 49.16692417366592,  lng:  20.028606639119626, name: "<b style='font-size:16px;'>🇸🇰 Bystra Ławka 🔻 2300m  </b><hr> ✦ 2014 🚶 ", icon: upsideDownTriangleSvg }, 
-      	KoziWierch: 				{ lat: 49.218692820404044,  lng:  20.027631702616752, name: "<b style='font-size:16px;'>🇵🇱 Kozi Wierch 🔺 2291m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },
-      	PrielomRohatka: 			{ lat: 49.177450461058385,  lng:  20.143735331339467, name: "<b style='font-size:16px;'>🇸🇰 Prielom (Rohatka) 🔻 2290m  </b><hr> ✦ 2014 🚶 ", icon: upsideDownTriangleSvg }, 
-      	WielkaŁomnickaBaszta: 		{ lat: 49.18628473948274,  lng:  20.217450608707576, name: "<b style='font-size:16px;'>🇸🇰 Wielka Łomnicka Baszta 🔺 2215m  </b><hr> ✦ 2020 🚡⭢🚡⭢🚡⭢🚶 <br>✦ 2014 🚶⭢🚡⭢🚶 ", icon: triangleSvg },  
-      	PolskiGrzebień: 			{ lat: 49.173880884112315, lng:  20.14019446025763, name: "<b style='font-size:16px;'>🇸🇰 Polski Grzebień 🔺 2200m  </b><hr> ✦ 2014 🚴⭢🚶 ", icon: triangleSvg },
-      	Krzesanica: 				{ lat: 49.23280902288707,  lng:  19.910906136098205, name: "<b style='font-size:16px;'>🇵🇱 Krzesanica 🔺 2122m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	Miłołączniak: 				{ lat: 49.236158275497424,  lng:  19.91815333983137, name: "<b style='font-size:16px;'>🇵🇱 Miłołączniak 🔺 2096m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },  
-      	Ciemniak: 					{ lat: 49.231235586723045,  lng:  19.90412726349122, name: "<b style='font-size:16px;'>🇵🇱 Ciemniak 🔺 2096m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	RochaczOstry: 				{ lat: 49.20113175491055, lng:  19.759244854952, name: "<b style='font-size:16px;'>🇸🇰 Rochacz Ostry 🔺 2088m  </b><hr> ✦ 2014 🚴⭢🚶 ", icon: triangleSvg },  
-      	Wołowiec: 					{ lat: 49.20839443307807,  lng:  19.762591054939985, name: "<b style='font-size:16px;'>🇵🇱 Wołowiec 🔺 2064m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },
-      	BulapodRysami: 				{ lat: 49.182068872906925,  lng:  20.08170172336121, name: "<b style='font-size:16px;'>🇵🇱 Bula pod Rysami 🔺 2054m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg }, 
-      	KondrackaKopa: 				{ lat: 49.236828098774076,  lng:  19.930794581561152, name: "<b style='font-size:16px;'>🇵🇱 Kondracka Kopa 🔺 2005m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	Rakoń: 						{ lat: 49.21607064856034, lng:  19.75786442241442, name: "<b style='font-size:16px;'>🇵🇱 Rakoń 🔺 1897m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },  
-      	ŚwistowaCzuba: 				{ lat: 49.21639551622798, lng: 20.057403641540237, name: "<b style='font-size:16px;'>🇵🇱 Świstowa Czuba 🔺 1763m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	Grześ: 						{ lat: 49.2366663312331,  lng:  19.766404978940873, name: "<b style='font-size:16px;'>🇵🇱 Grześ 🔺 1653m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },  
-      	CzarnyStawpodRysami: 		{ lat: 49.19035852552018, lng: 20.073626980652072, name: "<b style='font-size:16px;'>🇵🇱 Czarny Staw pod Rysami 1583m  </b><hr>✦ 2021 🚶 <br> ✦ 2000 🚶 ", icon: DiamondBlue15 },
-      	MorskieOko: 				{ lat: 49.19997241592262,  lng: 20.071685349841175, name: "<b style='font-size:16px;'>🇵🇱 Morskie Oko 1395m  </b><hr> ✦ 2022 🚶 <br> ✦ 2021 🚶<br> ✦ 2000 🚶", icon: DiamondBlue15 },  
-      	Gubałówka: 					{ lat: 49.306650426702554,  lng:  19.933081684032395, name: "<b style='font-size:16px;'>🇵🇱 Gubałówka 🔺 1129m  </b><hr> ✦ 2003 🚞 ", icon: triangleSvg },
-      	JaskiniaBielska: 			{ lat: 49.22944301449738,  lng:20.308943196710345, name: "<b style='font-size:16px;'>🇸🇰 Jaskinia Bielska 🔶 1002m </b><hr> ✦ 2022 🚶 ", icon: reddiamondSvg },  
+      	Krywań: 					{ lat: 49.1629653352761,  lng:   20.001332064990446, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇸🇰 Krywań </b><br> 2494m  </b><hr> ✦ 2020 🚶 ", icon: triangleSvg },
+      	Rysy2470: 					{ lat: 49.18013297498406,  lng:  20.087457739838438, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Rysy </b><br>niezdobyty <br> 2470m  </b><hr> ✦ 2021 🚶 ", icon: reddiamondSvg }, 
+      	MałaWysoka: 				{ lat: 49.17548181711281,  lng: 20.143636054724517, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇸🇰 Mała Wysoka </b><br> 2429m  </b><hr> ✦ 2014 🚴⭢🚶 ", icon: triangleSvg },
+      	CzerwonaŁawka: 				{ lat: 49.18838863309219,  lng:  20.18538573348813, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇸🇰 Czerwona Ławka </b><br> 2352m  </b><hr> ✦ 2020 🚶", icon: upsideDownTriangleSvg },  
+      	BystraŁawka: 				{ lat: 49.16692417366592,  lng:  20.028606639119626, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇸🇰 Bystra Ławka </b><br> 2300m  </b><hr> ✦ 2014 🚶 ", icon: upsideDownTriangleSvg }, 
+      	KoziWierch: 				{ lat: 49.218692820404044,  lng:  20.027631702616752, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Kozi Wierch </b><br> 2291m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },
+      	PrielomRohatka: 			{ lat: 49.177450461058385,  lng:  20.143735331339467, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇸🇰 Prielom (Rohatka) </b><br> 2290m  </b><hr> ✦ 2014 🚶 ", icon: upsideDownTriangleSvg }, 
+      	WielkaŁomnickaBaszta: 		{ lat: 49.18628473948274,  lng:  20.217450608707576, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇸🇰 Wielka Łomnicka Baszta </b><br> 2215m  </b><hr> ✦ 2020 🚡⭢🚡⭢🚡⭢🚶 <br>✦ 2014 🚶⭢🚡⭢🚶 ", icon: triangleSvg },  
+      	PolskiGrzebień: 			{ lat: 49.173880884112315, lng:  20.14019446025763, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇸🇰 Polski Grzebień </b><br> 2200m  </b><hr> ✦ 2014 🚴⭢🚶 ", icon: triangleSvg },
+      	Krzesanica: 				{ lat: 49.23280902288707,  lng:  19.910906136098205, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Krzesanica </b><br> 2122m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	Miłołączniak: 				{ lat: 49.236158275497424,  lng:  19.91815333983137, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Miłołączniak </b><br> 2096m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },  
+      	Ciemniak: 					{ lat: 49.231235586723045,  lng:  19.90412726349122, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Ciemniak </b><br> 2096m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	RochaczOstry: 				{ lat: 49.20113175491055, lng:  19.759244854952, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇸🇰 Rochacz Ostry </b><br> 2088m  </b><hr> ✦ 2014 🚴⭢🚶 ", icon: triangleSvg },  
+      	Wołowiec: 					{ lat: 49.20839443307807,  lng:  19.762591054939985, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Wołowiec </b><br> 2064m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },
+      	BulapodRysami: 				{ lat: 49.182068872906925,  lng:  20.08170172336121, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Bula pod Rysami </b><br> 2054m  </b><hr> ✦ 2021 🚶 ", icon: triangleSvg }, 
+      	KondrackaKopa: 				{ lat: 49.236828098774076,  lng:  19.930794581561152, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Kondracka Kopa </b><br> 2005m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	Rakoń: 						{ lat: 49.21607064856034, lng:  19.75786442241442, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Rakoń </b><br> 1897m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },  
+      	ŚwistowaCzuba: 				{ lat: 49.21639551622798, lng: 20.057403641540237, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Świstowa Czuba </b><br> 1763m  </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	Grześ: 						{ lat: 49.2366663312331,  lng:  19.766404978940873, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Grześ </b><br> 1653m  </b><hr> ✦ 2017 🚶❄️ ", icon: triangleSvg },  
+      	CzarnyStawpodRysami: 		{ lat: 49.18866131949747,  lng:  20.075142728909363, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Czarny Staw pod Rysami 1583m  </b><hr>✦ 2021 🚶 <br> ✦ 2000 🚶 ", icon: DiamondBlue15 },
+      	MorskieOko: 				{ lat: 49.19719397237692, lng:  20.069646974839216, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Morskie Oko 1395m  </b><hr> ✦ 2022 🚶 <br> ✦ 2021 🚶<br> ✦ 2000 🚶", icon: DiamondBlue15 }, 
+		SchroniskoMorskieOko: 		{ lat: 49.201369703871315,  lng: 20.07128728574572, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Schronisko PTTK Morskie Oko </b><br> 1395m  </b><hr> ✦ 2022 🚶 <br> ✦ 2021 🚶<br> ✦ 2000 🚶", icon: DiamondSquare15 },	
+      	Gubałówka: 					{ lat: 49.306650426702554,  lng:  19.933081684032395, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇵🇱 Gubałówka </b><br> 1129m  </b><hr> ✦ 2003 🚞 ", icon: triangleSvg },
+      	JaskiniaBielska: 			{ lat: 49.22944301449738,  lng:20.308943196710345, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'>🇸🇰 Jaskinia Bielska </b><br> 1002m </b><hr> ✦ 2022 🚶 ", icon: reddiamondSvg },  
       
       // SUDETY - Wszystkie stare szczyty
-      	WysokaKopa1126m: 			{ lat: 50.8504866992448, lng:  15.421461380994513, name: "<b style='font-size:16px;'> 🇵🇱 Wysoka Kopa 🔺 1126m 👑 </b><hr> ✦ 2023 🚶❄️ ", icon: triangleSvg },           
-	    Szrenica1362m: 				{ lat: 50.79229718643645, lng: 15.515000104246532, name: "<b style='font-size:16px;'> 🇵🇱 Szrenica 🔺 1362m </b><hr> ✦ 2023 🚶❄️ <br> ✦ 2014 🚶❄️", icon: triangleSvg },           
-      	CzarciaAmbona1497m: 		{ lat: 50.778967782396315,  lng:  15.557567224472564, name: "<b style='font-size:16px;'> 🇵🇱 🇨🇿 Czarcia Ambona (Śnieżne Kotły) 🔺 1497m </b><hr> ✦ 2023 🚶❄️ <br>✦ 2022 🚶 ", icon: triangleSvg },
-	    Śnieżka1603m: 				{ lat: 50.736040941953924,  lng:  15.739694007160306, name: "<b style='font-size:16px;'> 🇵🇱 🇨🇿 Śnieżka 🔺 1603m 👑</b><hr> ✦ 2023 🚶❄️ <br>✦ 2022 🚶 <br>✦ 2015 🚶❄️  ", icon: triangleSvg },       
-      	SkalnyStół1281m: 			{ lat: 50.75277749027954, lng:  15.791372742153987, name: "<b style='font-size:16px;'> 🇵🇱 Skalny Stół 🔺 1281m </b><hr> ✦ 2023 🚶❄️ ", icon: triangleSvg },
+      	WysokaKopa1126m: 			{ lat: 50.8504866992448, lng:  15.421461380994513, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wysoka Kopa </b><br> 1126m 👑 </b><hr> ✦ 2023 🚶❄️ ", icon: triangleSvg },           
+	    Szrenica1362m: 				{ lat: 50.79229718643645, lng: 15.515000104246532, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Szrenica </b><br> 1362m </b><hr> ✦ 2023 🚶❄️ <br> ✦ 2014 🚶❄️", icon: triangleSvg },           
+      	CzarciaAmbona1497m: 		{ lat: 50.778967782396315,  lng:  15.557567224472564, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 🇨🇿 Czarcia Ambona (Śnieżne Kotły) </b><br> 1497m </b><hr> ✦ 2023 🚶❄️ <br>✦ 2022 🚶 ", icon: triangleSvg },
+	    Śnieżka1603m: 				{ lat: 50.736040941953924,  lng:  15.739694007160306, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 🇨🇿 Śnieżka </b><br> 1603m 👑</b><hr> ✦ 2023 🚶❄️ <br>✦ 2022 🚶 <br>✦ 2015 🚶❄️  ", icon: triangleSvg },       
+      	SkalnyStół1281m: 			{ lat: 50.75277749027954, lng:  15.791372742153987, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Skalny Stół </b><br> 1281m </b><hr> ✦ 2023 🚶❄️ ", icon: triangleSvg },
       
-      	PradedPradziad1491: 		{ lat: 50.08348135904802,  lng:  17.23096415940303, name: "<b style='font-size:16px;'> 🇨🇿 Praded (Pradziad) 🔺 1491m </b><hr> ✦ 2002 🚶 ", icon: triangleSvg },
-      	Śnieżnik1426: 				{ lat: 50.207789740544186,  lng:  16.847235017265707, name: "<b style='font-size:16px;'> 🇵🇱 🇨🇿 Śnieżnik 🔺 1426m 👑</b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-      	CzarnaKopa1408: 			{ lat: 50.74271293557403,  lng:   15.769667954005511, name: "<b style='font-size:16px;'> 🇵🇱 🇨🇿 Czarna Kopa 🔺 1408m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	Sušina1321: 				{ lat: 50.173928285486404,  lng: 16.862828528173882, name: "<b style='font-size:16px;'> 🇨🇿 Sušina 🔺 1321m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-     	MałyŚnieżnik1318: 			{ lat: 50.1931030490788,  lng:  16.81645359259459, name: "<b style='font-size:16px;'> 🇵🇱 Mały Śnieżnik 🔺 1318m </b><hr> ✦ 2010 🚴 ", icon: triangleSvg }, 
-      	Podbělka1307: 				{ lat: 50.16472417300745, lng:  16.849150156496737, name: "<b style='font-size:16px;'> 🇨🇿 Podbělka 🔺 1307m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	CzarnaGóra1205: 			{ lat: 50.251922972489346,  lng:  16.804858141006495, name: "<b style='font-size:16px;'> 🇵🇱 Czarna Góra 🔺 1205m </b><hr> ✦ 2010 🚴 ", icon: triangleSvg },
-      	Żmijowiec1153: 				{ lat: 50.23087283614317,  lng:  16.827871447888416, name: "<b style='font-size:16px;'> 🇵🇱 Żmijowiec 🔺 1153m </b><hr> ✦ 2022 🚶 <br> ✦ 2010 🚴 ", icon: triangleSvg },
-      	Smrek1124: 					{ lat: 50.88937454879403,  lng:  15.271826445164665, name: "<b style='font-size:16px;'> 🇨🇿 Smrek 🔺 1124m +20m 🗼 </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-		Smrek1124Wieża: 			{ lat: 50.88937454879403,  lng:  15.271826445164665, name: "<b style='font-size:16px;'> 🇨🇿 Smrek 🔺 1124m +20m 🗼 </b><hr> ✦ 2022 🚶 ", icon: DiamondTower15 },
-     	Orlica1084: 				{ lat: 50.353644909012175,  lng:  16.361197477084513, name: "<b style='font-size:16px;'> 🇵🇱 Orlica 🔺 1084m 👑</b><hr> ✦ 2018 🚶 ", icon: triangleSvg }, 
-      	WysokiKamień1058: 			{ lat: 50.845612023535665,  lng:  15.491266688030361, name: "<b style='font-size:16px;'> 🇵🇱 Wysoki Kamień 🔺 1058m </b><hr> ✦ 2014 🚶❄️ ", icon: triangleSvg },
-      	WielkaSowa1015: 			{ lat: 50.68038796190523, lng: 16.48564939216492, name: "<b style='font-size:16px;'> 🇵🇱 Wielka Sowa 🔺 1015m +25m 🗼 👑</b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-      	WielkaSowa1015Tower: 		{ lat: 50.68038796190523, lng: 16.48564939216492, name: "<b style='font-size:16px;'> 🇵🇱 Wielka Sowa 🔺 1015m +25m 🗼 👑</b><hr> ✦ 2021 🚶 ", icon: DiamondTower15 },
-		Bukovec1005: 				{ lat: 50.81451672626001,  lng: 15.358282536949892, name: "<b style='font-size:16px;'> 🇨🇿 Bukovec 🔺 1005m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	Kalenica964: 				{ lat: 50.643010369990975, lng:  16.546297832376897, name: "<b style='font-size:16px;'> 🇵🇱 Kalenica 🔺 964m +20m 🗼 </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-     	Kalenica964Tower: 			{ lat: 50.643010369990975, lng:  16.546297832376897, name: "<b style='font-size:16px;'> 🇵🇱 Kalenica 🔺 964m +20m 🗼 </b><hr> ✦ 2021 🚶 ", icon: DiamondTower15 },
-		Koziołki935: 				{ lat: 50.65417586199853,  lng:  16.499969771465107, name: "<b style='font-size:16px;'> 🇵🇱 Koziołki 🔺 935m </b><hr> ✦ 2021 🚶 ", icon: triangleSvg }, 
-      	SzczeliniecWielki917: 		{ lat: 50.48420375763292, lng:  16.343901220776274, name: "<b style='font-size:16px;'> 🇵🇱 Szczeliniec Wielki 🔺 917m 👑</b><hr> ✦ 2018 🚶 <br>✦ 2010 🚶 ", icon: triangleSvg },
-      	Chełmiec851: 				{ lat: 50.77940878704759,  lng: 16.211143833560772, name: "<b style='font-size:16px;'> 🇵🇱 Chełmiec 🔺 851m +22m 🗼 </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-		Chełmiec851Tower: 			{ lat: 50.77940878704759,  lng: 16.211143833560772, name: "<b style='font-size:16px;'> 🇵🇱 Chełmiec 🔺 851m +22m 🗼 </b><hr> ✦ 2021 🚶 ", icon: DiamondTower15 },
-      	KłodzkaGóra757: 			{ lat: 50.45189759379972,  lng:  16.753364846206505, name: "<b style='font-size:16px;'> 🇵🇱 Kłodzka Góra 🔺 757m +35m 🗼 👑</b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-      	KłodzkaGóra757Tower: 		{ lat: 50.45189759379972,  lng:  16.753364846206505, name: "<b style='font-size:16px;'> 🇵🇱 Kłodzka Góra 🔺 757m +35m 🗼 👑</b><hr> ✦ 2021 🚶 ", icon: DiamondTower15 },
-		OstraGóra752: 				{ lat: 50.46650301080712,  lng:  16.744874026577413, name: "<b style='font-size:16px;'> 🇵🇱 Ostra Góra 🔺 752m </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
-     	SvětlýVrch730: 				{ lat: 50.76382480510282,  lng:  15.29255445733454, name: "<b style='font-size:16px;'> 🇨🇿 Světlý Vrch 🔺 730m +21m 🗼</b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-		SvětlýVrch730Tower: 		{ lat: 50.76382480510282,  lng:  15.29255445733454, name: "<b style='font-size:16px;'> 🇨🇿 Světlý Vrch 🔺 730m +21m 🗼</b><hr> ✦ 2022 🚶 ", icon: DiamondTower15 },
-      	MalýŠpičák684: 				{ lat: 50.745771703756446, lng: 15.290275894563068, name: "<b style='font-size:16px;'> 🇨🇿 Malý Špičák 🔺 684m +🗼</b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	MalýŠpičák684Tower: 		{ lat: 50.745771703756446, lng: 15.290275894563068, name: "<b style='font-size:16px;'> 🇨🇿 Malý Špičák 🔺 684m +🗼</b><hr> ✦ 2022 🚶 ", icon: DiamondTower15 },
-		Polskiewrota660: 			{ lat: 50.3984221888442,  lng:  16.34989406492238, name: "<b style='font-size:16px;'> 🇵🇱 Polskie Wrota 🔻 660m </b><hr> ✦ 2010 🚴 ", icon: upsideDownTriangleSvg },
+      	PradedPradziad1491: 		{ lat: 50.08348135904802,  lng:  17.23096415940303, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Praded (Pradziad) </b><br> 1491m </b><hr> ✦ 2002 🚶 ", icon: triangleSvg },
+      	Śnieżnik1426: 				{ lat: 50.207789740544186,  lng:  16.847235017265707, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 🇨🇿 Śnieżnik </b><br> 1426m 👑</b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
+      	CzarnaKopa1408: 			{ lat: 50.74271293557403,  lng:   15.769667954005511, name: "<p style='text-align: center; margin: 0'><p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 🇨🇿 Czarna Kopa </b><br> 1408m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	Sušina1321: 				{ lat: 50.173928285486404,  lng: 16.862828528173882, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Sušina </b><br> 1321m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+     	MałyŚnieżnik1318: 			{ lat: 50.1931030490788,  lng:  16.81645359259459, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Mały Śnieżnik </b><br> 1318m </b><hr> ✦ 2010 🚴 ", icon: triangleSvg }, 
+      	Podbělka1307: 				{ lat: 50.16472417300745, lng:  16.849150156496737, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Podbělka </b><br> 1307m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	CzarnaGóra1205: 			{ lat: 50.251922972489346,  lng:  16.804858141006495, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Czarna Góra </b><br> 1205m </b><hr> ✦ 2010 🚴 ", icon: triangleSvg },
+      	Żmijowiec1153: 				{ lat: 50.23087283614317,  lng:  16.827871447888416, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Żmijowiec </b><br> 1153m </b><hr> ✦ 2022 🚶 <br> ✦ 2010 🚴 ", icon: triangleSvg },
+      	Smrek1124: 					{ lat: 50.88937454879403,  lng:  15.271826445164665, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Smrek </b><br> 1124m </b><hr> ✦ 2022 🚶 <hr>🗼 +20m Wieża widokowa", icon: triangleSvg },
+		Smrek1124Wieża: 			{ lat: 50.88937454879403,  lng:  15.271826445164665, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Smrek </b><br> 1124m </b><hr> ✦ 2022 🚶 <hr>🗼 +20m Wieża widokowa", icon: DiamondTower15 },
+     	Orlica1084: 				{ lat: 50.353644909012175,  lng:  16.361197477084513, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Orlica </b><br> 1084m 👑</b><hr> ✦ 2018 🚶 ", icon: triangleSvg }, 
+      	WysokiKamień1058: 			{ lat: 50.845612023535665,  lng:  15.491266688030361, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wysoki Kamień </b><br> 1058m </b><hr> ✦ 2014 🚶❄️ ", icon: triangleSvg },
+      	WielkaSowa1015: 			{ lat: 50.68038796190523, lng: 16.48564939216492, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wielka Sowa </b><br> 1015m 👑</b><hr> ✦ 2021 🚶 <hr>🗼 +25m Wieża widokowa", icon: triangleSvg },
+      	WielkaSowa1015Tower: 		{ lat: 50.68038796190523, lng: 16.48564939216492, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wielka Sowa </b><br> 1015m 👑</b><hr> ✦ 2021 🚶 <hr>🗼 +25m Wieża widokowa", icon: DiamondTower15 },
+		Bukovec1005: 				{ lat: 50.81451672626001,  lng: 15.358282536949892, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Bukovec </b><br> 1005m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	Kalenica964: 				{ lat: 50.643010369990975, lng:  16.546297832376897, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Kalenica </b><br> 964m </b><hr> ✦ 2021 🚶 <hr>🗼 +20m Wieża widokowa", icon: triangleSvg },
+     	Kalenica964Tower: 			{ lat: 50.643010369990975, lng:  16.546297832376897, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Kalenica </b><br> 964m </b><hr> ✦ 2021 🚶 <hr>🗼 +20m Wieża widokowa", icon: DiamondTower15 },
+		Koziołki935: 				{ lat: 50.65417586199853,  lng:  16.499969771465107, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Koziołki </b><br> 935m </b><hr> ✦ 2021 🚶 ", icon: triangleSvg }, 
+      	SzczeliniecWielki917: 		{ lat: 50.48420375763292, lng:  16.343901220776274, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Szczeliniec Wielki </b><br> 917m 👑</b><hr> ✦ 2018 🚶 <br>✦ 2010 🚶 ", icon: triangleSvg },
+      	Chełmiec851: 				{ lat: 50.77940878704759,  lng: 16.211143833560772, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Chełmiec </b><br> 851m 👑</b><hr> ✦ 2021 🚶 <hr>🗼 +25m Wieża widokowa", icon: triangleSvg },
+		Chełmiec851Tower: 			{ lat: 50.77940878704759,  lng: 16.211143833560772, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Chełmiec </b><br> 851m 👑</b><hr> ✦ 2021 🚶 <hr>🗼 +25m Wieża widokowa", icon: DiamondTower15 },
+      	KłodzkaGóra757: 			{ lat: 50.45189759379972,  lng:  16.753364846206505, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Kłodzka Góra </b><br> 757m 👑</b><hr> ✦ 2021 🚶 <hr>🗼 +35m Wieża widokowa", icon: triangleSvg },
+      	KłodzkaGóra757Tower: 		{ lat: 50.45189759379972,  lng:  16.753364846206505, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Kłodzka Góra </b><br> 757m 👑</b><hr> ✦ 2021 🚶 <hr>🗼 +35m Wieża widokowa", icon: DiamondTower15 },
+		OstraGóra752: 				{ lat: 50.46650301080712,  lng:  16.744874026577413, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Ostra Góra </b><br> 752m </b><hr> ✦ 2021 🚶 ", icon: triangleSvg },
+     	SvětlýVrch730: 				{ lat: 50.76382480510282,  lng:  15.29255445733454, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Světlý Vrch </b><br> 730m </b><hr> ✦ 2022 🚶 <hr>🗼 +21m Wieża widokowa", icon: triangleSvg },
+		SvětlýVrch730Tower: 		{ lat: 50.76382480510282,  lng:  15.29255445733454, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Světlý Vrch </b><br> 730m </b><hr> ✦ 2022 🚶 <hr>🗼 +21m Wieża widokowa", icon: DiamondTower15 },
+      	MalýŠpičák684: 				{ lat: 50.745771703756446, lng: 15.290275894563068, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Malý Špičák </b><br> 684m </b><hr> ✦ 2022 🚶 <hr>🗼 Wieża widokowa", icon: triangleSvg },
+      	MalýŠpičák684Tower: 		{ lat: 50.745771703756446, lng: 15.290275894563068, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Malý Špičák </b><br> 684m </b><hr> ✦ 2022 🚶 <hr>🗼 Wieża widokowa", icon: DiamondTower15 },
+		Polskiewrota660: 			{ lat: 50.3984221888442,  lng:  16.34989406492238, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Polskie Wrota </b><br> 660m </b><hr> ✦ 2010 🚴 ", icon: upsideDownTriangleSvg },
       	
-      	WodospadSzklarki: 			{ lat: 50.83022176402639,  lng: 15.556769568631712, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Szklarki </b><hr> ✦ 1993 🚶 ", icon: DiamondBlue15 },
-      	WodospadSzklarki2: 			{ lat: 50.83022176402639,  lng: 15.556769568631712, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Szklarki </b><hr> ✦ 1993 🚶 ", icon: DiamondBlue15 },
-      	WodospadKaAmieńczyka: 		{ lat: 50.81375655290148,  lng:  15.496924800613105, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Kamieńczyka  </b><hr> ✦ 2023 🚶❄️ ", icon: DiamondBlue15 },
-      	WodospadKaAmieńczyka2: 		{ lat: 50.81375655290148,  lng:  15.496924800613105, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Kamieńczyka  </b><hr> ✦ 2023 🚶❄️ ", icon: DiamondBlue15 },
-      	WodospadWilczki: 			{ lat: 50.2294567633266, lng:  16.76078886051144, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Wilczki 🔺 1281m </b><hr> ✦ 2021 🚶 ", icon: DiamondBlue15 },
-      	WodospadWilczki2: 			{ lat: 50.2294567633266, lng:  16.76078886051144, name: "<b style='font-size:16px;'> 🇵🇱 Wodospad Wilczki 🔺 1281m </b><hr> ✦ 2021 🚶 ", icon: DiamondBlue15 },
-      	Mumlavskyvodopád: 			{ lat: 50.77113639974774,  lng:  15.453356775933797, name: "<b style='font-size:16px;'> 🇨🇿 Mumlavský vodopád </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
-      	Mumlavskyvodopád2: 			{ lat: 50.77113639974774,  lng:  15.453356775933797, name: "<b style='font-size:16px;'> 🇨🇿 Mumlavský vodopád </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
-      	WodospadPanczawski: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
-      	WodospadPanczawski2: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
-      	SkyBridge721: 				{ lat: 50.15151971448964,   lng:    16.833623084907202, name: "<b style='font-size:16px;'> 🇨🇿 Sky Bridge 721 🔶 </b><hr> ✦ 2022 🚶 ", icon: DiamondYellow20 },
-      	Střmen630m:					{ lat: 50.5941225, lng: 16.1382764, name: "<b style='font-size:16px;'> 🇨🇿 Střmen 🔺 684m </b><hr> ✦ 2014 🚶❄️ ", icon: triangleSvg },
-      	Teplickéskály:				{ lat: 50.589662161941575,  lng:  16.123543331430714, name: "<b style='font-size:16px;'> 🇨🇿 Teplické skály 🔶</b><hr> ✦ 2014 🚶❄️ ", icon: reddiamondSvg },
-      	Adršpach:					{ lat: 50.61038530066005,  lng: 16.11647755772387, name: "<b style='font-size:16px;'> 🇨🇿 Adršpach 🔶 </b><hr> ✦ 2014 🚶❄️ ", icon: reddiamondSvg },
+      	WodospadSzklarki: 			{ lat: 50.83022176402639,  lng: 15.556769568631712, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wodospad Szklarki </b><hr> ✦ 1993 🚶 ", icon: DiamondBlue15 },
+      	WodospadSzklarki2: 			{ lat: 50.83022176402639,  lng: 15.556769568631712, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wodospad Szklarki </b><hr> ✦ 1993 🚶 ", icon: DiamondBlue15 },
+      	WodospadKaAmieńczyka: 		{ lat: 50.81375655290148,  lng:  15.496924800613105, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wodospad Kamieńczyka  </b><hr> ✦ 2023 🚶❄️ ", icon: DiamondBlue15 },
+      	WodospadKaAmieńczyka2: 		{ lat: 50.81375655290148,  lng:  15.496924800613105, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wodospad Kamieńczyka  </b><hr> ✦ 2023 🚶❄️ ", icon: DiamondBlue15 },
+      	WodospadWilczki: 			{ lat: 50.2294567633266, lng:  16.76078886051144, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wodospad Wilczki </b><br> 1281m </b><hr> ✦ 2021 🚶 ", icon: DiamondBlue15 },
+      	WodospadWilczki2: 			{ lat: 50.2294567633266, lng:  16.76078886051144, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wodospad Wilczki </b><br> 1281m </b><hr> ✦ 2021 🚶 ", icon: DiamondBlue15 },
+      	Mumlavskyvodopád: 			{ lat: 50.77113639974774,  lng:  15.453356775933797, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Mumlavský vodopád </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
+      	Mumlavskyvodopád2: 			{ lat: 50.77113639974774,  lng:  15.453356775933797, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Mumlavský vodopád </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
+      	WodospadPanczawski: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
+      	WodospadPanczawski2: 		{ lat: 50.7618142499003,  lng:   15.545440847101268, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Wodospad Panczawski </b><hr> ✦ 2022 🚶 ", icon: DiamondBlue15 },
+      	SkyBridge721: 				{ lat: 50.15151971448964,   lng:    16.833623084907202, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Sky Bridge 721 </b><hr> ✦ 2022 🚶 ", icon: DiamondYellow20 },
+      	Střmen630m:					{ lat: 50.5941225, lng: 16.1382764, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Střmen </b><br> 684m </b><hr> ✦ 2014 🚶❄️ ", icon: triangleSvg },
+      	Teplickéskály:				{ lat: 50.589662161941575,  lng:  16.123543331430714, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Teplické skály</b><hr> ✦ 2014 🚶❄️ ", icon: reddiamondSvg },
+      	Adršpach:					{ lat: 50.61038530066005,  lng: 16.11647755772387, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇨🇿 Adršpach </b><hr> ✦ 2014 🚶❄️ ", icon: reddiamondSvg },
       
       
       // BESKIDY - wszystkie stare szczyty
       	
-      	BabiaGóraDiablak1725: 		{ lat: 49.57312958000356,  lng:  19.529602216876214, name: "<b style='font-size:16px;'> 🇵🇱 🇸🇰 Babia Góra (Diablak) 🔺 1725m 👑</b><hr> ✦ 2022 🚶 <br> ✦ 2016 🚶 ", icon: triangleSvg },
-      	Sokolica:					{ lat: 49.58493978648241,  lng:  19.563147717478593, name: "<b style='font-size:16px;'> 🇵🇱 Sokolica 🔺 1368m </b><hr> ✦ 2016 🚶 ", icon: triangleSvg },
-      	Gówniak:					{ lat: 49.574254026971964,  lng:   19.5358603429592, name: "<b style='font-size:16px;'> 🇵🇱 Gówniak 🔺 1617m </b><hr>✦ 2022 🚶 <br> ✦ 2016 🚶 ", icon: triangleSvg },
-      	WielkiKrywań1709: 			{ lat: 49.187683744347474, lng:  19.03057776672531, name: "<b style='font-size:16px;'> 🇸🇰 Wielki Krywań 🔺 1709m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
-     	Chleb1646: 					{ lat: 49.188267405014265,  lng:  19.051379915406507, name: "<b style='font-size:16px;'> 🇸🇰 Chleb 🔺 1646m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
-      	PoludňovýGrúň:				{ lat: 49.211105982268144,  lng:   19.06371451549807, name: "<b style='font-size:16px;'> 🇸🇰 Południowa Grań 🔺 1460m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
-      	Pilsko1557: 				{ lat: 49.528061228921786,  lng:  19.317042831666747, name: "<b style='font-size:16px;'> 🇸🇰 Pilsko 🔺 1557m </b><hr> ✦ 2016 🚶 ", icon: triangleSvg },
-      	Romanka1366: 				{ lat: 49.560794327548024, lng:  19.241891121345414, name: "<b style='font-size:16px;'> 🇵🇱 Romanka 🔺 1366m </b><hr> ✦ 2016 🚶 ", icon: triangleSvg },
-      	Turbacz1310: 				{ lat: 49.54319674292774,  lng:  20.112222718174266, name: "<b style='font-size:16px;'> 🇵🇱 Turbacz 🔺 1310m 👑</b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	HalaRysianka: 				{ lat: 49.53651216033942,  lng:  19.2347591814347, name: "<b style='font-size:16px;'> 🇵🇱 Hala Rysianka 🔶 1270m </b><hr>✦ 2022 🚶❄️ <br> ✦ 2016 🚶 ", icon: reddiamondSvg },
-     	CzołoTurbacza1259: 			{ lat: 49.551875156968194,  lng:  20.115469332022315, name: "<b style='font-size:16px;'> 🇵🇱 Czoło Turbacza 🔺 1259m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	Skrzyczne1257: 				{ lat: 49.68458423191465,  lng: 19.030430446589286, name: "<b style='font-size:16px;'> 🇵🇱 Skrzyczne 🔺 1257m 👑</b><hr> ✦ 2012 🚴 ", icon: triangleSvg },
-      	WielkaRycerzowa1226: 		{ lat: 49.41631376659864,  lng:  19.09297760380869, name: "<b style='font-size:16px;'> 🇵🇱 Wielka Rycerzowa 🔺 1226m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
-     	MałeSkrzyczne1211: 			{ lat: 49.67680178373881,  lng:  19.012200163048234, name: "<b style='font-size:16px;'> 🇵🇱 Małe Skrzyczne 🔺 1211m </b><hr> ✦ 2012 🚴 ", icon: triangleSvg }, 
-      	MalinowskaSkała1152: 		{ lat: 49.656855184565906,  lng: 19.001477751284074, name: "<b style='font-size:16px;'> 🇵🇱 Malinowska Skała 🔺 1152m </b><hr> ✦ 2012 🚴 ", icon: triangleSvg },
-      	Obidowiec1106: 				{ lat: 49.55620366305514,  lng:  20.08344643976252, name: "<b style='font-size:16px;'> 🇵🇱 Obidowiec 🔺 1106m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-      	KrawcówWierch1080: 			{ lat: 49.478080367128946,  lng:  19.225261158396897, name: "<b style='font-size:16px;'> 🇵🇱 Krawców Wierch 🔺 1080m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
-      	LubońWielki1022: 			{ lat: 49.65402178189866, lng:  19.993432742049784, name: "<b style='font-size:16px;'> 🇵🇱 Luboń Wielki 🔺 1022m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-     	PrzełęczLipnickaKrowiarki: 	{ lat: 49.58859988571466,  lng: 19.583387358476795, name: "<b style='font-size:16px;'> 🇵🇱 Przełęcz Lipnicka (Krowiarki) 🔻 1012m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg },
-        Prusów1010: 				{ lat: 49.55680382615725,  lng: 19.147810293468186, name: "<b style='font-size:16px;'> 🇵🇱 Prusów 🔺 1010m </b><hr> ✦ 2016 🚶 ", icon: triangleSvg },
-      	Klekociny892: 				{ lat: 49.633179800014375,  lng: 19.4789732937525, name: "<b style='font-size:16px;'> 🇵🇱 Klekociny 🔻 892m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg },
-     	Szarcuła759: 				{ lat: 49.60400985816209, lng:  18.914380474726283, name: "<b style='font-size:16px;'> 🇵🇱 Szarcuła 🔻 759m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg }, 
-      	Przysłop664: 				{ lat: 49.68608481270266, lng: 19.563412345625288, name: "<b style='font-size:16px;'> 🇵🇱 Przysłop 🔻 664m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg },
-      	Polczakówka: 				{ lat: 49.62076679654182,  lng:  19.984801108027824, name: "<b style='font-size:16px;'> 🇵🇱 Polczakówka 🔺 588m +25m 🗼</b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
-		Polczakówka588Tower: 		{ lat: 49.62076679654182,  lng:  19.984801108027824, name: "<b style='font-size:16px;'> 🇵🇱 Polczakówka 🔺 588m +25m 🗼</b><hr> ✦ 2022 🚶 ", icon: DiamondTower15 },
-      	ZaporaWisłaCzarne1:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: DiamondYellow20 }, 
-     	ZaporaWisłaCzarne2:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: DiamondYellow20 },
-      	ZaporaCzorsztyn1:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 }, 
-     	ZaporaCzorsztyn2:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 },
+      	BabiaGóraDiablak1725: 		{ lat: 49.57312958000356,  lng:  19.529602216876214, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 🇸🇰 Babia Góra (Diablak) </b><br> 1725m 👑</b><hr> ✦ 2022 🚶 <br> ✦ 2016 🚶 ", icon: triangleSvg },
+      	Sokolica:					{ lat: 49.58493978648241,  lng:  19.563147717478593, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Sokolica </b><br> 1368m </b><hr> ✦ 2016 🚶 ", icon: triangleSvg },
+      	Gówniak:					{ lat: 49.574254026971964,  lng:   19.5358603429592, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Gówniak </b><br> 1617m </b><hr>✦ 2022 🚶 <br> ✦ 2016 🚶 ", icon: triangleSvg },
+      	WielkiKrywań1709: 			{ lat: 49.187683744347474, lng:  19.03057776672531, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇸🇰 Wielki Krywań </b><br> 1709m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
+     	Chleb1646: 					{ lat: 49.188267405014265,  lng:  19.051379915406507, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇸🇰 Chleb </b><br> 1646m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
+      	PoludňovýGrúň:				{ lat: 49.211105982268144,  lng:   19.06371451549807, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇸🇰 Południowa Grań </b><br> 1460m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
+      	Pilsko1557: 				{ lat: 49.528061228921786,  lng:  19.317042831666747, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇸🇰 Pilsko </b><br> 1557m </b><hr> ✦ 2016 🚶 ", icon: triangleSvg },
+      	Romanka1366: 				{ lat: 49.560794327548024, lng:  19.241891121345414, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Romanka </b><br> 1366m </b><hr> ✦ 2016 🚶 ", icon: triangleSvg },
+      	Turbacz1310: 				{ lat: 49.54319674292774,  lng:  20.112222718174266, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Turbacz </b><br> 1310m 👑</b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	HalaRysianka: 				{ lat: 49.53651216033942,  lng:  19.2347591814347, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Hala Rysianka </b><br> 1270m </b><hr>✦ 2022 🚶❄️ <br> ✦ 2016 🚶 ", icon: reddiamondSvg },
+     	CzołoTurbacza1259: 			{ lat: 49.551875156968194,  lng:  20.115469332022315, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Czoło Turbacza </b><br> 1259m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	Skrzyczne1257: 				{ lat: 49.68458423191465,  lng: 19.030430446589286, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Skrzyczne </b><br> 1257m 👑</b><hr> ✦ 2012 🚴 ", icon: triangleSvg },
+      	WielkaRycerzowa1226: 		{ lat: 49.41631376659864,  lng:  19.09297760380869, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Wielka Rycerzowa </b><br> 1226m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
+     	MałeSkrzyczne1211: 			{ lat: 49.67680178373881,  lng:  19.012200163048234, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Małe Skrzyczne </b><br> 1211m </b><hr> ✦ 2012 🚴 ", icon: triangleSvg }, 
+      	MalinowskaSkała1152: 		{ lat: 49.656855184565906,  lng: 19.001477751284074, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Malinowska Skała </b><br> 1152m </b><hr> ✦ 2012 🚴 ", icon: triangleSvg },
+      	Obidowiec1106: 				{ lat: 49.55620366305514,  lng:  20.08344643976252, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Obidowiec </b><br> 1106m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+      	KrawcówWierch1080: 			{ lat: 49.478080367128946,  lng:  19.225261158396897, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Krawców Wierch </b><br> 1080m </b><hr> ✦ 2022 🚶❄️ ", icon: triangleSvg },
+      	LubońWielki1022: 			{ lat: 49.65402178189866, lng:  19.993432742049784, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Luboń Wielki </b><br> 1022m </b><hr> ✦ 2022 🚶 ", icon: triangleSvg },
+     	PrzełęczLipnickaKrowiarki: 	{ lat: 49.58859988571466,  lng: 19.583387358476795, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Przełęcz Lipnicka (Krowiarki) </b><br> 1012m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg },
+        Prusów1010: 				{ lat: 49.55680382615725,  lng: 19.147810293468186, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Prusów </b><br> 1010m </b><hr> ✦ 2016 🚶 ", icon: triangleSvg },
+      	Klekociny892: 				{ lat: 49.633179800014375,  lng: 19.4789732937525, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Klekociny </b><br> 892m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg },
+     	Szarcuła759: 				{ lat: 49.60400985816209, lng:  18.914380474726283, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Szarcuła </b><br> 759m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg }, 
+      	Przysłop664: 				{ lat: 49.68608481270266, lng: 19.563412345625288, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Przysłop </b><br> 664m </b><hr> ✦ 2012 🚴 ", icon: upsideDownTriangleSvg },
+      	Polczakówka: 				{ lat: 49.62076679654182,  lng:  19.984801108027824, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Polczakówka </b><br> 588m <hr> ✦ 2022 🚶 <hr>🗼 +25m Wieża widokowa ", icon: triangleSvg },
+		Polczakówka588Tower: 		{ lat: 49.62076679654182,  lng:  19.984801108027824, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Polczakówka </b><br> 588m <hr> ✦ 2022 🚶 <hr>🗼 +25m Wieża widokowa", icon: DiamondTower15 },
+      	ZaporaWisłaCzarne1:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: DiamondYellow20 }, 
+     	ZaporaWisłaCzarne2:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: DiamondYellow20 },
+      	ZaporaCzorsztyn1:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 }, 
+     	ZaporaCzorsztyn2:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 },
       
 
       
@@ -7418,6 +7685,19 @@ markerTemplates.Piekoszów,
 markerTemplates.Krasocin,
        
 // GÓRY do 2023
+markerTemplates.MisenTower,
+markerTemplates.OwińskaTower,
+markerTemplates.TourdeSauvabelinTower,
+markerTemplates.MontPelerinTower,
+markerTemplates.WielkaSowa1015Tower,
+markerTemplates.Kalenica964Tower,
+markerTemplates.Chełmiec851Tower,
+markerTemplates.KłodzkaGóra757Tower,
+markerTemplates.SvětlýVrch730Tower,
+markerTemplates.MalýŠpičák684Tower,
+markerTemplates.Polczakówka588Tower,
+markerTemplates.JanowskiWierch349mTower,
+
 // Alpy
 markerTemplates.PointedelaPlaineMorte,
 markerTemplates.PointedeVatseret,
@@ -7490,6 +7770,7 @@ markerTemplates.ŚwistowaCzuba,
 markerTemplates.Grześ,
 markerTemplates.CzarnyStawpodRysami,
 markerTemplates.MorskieOko,
+markerTemplates.SchroniskoMorskieOko,
 markerTemplates.Gubałówka,
 markerTemplates.JaskiniaBielska,
 
@@ -7617,18 +7898,7 @@ markerTemplates.KarkonowskiParkNarodwyCzechy,
 markerTemplates.NarodowyRezerwatPrzyrodyPraděd,
 markerTemplates.TatrzańskiParkNarodwySłowacja,
 markerTemplates.MałaFatra,
-markerTemplates.MisenTower,
-markerTemplates.OwińskaTower,
-markerTemplates.TourdeSauvabelinTower,
-markerTemplates.MontPelerinTower,
-markerTemplates.WielkaSowa1015Tower,
-markerTemplates.Kalenica964Tower,
-markerTemplates.Chełmiec851Tower,
-markerTemplates.KłodzkaGóra757Tower,
-markerTemplates.SvětlýVrch730Tower,
-markerTemplates.MalýŠpičák684Tower,
-markerTemplates.Polczakówka588Tower,
-markerTemplates.JanowskiWierch349mTower,
+
 
 
 
@@ -7882,6 +8152,12 @@ markerTemplates.Courmayeur,
 markerTemplates.NovaraIT,
 markerTemplates.JezioroComo,
 markerTemplates.JezioroMaggiore,
+markerTemplates.PuntaHellbronnerPavillonCable,
+markerTemplates.PuntaHellbronnerPavillonSchronisko,
+markerTemplates.PuntaHellbronnerCourmayeurCable,
+markerTemplates.PuntaHellbronner3466mTower,
+markerTemplates.PuntaHellbronner3466mCable,
+markerTemplates.PuntaHellbronner3466mSchronisko,
 markerTemplates.PuntaHellbronner3466m,
 markerTemplates.PrzełŚwBernarda2473m,
 markerTemplates.SassodelFerro1062m,
@@ -7902,6 +8178,9 @@ markerTemplates.JezBodeńskie,
 markerTemplates.ParkingBrunnen,
 markerTemplates.Jez4KAntonów,
 markerTemplates.PrzełŚwGottarda,
+markerTemplates.AiguilleduMidi3842mTower,
+markerTemplates.AiguilleduMidi3842mCable,
+markerTemplates.AiguilleduMidi3842mSchronisko,
 markerTemplates.AiguilleduMidi3842m,
 markerTemplates.Lindau,
          
@@ -7910,8 +8189,8 @@ markerTemplates.Lindau,
           
         // Punkty na mapie ROK 2024 - Pozostałe 
 markerTemplates.PuszczaZielonka, 
-markerTemplates.DziewiczaGóra,
 markerTemplates.DziewiczaGóraTower,
+markerTemplates.DziewiczaGóra,
 markerTemplates.MurowanaGoślina, 
 markerTemplates.Lusówko, 
 markerTemplates.Liw,
