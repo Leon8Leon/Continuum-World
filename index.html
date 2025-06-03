@@ -11,7 +11,7 @@
   	<script src="https://cdn.jsdelivr.net/npm/gpxparser/dist/gpxparser.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/leaflet-omnivore@0.4.1/dist/leaflet-omnivore.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gpxparser@1.2.0/dist/gpxparser.min.js"></script>
-  	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> // #fff22f żłóty
   
     <title>Mapa z markerami</title>
     <style>
@@ -90,8 +90,171 @@
         	 
         }
       
+  /* Uniwersalny styl przycisku Podstawowy*/
+        .route-button {
+			width: 24px;
+			height: 12px;
+			background-color: #ffd700;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-button .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-button .tooltip {
+            display: none;
+            position: absolute;
+            top: -110px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 300px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			
+        }
+
+        .route-button .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-button:hover .tooltip {
+            display: block;
+        }
  
-      
+  /* Uniwersalny styl przycisku Zielony*/
+        .route-buttonGreen {
+			width: 24px;
+			height: 12px;
+			background-color: #00cc66;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonGreen .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonGreen .tooltip {
+            display: none;
+            position: absolute;
+            top: -110px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 300px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			
+        }
+
+        .route-buttonGreen .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonGreen:hover .tooltip {
+            display: block;
+        }
+ 
+ /* Uniwersalny styl przycisku Złoty*/
+        .route-buttonGold {
+			width: 24px;
+			height: 12px;
+			background-color: #00cc66;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonGold .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonGold .tooltip {
+            display: none;
+            position: absolute;
+            top: -110px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 300px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			
+        }
+
+        .route-buttonGold .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonGold:hover .tooltip {
+            display: block;
+        }
+ 
     </style>
   
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -1627,7 +1790,7 @@ var iconStyles = {
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Novara-Stemma.svg/800px-Novara-Stemma.svg.png" style="height:80px;">
 								<br><b style='font-size:20px;'> 🇮🇹 Novara </b><br> Włochy, Piemont</div><hr>✦ 2024 🚗`, icon: redDotIcon },
     JezioroComo:   			{ lat: 45.9748, lng: 9.2302, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Jezioro Como </b><br> Włochy, Lombardia <br>198m<hr>✦ 2024 🚗", icon: blueDiamondIcon },
-    JezioroMaggiore: 		{ lat: 45.8699, lng: 8.5807, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Jezioro Maggiore </b><br> Włochy, Lombardia/Piemont<br>198m<hr>✦ 2024 🚗 ", icon: blueDiamondIcon },
+    JezioroMaggiore: 		{ lat: 45.8699, lng: 8.5807, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹 Jezioro Maggiore </b><br> Włochy, Lombardia/Piemont<br>193m<hr>✦ 2024 🚗 ", icon: blueDiamondIcon },
     PuntaHellbronner3466m: 			{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: triangleSvg },
 	PuntaHellbronner3466mTower:		{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: DiamondTower15 },
 	PuntaHellbronner3466mCable:			{ lat: 45.845834, lng: 6.931858, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇮🇹  Punta Hellbronner </b><br>3466m<hr>✦ 2024 🚠⭢🚠 ", icon: DiamondPurple15 },
@@ -1681,10 +1844,10 @@ var iconStyles = {
                         	<hr> 🗼 +312m Wieża Eiffla
                             `,
                             icon: redSquareIcon30 },
-      AiguilleduMidi3842m:	{ lat: 45.878686, lng: 6.887913, name: "<b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: triangleSvg },
-	AiguilleduMidi3842mTower:	{ lat: 45.878686, lng: 6.887913, name: "<b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: DiamondTower15 },
-	AiguilleduMidi3842mCable:	{ lat: 45.878686, lng: 6.887913, name: "<b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: DiamondPurple15 },
-	AiguilleduMidi3842mSchronisko: { lat: 45.878686, lng: 6.887913, name: "<b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: DiamondSquare15ONTOP },  
+      AiguilleduMidi3842m:	{ lat: 45.878686, lng: 6.887913, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: triangleSvg },
+	AiguilleduMidi3842mTower:	{ lat: 45.878686, lng: 6.887913, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: DiamondTower15 },
+	AiguilleduMidi3842mCable:	{ lat: 45.878686, lng: 6.887913, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: DiamondPurple15 },
+	AiguilleduMidi3842mSchronisko: { lat: 45.878686, lng: 6.887913, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇫🇷 Aiguille du Midi </b><br> 3842m</b><hr>✦ 2024 🚠⭢🚠⭢🚡 ", icon: DiamondSquare15ONTOP },  
     // Holandia
       Amsterdam: 			{ lat: 52.367975546891806,  lng:   4.902300978728007, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/amsterdam.png" style="height:60px;">
@@ -2010,8 +2173,8 @@ var iconStyles = {
                             <hr> 🏭 +124m Copenhill - Spalarnia śmieci 
                          	`,
                                  icon: redSquareIcon },
-      Storebaeltsbroen: 	{ lat: 55.33146791586895,    lng:  10.967168270290271,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Storebæltsbroen </b><br>(Most nad Wielkim Bełtem) </b><br>Dania/Szwecja<hr>✦ 2025 🚗 <hr> most wschodni: 6790m <br>most zachodni: 6611m", icon: DiamondYellow20 },
-      Oresundsbroen: 		{ lat: 55.5762702508758,    lng:   12.830754923502525,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 🇸🇪 Most Øresundsbroen </b><br>(Most nad Sundem) </b><br>Dania<hr>✦ 2025 🚈 <hr> długość 7845m", icon: DiamondYellow20 },
+      Storebaeltsbroen: 	{ lat: 55.33146791586895,    lng:  10.967168270290271,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Storebæltsbroen </b><br>(Most nad Wielkim Bełtem) </b><br>Dania<hr>✦ 2025 🚗 <hr> most wschodni: 6790m <br>most zachodni: 6611m", icon: DiamondYellow20 },
+      Oresundsbroen: 		{ lat: 55.5762702508758,    lng:   12.830754923502525,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 🇸🇪 Most Øresundsbroen </b><br>(Most nad Sundem) </b><br>Dania/Szwecja<hr>✦ 2025 🚈 <hr> długość 7845m", icon: DiamondYellow20 },
       FaroBridge: 			{ lat: 54.95199397234257,   lng:   11.987328001285855,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Mosty Farø  </b><br>Dania<hr>✦ 2025 🚗 <hr> most południowy 1726m <br> most północny 1596m", icon: DiamondYellow20 },
                                                      
     // Szwecja                                             
@@ -5817,15 +5980,40 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
         Łódź:				{ lat: 51.77024, lng: 19.44606, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/POL_%C5%81%C3%B3d%C5%BA_COA.svg/800px-POL_%C5%81%C3%B3d%C5%BA_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Łódź </b><br>Polska, woj. Łódzkie</div>
-                            <hr> ✦ 2024 🚗
+                            <hr> 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+							✦ 2024 🚗&nbsp;
+								<a href="index.html" class="route-button">
+								 <span class="button-text">277</span>
+								<div class="tooltip">
+								<iframe src="index.html#map-zoom=5&lat=51.77024&lng=19.44606&filters=chodziez,poznan" 
+								width="600" height="600" style="border:0;"></iframe>
+								</div>
+								</a>
+								</div>
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
-      						<div>
+							<div>
         					<!-- Pierwsza kolumna -->
-        					✦ 2020 🚴 
-                            <br>✦ 2017 🚴
-                            <br>✦ 2014 🚗 <b style='font-size:10px;'>(wiele)</b>
-                            <br>✦ 2012 🚴 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+        					✦ 2020 🚴&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">178</span>
+								<div class="tooltip">
+								<img src="https://via.placeholder.com/120x80.png?text=Chodziez" alt="Łódź - Warszawa">
+								</div>
+								</a>
+								</div>
+                            ✦ 2014 🚗<b style='font-size:10px;'>(wiele)</b>&nbsp;
+							<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+                            <br>✦ 2012 🚴&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">61</span>
+								<div class="tooltip">
+								<img src="https://via.placeholder.com/120x80.png?text=Chodziez" alt="Łódź - Warszawa">
+								</div>
+								</a> &nbsp;
+								</div>
       						</div>
                             <div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
       						<div>
