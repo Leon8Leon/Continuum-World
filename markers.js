@@ -6744,3 +6744,15 @@ for (const city in markers) {
 if (bounds.length) {
   map.fitBounds(bounds);
 }
+
+
+if (typeof additionalCities !== "undefined") {
+  for (const city of additionalCities) {
+    if (!markers[city]) continue;
+
+    const m = markers[city];
+    L.marker([m.lat, m.lng], { icon: m.icon })
+      .addTo(map)
+      .bindPopup(m.name);
+  }
+}
