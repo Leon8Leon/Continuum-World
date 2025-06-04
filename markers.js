@@ -4613,7 +4613,15 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
         					<!-- Pierwsza kolumna -->
                             ✦ 2022 🏠|🚗|🚴<b style='font-size:10px;'>x4 (duże wyprawy)</b>
                             <br>✦ 2021 🏠|🚗|🚴<b style='font-size:10px;'>x3 (duże wyprawy)</b>
-                            <br>✦ 2020 🏠|🚗|🚴<b style='font-size:10px;'>x4 (duże wyprawy)</b>
+                            <div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2020 🏠|🚗|🚴<b style='font-size:10px;'>x4 (duże wyprawy)</b></p>&nbsp;
+								<a href="mapa188.html" class="route-button">
+								<span class="button-text">188</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg">
+								</div>
+								</a>
+							</div>
       						</div>
                             <div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
       						<div>
@@ -4694,7 +4702,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								<hr>
 								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
 								<p style='text-align: left; margin: 0'>✦ 2024 🚗</p>&nbsp;
-								<a href="index.html" class="route-button">
+								<a href="mapa280.html" class="route-button">
 								<span class="button-text">280</span>
 								<div class="tooltip">
 								<img src="" alt=" 🇵🇱 Kołobrzeg, Mrzeżyno">
@@ -4771,13 +4779,13 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
         					<!-- Pierwsza kolumna -->
                             <div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
 								<p style='text-align: left; margin: 0'>✦ 2022 🚗|🚴<b style='font-size:10px;'>x2</b></p>&nbsp;
-								<a href="index.html" class="route-button">
+								<a href="mapa231.html" class="route-button">
 								<span class="button-text">231</span>
 								<div class="tooltip">
 								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg - Koszalin">
 								</div>
 								</a>&nbsp;
-								<a href="index.html" class="route-button">
+								<a href="mapa241.html" class="route-button">
 								<span class="button-text">241</span>
 								<div class="tooltip">
 								<img src="" alt=" 🇵🇱 Kołobrzeg - Mielno">
@@ -4786,7 +4794,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 							</div>	
                             <div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
 								<p style='text-align: left; margin: 0'>✦ 2021 🚴</p>&nbsp;
-								<a href="index.html" class="route-button">
+								<a href="mapa214.html" class="route-button">
 								<span class="button-text">214</span>
 								<div class="tooltip">
 								<img src="" alt=" 🇵🇱 Złocieniec - Kołobrzeg">
@@ -4795,7 +4803,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								</div>
                             <div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
 								<p style='text-align: left; margin: 0'>✦ 2020 🚴</p>&nbsp;
-								<a href="index.html" class="route-button">
+								<a href="mapa188.html" class="route-button">
 								<span class="button-text">188</span>
 								<div class="tooltip">
 								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg">
@@ -4804,7 +4812,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								</div>
                             <div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
 								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
-								<a href="index.html" class="route-button">
+								<a href="mapa062.html" class="route-button">
 								<span class="button-text">62</span>
 								<div class="tooltip">
 								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
@@ -4823,7 +4831,17 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	Gościno: 				{ lat: 54.05202220615165,  lng:  15.651801803583474, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Go%C5%9Bcino_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Gościno</b><br>Polska, woj. Zachodniopomorskie
-								<hr> ✦ 2022 🚴 <br> ✦ 2020 🚴</p>`, icon: redDotIconSmall },
+								<hr> ✦ 2022 🚴 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2020 🚴</p>&nbsp;
+								<a href="mapa188.html" class="route-button">
+								<span class="button-text">188</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconSmall },
       	UstronieMorskie: 		{ lat: 54.21294598718471, lng: 15.74861282451483, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_gmina_Ustronie_Morskie_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Ustronie Morskie</b><br>Polska, woj. Zachodniopomorskie
@@ -4849,7 +4867,16 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	Łobez: 					{ lat: 53.6390323274686, lng: 15.621402529891055, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/POL_%C5%81obez_COA.svg/800px-POL_%C5%81obez_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Łobez</b><br>Polska, woj. Zachodniopomorskie</div>
-                                <hr> ✦ 2022 🚴 <br> ✦ 2020 🚴`, icon: redDotIcon10 },
+                                <hr> ✦ 2022 🚴 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2020 🚴</p>&nbsp;
+								<a href="mapa188.html" class="route-button">
+								<span class="button-text">188</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg">
+								</div>
+								</a>
+								</div>`, icon: redDotIcon10 },
       	Resko: 					{ lat: 53.77302767096552, lng:  15.405911062739703, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/532px-POL_Resko_COA_1.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Resko</b><br>Polska, woj. Zachodniopomorskie
@@ -4926,7 +4953,17 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
         Świdwin: 				{ lat: 53.77551601875951, lng: 15.774210221598603, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_%C5%9Awidwin_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Świdwin </b><br>Polska, woj. Zachodniopomorskie</div>
-                                <hr> ✦ 2022 🚴 <br> ✦ 2021 🚴<b style='font-size:10px;'>x2</b> <br> ✦ 2020 🚴 <br> ✦ 2017 🚴`, icon: redDotIcon10 },
+                                <hr> ✦ 2022 🚴 <br> ✦ 2021 🚴<b style='font-size:10px;'>x2</b> 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2020 🚴</p>&nbsp;
+								<a href="mapa188.html" class="route-button">
+								<span class="button-text">188</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg">
+								</div>
+								</a>
+								</div>								
+								✦ 2017 🚴`, icon: redDotIcon10 },
       	PołczynZdrój: 			{ lat: 53.76749377526193,  lng: 16.08992558791217, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Po%C5%82czyn-Zdr%C3%B3j_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Połczyn-Zdrój </b><br>Polska, woj. Zachodniopomorskie</div>
@@ -4942,7 +4979,17 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	Sławoborze: 			{ lat: 53.891606663313375, lng: 15.710959616772499, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
 								<b style='font-size:18px;'> 🇵🇱 Sławoborze</b><br>Polska, woj. Zachodniopomorskie
-								<hr> ✦ 2022 🚴<br> ✦ 2020 🚴`, icon: redDotIconSmall6 },
+								<hr> ✦ 2022 🚴
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2020 🚴</p>&nbsp;
+								<a href="mapa188.html" class="route-button">
+								<span class="button-text">188</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconSmall6 },
       	// Świnoujście	Świnoujście
       	Świnoujście: 			{ lat: 53.90974412884329, lng: 14.251670681680602, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_%C5%9Awinouj%C5%9Bcie_COA_1.svg.png" style="height:60px;">
@@ -5712,16 +5759,9 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								<a href="index.html" class="route-button">
 								 <span class="button-text">287</span>
 								<div class="tooltip">
-								<iframe src="index.html#map-zoom=5&lat=51.77024&lng=19.44606&filters=chodziez,poznan" 
-								width="600" height="600" style="border:0;"></iframe>
+								<img src="" alt="🇵🇱 Łódź">
 								</div>
 								</a>&nbsp;
-								<a href="index.html" class="route-button">
-								<span class="button-text">⭢3</span>
-								<div class="tooltip">
-								<img src="https://via.placeholder.com/120x80.png?text=Chodziez" alt="Łódź - Warszawa">
-								</div>
-								</a> &nbsp;
 								</div>
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
@@ -5732,7 +5772,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								<a href="index.html" class="route-button">
 								<span class="button-text">185</span>
 								<div class="tooltip">
-								<img src="https://via.placeholder.com/120x80.png?text=Chodziez" alt="Łódź - Warszawa">
+								<img src="" alt="🇵🇱 Radomsko - Łódź">
 								</div>
 								</a>
 								</div>
@@ -5742,7 +5782,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								<a href="index.html" class="route-button">
 								<span class="button-text">61</span>
 								<div class="tooltip">
-								<img src="https://via.placeholder.com/120x80.png?text=Chodziez" alt="Łódź - Warszawa">
+								<img src="https://via.placeholder.com/120x80.png?text=Chodziez" alt="🇵🇱 Konin - Łódź">
 								</div>
 								</a> &nbsp;
 								
@@ -6719,6 +6759,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
      	ZaporaWisłaCzarne2:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: DiamondYellow20 },
       	ZaporaCzorsztyn1:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 }, 
      	ZaporaCzorsztyn2:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 },
+      
       
       };
 

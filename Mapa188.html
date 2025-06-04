@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wyprawa nr 188</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map {
+      width: 95%;
+      height: 85vh;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+    }
+    h1 {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+	
+      
+ 		.custom-text {
+            display: none; /* Domyślnie ukryte */ 
+            background-color: white;
+            padding: 5px;
+            border: 1px solid black;
+            font-size: 18px;
+          
+        }  
+        .leaflet-tooltip {
+            background: gray ; /* Tło tooltipa ustawione na przezroczyste */
+            border: none !important; /* Bez obramowania */
+            box-shadow: gray ; /* Bez cienia */
+            font-size: 14px; /* Rozmiar czcionki */
+            color: #000; /* Kolor tekstu */
+            padding: 0; /* Brak paddingu */
+            margin: 0; /* Brak marginesów */
+            white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+          	max-width: 200px;
+   			min-width: 100px;
+          	
+        }
+        .leaflet-tooltip:after {
+            display: none; /* Usunięcie strzałek w tooltipie */
+        }
+        .text-icon-left {
+            background: transparent; /* Przezroczyste tło */
+            border: none; /* Brak obramowania */
+            box-shadow: none; /* Brak cienia */
+            font-size: 14px; /* Rozmiar czcionki */
+            color: #000; /* Kolor tekstu */
+            padding: 0; /* Brak paddingu */
+            margin: 0; /* Brak marginesów */
+            text-align: left; /* Wyrównanie tekstu do lewej */
+            white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+        }
+        .text-icon-right {
+            background: transparent; /* Przezroczyste tło */
+            border: none; /* Brak obramowania */
+            box-shadow: none; /* Brak cienia */
+            font-size: 18px; /* Rozmiar czcionki */
+            color: #000; /* Kolor tekstu */
+            padding: 0; /* Brak paddingu */
+            margin: 0; /* Brak marginesów */
+            text-align: right; /* Wyrównanie tekstu do prawej */
+            white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+        }
+        .text-icon-rotate {
+             background: transparent; /* Przezroczyste tło */
+   			 border: none; /* Brak obramowania */
+    			box-shadow: none; /* Brak cienia */
+    			font-size: 14px; /* Rozmiar czcionki */
+    			color: #000; /* Kolor tekstu */
+    			padding: 0; /* Brak paddingu */
+    			margin: 0; /* Brak marginesów */
+    			display: inline-block; /* Ważne dla poprawnego działania transform */
+           		transform: rotate(-45deg) !important; /* Obrót o -45 stopni */
+            	transform-origin: center; /* Ustaw punkt obrotu na środek */
+    			
+        }
+      
+      .rotated-text {
+            display: inline-block !important;
+            transform: rotate(45deg) !important; /* Rotacja tekstu o 45 stopni */
+            transform-origin: center center !important; /* Punkt obrotu na środku */
+            font-size: 25px !important; /* Rozmiar tekstu */
+            color: red !important; /* Kolor tekstu */
+            white-space: nowrap !important; /* Zapobiega zawijaniu tekstu */
+        	 
+        }
+      
+  /* Uniwersalny styl przycisku Podstawowy*/
+        .route-button {
+			width: 24px;
+			height: 12px;
+			background-color: #ffd700;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-button .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-button .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-button .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-button:hover .tooltip {
+            display: block;
+        }
+		
+		/* Uniwersalny styl przycisku PodstawowyX*/
+        .route-buttonX {
+			width: 72px;
+			height: 36px;
+			background-color: #ffd700  ;					
+			border: 5px solid #000000;
+			border-radius: 10px;
+			display: flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 36px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		.route-buttonX .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+        .route-buttonX .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 1000px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+        }
+        .route-buttonX .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .route-buttonX:hover .tooltip {
+            display: block;
+        }
+ 
+  /* Uniwersalny styl przycisku None*/
+        .route-buttonNone {
+			width: 24px;
+			height: 12px;
+			background-color: #eeeeee;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonNone .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonNone .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonNone .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonNone:hover .tooltip {
+            display: block;
+        }
+ 
+ 
+  /* Uniwersalny styl przycisku Zielony*/
+        .route-buttonGreen {
+			width: 24px;
+			height: 12px;
+			background-color: #00cc66;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonGreen .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonGreen .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+			padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonGreen .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonGreen:hover .tooltip {
+            display: block;
+        }
+ 
+ /* Uniwersalny styl przycisku Zielony*/
+        .route-buttonGold {
+			width: 24px;
+			height: 12px;
+			background-color: #00cc66  ;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonGold .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonGold .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonGold .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonGold:hover .tooltip {
+            display: block;
+        }
+		
+/* Uniwersalny styl przycisku ZłotyX*/
+        .route-buttonGoldX {
+			width: 72px;
+			height: 36px;
+			background-color: #00cc66  ;					
+			border: 5px solid #000000;
+			border-radius: 10px;
+			display: flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 36px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		.route-buttonGoldX .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+        .route-buttonGoldX .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 1000px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+        }
+        .route-buttonGoldX .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .route-buttonGoldX:hover .tooltip {
+            display: block;
+        }
+		
+		/* Uniwersalny styl przycisku Rok*/
+        .route-buttonRok {
+			width: 96px;
+			height: 36px;
+			background-color: #EEEEEE  ;					
+			border: 5px solid #000000;
+			border-radius: 10px;
+			display: flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 36px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		.route-buttonRok .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+        .route-buttonRok .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 1000px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+        }
+        .route-buttonRok .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .route-buttonRok:hover .tooltip {
+            display: block;
+        }
+ body {
+    background-color: #EEEEEE;
+  }
+  </style>
+</head>
+<body>
+  <div style="display: flex; justify-content: center; align-items: center;">
+								<a href="index.html" class="route-buttonRok">
+								<span class="button-text">2020</span>
+								<div class="tooltip">
+								<img src="" alt="Mapa">
+								</div>
+								</a>&nbsp;&nbsp;
+								<a href="Mapa188.html" class="route-buttonX">
+								<span class="button-text">188</span>
+								<div class="tooltip">
+								<img src="" alt="🇵🇱 Drawsko Pom. - Kołobrzeg">
+								</div>
+								</a>&nbsp;&nbsp;				
+  <h1>🇵🇱 Drawsko Pom. - Kołobrzeg</h1></div>
+								
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Definicja widocznych miast -->
+  <script>
+    const visibleCities = [
+	"Kołobrzeg",
+	"DrawskoPom",
+	"Świdwin",
+	"Sławoborze",
+	"Gościno",
+	"Łobez"
+	,];
+	
+	const additionalCities  = [
+	];
+	
+  </script>
+
+  <script src="markers.js"></script>
+  
+  
+  <script>
+  const shapes = [
+    {
+      type: "polyline",
+      style: {
+        fillOpacity: 0,
+        fillColor: "#008000",
+        color: "#FF0033",
+        weight: 4,
+        opacity: 0.8
+      },
+      coordinates: [
+[53.532016486498264,15.807952880859377],[53.545074437420986,15.816192626953127],[53.561391212941324,15.828552246093752],[53.57036275772296,15.84606170654297],[53.58116686461247,15.807266235351564],[53.58931907949891,15.789756774902346],[53.600997783149275,15.805549621582033],[53.616987513233255,15.808296203613283],[53.62462378246946,15.80537796020508],[53.63348012413394,15.79936981201172],[53.639485091284996,15.800228118896486],[53.651390718372596,15.808982849121096],[53.65383248285996,15.805721282958986],[53.66322856561739,15.817909240722658],[53.67848298882447,15.820655822753908],[53.69332532385111,15.81413269042969],[53.723400580750585,15.801086425781252],[53.73680558932076,15.79936981201172],[53.74858222013373,15.79387664794922],[53.76035555078812,15.776023864746096],[53.7655949746907,15.773277282714846],[53.77503037738816,15.776882171630861],[53.78916598420946,15.782203674316408],[53.801333464084415,15.777053833007814],[53.81592978087286,15.794563293457033],[53.8297105249672,15.782203674316408],[53.83882764297445,15.77293395996094],[53.86070062945938,15.745811462402346],[53.85746090822046,15.733795166015627],[53.87628827989363,15.727615356445314],[53.89065616119688,15.71147918701172],[53.89611870749233,15.70701599121094],[53.92988970402389,15.725898742675783],[53.93676189051722,15.723152160644533],[53.947068048368,15.725555419921877],[53.969490297315346,15.763320922851564],[53.98019216296302,15.761260986328127],[53.994927968471536,15.765724182128908],[54.00784274182211,15.74169158935547],[54.010062064974804,15.722808837890627],[54.028077914383466,15.69877624511719],[54.03412739171458,15.686244964599611],[54.03563962352905,15.675430297851564],[54.04571976331064,15.657234191894533],[54.04783628209379,15.65156936645508],[54.054487496509935,15.645732879638674],[54.058316500626816,15.64384460449219],[54.066376408351076,15.646247863769533],[54.08480756655296,15.629425048828127],[54.08792897411484,15.630626678466799],[54.090546747800865,15.64006805419922],[54.09507711965905,15.64933776855469],[54.098701060951306,15.653629302978517],[54.1032305423454,15.651741027832033],[54.108061443934226,15.640239715576174],[54.114501770608356,15.631656646728517],[54.11782217312609,15.62959671020508],[54.12094109684265,15.62753677368164],[54.121343521516245,15.618782043457033],[54.136934468284444,15.618267059326174],[54.14427526910701,15.62084197998047],[54.14809599294191,15.620326995849611],[54.151011571304174,15.611572265625002],[54.15513324553842,15.610542297363283],[54.166993334892084,15.595264434814455],[54.170510504406124,15.590114593505861],[54.174931664710655,15.588741302490236],[54.17874955924503,15.578784942626955],[54.18025652585951,15.571575164794924],[54.182567101346656,15.561962127685549],[54.185480251638594,15.555782318115236],[54.19070331751197,15.549259185791017],[54.18447322877772,15.556855201721193],[54.18236367527384,15.569086074829103]    ]},
+		
+		{"type":"polyline","style":{"fillOpacity":0.5,"fillColor":"#008000","color":"#FF0033","weight":4,"opacity":0.8},"coordinates":[[53.63602470610189,15.62685012817383],[53.62268939158683,15.645046234130861],[53.62503101135816,15.650882720947267],[53.61220141369403,15.684700012207033],[53.60649811863621,15.696716308593752],[53.60222014182658,15.70924758911133],[53.59131952839659,15.729675292968752],[53.58836467207265,15.73448181152344],[53.58571531487688,15.73448181152344],[53.5809256707674,15.73945999145508],[53.5776643259122,15.742893218994142],[53.575422005371564,15.74272155761719],[53.571242817925615,15.751819610595705],[53.56655348176855,15.759029388427736],[53.56278124708944,15.764350891113283],[53.55870277708623,15.774478912353517],[53.5553377433133,15.77842712402344],[53.551768475631285,15.779800415039064],[53.54258897618926,15.79387664794922],[53.5357540560256,15.804176330566408],[53.53126485144394,15.805206298828125],[53.531678507158425,15.80763101577759]
+		]},
+
+{"type":"polyline","style":{"fillOpacity":0,"fillColor":"#008000","color":"#000099","weight":3,"opacity":0.5},"coordinates":[[54.182215500361906,15.572776794433596],[54.18080906652576,15.584964752197267],[54.17769464994048,15.592517852783205],[54.169957826141776,15.61311721801758],[54.15880219559611,15.636634826660158],[54.15387668102739,15.653285980224611],[54.123707687557825,15.81962585449219],[54.12109200655318,15.828723907470705],[54.11686632693763,15.835247039794924],[54.11364647233556,15.838680267333986],[54.07668745106591,15.875587463378908],[54.07165144282945,15.87730407714844],[54.06097308488957,15.877647399902346],[54.050291980895,15.878334045410158],[54.043035325116975,15.883827209472658],[54.03597902820531,15.891380310058596],[54.03234960906978,15.908889770507814],[54.02448478064424,15.952835083007814],[54.02145945055238,15.971374511718752],[54.016820183675655,15.977554321289062],[54.008347143840815,15.978240966796877],[53.98858346379703,15.974464416503908],[53.96546460737445,15.973262786865236],[53.92978863401376,15.985450744628908],[53.91563641667147,15.990943908691408],[53.902086228891754,15.98991394042969],[53.89460140514306,15.97892761230469],[53.8816515173908,15.964851379394533],[53.87132920301246,15.956611633300783],[53.86120681324477,15.942535400390627],[53.85452469418085,15.930862426757814],[53.847638970585606,15.91197967529297],[53.83710567271949,15.89103698730469],[53.83001446087679,15.872840881347658],[53.822111410478506,15.850868225097658],[53.817044568358966,15.836448669433596],[53.81359876575972,15.824775695800783],[53.809949960089575,15.802803039550783],[53.807517246512624,15.792846679687502],[53.80042102553352,15.78563690185547],[53.77121250772278,15.76641082763672],[53.76390720080708,15.76091766357422],[53.75903628998618,15.74718475341797],[53.75193186557528,15.732421875000002],[53.74462320390872,15.719032287597658],[53.735485588822755,15.702209472656252],[53.72817406622726,15.677490234375002],[53.725330352899846,15.667877197265627],[53.715579018463515,15.653114318847658],[53.70846724499951,15.644531250000002],[53.70318343499537,15.63835144042969],[53.697085906672754,15.631141662597658],[53.68915779913331,15.634231567382814],[53.683464903698585,15.645217895507814],[53.68061816735776,15.651741027832033],[53.675534230997755,15.65654754638672],[53.67105985940756,15.658264160156252],[53.66088906568985,15.650367736816408],[53.64503129301574,15.63732147216797],[53.63902711542688,15.63182830810547],[53.63678805076475,15.62753677368164]
+]},
+
+];
+  shapes.forEach(shape => {
+    if (shape.type === "polygon") {
+      L.polygon(shape.coordinates, shape.style).addTo(map);
+    } else if (shape.type === "polyline") {
+      L.polyline(shape.coordinates, shape.style).addTo(map);
+    }
+  });
+</script> 
+  
+  
+  
+  
+</body>
+</html>
