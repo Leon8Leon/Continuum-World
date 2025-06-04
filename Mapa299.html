@@ -2,13 +2,13 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Mapa nr 299</title>
+  <title>Wyprawa nr 299</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
     #map {
-      width: 600px;
-      height: 600px;
+      width: 75%;
+      height: 85vh;
       margin: 0 auto;
       border: 1px solid #ccc;
     }
@@ -16,17 +16,438 @@
       text-align: center;
       font-family: Arial, sans-serif;
     }
+	
+      
+ 		.custom-text {
+            display: none; /* Domyślnie ukryte */ 
+            background-color: white;
+            padding: 5px;
+            border: 1px solid black;
+            font-size: 18px;
+          
+        }  
+        .leaflet-tooltip {
+            background: gray ; /* Tło tooltipa ustawione na przezroczyste */
+            border: none !important; /* Bez obramowania */
+            box-shadow: gray ; /* Bez cienia */
+            font-size: 14px; /* Rozmiar czcionki */
+            color: #000; /* Kolor tekstu */
+            padding: 0; /* Brak paddingu */
+            margin: 0; /* Brak marginesów */
+            white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+          	max-width: 200px;
+   			min-width: 100px;
+          	
+        }
+        .leaflet-tooltip:after {
+            display: none; /* Usunięcie strzałek w tooltipie */
+        }
+        .text-icon-left {
+            background: transparent; /* Przezroczyste tło */
+            border: none; /* Brak obramowania */
+            box-shadow: none; /* Brak cienia */
+            font-size: 14px; /* Rozmiar czcionki */
+            color: #000; /* Kolor tekstu */
+            padding: 0; /* Brak paddingu */
+            margin: 0; /* Brak marginesów */
+            text-align: left; /* Wyrównanie tekstu do lewej */
+            white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+        }
+        .text-icon-right {
+            background: transparent; /* Przezroczyste tło */
+            border: none; /* Brak obramowania */
+            box-shadow: none; /* Brak cienia */
+            font-size: 18px; /* Rozmiar czcionki */
+            color: #000; /* Kolor tekstu */
+            padding: 0; /* Brak paddingu */
+            margin: 0; /* Brak marginesów */
+            text-align: right; /* Wyrównanie tekstu do prawej */
+            white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+        }
+        .text-icon-rotate {
+             background: transparent; /* Przezroczyste tło */
+   			 border: none; /* Brak obramowania */
+    			box-shadow: none; /* Brak cienia */
+    			font-size: 14px; /* Rozmiar czcionki */
+    			color: #000; /* Kolor tekstu */
+    			padding: 0; /* Brak paddingu */
+    			margin: 0; /* Brak marginesów */
+    			display: inline-block; /* Ważne dla poprawnego działania transform */
+           		transform: rotate(-45deg) !important; /* Obrót o -45 stopni */
+            	transform-origin: center; /* Ustaw punkt obrotu na środek */
+    			
+        }
+      
+      .rotated-text {
+            display: inline-block !important;
+            transform: rotate(45deg) !important; /* Rotacja tekstu o 45 stopni */
+            transform-origin: center center !important; /* Punkt obrotu na środku */
+            font-size: 25px !important; /* Rozmiar tekstu */
+            color: red !important; /* Kolor tekstu */
+            white-space: nowrap !important; /* Zapobiega zawijaniu tekstu */
+        	 
+        }
+      
+  /* Uniwersalny styl przycisku Podstawowy*/
+        .route-button {
+			width: 24px;
+			height: 12px;
+			background-color: #ffd700;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-button .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-button .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-button .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-button:hover .tooltip {
+            display: block;
+        }
+ 
+  /* Uniwersalny styl przycisku None*/
+        .route-buttonNone {
+			width: 24px;
+			height: 12px;
+			background-color: #eeeeee;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonNone .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonNone .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonNone .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonNone:hover .tooltip {
+            display: block;
+        }
+ 
+ 
+  /* Uniwersalny styl przycisku Zielony*/
+        .route-buttonGreen {
+			width: 24px;
+			height: 12px;
+			background-color: #00cc66;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonGreen .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonGreen .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+			padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonGreen .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonGreen:hover .tooltip {
+            display: block;
+        }
+ 
+ /* Uniwersalny styl przycisku Złoty*/
+        .route-buttonGold {
+			width: 24px;
+			height: 12px;
+			background-color: #00cc66  ;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonGold .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonGold .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonGold .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonGold:hover .tooltip {
+            display: block;
+        }
+		
+/* Uniwersalny styl przycisku ZłotyX*/
+        .route-buttonGoldX {
+			width: 72px;
+			height: 36px;
+			background-color: #00cc66  ;					
+			border: 5px solid #000000;
+			border-radius: 10px;
+			display: flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 36px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		.route-buttonGoldX .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+        .route-buttonGoldX .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 1000px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+        }
+        .route-buttonGoldX .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .route-buttonGoldX:hover .tooltip {
+            display: block;
+        }
+		
+		/* Uniwersalny styl przycisku Rok*/
+        .route-buttonRok {
+			width: 96px;
+			height: 36px;
+			background-color: #EEEEEE  ;					
+			border: 5px solid #000000;
+			border-radius: 10px;
+			display: flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 36px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		.route-buttonRok .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+        .route-buttonRok .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 1000px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+        }
+        .route-buttonRok .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .route-buttonRok:hover .tooltip {
+            display: block;
+        }
+ body {
+    background-color: #EEEEEE;
+  }
   </style>
 </head>
 <body>
-  <h1>Mapa nr 299</h1>
+  <div style="display: flex; justify-content: center; align-items: center;">
+								<a href="index.html" class="route-buttonRok">
+								<span class="button-text">2025</span>
+								<div class="tooltip">
+								<img src="" alt="Mapa">
+								</div>
+								</a>&nbsp;&nbsp;
+								<a href="Mapa299.html" class="route-buttonGoldX">
+								<span class="button-text">299</span>
+								<div class="tooltip">
+								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga 2025 (podróż poślubna)">
+								</div>
+								</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					
+  <h1>🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga 2025 (podróż poślubna)</h1></div>
+								
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
   <!-- Definicja widocznych miast -->
   <script>
-    const visibleCities = ["Gdańsk", "Warszawa"]; // <- ZMIEŃ TUTAJ jeśli chcesz inne
+    const visibleCities = ["Rostock", "Odensa", "Kopenhaga","Storebaeltsbroen","Oresundsbroen","FaroBridge","Malmo", ]; // <- ZMIEŃ TUTAJ jeśli chcesz inne
   </script>
 
   <script src="markers.js"></script>

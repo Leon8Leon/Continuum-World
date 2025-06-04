@@ -11,7 +11,7 @@
   	<script src="https://cdn.jsdelivr.net/npm/gpxparser/dist/gpxparser.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/leaflet-omnivore@0.4.1/dist/leaflet-omnivore.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gpxparser@1.2.0/dist/gpxparser.min.js"></script>
-  	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> // #fff22f żłóty
+  	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
   
     <title>Mapa z markerami</title>
     <style>
@@ -122,16 +122,18 @@
         .route-button .tooltip {
             display: none;
             position: absolute;
-            top: -110px;
+            top: -40px;
             left: 50%;
             transform: translate(-50%);
-            width: 300px;
+            width: auto;
+			max-width: 600px;
             padding: 5px;
             background-color: white;
             border: 1px solid #ccc;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
             z-index: 100;
 			color: black;
+			white-space: nowrap;
 			
         }
 
@@ -144,6 +146,64 @@
         .route-button:hover .tooltip {
             display: block;
         }
+ 
+  /* Uniwersalny styl przycisku None*/
+        .route-buttonNone {
+			width: 24px;
+			height: 12px;
+			background-color: #eeeeee;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonNone .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonNone .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonNone .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonNone:hover .tooltip {
+            display: block;
+        }
+ 
  
   /* Uniwersalny styl przycisku Zielony*/
         .route-buttonGreen {
@@ -177,16 +237,18 @@
         .route-buttonGreen .tooltip {
             display: none;
             position: absolute;
-            top: -110px;
+            top: -40px;
             left: 50%;
             transform: translate(-50%);
-            width: 300px;
-            padding: 5px;
+            width: auto;
+			max-width: 600px;
+			padding: 5px;
             background-color: white;
             border: 1px solid #ccc;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
             z-index: 100;
 			color: black;
+			white-space: nowrap;
 			
         }
 
@@ -204,7 +266,7 @@
         .route-buttonGold {
 			width: 24px;
 			height: 12px;
-			background-color: #00cc66;					
+			background-color: #00cc66  ;					
 			border: 2px solid #000000;
 			border-radius: 5px;
 			display: inline-flex; /* Upewnij się, że mieści się w linii */
@@ -232,16 +294,18 @@
         .route-buttonGold .tooltip {
             display: none;
             position: absolute;
-            top: -110px;
+            top: -40px;
             left: 50%;
             transform: translate(-50%);
-            width: 300px;
+            width: auto;
+			max-width: 600px;
             padding: 5px;
             background-color: white;
             border: 1px solid #ccc;
             box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
             z-index: 100;
 			color: black;
+			white-space: nowrap;
 			
         }
 
@@ -817,8 +881,7 @@ var iconStyles = {
     var markerTemplates = {
     // Marta Stare Polska 
 
- 	
-    Puck: 				{ lat: 54.72013, lng: 18.41081, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
+ 	Puck: 				{ lat: 54.72013, lng: 18.41081, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/POL_Puck_COA.svg/1280px-POL_Puck_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:20px;'> 🇵🇱 Puck </b><br>Polska, woj. Pomorskie</div>
 								<hr>✦ 2021 🚗 `, icon: redDotIcon10 },
@@ -1020,13 +1083,42 @@ var iconStyles = {
 	    // Punkty na mapie ROK 2023 - mniejsze
     Binz:    				{ lat: 54.40162, lng: 13.61457, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/DEU_Binz_COA.svg.png" style="height:60px;">
-                                <br><b style='font-size:20px;'>  🇩🇪 Binz </b> <br>Niemcy, <br> Maklemburgia - Pomorze Przednie</div><hr> ✦ 2023 🚗 <hr> Molo`, icon: redDotIcon10 }, 
+                                <br><b style='font-size:20px;'>  🇩🇪 Binz </b> <br>Niemcy, <br> Maklemburgia - Pomorze Przednie</div><hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2023 🚗</p>&nbsp;
+								<a href="index.html" class="route-buttonGreen">
+								<span class="button-text">268</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇩🇪 🇵🇱 Niemcy 2023">
+								</div>
+								</a>
+								</div>								 
+								<hr> Molo`, icon: redDotIcon10 }, 
 	Stralsund:    			{ lat: 54.31614, lng: 13.09294, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/DEU_Stralsund_COA.svg.png" style="height:60px;">
-                                <br><b style='font-size:20px;'>  🇩🇪 Stralsund </b> <br>Niemcy, <br> Maklemburgia - Pomorze Przednie</div><hr> ✦ 2023 🚗 <hr> Stare Miasto | Port Morski`, icon: redDotIcon }, 
+                                <br><b style='font-size:20px;'>  🇩🇪 Stralsund </b> <br>Niemcy, <br> Maklemburgia - Pomorze Przednie</div><hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2023 🚗</p>&nbsp;
+								<a href="index.html" class="route-buttonGreen">
+								<span class="button-text">268</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇩🇪 🇵🇱 Niemcy 2023">
+								</div>
+								</a>
+								</div>
+								<hr> Stare Miasto | Port Morski`, icon: redDotIcon }, 
 	Schwerin:    			{ lat: 53.62358, lng: 11.41235, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/DEU_Schwerin_COA.svg.png" style="height:60px;">
-                                <br><b style='font-size:20px;'>  🇩🇪 Schwerin </b> <br>Niemcy, <br> Maklemburgia - Pomorze Przednie</div><hr> ✦ 2023 🚗 <hr> Stare Miasto | Zamek w Schwerinie`, icon: redDotIcon },
+                                <br><b style='font-size:20px;'>  🇩🇪 Schwerin </b> <br>Niemcy, <br> Maklemburgia - Pomorze Przednie</div><hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2023 🚗</p>&nbsp;
+								<a href="index.html" class="route-buttonGreen">
+								<span class="button-text">268</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇩🇪 🇵🇱 Niemcy 2023">
+								</div>
+								</a>
+								</div><hr> Stare Miasto | Zamek w Schwerinie`, icon: redDotIcon },
       
       
       
@@ -1316,7 +1408,17 @@ var iconStyles = {
      Rostock: 				{ lat: 54.09084799446086,   lng:  12.14640655375654, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Rostock_Wappen.svg2.png" style="height:60px;">
                                 <br><b style='font-size:20px;'>  🇩🇪 Rostock </b> <br>Niemcy, <br> Maklemburgia - Pomorze Przednie</div>
-                        	<hr><p style='text-align: left; margin: 0'>✦ 2025 🚢⭢🚗</p>
+                        	<hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2025 🚢⭢🚗</p>&nbsp;
+								<a href="Mapa299.html" class="route-buttonGold">
+								<span class="button-text">299</span>
+								<div class="tooltip">
+								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga (podróż poślubna)">
+								</div>
+								</a>
+								</div>
+								
                          	`,
                            	icon: redDotIconsurplus },
      
@@ -2161,27 +2263,85 @@ var iconStyles = {
     	Odensa: 				{ lat: 55.398578840273736,  lng:  10.389948098436365, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Coat_of_arms_of_Odense.svg/800px-Coat_of_arms_of_Odense.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇩🇰 Odensa </b><br>Dania</div> 
-                        	<hr><p style='text-align: left; margin: 0'>✦ 2025 🚗</p>
+                        	<hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2025 🚗</p>&nbsp;
+								<a href="Mapa299.html" class="route-buttonGold">
+								<span class="button-text">299</span>
+								<div class="tooltip">
+								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga (podróż poślubna)">
+								</div>
+								</a>
+								</div>
                             <hr><p style='text-align: justify; margin: 0'> Dom Andersena | Futyrystyczna zabudowa centrum | Ogród Eventyrhaven</p>
                          	`,
                            	icon: redDotIconsurplus },
      	Kopenhaga: 				{ lat: 55.6808589316875,  lng:  12.585713462802685, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Lesser_coat_of_arms_of_Copenhagen.svg.png" style="height:65px;">
-                                <br><b style='font-size:20px;'> 🇩🇰 Kopenhaga </b><br>Dania</div> 
-                        	<hr><p style='text-align: left; margin: 0'>✦ 2025 🚗⭢🚇</p>
+                                <br><b style='font-size:20px;'> 🇩🇰 Kopenhaga </b><br>Dania</div>
+                        	<hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2025 🚗⭢🚇</p>&nbsp;
+								<a href="Mapa299.html" class="route-buttonGold">
+								<span class="button-text">299</span>
+								<div class="tooltip">
+								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga (podróż poślubna)">
+								</div>
+								</a>
+								</div>
+							
                             <hr><p style='text-align: justify; margin: 0'> Nyhavn | CopenHill | Kongens Nytorv | Gasoline Grill | DØP - The Organic Sausage man | Rosenborg - zamek królewski | Park Królewski | Ogród botaniczny | Christniania | Metro Kopehaskie | Amager Sandpark</p>
                             <hr> 🏭 +124m Copenhill - Spalarnia śmieci 
                          	`,
                                  icon: redSquareIcon },
-      Storebaeltsbroen: 	{ lat: 55.33146791586895,    lng:  10.967168270290271,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Storebæltsbroen </b><br>(Most nad Wielkim Bełtem) </b><br>Dania<hr>✦ 2025 🚗 <hr> most wschodni: 6790m <br>most zachodni: 6611m", icon: DiamondYellow20 },
-      Oresundsbroen: 		{ lat: 55.5762702508758,    lng:   12.830754923502525,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 🇸🇪 Most Øresundsbroen </b><br>(Most nad Sundem) </b><br>Dania/Szwecja<hr>✦ 2025 🚈 <hr> długość 7845m", icon: DiamondYellow20 },
-      FaroBridge: 			{ lat: 54.95199397234257,   lng:   11.987328001285855,  name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Mosty Farø  </b><br>Dania<hr>✦ 2025 🚗 <hr> most południowy 1726m <br> most północny 1596m", icon: DiamondYellow20 },
-                                                     
+      Storebaeltsbroen: 	{ lat: 55.33146791586895,    lng:  10.967168270290271,  name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Storebæltsbroen </b><br>(Most nad Wielkim Bełtem) </b><br>Dania<hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2025 🚗</p>&nbsp;
+								<a href="Mapa299.html" class="route-buttonGold">
+								<span class="button-text">299</span>
+								<div class="tooltip">
+								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga (podróż poślubna)">
+								</div>
+								</a>
+								</div>
+								<hr> most wschodni: 6790m 
+								<br>most zachodni: 6611m`, icon: DiamondYellow20 },
+      Oresundsbroen: 		{ lat: 55.5762702508758,    lng:   12.830754923502525,  name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 🇸🇪 Most Øresundsbroen </b><br>(Most nad Sundem) </b><br>Dania/Szwecja<hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2025 🚈 </p>&nbsp;
+								<a href="Mapa299.html" class="route-buttonGold">
+								<span class="button-text">299</span>
+								<div class="tooltip">
+								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga (podróż poślubna)">
+								</div>
+								</a>
+								</div>
+								<hr> długość 7845m`, icon: DiamondYellow20 },
+      FaroBridge: 			{ lat: 54.95199397234257,   lng:   11.987328001285855,  name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Mosty Farø  </b><br>Dania<hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2025 🚗 </p>&nbsp;
+								<a href="Mapa299.html" class="route-buttonGold">
+								<span class="button-text">299</span>
+								<div class="tooltip">
+								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga (podróż poślubna)">
+								</div>
+								</a>
+								</div> 
+								<hr> most południowy 1726m <br> most północny 1596m`, icon: DiamondYellow20 },
     // Szwecja                                             
       	Malmo: 				{ lat: 55.60446515188319,  lng:   13.00323203593924, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Malm%C3%B6_vapen.svg/1691px-Malm%C3%B6_vapen.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇸🇪 Malmö</b><br>Szwejca, Skania</div>
-                        	<hr><p style='text-align: left; margin: 0'>✦ 2025 🚈</p>
+                        	<hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2025 🚈 </p>&nbsp;
+								<a href="Mapa299.html" class="route-buttonGold">
+								<span class="button-text">299</span>
+								<div class="tooltip">
+								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga (podróż poślubna)">
+								</div>
+								</a>
+								</div>
                             <hr><p style='text-align: justify; margin: 0'> Most nad Sundem - Öresundsbron | Stare Miasto | PArk Pildammsparken | Park Kungsparken | Ogród botaniczny Slottsträdgården</p>
                          	`,
                              icon: redDotIconMedium },
@@ -5021,7 +5181,16 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       		Mrzeżyno: 			{ lat: 54.14379702227192, lng: 15.290203230036887, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
 								<b style='font-size:18px;'> 🇵🇱 Mrzeżyno</b><br>Polska, woj. Zachodniopomorskie
-								<hr> ✦ 2024 🚗`, icon: redDotIconSmall },
+								<hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2024 🚗</p>&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">280</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Kołobrzeg, Mrzeżyno">
+								</div>
+								</a>
+								</div>								`, icon: redDotIconSmall },
       	Brojce: 				{ lat: 53.95749024499447, lng:  15.35076246578956, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
 								<b style='font-size:18px;'> 🇵🇱 Brojce</b><br>Polska, woj. Zachodniopomorskie
@@ -5076,15 +5245,62 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
         Kołobrzeg: 				{ lat: 54.1762706503702,  lng:  15.583660034815221, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/POL_Ko%C5%82obrzeg_COA.svg/800px-POL_Ko%C5%82obrzeg_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Kołobrzeg</b><br>Polska, woj. Zachodniopomorskie</div>   
-                            <hr> ✦ 2024 🚗
+                            <hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2024 🚗</p>&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">280</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Kołobrzeg, Mrzeżyno">
+								</div>
+								</a>
+								</div>							
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
       						<div>
         					<!-- Pierwsza kolumna -->
-                            ✦ 2022 🚗|🚴<b style='font-size:10px;'>x2</b>
-                            <br>✦ 2021 🚴
-                            <br>✦ 2020 🚴
-                            <br>✦ 2013 🚴
+                            <div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2022 🚗|🚴<b style='font-size:10px;'>x2</b></p>&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">231</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg - Koszalin">
+								</div>
+								</a>&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">241</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Kołobrzeg - Mielno">
+								</div>
+								</a>
+							</div>	
+                            <div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2021 🚴</p>&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">214</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Złocieniec - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+                            <div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2020 🚴</p>&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">188</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+                            <div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
       						</div>
                             <div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
       						<div>
@@ -5984,12 +6200,18 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
 							✦ 2024 🚗&nbsp;
 								<a href="index.html" class="route-button">
-								 <span class="button-text">277</span>
+								 <span class="button-text">287</span>
 								<div class="tooltip">
 								<iframe src="index.html#map-zoom=5&lat=51.77024&lng=19.44606&filters=chodziez,poznan" 
 								width="600" height="600" style="border:0;"></iframe>
 								</div>
-								</a>
+								</a>&nbsp;
+								<a href="index.html" class="route-button">
+								<span class="button-text">⭢3</span>
+								<div class="tooltip">
+								<img src="https://via.placeholder.com/120x80.png?text=Chodziez" alt="Łódź - Warszawa">
+								</div>
+								</a> &nbsp;
 								</div>
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
@@ -5998,7 +6220,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
         					✦ 2020 🚴&nbsp;
 								<a href="index.html" class="route-button">
-								<span class="button-text">178</span>
+								<span class="button-text">185</span>
 								<div class="tooltip">
 								<img src="https://via.placeholder.com/120x80.png?text=Chodziez" alt="Łódź - Warszawa">
 								</div>
@@ -6006,13 +6228,15 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								</div>
                             ✦ 2014 🚗<b style='font-size:10px;'>(wiele)</b>&nbsp;
 							<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
-                            ✦ 2012 🚴&nbsp;
-								<a href="index.html" class="route-buttonGreen">
+                            ✦ 2013 🚴&nbsp;
+								<a href="index.html" class="route-button">
 								<span class="button-text">61</span>
 								<div class="tooltip">
 								<img src="https://via.placeholder.com/120x80.png?text=Chodziez" alt="Łódź - Warszawa">
 								</div>
 								</a> &nbsp;
+								
+								
 								</div>
       						</div>
                             <div style="border-left: 2px solid #000; height: auto; margin: 0 10px;"></div> <!-- Pionowa linia -->
@@ -6986,21 +7210,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	ZaporaCzorsztyn1:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 }, 
      	ZaporaCzorsztyn2:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 },
       
-
       
-      
-      
-      // NOWE OD 2023 ROKU - WSPÓLNE
-      	
-      	
-         // Poznań, Polska
-      
-      
-      
-      
-      //ROK 2024 Mniejsze 
-     
-        // Rok 2024 Mniejsze 
         
       
       };
