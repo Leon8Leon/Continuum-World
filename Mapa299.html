@@ -14,7 +14,7 @@
   .map-container {
   display: flex;
   flex-direction: row;        /* mapa i zdjęcie obok siebie */
-  max-width: 900px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 20px;
   gap: 20px;
@@ -23,33 +23,38 @@
 
 /* Przykładowe style dla mapy i zdjęcia */
 #map {
-  flex: 2;                   /* mapa zajmuje 2 części */
-  height: 75vh;
+  flex: 1;                   /* mapa zajmuje 2 części */
+  height: 500px;
   border: 1px solid #ccc;
 }
 
 .photo-gallery {
-  flex: 1;                   /* galeria zajmuje 1 część */
-  height: 75vh;
+  flex: 1;
+  height: 500px;
   border: 1px solid #ccc;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  overflow-y: auto;
+  }
 
 /* Media query - telefony i małe ekrany */
 @media (max-width: 600px) {
-  .map-container {
-    flex-direction: column;  /* wszystko pod sobą */
-    max-width: 100%;
-    padding: 10px;
-    gap: 10px;
+  .photo-gallery {
+    flex: none;          /* wyłącz flex-grow */
+    width: 100%;         /* pełna szerokość */
+    height: auto;        /* auto - wysokość rośnie z zawartością */
+    
+    display: flex;
+    flex-wrap: wrap;     /* zawijaj elementy do nowego wiersza */
+    gap: 10px;           /* odstępy między miniaturami */
   }
 
-  #map, .photo-gallery {
-    flex: none;              /* wyłącz flex-grow */
-    width: 100%;             /* pełna szerokość */
-    height: 50vh;            /* niższa wysokość, by zmieścić */
+  .photo-gallery img {
+    flex: 0 0 30%;       /* miniatury zajmują 30% szerokości, można zmieniać */
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
   }
 }
 	
@@ -686,7 +691,7 @@
         }
 
         .album-container {
-            display: none;
+            display: flex;
             grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
             gap: 10px;
 			padding: 20px;
@@ -742,7 +747,7 @@
 								<div class="tooltip">
 								<img src="" alt="🇵🇱 Drawsko Pom. - Kołobrzeg">
 								</div>
-								</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+								</a>&nbsp;&nbsp		
   <p style="font-family: Verdana;font-size: 24px">🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga 2025 (podróż poślubna) 🚶🚶🏼‍♀️ 55km</p></div><hr>							
   
   
