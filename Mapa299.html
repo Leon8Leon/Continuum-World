@@ -11,6 +11,42 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
   
+
+   
+
+@media (max-width: 600px) {
+  .map-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  #map {
+    display: block;
+    width: 90%;
+    height: 500px;
+    background: lightgray;
+  }
+
+  .photo-gallery {
+    flex: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .photo-gallery img {
+    width: 30%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
   .map-container {
   display: flex;
   flex-direction: row;        /* mapa i zdjęcie obok siebie */
@@ -38,41 +74,6 @@
   align-items: center;
   overflow-y: auto;
   }
-   
-
-@media (max-width: 600px) {
-  .map-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  #map {
-    display: block;
-    width: 100%;
-    height: 500px;
-    background: lightgray; /* testowo */
-    /* flex: 1; <-- usuń */
-  }
-
-  .photo-gallery {
-    flex: none;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .photo-gallery img {
-    width: 30%;
-    height: auto;
-    max-width: 100%;
-  }
-}
 
 
 #main-photo {
