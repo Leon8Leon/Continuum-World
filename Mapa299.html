@@ -40,7 +40,6 @@
   }
    
 
-/* ✅ POŁĄCZONY MEDIA QUERY */
 @media (max-width: 600px) {
   .map-container {
     display: flex;
@@ -51,13 +50,13 @@
   }
 
   #map {
-    display: flex;
+    display: block;
     width: 100%;
-    height: 45vh;
-    background: lightgray; /* pomocniczo, potem możesz usunąć */
+    height: 500px;
+    background: lightgray; /* testowo */
+    /* flex: 1; <-- usuń */
   }
 
-  
   .photo-gallery {
     flex: none;
     width: 100%;
@@ -769,7 +768,6 @@
   
   <div class="map-container">
   <div id="map"></div>
-
   <div class="photo-gallery">
     <img id="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/Fe-onCyW_0CQHSb8OihYxN_rPbEoVk_Dp1fTz_r_Nuw-2048x1536.jpg" alt="Główne zdjęcie">
 
