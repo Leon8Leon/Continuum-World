@@ -6,17 +6,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
-    #map {
-      width: 95%;
-      height: 85vh;
-      margin: 0 auto;
+    .map-container {
+	display: flex;
+	align-items: flex-start; /* lub center jeśli chcesz równe wysokości */
+	gap: 20px; /* odstęp między mapą a zdjęciem */
+	padding: 20px;
+	}
+	
+	#map {
+      width: 50%;
+      height: 60vh;
       border: 1px solid #ccc;
+	  display: flex
+	  
     }
+	
+	.map-image {
+  width: 50%;
+	height: 60vh;
+  object-fit: contain;
+  border: 1px solid #ccc;
+}
+
+.photo-gallery {
+  width: 50%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+#main-photo {
+  max-height: 80%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 20%;   /* reszta wysokości galerii */
+  overflow-y: 0;  /* jeśli miniatury się nie mieszczą */
+  padding: 5px;
+}
+
+.thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.thumb:hover {
+  border: 2px solid #007bff;
+}
+
     h1 {
       text-align: center;
       font-family: Arial, sans-serif;
     }
 	
+	  .overlay {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px 20px;
+    border-radius: 12px;
+  }
       
  		.custom-text {
             display: none; /* Domyślnie ukryte */ 
@@ -88,7 +152,7 @@
         	 
         }
       
-  /* Uniwersalny styl przycisku Podstawowy*/
+  /* Uniwersalny styl przycisku Podstawowy czyli Żółty*/
         .route-button {
 			width: 24px;
 			height: 12px;
@@ -145,7 +209,7 @@
             display: block;
         }
 		
-		/* Uniwersalny styl przycisku PodstawowyX*/
+		/* Uniwersalny styl przycisku PodstawowyX Duży Żółty*/
         .route-buttonX {
 			width: 72px;
 			height: 36px;
@@ -197,7 +261,7 @@
             display: block;
         }
  
-  /* Uniwersalny styl przycisku None*/
+  /* Uniwersalny styl przycisku None Brak koloru*/
         .route-buttonNone {
 			width: 24px;
 			height: 12px;
@@ -312,7 +376,58 @@
             display: block;
         }
  
- /* Uniwersalny styl przycisku Zielony*/
+ /* Uniwersalny styl przycisku ZielonyX Duży Zielony*/
+        .route-buttonGreenX {
+			width: 72px;
+			height: 36px;
+			background-color: #00cc66  ;					
+			border: 5px solid #000000;
+			border-radius: 10px;
+			display: flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 36px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		.route-buttonGreenX .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+        .route-buttonX .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 1000px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+        }
+        .route-buttonGreenX .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .route-buttonGreenX:hover .tooltip {
+            display: block;
+        }
+ /* Uniwersalny styl przycisku Złoty - tymczasowo Zielony*/
         .route-buttonGold {
 			width: 24px;
 			height: 12px;
@@ -475,9 +590,73 @@
  body {
     background-color: #EEEEEE;
   }
+  
+
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .tab-button {
+            padding: 10px 15px;
+            margin: 2px;
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .tab-button.active {
+            background-color: #aaa;
+        }
+
+        .album-container {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+            gap: 10px;
+			padding: 20px;
+			justify-content: left;
+			font-family: Verdana
+        }
+
+        .album-container.active {
+            display: grid;
+        }
+
+        .herb-box {
+            background-color: #ffffcc;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            color: black;
+            line-height: 1.2;
+        }
+
+        .herb-box img {
+            height: 100px;
+            display: block;
+            margin: 0 auto 5px auto;
+        }
+
+        .herb-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .herb-description {
+            font-size: 12px;
+            font-style: italic;
+            margin: 2px 0 0 0;
+        }
+    
   </style>
 </head>
 <body>
+
+
   <div style="display: flex; justify-content: center; align-items: center;">
 								<a href="index.html" class="route-buttonRok">
 								<span class="button-text">2020</span>
@@ -491,9 +670,27 @@
 								<img src="" alt="🇵🇱 Drawsko Pom. - Kołobrzeg">
 								</div>
 								</a>&nbsp;&nbsp;				
-  <h1>🇵🇱 Drawsko Pom. - Kołobrzeg</h1></div>
-								
+  <p style="font-family: Verdana;"><h1>🇵🇱 Drawsko Pom. - Kołobrzeg 🚴 127km</h1></p></div><hr>							
+  
+  
+  <div class="map-container">
   <div id="map"></div>
+
+  <div class="photo-gallery">
+    <img id="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/LZU7M_jOAun3meEegNzUKRQe3elzXl4w6WXZmpEs41I-2048x1536.jpg" alt="Główne zdjęcie">
+
+    <div class="thumbnails">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/Pe0L2EYljIJTTe9xymRFf-dHU_xQZ9jdyupfl1eRQ1Q-2048x1536.jpg" alt="Miniatura 1" class="thumb">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/wQY0pgEut9WohkAGKDqVfKsXyMKZHWded6cm_L-DAaA-2048x1536.jpg" alt="Miniatura 2" class="thumb">
+    </div>
+  </div>
+</div>
+  
+  
+  
+  
+  
+  
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
@@ -544,10 +741,55 @@
       L.polyline(shape.coordinates, shape.style).addTo(map);
     }
   });
+  
+
+
 </script> 
-  
-  
+<div id="polska" class="album-container active">
+    <div class="herb-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/POL_Drawsko_Pomorskie_COA.svg/800px-POL_Drawsko_Pomorskie_COA.svg.png" alt="Drawsko Pom.">
+        <div class="herb-name">Drawsko Pom.</div>
+        <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
+    </div>
+
+    <div class="herb-box">
+        <img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_%C5%9Awidwin_COA.svg.png" alt="Świdwin">
+        <div class="herb-name">Świdwin</div>
+        <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
+    </div> 
+	
+	<div class="herb-box">
+        <img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Go%C5%9Bcino_COA.svg.png" alt="Gościno">
+        <div class="herb-name">Gościno</div>
+        <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
+    </div> 
+	
+	<div class="herb-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/POL_Ko%C5%82obrzeg_COA.svg/800px-POL_Ko%C5%82obrzeg_COA.svg.png" alt="Kołobrzeg">
+        <div class="herb-name">Kołobrzeg</div>
+        <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
+    </div> 
+	
+	<div class="herb-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/POL_%C5%81obez_COA.svg/800px-POL_%C5%81obez_COA.svg.png" alt="Łobez">
+        <div class="herb-name">Łobez</div>
+        <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
+    </div> 
   
   
 </body>
+
+<script>
+  const mainPhoto = document.getElementById('main-photo');
+  const thumbnails = document.querySelectorAll('.thumb');
+
+  thumbnails.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const tempSrc = mainPhoto.src;
+      mainPhoto.src = thumb.src;
+      thumb.src = tempSrc;
+    });
+  });
+</script>
+
 </html>
