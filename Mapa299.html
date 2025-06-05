@@ -41,10 +41,10 @@
 /* Media query - telefony i małe ekrany */
 @media (max-width: 600px) {
   .photo-gallery {
-    flex: none;          /* wyłącz flex-grow */
+    flex: column;          /* wyłącz flex-grow */
     width: 100%;         /* pełna szerokość */
+	max-width: 100%;
     height: auto;        /* auto - wysokość rośnie z zawartością */
-    
     display: flex;
     flex-wrap: wrap;     /* zawijaj elementy do nowego wiersza */
     gap: 10px;           /* odstępy między miniaturami */
@@ -57,7 +57,10 @@
     cursor: pointer;
   }
 }
-	
+  #map {
+    width: 100%;             /* pełna szerokość */
+    height: 500px;           /* lub auto, albo dopasuj wysokość */
+  }	
 
 
 #main-photo {
