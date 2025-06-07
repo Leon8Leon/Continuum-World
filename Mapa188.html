@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -6,85 +8,205 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
-    .map-container {
-	display: flex;
-	align-items: flex-start; /* lub center jeśli chcesz równe wysokości */
-	gap: 20px; /* odstęp między mapą a zdjęciem */
-	padding: 20px;
-	}
-	
-	#map {
-      width: 50%;
-      height: 60vh;
-      border: 1px solid #ccc;
-	  display: flex
-	  
-    }
-	
-	.map-image {
-  width: 50%;
-	height: 60vh;
-  object-fit: contain;
+  
+
+   
+
+
+
+  .map-container {
+  display: flex;
+  flex-direction: row;       
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+  align-items: flex-start; 
+}
+
+/* Przykładowe style dla mapy i zdjęcia */
+#map {
+                    
+  height: 460px;
+  width: 35vw;
+  min-width: 500px;
+  display: flex;
   border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;             /* pozwala na zawijanie elementów */
+  justify-content: flex-start; /* lub center/space-between wedle potrzeb */
+  gap: 10px;
+  padding: 0px;
+  max-width: 100%;
+  box-sizing: border-box;
+  
 }
 
 .photo-gallery {
-  width: 50%;
-  height: 60vh;
+  width: 400px;
+  height: 460px;
+  border: 1px solid #ccc;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid #ccc;
+  background: #ffffcc;
+  padding: 5px;
+  box-sizing: border-box;
   overflow: hidden;
+  border-radius: 5px;
+  
 }
 
-#main-photo {
+/* Główne zdjęcie */
+.main-photo {
+
+  width: 360px;
+  height: auto;
   max-height: 80%;
-  width: 100%;
   object-fit: contain;
+  margin: 0 auto 5px auto;
+  padding-top: 5px;
 }
 
+/* Opis zdjęcia */
+.photo-description {
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  font-size: 13px;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Miniaturki */
 .thumbnails {
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-height: 20%;   /* reszta wysokości galerii */
-  overflow-y: 0;  /* jeśli miniatury się nie mieszczą */
-  padding: 5px;
+  gap: 5px;
+  justify-content: left;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 80px;
+  padding-top: 0px;
+  padding-bottom: 10px;
 }
 
+/* Pojedyncza miniaturka */
 .thumb {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   cursor: pointer;
+  flex: 0 0 auto;
 }
 
 .thumb:hover {
   border: 2px solid #007bff;
 }
 
+.gallery-name {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Verdana;
+    text-align: center;
+}
+
+.gallery-description {
+    font-family: Verdana;
+    font-size: 12px;
+    font-style: italic;
+    margin: 2px 0 0 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 
 .lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
   display: flex;
+  flex-direction: column;   /* pionowo: zdjęcie na górze, opis pod spodem */
+  align-items: center;      /* wyśrodkowanie poziome */
   justify-content: center;
-  align-items: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
   z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.lightbox.hidden {
+  display: none;
 }
 
 .lightbox img {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 80%;
   object-fit: contain;
-  border: 4px solid white;
-  box-shadow: 0 0 20px #000;
+}
+
+.lightbox-description {
+  margin-top: 15px;
+  color: white;
+  text-align: center;
+  max-width: 90%;
+  word-wrap: break-word;
+  font-family: Verdana;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.slide-left {
+  animation: slideLeft 0.4s;
+}
+
+.slide-right {
+  animation: slideRight 0.4s;
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+
+
+/* Animacja przesunięcia w prawo (nowe zdjęcie z lewej) */
+.slide-right {
+  animation: slideRight 0.3s ease;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 
 .hidden {
@@ -177,7 +299,8 @@
             white-space: nowrap !important; /* Zapobiega zawijaniu tekstu */
         	 
         }
-      
+  </style> 
+<style>  
   /* Uniwersalny styl przycisku Podstawowy czyli Żółty*/
         .route-button {
 			width: 24px;
@@ -617,6 +740,8 @@
     background-color: #EEEEEE;
   }
   
+ </style>
+<style> 
 
 
         .tabs {
@@ -639,12 +764,13 @@
         }
 
         .album-container {
-            display: none;
+            display: flex;
             grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
             gap: 10px;
-			padding: 20px;
+			padding: 0px;
 			justify-content: left;
 			font-family: Verdana
+			
         }
 
         .album-container.active {
@@ -682,51 +808,67 @@
 </head>
 <body>
 
-
-  <div style="display: flex; justify-content: center; align-items: center;">
-								<a href="index.html" class="route-buttonRok">
+ 
+  <hr><div style="display: flex; justify-content: center; align-items: center;background: #b0bec5">
+									
+  <b style="font-family: Verdana;font-size: 24px; text-align: center;">🇵🇱 Drawsko Pom. - Kołobrzeg 🚴 127km</b> &nbsp;&nbsp;
+  <a href="index.html" class="route-buttonRok">
 								<span class="button-text">2020</span>
 								<div class="tooltip">
 								<img src="" alt="Mapa">
 								</div>
 								</a>&nbsp;&nbsp;
-								<a href="Mapa188.html" class="route-buttonX">
+								<a href="Mapa299.html" class="route-buttonX">
 								<span class="button-text">188</span>
 								<div class="tooltip">
 								<img src="" alt="🇵🇱 Drawsko Pom. - Kołobrzeg">
 								</div>
-								</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
-  <p style="font-family: Verdana;font-size: 24px">🇵🇱 Drawsko Pom. - Kołobrzeg 🚴 127km</p></div><hr>							
+								</a></div><hr>							
   
-  
-  <div class="map-container">
-  <div id="map"></div>
-
-  <div class="photo-gallery">
-    <img id="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/LZU7M_jOAun3meEegNzUKRQe3elzXl4w6WXZmpEs41I-2048x1536.jpg" alt="Główne zdjęcie">
-
+ <div style="display: flex; justify-content: center; align-items: center">
+ <div>
+ </div><span style="display: block; width: 100%; height: 1px; background-color: transparent;"></span>
+ </div>
+ 
+ 
+<div class="gallery-container">
+<div >
+ <div id="map"></div>
+</div>
+<div class="photo-gallery">
+    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/LZU7M_jOAun3meEegNzUKRQe3elzXl4w6WXZmpEs41I-2048x1536.jpg" alt="Główne zdjęcie" data-description="Widok z latarni w Kołobrzegu">
+	<div>
+	<hr>
+	</div>
+	<div class="gallery-name">🇵🇱 Kołobrzeg</b>
+	</div>
+	<div class="gallery-description">✦ 2020 🚴</b>
+	</div>
+	<div>
+	<hr>
+	</div>
     <div class="thumbnails">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/Pe0L2EYljIJTTe9xymRFf-dHU_xQZ9jdyupfl1eRQ1Q-2048x1536.jpg" alt="Miniatura 1" class="thumb">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/wQY0pgEut9WohkAGKDqVfKsXyMKZHWded6cm_L-DAaA-2048x1536.jpg" alt="Miniatura 2" class="thumb">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/Pe0L2EYljIJTTe9xymRFf-dHU_xQZ9jdyupfl1eRQ1Q-2048x1536.jpg" alt="Miniatura 1" class="thumb" data-description="">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/wQY0pgEut9WohkAGKDqVfKsXyMKZHWded6cm_L-DAaA-2048x1536.jpg" alt="Miniatura 2" class="thumb" data-description="">
     </div>
+
+ </div>
+ 
   </div>
   <div id="lightbox" class="lightbox hidden">
   <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-description" class="lightbox-description"></div>
   </div>
-</div>
-  
+
+ 
 
 <!-- Lightbox (ukryty) -->
-
-  
-  
-  
-  
+ 
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
   <!-- Definicja widocznych miast -->
-  <script>
+    <script>
     const visibleCities = [
 	"Kołobrzeg",
 	"DrawskoPom",
@@ -742,112 +884,273 @@
   </script>
 
   <script src="markers.js"></script>
+  <style>
+  .car-polyline {
+    fill-opacity: 0;
+    fill: #008000;
+    stroke: #ff6600;
+    stroke-width: 4;
+    stroke-opacity: 0.7;
+  }
+  .train-polyline {
+    fill-opacity: 0;
+    fill: #008000;
+    stroke: #000099;
+    stroke-width: 4;
+    stroke-opacity: 0.7;
+  }
+  .ferry-polyline {
+    fill-opacity: 0;
+    fill: #008000;
+    stroke: #3366FF;
+    stroke-width: 4;
+    stroke-opacity: 0.7;
+  }
+  .bike-polyline {
+    fill-opacity: 0;
+    fill: #008000;
+    stroke: #FF0033;
+    stroke-width: 4;
+    stroke-opacity: 0.7;
+  }
+  .walk-polyline {
+    fill-opacity: 0;
+    fill: #008000;
+    stroke: #FF0033;
+    stroke-width: 4;
+    stroke-opacity: 0.7;
+  }
+  
+  .plane-polyline {
+    fill-opacity: 0;
+    fill: #008000;
+    stroke: #000000;
+    stroke-width: 4;
+    stroke-opacity: 0.7;
+  }
+  .cable-polyline {
+    fill-opacity: 0;
+    fill: #008000;
+    stroke: #8b15ba;
+    stroke-width: 3;
+    stroke-opacity: 0.7;
+  }
+  .bullettrain-polyline {
+    fill-opacity: 0;
+    fill: #008000;
+    stroke: #000099;
+    stroke-width: 5;
+    stroke-opacity: 0.7;
+  }
+  .subway-polyline {
+    fill-opacity: 0;
+    fill: #008000;
+    stroke: #44a412;
+    stroke-width: 4;
+    stroke-opacity: 0.7;
+  }
+</style>
+  
+    <script>
+	const styles = {
+  "car-polyline": {color: "#009e2f", weight: 3, opacity: 0.7,},
+  "train-polyline": {color: "#000099", weight: 3, opacity: 0.7,},
+  "ferry-polyline": {color: "#3366FF", weight: 3, opacity: 0.7,},
+  "bike-polyline": {color: "#FF0033", weight: 3, opacity: 0.7,},
+  "walk-polyline": {color: "#FF0033", weight: 3, opacity: 0.7,},
+  "plane-polyline": {color: "#000000", weight: 3, opacity: 0.7,},
+  "cable-polyline": {color: "#8b15ba", weight: 3, opacity: 0.7,},
+  "bullettrain-polyline": {color: "#000099", weight: 4, opacity: 0.7,},
+  "subway-polyline": {color: "#44a412", weight: 3, opacity: 0.7,},
+};
+
   
   
-  <script>
   const shapes = [
-{type: "polyline",style: {fillOpacity: 0,fillColor: "#008000",color: "#FF0033",weight: 4,opacity: 0.8},coordinates: [
+{type: "polyline",mode:"bike-polyline",coordinates: [
 [53.532016486498264,15.807952880859377],[53.545074437420986,15.816192626953127],[53.561391212941324,15.828552246093752],[53.57036275772296,15.84606170654297],[53.58116686461247,15.807266235351564],[53.58931907949891,15.789756774902346],[53.600997783149275,15.805549621582033],[53.616987513233255,15.808296203613283],[53.62462378246946,15.80537796020508],[53.63348012413394,15.79936981201172],[53.639485091284996,15.800228118896486],[53.651390718372596,15.808982849121096],[53.65383248285996,15.805721282958986],[53.66322856561739,15.817909240722658],[53.67848298882447,15.820655822753908],[53.69332532385111,15.81413269042969],[53.723400580750585,15.801086425781252],[53.73680558932076,15.79936981201172],[53.74858222013373,15.79387664794922],[53.76035555078812,15.776023864746096],[53.7655949746907,15.773277282714846],[53.77503037738816,15.776882171630861],[53.78916598420946,15.782203674316408],[53.801333464084415,15.777053833007814],[53.81592978087286,15.794563293457033],[53.8297105249672,15.782203674316408],[53.83882764297445,15.77293395996094],[53.86070062945938,15.745811462402346],[53.85746090822046,15.733795166015627],[53.87628827989363,15.727615356445314],[53.89065616119688,15.71147918701172],[53.89611870749233,15.70701599121094],[53.92988970402389,15.725898742675783],[53.93676189051722,15.723152160644533],[53.947068048368,15.725555419921877],[53.969490297315346,15.763320922851564],[53.98019216296302,15.761260986328127],[53.994927968471536,15.765724182128908],[54.00784274182211,15.74169158935547],[54.010062064974804,15.722808837890627],[54.028077914383466,15.69877624511719],[54.03412739171458,15.686244964599611],[54.03563962352905,15.675430297851564],[54.04571976331064,15.657234191894533],[54.04783628209379,15.65156936645508],[54.054487496509935,15.645732879638674],[54.058316500626816,15.64384460449219],[54.066376408351076,15.646247863769533],[54.08480756655296,15.629425048828127],[54.08792897411484,15.630626678466799],[54.090546747800865,15.64006805419922],[54.09507711965905,15.64933776855469],[54.098701060951306,15.653629302978517],[54.1032305423454,15.651741027832033],[54.108061443934226,15.640239715576174],[54.114501770608356,15.631656646728517],[54.11782217312609,15.62959671020508],[54.12094109684265,15.62753677368164],[54.121343521516245,15.618782043457033],[54.136934468284444,15.618267059326174],[54.14427526910701,15.62084197998047],[54.14809599294191,15.620326995849611],[54.151011571304174,15.611572265625002],[54.15513324553842,15.610542297363283],[54.166993334892084,15.595264434814455],[54.170510504406124,15.590114593505861],[54.174931664710655,15.588741302490236],[54.17874955924503,15.578784942626955],[54.18025652585951,15.571575164794924],[54.182567101346656,15.561962127685549],[54.185480251638594,15.555782318115236],[54.19070331751197,15.549259185791017],[54.18447322877772,15.556855201721193],[54.18236367527384,15.569086074829103]    
 ]},
-{"type":"polyline","style":{"fillOpacity":0.5,"fillColor":"#008000","color":"#FF0033","weight":4,"opacity":0.8},"coordinates":[
+{"type":"polyline",mode:"bike-polyline","coordinates":[
 [53.63602470610189,15.62685012817383],[53.62268939158683,15.645046234130861],[53.62503101135816,15.650882720947267],[53.61220141369403,15.684700012207033],[53.60649811863621,15.696716308593752],[53.60222014182658,15.70924758911133],[53.59131952839659,15.729675292968752],[53.58836467207265,15.73448181152344],[53.58571531487688,15.73448181152344],[53.5809256707674,15.73945999145508],[53.5776643259122,15.742893218994142],[53.575422005371564,15.74272155761719],[53.571242817925615,15.751819610595705],[53.56655348176855,15.759029388427736],[53.56278124708944,15.764350891113283],[53.55870277708623,15.774478912353517],[53.5553377433133,15.77842712402344],[53.551768475631285,15.779800415039064],[53.54258897618926,15.79387664794922],[53.5357540560256,15.804176330566408],[53.53126485144394,15.805206298828125],[53.531678507158425,15.80763101577759]
 ]},
-{"type":"polyline","style":{"fillOpacity":0,"fillColor":"#008000","color":"#000099","weight":3,"opacity":0.5},"coordinates":[[54.182215500361906,15.572776794433596],[54.18080906652576,15.584964752197267],[54.17769464994048,15.592517852783205],[54.169957826141776,15.61311721801758],[54.15880219559611,15.636634826660158],[54.15387668102739,15.653285980224611],[54.123707687557825,15.81962585449219],[54.12109200655318,15.828723907470705],[54.11686632693763,15.835247039794924],[54.11364647233556,15.838680267333986],[54.07668745106591,15.875587463378908],[54.07165144282945,15.87730407714844],[54.06097308488957,15.877647399902346],[54.050291980895,15.878334045410158],[54.043035325116975,15.883827209472658],[54.03597902820531,15.891380310058596],[54.03234960906978,15.908889770507814],[54.02448478064424,15.952835083007814],[54.02145945055238,15.971374511718752],[54.016820183675655,15.977554321289062],[54.008347143840815,15.978240966796877],[53.98858346379703,15.974464416503908],[53.96546460737445,15.973262786865236],[53.92978863401376,15.985450744628908],[53.91563641667147,15.990943908691408],[53.902086228891754,15.98991394042969],[53.89460140514306,15.97892761230469],[53.8816515173908,15.964851379394533],[53.87132920301246,15.956611633300783],[53.86120681324477,15.942535400390627],[53.85452469418085,15.930862426757814],[53.847638970585606,15.91197967529297],[53.83710567271949,15.89103698730469],[53.83001446087679,15.872840881347658],[53.822111410478506,15.850868225097658],[53.817044568358966,15.836448669433596],[53.81359876575972,15.824775695800783],[53.809949960089575,15.802803039550783],[53.807517246512624,15.792846679687502],[53.80042102553352,15.78563690185547],[53.77121250772278,15.76641082763672],[53.76390720080708,15.76091766357422],[53.75903628998618,15.74718475341797],[53.75193186557528,15.732421875000002],[53.74462320390872,15.719032287597658],[53.735485588822755,15.702209472656252],[53.72817406622726,15.677490234375002],[53.725330352899846,15.667877197265627],[53.715579018463515,15.653114318847658],[53.70846724499951,15.644531250000002],[53.70318343499537,15.63835144042969],[53.697085906672754,15.631141662597658],[53.68915779913331,15.634231567382814],[53.683464903698585,15.645217895507814],[53.68061816735776,15.651741027832033],[53.675534230997755,15.65654754638672],[53.67105985940756,15.658264160156252],[53.66088906568985,15.650367736816408],[53.64503129301574,15.63732147216797],[53.63902711542688,15.63182830810547],[53.63678805076475,15.62753677368164]
+{"type":"polyline",mode:"train-polyline","coordinates":[[54.182215500361906,15.572776794433596],[54.18080906652576,15.584964752197267],[54.17769464994048,15.592517852783205],[54.169957826141776,15.61311721801758],[54.15880219559611,15.636634826660158],[54.15387668102739,15.653285980224611],[54.123707687557825,15.81962585449219],[54.12109200655318,15.828723907470705],[54.11686632693763,15.835247039794924],[54.11364647233556,15.838680267333986],[54.07668745106591,15.875587463378908],[54.07165144282945,15.87730407714844],[54.06097308488957,15.877647399902346],[54.050291980895,15.878334045410158],[54.043035325116975,15.883827209472658],[54.03597902820531,15.891380310058596],[54.03234960906978,15.908889770507814],[54.02448478064424,15.952835083007814],[54.02145945055238,15.971374511718752],[54.016820183675655,15.977554321289062],[54.008347143840815,15.978240966796877],[53.98858346379703,15.974464416503908],[53.96546460737445,15.973262786865236],[53.92978863401376,15.985450744628908],[53.91563641667147,15.990943908691408],[53.902086228891754,15.98991394042969],[53.89460140514306,15.97892761230469],[53.8816515173908,15.964851379394533],[53.87132920301246,15.956611633300783],[53.86120681324477,15.942535400390627],[53.85452469418085,15.930862426757814],[53.847638970585606,15.91197967529297],[53.83710567271949,15.89103698730469],[53.83001446087679,15.872840881347658],[53.822111410478506,15.850868225097658],[53.817044568358966,15.836448669433596],[53.81359876575972,15.824775695800783],[53.809949960089575,15.802803039550783],[53.807517246512624,15.792846679687502],[53.80042102553352,15.78563690185547],[53.77121250772278,15.76641082763672],[53.76390720080708,15.76091766357422],[53.75903628998618,15.74718475341797],[53.75193186557528,15.732421875000002],[53.74462320390872,15.719032287597658],[53.735485588822755,15.702209472656252],[53.72817406622726,15.677490234375002],[53.725330352899846,15.667877197265627],[53.715579018463515,15.653114318847658],[53.70846724499951,15.644531250000002],[53.70318343499537,15.63835144042969],[53.697085906672754,15.631141662597658],[53.68915779913331,15.634231567382814],[53.683464903698585,15.645217895507814],[53.68061816735776,15.651741027832033],[53.675534230997755,15.65654754638672],[53.67105985940756,15.658264160156252],[53.66088906568985,15.650367736816408],[53.64503129301574,15.63732147216797],[53.63902711542688,15.63182830810547],[53.63678805076475,15.62753677368164]
 ]},
-
-];
-  shapes.forEach(shape => {
+	];
+   shapes.forEach(shape => {
+    const style = styles[shape.mode] || {}; // zabezpieczenie jeśli brak stylu
     if (shape.type === "polygon") {
-      L.polygon(shape.coordinates, shape.style).addTo(map);
+      L.polygon(shape.coordinates, style).addTo(map);
     } else if (shape.type === "polyline") {
-      L.polyline(shape.coordinates, shape.style).addTo(map);
+      L.polyline(shape.coordinates, style).addTo(map);
     }
   });
-  
+</script>
+<hr> 
 
-
-</script> 
 <div id="polska" class="album-container active">
+	
+
     <div class="herb-box">
+		<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/POL_Drawsko_Pomorskie_COA.svg/800px-POL_Drawsko_Pomorskie_COA.svg.png" target="_blank" rel="noopener noreferrer">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/POL_Drawsko_Pomorskie_COA.svg/800px-POL_Drawsko_Pomorskie_COA.svg.png" alt="Drawsko Pom.">
-        <div class="herb-name">Drawsko Pom.</div>
+        </a>
+		<div class="herb-name">Drawsko Pom.</div>
         <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
     </div>
 
     <div class="herb-box">
-        <img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_%C5%9Awidwin_COA.svg.png" alt="Świdwin">
-        <div class="herb-name">Świdwin</div>
+        <a href="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_%C5%9Awidwin_COA.svg.png" target="_blank" rel="noopener noreferrer">
+		<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_%C5%9Awidwin_COA.svg.png" alt="Świdwin">
+        </a>
+		<div class="herb-name">Świdwin</div>
         <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
     </div> 
 	
 	<div class="herb-box">
-        <img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Go%C5%9Bcino_COA.svg.png" alt="Gościno">
-        <div class="herb-name">Gościno</div>
+        <a href="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Go%C5%9Bcino_COA.svg.png" target="_blank" rel="noopener noreferrer">
+		<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Go%C5%9Bcino_COA.svg.png" alt="Gościno">
+        </a>
+		<div class="herb-name">Gościno</div>
         <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
     </div> 
 	
 	<div class="herb-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/POL_Ko%C5%82obrzeg_COA.svg/800px-POL_Ko%C5%82obrzeg_COA.svg.png" alt="Kołobrzeg">
-        <div class="herb-name">Kołobrzeg</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/POL_Ko%C5%82obrzeg_COA.svg/800px-POL_Ko%C5%82obrzeg_COA.svg.png" target="_blank" rel="noopener noreferrer">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/POL_Ko%C5%82obrzeg_COA.svg/800px-POL_Ko%C5%82obrzeg_COA.svg.png" alt="Kołobrzeg">
+        </a>
+		<div class="herb-name">Kołobrzeg</div>
         <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
     </div> 
 	
 	<div class="herb-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/POL_%C5%81obez_COA.svg/800px-POL_%C5%81obez_COA.svg.png" alt="Łobez">
-        <div class="herb-name">Łobez</div>
+        <a href="ttps://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/POL_%C5%81obez_COA.svg/800px-POL_%C5%81obez_COA.svg.png" target="_blank" rel="noopener noreferrer">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/POL_%C5%81obez_COA.svg/800px-POL_%C5%81obez_COA.svg.png" alt="Łobez">
+        </a>
+		<div class="herb-name">Łobez</div>
         <div class="herb-description">Polska, woj. Zachodniopomorskie</div>
     </div> 
-  
+	
+</div>
+
   
 </body>
 
 <script>
-  const thumbnails = document.querySelectorAll('.thumb');
-  const mainPhoto = document.getElementById('main-photo');
+document.addEventListener('DOMContentLoaded', () => {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
-
+  const lightboxDesc = document.getElementById('lightbox-description'); // nowy
+  const allImages = Array.from(document.querySelectorAll('.main-photo, .thumb'));
   let currentIndex = 0;
-  const images = Array.from(thumbnails).map(img => img.src);
 
-  // Klik na miniaturę – zamień z głównym zdjęciem
-  thumbnails.forEach((thumb, index) => {
-    thumb.addEventListener('click', () => {
-      const tempSrc = mainPhoto.src;
-      mainPhoto.src = thumb.src;
-      thumb.src = tempSrc;
+  // Klik na zdjęcie – otwórz lightbox
+  allImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
       currentIndex = index;
+      openLightbox();
     });
   });
 
-  // Klik na główne zdjęcie – otwórz lightbox
-  mainPhoto.addEventListener('click', () => {
-    lightboxImg.src = mainPhoto.src;
-    currentIndex = images.indexOf(mainPhoto.src);
+  function openLightbox() {
+    updateLightboxContent();
     lightbox.classList.remove('hidden');
-  });
+  }
 
-  // Zamknij lightbox klikając poza obraz
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+  }
+
+  // Zamknięcie po kliknięciu poza zdjęciem
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
-      lightbox.classList.add('hidden');
+      closeLightbox();
     }
   });
 
-  // Obsługa klawiatury: ← → oraz Esc
+  // Klawiatura: ← → Esc
   document.addEventListener('keydown', (e) => {
     if (lightbox.classList.contains('hidden')) return;
-
-    if (e.key === 'ArrowRight') {
-      currentIndex = (currentIndex + 1) % images.length;
-    } else if (e.key === 'ArrowLeft') {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-    } else if (e.key === 'Escape') {
-      lightbox.classList.add('hidden');
-      return;
-    }
-    lightboxImg.src = images[currentIndex];
+    if (e.key === 'ArrowRight') showNextImage("left");
+    else if (e.key === 'ArrowLeft') showNextImage("right");
+    else if (e.key === 'Escape') closeLightbox();
   });
+
+  // Swipe na telefonie
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+  });
+
+  function handleGesture() {
+    const threshold = 50;
+    if (touchEndX < touchStartX - threshold) showNextImage("left");
+    else if (touchEndX > touchStartX + threshold) showNextImage("right");
+  }
+
+  function showNextImage(direction) {
+    if (direction === "left") {
+      currentIndex = (currentIndex + 1) % allImages.length;
+      animateImage("slide-left");
+    } else if (direction === "right") {
+      currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+      animateImage("slide-right");
+    }
+  }
+
+  function animateImage(animationClass) {
+    lightboxImg.classList.remove("slide-left", "slide-right");
+    void lightboxImg.offsetWidth; // wymusza reflow
+    lightboxImg.classList.add(animationClass);
+    updateLightboxContent();
+  }
+
+  function updateLightboxContent() {
+    const img = allImages[currentIndex];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || '';
+
+    // Pobieramy opis z data-attribute "data-description"
+    const description = img.dataset.description || '';
+    lightboxDesc.textContent = description;
+  }
+});
+
+</script>
+
+
+
 </script>
 
 </html>
+<!--
+// <b style="font-family: Arial;font-size: 14px;">3. Miasta</b> 
+
+
+
+
+<b style="font-family: Arial;font-size: 14px;">4. Inne obiekty</b>
+
+
+
+<div id="polska" class="album-container active">
+	
+    <div class="herb-box">
+		<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/%C3%98resund_Bridge_from_the_air_in_September_2015.jpg/1280px-%C3%98resund_Bridge_from_the_air_in_September_2015.jpg" target="_blank" rel="noopener noreferrer">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/%C3%98resund_Bridge_from_the_air_in_September_2015.jpg/1280px-%C3%98resund_Bridge_from_the_air_in_September_2015.jpg" alt="Most Oresundsbroen" >
+        </a>
+		<div class="herb-name">Most nad Sundem</div>
+        <div class="herb-description">Dania, Szwecja </div>
+    </div>
+
+     	
+</div> 
+<hr>
+
+-->
