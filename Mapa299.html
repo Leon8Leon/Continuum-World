@@ -941,13 +941,13 @@
 	<b style="font-family: Verdana;font-size: 24px; text-align: top;">🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga 2025 - Podróż poślubna</b><br>
 	<div style="display: flex; justify-content: Left; align-items: center;background: #EEEEEE">
 	<p style="font-family: Verdana;font-size: 12px; text-align: left;">✦ Poznań ✦ Odensa ✦ Kopenhaga</p>&nbsp;&nbsp;
-	<a href="Mapa299K.html" class="route-buttonGreenLong">
-	<span class="button-text">299-K</span>
+	<a href="Mapa299K.html" class="route-buttonYellowLong">
+	<span class="button-text;"><b style="font-family: Verdana; font-style: italic;">299-K</b></span>
 	<div class="tooltip">
 	<img src="" alt="🇩🇰 Kopenhaga">
 	</div>
-	</a>
-	<p style="font-family: Verdana;font-size: 12px; text-align: left;">✦ Malmo ✦ Gedser ✦ Rostock</p>
+	</a>&nbsp;&nbsp;
+	<p style="font-family: Verdana;font-size: 12px; text-align: left;"> ✦ Malmo ✦ Gedser ✦ Rostock</p>
 	</div>
 	<hr style="margin: 0px 0;">							
   
@@ -988,7 +988,7 @@
 	
 	</div>
 	<div class="gallery-description">Dzień 2 - Stare Miasto, Nabrzeże, Park Królewski</b>&nbsp;&nbsp;
-	<a href="Mapa299K.html" class="route-buttonGreenLong">
+	<a href="Mapa299K.html" class="route-buttonYellowLong">
 	<span class="button-text">299-K</span>
 	<div class="tooltip">
 	<img src="" alt="🇩🇰 Kopenhaga">
@@ -1039,7 +1039,7 @@
 	
 	</div>
 	<div class="gallery-description">Dzień 4 - Spalarnia śmieci</b>&nbsp;&nbsp;
-	<a href="Mapa299K.html" class="route-buttonGreenLong">
+	<a href="Mapa299K.html" class="route-buttonYellowLong">
 	<span class="button-text">299-K</span>
 	<div class="tooltip">
 	<img src="" alt="🇩🇰 Kopenhaga">
@@ -1052,10 +1052,9 @@
 	<hr>
 	</div>
     <div class="thumbnails">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/JAjHRFkRqzamu9GSa8LrgxgPsJ_nYzPNkqino-Gal_E-2048x1536.jpg" alt="" class="thumb" data-description="">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/RXDYuNSdFFu_3B-98YDggGc08-iNUaLqcIkFWpGYnWU-2048x1536.jpg" alt="" class="thumb" data-description="">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/KL-C3OR726wW_UfUQri2vCIWHDfpBpU4D948J7S51-Y-2048x1536.jpg" alt="" class="thumb" data-description="">
-		<img src="https://dgtzuqphqg23d.cloudfront.net/Nd3hUOrtYl-RO8Z3QNPL_KL1rMo2yRsNr97hIPXTAzw-2048x1536.jpg" alt="" class="thumb" data-description="">
+		<img src="https://dgtzuqphqg23d.cloudfront.net/JAjHRFkRqzamu9GSa8LrgxgPsJ_nYzPNkqino-Gal_E-2048x1536.jpg" alt="" class="thumb" data-description="">
+		<img src="https://dgtzuqphqg23d.cloudfront.net/RXDYuNSdFFu_3B-98YDggGc08-iNUaLqcIkFWpGYnWU-2048x1536.jpg" alt="" class="thumb" data-description="">
+		<img src="https://dgtzuqphqg23d.cloudfront.net/KL-C3OR726wW_UfUQri2vCIWHDfpBpU4D948J7S51-Y-2048x1536.jpg" alt="" class="thumb" data-description="">
 		<img src="https://dgtzuqphqg23d.cloudfront.net/Nd3hUOrtYl-RO8Z3QNPL_KL1rMo2yRsNr97hIPXTAzw-2048x1536.jpg" alt="" class="thumb" data-description="">
 		<img src="https://dgtzuqphqg23d.cloudfront.net/-dvE3NtpI8pgSsGy8yDo0cRby8YxxpIOYhpZ2TswNj4-2048x1536.jpg" alt="" class="thumb" data-description="">
     </div>
@@ -1070,7 +1069,7 @@
 	
 	</div>
 	<div class="gallery-description">Dzień 4 </b>&nbsp;&nbsp;
-	<a href="Mapa299K.html" class="route-buttonGreenLong">
+	<a href="Mapa299K.html" class="route-buttonYellowLong">
 	<span class="button-text">299-K</span>
 	<div class="tooltip">
 	<img src="" alt="🇩🇰 Kopenhaga">
@@ -1363,6 +1362,10 @@ document.addEventListener('DOMContentLoaded', () => {
       closeLightbox();
     }
   });
+  
+  lightboxImg.addEventListener('click', () => {
+    showNextImage("left");
+  });
 
   // Klawiatura: ← → Esc
   document.addEventListener('keydown', (e) => {
@@ -1418,6 +1421,8 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxDesc.textContent = description;
   }
 });
+
+
 
 </script>
 
