@@ -27,14 +27,17 @@
 /* Przykładowe style dla mapy i zdjęcia */
 #map {
   height: 460px;
-  width: 500px;
-  max-width: 100%;
-  display: flex;
+  width: 100%;
+  max-width: 500px;
   border: 1px solid #ccc;
   border-radius: 5px;
+
 }
 
-
+.map-box {
+  flex: 1 1 500px; /* elastyczny z bazową szerokością 500px */
+  max-width: 500px;
+}
 
 
 
@@ -945,18 +948,16 @@
 								</a>
 	</div>
 	<hr>
-	<b style="font-family: Verdana;font-size: 24px; text-align: center;">🇵🇱 Drawsko Pom. - Kołobrzeg 🚴 127km</b>								
-  <hr>
- <div style="display: flex; justify-content: center; align-items: center">
- <div>
- </div><span style="display: block; width: 100%; height: 1px; background-color: transparent;"></span>
- </div>
+	<b style="font-family: Verdana;font-size: 24px; text-align: center;">🇵🇱 Drawsko Pom. - Kołobrzeg 🚴 127km</b>
+	<p style="font-family: Verdana;font-size: 12px; text-align: left;">✦ Drawsko Pom. ✦ Świdwin ✦ Sławoborze ✦ Gościno ✦ Kołobrzeg ✦ Łobez</p>	
+  <hr style="margin: 8px 0;">
+
  
  
 <div class="gallery-container">
-<div >
- <div id="map"></div>
-</div>
+  <div class="map-box">
+    <div id="map"></div>
+  </div>
 <div class="photo-gallery">
     <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/LZU7M_jOAun3meEegNzUKRQe3elzXl4w6WXZmpEs41I-2048x1536.jpg" alt="Główne zdjęcie" data-description="Widok z latarni w Kołobrzegu">
 	<div>
