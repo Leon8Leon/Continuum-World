@@ -26,11 +26,9 @@
 
 /* Przykładowe style dla mapy i zdjęcia */
 #map {
-                    
   height: 460px;
-  width: 35vw;
+  width: 500px;
   max-width: 100%;
-  min-width: 500px;
   display: flex;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -359,6 +357,64 @@
             display: block;
         }
 		
+		
+		/* Uniwersalny styl przycisku Podstawowy czyli ŻółtyDługi*/
+        .route-buttonYellowLong {
+			width: 50px;
+			height: 12px;
+			background-color: #ffd700;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonYellowLong .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonYellowLong .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonYellowLong .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonYellowLong:hover .tooltip {
+            display: block;
+        }
+		
 		/* Uniwersalny styl przycisku PodstawowyX Duży Żółty*/
         .route-buttonX {
 			width: 72px;
@@ -525,6 +581,67 @@
         .route-buttonGreen:hover .tooltip {
             display: block;
         }
+		
+  /* Uniwersalny styl przycisku ZielonySzeroki*/
+        .route-buttonGreenLong {
+			width: 36px;
+			height: 12px;
+			background-color: #00cc66;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonGreenLong .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonGreenLong .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+			padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonGreenLong .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonGreenLong:hover .tooltip {
+            display: block;
+        }
+		
+		
+		
+		
  
  /* Uniwersalny styl przycisku ZielonyX Duży Zielony*/
         .route-buttonGreenX {
@@ -766,7 +883,7 @@
 
         .album-container {
             display: flex;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+            grid-template-columns: repeat(auto-fit, minmax(100px, 175px));
             gap: 10px;
 			padding: 0px;
 			justify-content: left;
@@ -789,18 +906,18 @@
         }
 
         .herb-box img {
-            height: 100px;
+            height: 80px;
             display: block;
             margin: 0 auto 5px auto;
         }
 
         .herb-name {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
         }
 
         .herb-description {
-            font-size: 12px;
+            font-size: 11px;
             font-style: italic;
             margin: 2px 0 0 0;
         }
@@ -809,23 +926,27 @@
 </head>
 <body>
 
+	
  
-  <hr><div style="display: flex; justify-content: center; align-items: center;background: #b0bec5">
+<div style="display: flex; justify-content: Left; align-items: center;background: #EEEEEE">	
 									
-  <b style="font-family: Verdana;font-size: 24px; text-align: center;">🇵🇱 Drawsko Pom. - Kołobrzeg 🚴 127km</b> &nbsp;&nbsp;
+  
   <a href="index.html" class="route-buttonRok">
 								<span class="button-text">2020</span>
 								<div class="tooltip">
 								<img src="" alt="Mapa">
 								</div>
 								</a>&nbsp;&nbsp;
-								<a href="Mapa299.html" class="route-buttonX">
+								<a href="Mapa188.html" class="route-buttonX">
 								<span class="button-text">188</span>
 								<div class="tooltip">
 								<img src="" alt="🇵🇱 Drawsko Pom. - Kołobrzeg">
 								</div>
-								</a></div><hr>							
-  
+								</a>
+	</div>
+	<hr>
+	<b style="font-family: Verdana;font-size: 24px; text-align: center;">🇵🇱 Drawsko Pom. - Kołobrzeg 🚴 127km</b>								
+  <hr>
  <div style="display: flex; justify-content: center; align-items: center">
  <div>
  </div><span style="display: block; width: 100%; height: 1px; background-color: transparent;"></span>
@@ -854,8 +975,7 @@
     </div>
 
  </div>
- 
-  </div>
+</div>
   <div id="lightbox" class="lightbox hidden">
   <img id="lightbox-img" src="" alt="">
   <div id="lightbox-description" class="lightbox-description"></div>

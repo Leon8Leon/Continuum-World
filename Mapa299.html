@@ -522,6 +522,121 @@
         .route-buttonGreen:hover .tooltip {
             display: block;
         }
+		
+		
+		/* Uniwersalny styl przycisku ZielonySzeroki*/
+        .route-buttonGreenLong {
+			width: 50px;
+			height: 12px;
+			background-color: #00cc66;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonGreenLong .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonGreenLong .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+			padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonGreenLong .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonGreenLong:hover .tooltip {
+            display: block;
+        }
+		
+		/* Uniwersalny styl przycisku Podstawowy czyli ŻółtyDługi*/
+        .route-buttonYellowLong {
+			width: 50px;
+			height: 12px;
+			background-color: #ffd700;					
+			border: 2px solid #000000;
+			border-radius: 5px;
+			display: inline-flex; /* Upewnij się, że mieści się w linii */
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			font-size: 12px; /* dostosuj do wysokości */
+			cursor: pointer;
+			position: relative;
+			text-decoration: none;
+			color: black;
+			overflow: visible;
+			vertical-align: baseline; /* lub baseline */
+			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
+			font-COLOR: BLACK;
+			
+        }
+		
+		.route-buttonYellowLong .button-text {
+    z-index: 1;
+    position: relative;
+    color: black;
+}
+
+        .route-buttonYellowLong .tooltip {
+            display: none;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translate(-50%);
+            width: auto;
+			max-width: 600px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+			color: black;
+			white-space: nowrap;
+			
+        }
+
+        .route-buttonYellowLong .tooltip img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .route-buttonYellowLong:hover .tooltip {
+            display: block;
+        }
  
  /* Uniwersalny styl przycisku ZielonyX Duży Zielony*/
         .route-buttonGreenX {
@@ -763,7 +878,7 @@
 
         .album-container {
             display: flex;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+            grid-template-columns: repeat(auto-fit, minmax(100px, 175px));
             gap: 10px;
 			padding: 0px;
 			justify-content: left;
@@ -786,18 +901,18 @@
         }
 
         .herb-box img {
-            height: 100px;
+            height: 80px;
             display: block;
             margin: 0 auto 5px auto;
         }
 
         .herb-name {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
         }
 
         .herb-description {
-            font-size: 12px;
+            font-size: 11px;
             font-style: italic;
             margin: 2px 0 0 0;
         }
@@ -807,10 +922,9 @@
 <body>
 
  
-  <hr><div style="display: flex; justify-content: center; align-items: center;background: #b0bec5">
-									
-  <b style="font-family: Verdana;font-size: 24px; text-align: center;">🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga 2025 - Podróż poślubna</b> &nbsp;&nbsp;
-  <a href="index.html" class="route-buttonRok">
+  <div style="display: flex; justify-content: Left; align-items: center;background: #EEEEEE">									
+  
+								<a href="index.html" class="route-buttonRok">
 								<span class="button-text">2025</span>
 								<div class="tooltip">
 								<img src="" alt="Mapa">
@@ -821,7 +935,21 @@
 								<div class="tooltip">
 								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga 2025 - Podróż poślubna">
 								</div>
-								</a></div><hr>							
+								</a>
+	</div>
+	<hr>
+	<b style="font-family: Verdana;font-size: 24px; text-align: center;">🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga 2025 - Podróż poślubna</b><br>
+	<div style="display: flex; justify-content: Left; align-items: center;background: #EEEEEE">
+	<p style="font-family: Verdana;font-size: 12px; text-align: left;">✦ Kopenhaga</p>&nbsp;&nbsp;
+	<a href="Mapa299K.html" class="route-buttonGreenLong">
+	<span class="button-text">299-K</span>
+	<div class="tooltip">
+	<img src="" alt="🇩🇰 Kopenhaga">
+	</div>
+	</a>
+	</div>
+	
+	<hr>							
   
  <div style="display: flex; justify-content: center; align-items: center">
  <div>
@@ -834,7 +962,7 @@
 <hr>
 <div class="gallery-container">
 <div class="photo-gallery">
-    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/njicXKC5k5p4-Z4sCre1NxO4hKcwdom2eqvQyKHbJwg-2048x1536.jpg" alt="Główne zdjęcie" data-description="Opis głównego zdjęcia">
+    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/njicXKC5k5p4-Z4sCre1NxO4hKcwdom2eqvQyKHbJwg-2048x1536.jpg" alt="Główne zdjęcie" data-description="Odensa">
 	<div>
 	<hr>
 	</div>
@@ -846,13 +974,10 @@
 	<hr>
 	</div>
     <div class="thumbnails">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/IgQCpaMjUQUfnvEZBH5GW22Kfdb8EK73MxkG-gPnjvY-2048x1536.jpg" alt="Miniatura 1" class="thumb" data-description="test">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/73MFghw5yeVxziuz_F33IjzZlJIwi83WpsQJJdcqu1I-2048x1536.jpg" alt="Miniatura 2" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/6pV2GiZXx85lxFhkVVH6MHxmBkPotIJe-LU1SQnVimg-2048x1536.jpg" alt="Miniatura 3" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/p7iOaQ6YVCwn8rlFnkU06Up6njovtWwGoBD0mw41H00-2048x1536.jpg" alt="Miniatura 4" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/njicXKC5k5p4-Z4sCre1NxO4hKcwdom2eqvQyKHbJwg-2048x1536.jpg" alt="Miniatura 6" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/BHtQ_8DI9jzUG8Hr5Dgy-Q7kZgx6flhtT59BSZjFHKU-2048x1536.jpg" alt="Miniatura 7" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/hGuSbixb-P0_fTIUIOrnqZkWjkcHZq8FP_GAoE5D9Rg-2048x1536.jpg" alt="Miniatura 8" class="thumb">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/r3ub-cm6jLcUHxoPqBdbENe3dlt_30Sookv4_Npo9cY-2048x1536.jpg" alt="Miniatura 1" class="thumb" data-description="">
+	  <img src="https://dgtzuqphqg23d.cloudfront.net/i3kO0H0LST9tYXivqqFcNqXVZg8u_NmAoC4tfoat6HM-2048x1536.jpg" alt="Miniatura 3" class="thumb" data-description="">
+	  <img src="https://dgtzuqphqg23d.cloudfront.net/c5QVYd5Eq0sUyA6Ro3STo7y30nVHsm_yhf0gv_TyZ-s-2048x1536.jpg" alt="Miniatura 4" class="thumb" data-description="">
+	  <img src="https://dgtzuqphqg23d.cloudfront.net/z_dETRzEdNdLNxD_qiuRtJ4uxI5fqpjHPPwhmEjXjk4-2048x1536.jpg" alt="Miniatura 6" class="thumb" data-description="">
     </div>
 
   </div>
@@ -863,25 +988,33 @@
 	<hr>
 	</div>
 	<div class="gallery-name">🇩🇰 Kopenhaga</b>
+	
 	</div>
-	<div class="gallery-description">Dzień 2 - Centrum</b>
+	<div class="gallery-description">Dzień 2 - Stare Miasto, Nabrzeże, Park Królewski</b>&nbsp;&nbsp;
+	<a href="Mapa299K.html" class="route-buttonGreenLong">
+	<span class="button-text">299-K</span>
+	<div class="tooltip">
+	<img src="" alt="🇩🇰 Kopenhaga">
 	</div>
+	</a>
+	
+	</div>
+	
 	<div>
 	<hr>
 	</div>
     <div class="thumbnails">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/IgQCpaMjUQUfnvEZBH5GW22Kfdb8EK73MxkG-gPnjvY-2048x1536.jpg" alt="Miniatura 1" class="thumb">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/73MFghw5yeVxziuz_F33IjzZlJIwi83WpsQJJdcqu1I-2048x1536.jpg" alt="Miniatura 2" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/6pV2GiZXx85lxFhkVVH6MHxmBkPotIJe-LU1SQnVimg-2048x1536.jpg" alt="Miniatura 3" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/p7iOaQ6YVCwn8rlFnkU06Up6njovtWwGoBD0mw41H00-2048x1536.jpg" alt="Miniatura 4" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/njicXKC5k5p4-Z4sCre1NxO4hKcwdom2eqvQyKHbJwg-2048x1536.jpg" alt="Miniatura 6" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/BHtQ_8DI9jzUG8Hr5Dgy-Q7kZgx6flhtT59BSZjFHKU-2048x1536.jpg" alt="Miniatura 7" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/hGuSbixb-P0_fTIUIOrnqZkWjkcHZq8FP_GAoE5D9Rg-2048x1536.jpg" alt="Miniatura 8" class="thumb">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/li0dJk-G_1dnMzFevw-5YEK27YSQlJXZRXWGTlOv_nQ-2048x1536.jpg" alt="" class="thumb" data-description="">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/7mSU8OZSnn17elDQVdLXPefaSkHcczySlCer0B-h5jE-2048x1536.jpg" alt="" class="thumb" data-description="">
+	  <img src="https://dgtzuqphqg23d.cloudfront.net/6WLzaROeP8qCb8c0vpDkonOK6rTHecs9UhcCyKhJBEA-2048x1536.jpg" alt="" class="thumb" data-description="">
+		<img src="https://dgtzuqphqg23d.cloudfront.net/byqtXWqzi4uoNSiAwrLvLhufcXsnXKyPgRBJuQoz5kk-2048x1536.jpg" alt="" class="thumb" data-description="">
+		<img src="https://dgtzuqphqg23d.cloudfront.net/73MFghw5yeVxziuz_F33IjzZlJIwi83WpsQJJdcqu1I-2048x1536.jpg" alt="" class="thumb" data-description="">
+		
     </div>
-
   </div>
-<div class="photo-gallery">
-    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/BHtQ_8DI9jzUG8Hr5Dgy-Q7kZgx6flhtT59BSZjFHKU-2048x1536.jpg" alt="Główne zdjęcie">
+  
+  <div class="photo-gallery">
+    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/BHtQ_8DI9jzUG8Hr5Dgy-Q7kZgx6flhtT59BSZjFHKU-2048x1536.jpg" alt="Główne zdjęcie" data-description="">
 	<div>
 	<hr>
 	</div>
@@ -893,61 +1026,111 @@
 	<hr>
 	</div>
     <div class="thumbnails">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/IgQCpaMjUQUfnvEZBH5GW22Kfdb8EK73MxkG-gPnjvY-2048x1536.jpg" alt="Miniatura 1" class="thumb">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/73MFghw5yeVxziuz_F33IjzZlJIwi83WpsQJJdcqu1I-2048x1536.jpg" alt="Miniatura 2" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/6pV2GiZXx85lxFhkVVH6MHxmBkPotIJe-LU1SQnVimg-2048x1536.jpg" alt="Miniatura 3" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/p7iOaQ6YVCwn8rlFnkU06Up6njovtWwGoBD0mw41H00-2048x1536.jpg" alt="Miniatura 4" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/njicXKC5k5p4-Z4sCre1NxO4hKcwdom2eqvQyKHbJwg-2048x1536.jpg" alt="Miniatura 6" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/BHtQ_8DI9jzUG8Hr5Dgy-Q7kZgx6flhtT59BSZjFHKU-2048x1536.jpg" alt="Miniatura 7" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/hGuSbixb-P0_fTIUIOrnqZkWjkcHZq8FP_GAoE5D9Rg-2048x1536.jpg" alt="Miniatura 8" class="thumb">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/XP6mS3QLgRu4KI4Y8iq0TeTcRhnXGeT_hU0Ct_TUgyk-2048x1536.jpg" alt="" class="thumb" data-description="">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/QN9a7sRsR_Q6jHJ_ypIdoOXqli3InpRnUxK2yuRW_us-2048x1536.jpg" alt="" class="thumb" data-description="">
+	
     </div>
 
   </div>
-
-<div class="photo-gallery">
-    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/hGuSbixb-P0_fTIUIOrnqZkWjkcHZq8FP_GAoE5D9Rg-2048x1536.jpg" alt="Główne zdjęcie">
+  
+  <div class="photo-gallery">
+    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/IgQCpaMjUQUfnvEZBH5GW22Kfdb8EK73MxkG-gPnjvY-2048x1536.jpg" alt="Główne zdjęcie">
 	<div>
 	<hr>
 	</div>
-	<div class="gallery-name">🇩🇪 Rostock</b>
+	<div class="gallery-name">🇩🇰 Kopenhaga</b>
+	
 	</div>
-	<div class="gallery-description">Dzień 4 - Rostock, przeprawa przez Bałtyk</b>
+	<div class="gallery-description">Dzień 4A - Spalarnia śmieci</b>&nbsp;&nbsp;
+	<a href="Mapa299K.html" class="route-buttonGreenLong">
+	<span class="button-text">299-K</span>
+	<div class="tooltip">
+	<img src="" alt="🇩🇰 Kopenhaga">
+	</div>
+	</a>
+	
+	</div>
+	
+	<div>
+	<hr>
+	</div>
+    <div class="thumbnails">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/JAjHRFkRqzamu9GSa8LrgxgPsJ_nYzPNkqino-Gal_E-2048x1536.jpg" alt="" class="thumb" data-description="">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/RXDYuNSdFFu_3B-98YDggGc08-iNUaLqcIkFWpGYnWU-2048x1536.jpg" alt="" class="thumb" data-description="">
+	  <img src="https://dgtzuqphqg23d.cloudfront.net/KL-C3OR726wW_UfUQri2vCIWHDfpBpU4D948J7S51-Y-2048x1536.jpg" alt="" class="thumb" data-description="">
+		<img src="https://dgtzuqphqg23d.cloudfront.net/Nd3hUOrtYl-RO8Z3QNPL_KL1rMo2yRsNr97hIPXTAzw-2048x1536.jpg" alt="" class="thumb" data-description="">
+		<img src="https://dgtzuqphqg23d.cloudfront.net/Nd3hUOrtYl-RO8Z3QNPL_KL1rMo2yRsNr97hIPXTAzw-2048x1536.jpg" alt="" class="thumb" data-description="">
+		<img src="https://dgtzuqphqg23d.cloudfront.net/-dvE3NtpI8pgSsGy8yDo0cRby8YxxpIOYhpZ2TswNj4-2048x1536.jpg" alt="" class="thumb" data-description="">
+    </div>
+  </div>
+  
+  <div class="photo-gallery">
+    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/qBiEi2zP31Hts54cYTDhiCuCEugygJl51_bPo2cyoPQ-2048x1536.jpg" alt="Główne zdjęcie">
+	<div>
+	<hr>
+	</div>
+	<div class="gallery-name">🇩🇰 Kopenhaga</b>
+	
+	</div>
+	<div class="gallery-description">Dzień 4B </b>&nbsp;&nbsp;
+	<a href="Mapa299K.html" class="route-buttonGreenLong">
+	<span class="button-text">299-K</span>
+	<div class="tooltip">
+	<img src="" alt="🇩🇰 Kopenhaga">
+	</div>
+	</a>
+	
+	</div>
+	
+	<div>
+	<hr>
+	</div>
+    <div class="thumbnails">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/o4o-TuRHFBUoux0LnDQl-e-DaAsryzLQqwpUw8bhddA-2048x1536.jpg" alt="Miniatura 1" class="thumb" data-description="">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/Y438oRfrgqWl50OS6rcVCdKuxsf3ROJ4ri46tPC15GE-2048x1536.jpg" alt="Miniatura 2" class="thumb" data-description=""
+	  <img src="https://dgtzuqphqg23d.cloudfront.net/NrljQH24ND05_uALb0noTruQmfEUIWU-bLrW_ITR19E-2048x1536.jpg" alt="Miniatura 3" class="thumb" data-description="">
+	  <img src="https://dgtzuqphqg23d.cloudfront.net/6pV2GiZXx85lxFhkVVH6MHxmBkPotIJe-LU1SQnVimg-2048x1536.jpg" alt="Miniatura 4" class="thumb" data-description="">
+	  <img src="https://dgtzuqphqg23d.cloudfront.net/p7iOaQ6YVCwn8rlFnkU06Up6njovtWwGoBD0mw41H00-2048x1536.jpg" alt="Miniatura 6" class="thumb" data-description="">
+    </div>
+  </div>
+  
+
+<div class="photo-gallery">
+    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/hGuSbixb-P0_fTIUIOrnqZkWjkcHZq8FP_GAoE5D9Rg-2048x1536.jpg" alt="Główne zdjęcie" data-description="">
+	<div>
+	<hr>
+	</div>
+	<div class="gallery-name">🇩🇰 Gedser - 🇩🇪 Rostock</b>
+	</div>
+	<div class="gallery-description">Dzień 5 - Przeprawa przez Bałtyk</b>
 	</div>
 	<div>
 	<hr>
 	</div>
     <div class="thumbnails">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/IgQCpaMjUQUfnvEZBH5GW22Kfdb8EK73MxkG-gPnjvY-2048x1536.jpg" alt="Miniatura 1" class="thumb">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/73MFghw5yeVxziuz_F33IjzZlJIwi83WpsQJJdcqu1I-2048x1536.jpg" alt="Miniatura 2" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/6pV2GiZXx85lxFhkVVH6MHxmBkPotIJe-LU1SQnVimg-2048x1536.jpg" alt="Miniatura 3" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/p7iOaQ6YVCwn8rlFnkU06Up6njovtWwGoBD0mw41H00-2048x1536.jpg" alt="Miniatura 4" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/njicXKC5k5p4-Z4sCre1NxO4hKcwdom2eqvQyKHbJwg-2048x1536.jpg" alt="Miniatura 6" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/BHtQ_8DI9jzUG8Hr5Dgy-Q7kZgx6flhtT59BSZjFHKU-2048x1536.jpg" alt="Miniatura 7" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/hGuSbixb-P0_fTIUIOrnqZkWjkcHZq8FP_GAoE5D9Rg-2048x1536.jpg" alt="Miniatura 8" class="thumb">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/Jc2dyiEOnAZUwgNqMmrWAFKSDCqgvFRqtVqZPgD6VlQ-2048x1536.jpg" alt="" class="thumb" data-description="">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/i4JaYrCsD59uXrUSMiJeHolpZqVBO59JSw7sgj-yYGE-2048x1536.jpg" alt="" class="thumb" data-description="">
+
+
     </div>
 
   </div>
   
 <div class="photo-gallery">
-    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/hGuSbixb-P0_fTIUIOrnqZkWjkcHZq8FP_GAoE5D9Rg-2048x1536.jpg" alt="Główne zdjęcie">
+    <img class="main-photo" src="https://dgtzuqphqg23d.cloudfront.net/r0l_7a-UArtEAy4mFSnPiMdxkovrzf5bE1GXZj_E34g-2048x1536.jpg" alt="Główne zdjęcie" data-description="">
 	<div>
 	<hr>
 	</div>
 	<div class="gallery-name">🇩🇪 Rostock</b>
 	</div>
-	<div class="gallery-description">Dzień 4 - Rostock, przeprawa przez Bałtyk</b>
+	<div class="gallery-description">Dzień 5</b>
 	</div>
 	<div>
 	<hr>
 	</div>
     <div class="thumbnails">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/IgQCpaMjUQUfnvEZBH5GW22Kfdb8EK73MxkG-gPnjvY-2048x1536.jpg" alt="Miniatura 1" class="thumb">
-      <img src="https://dgtzuqphqg23d.cloudfront.net/73MFghw5yeVxziuz_F33IjzZlJIwi83WpsQJJdcqu1I-2048x1536.jpg" alt="Miniatura 2" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/6pV2GiZXx85lxFhkVVH6MHxmBkPotIJe-LU1SQnVimg-2048x1536.jpg" alt="Miniatura 3" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/p7iOaQ6YVCwn8rlFnkU06Up6njovtWwGoBD0mw41H00-2048x1536.jpg" alt="Miniatura 4" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/njicXKC5k5p4-Z4sCre1NxO4hKcwdom2eqvQyKHbJwg-2048x1536.jpg" alt="Miniatura 6" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/BHtQ_8DI9jzUG8Hr5Dgy-Q7kZgx6flhtT59BSZjFHKU-2048x1536.jpg" alt="Miniatura 7" class="thumb">
-	  <img src="https://dgtzuqphqg23d.cloudfront.net/hGuSbixb-P0_fTIUIOrnqZkWjkcHZq8FP_GAoE5D9Rg-2048x1536.jpg" alt="Miniatura 8" class="thumb">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/O58H7oIGocODU0nv-K4HxUGuLn2FMEXlTxFjplCf0t8-2048x1536.jpg" alt="" class="thumb" data-description="">
+      <img src="https://dgtzuqphqg23d.cloudfront.net/57WGyoYdNZDQ-LHFhIerrGBj_WFIiJ4yIE0ZudeCitA-2048x1536.jpg" alt="" class="thumb" data-description="">
     </div>
 
   </div>
