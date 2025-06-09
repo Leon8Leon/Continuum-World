@@ -917,7 +917,7 @@ const markers = {
      JezBodeńskie:			{ lat: 47.5471, lng: 9.5145, name: "<p style='text-align: center; margin: 0'><b style='font-size:18px;'> 🇩🇪 🇨🇭 🇦🇹 Jezioro Bodeńskie </b><br>Niemcy, Szwajcaria, Austria</b><br>395<hr>✦ 2024 🚗", icon: blueDiamondIcon },
      Rostock: 				{ lat: 54.09084799446086,   lng:  12.14640655375654, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/Rostock_Wappen.svg2.png" style="height:60px;">
-                                <br><b style='font-size:20px;'>  🇩🇪 Rostock </b> <br>Niemcy, <br> Maklemburgia - Pomorze Przednie</div>
+                                <br><b style='font-size:20px;'>  🇩🇪 Rostock </b> <br>Niemcy, Maklemburgia - Pomorze Przednie</div>
                         	<hr>
 								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
 								<p style='text-align: left; margin: 0'>✦ 2025 🚢⭢🚗</p>&nbsp;
@@ -1838,6 +1838,17 @@ const markers = {
 								</a>
 								</div> 
 								<hr> most południowy 1726m <br> most północny 1596m`, icon: DiamondYellow20 },
+		Gedser: 			{ lat: 54.57550415326223,  lng:    11.925095007246393,  name: `<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇩🇰 Gedser </b><br>Dania<hr>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2025 🚗 </p>&nbsp;
+								<a href="Mapa299.html" class="route-buttonGold">
+								<span class="button-text">299</span>
+								<div class="tooltip">
+								<img src="" alt="🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga (podróż poślubna)">
+								</div>
+								</a>
+								</div> 
+								<hr> terminal promowy`, icon: redDotIconSmall6 },						
     // Szwecja                                             
       	Malmo: 				{ lat: 55.60446515188319,  lng:   13.00323203593924, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Malm%C3%B6_vapen.svg/1691px-Malm%C3%B6_vapen.svg.png" style="height:60px;">
@@ -3707,11 +3718,12 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	Kórnik: 				{ lat: 52.24420, lng: 17.09089, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/K%C3%B3rnik.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Kórnik</b><br>Polska, woj. Wielkopolskie
-								<hr> ✦ 2023 🚴 <br>✦ 2022 🚴 <br>✦ 2018 🚴 <br>✦ 2009 🚴 <br>✦ 2008 🚴 <br>✦ ~1996 🚌`, icon: redDotIconSmall },
+								<hr>
+								✦ 2025 🚗 
+								<hr>✦ 2023 🚴 <br>✦ 2022 🚴 <br>✦ 2018 🚴 <br>✦ 2009 🚴 <br>✦ 2008 🚴 <br>✦ ~1996 🚌`, icon: redDotIconSmall },
       	Mosina: 				{ lat: 52.24530, lng: 16.84711, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/744px-POL_Mosina_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Mosina</b><br>Polska, woj. Wielkopolskie
-								
                             <hr>✦ 2023 🚴🚴‍♀️
                             <hr>
                             <div style="display: flex; justify-content: space-between;">
@@ -3914,7 +3926,7 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	Zaniemyśl: 				{ lat: 52.15662958929963,  lng: 17.159569343412386, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/POL_gmina_Zaniemy%C5%9Bl_COA.jpg" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Zaniemyśl</b><br>Polska, woj. Wielkopolskie
-								<hr> ✦ 2020 🚴 <br>✦ 2016 🚴 <br>✦ 2013 🚴`, icon: redDotIconSmall6 },
+								<hr> ✦ 2025 🚗<hr> ✦ 2020 🚴 <br>✦ 2016 🚴 <br>✦ 2013 🚴`, icon: redDotIconSmall6 },
       	// śremski	Śrem	Dolsk	Książ Wlkp.									Brodnica
       	Śrem: 					{ lat: 52.09096, lng: 17.01692, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_%C5%9Arem_COA.svg.png" style="height:60px;">
@@ -6760,6 +6772,8 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	ZaporaCzorsztyn1:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 }, 
      	ZaporaCzorsztyn2:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 },
       
+      
+        
       
       };
 
