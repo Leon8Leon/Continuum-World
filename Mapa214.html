@@ -27,7 +27,6 @@
 /* Przykładowe style dla mapy i zdjęcia */
 #map {
   height: 460px;
-  max-height: 50vh;
   width: 100%;
   max-width: 500px;
   border: 1px solid #ccc;
@@ -40,6 +39,12 @@
   max-width: 500px;
 }
 
+@media only screen and (max-width: 600px) {
+  #map {
+    height: 460px;
+    max-height: 50vh;
+  }
+}
 
 
 
