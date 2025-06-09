@@ -1200,6 +1200,10 @@ document.addEventListener('DOMContentLoaded', () => {
       closeLightbox();
     }
   });
+  
+  lightboxImg.addEventListener('click', () => {
+    showNextImage("left");
+  });
 
   // Klawiatura: ← → Esc
   document.addEventListener('keydown', (e) => {
@@ -1255,6 +1259,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxDesc.textContent = description;
   }
 });
+
 
 </script>
 

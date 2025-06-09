@@ -955,7 +955,7 @@
 	</div>
 	<hr>
 	<b style="font-family: Verdana;font-size: 24px; text-align: center;">🇵🇱 Drawsko Pom. - Kołobrzeg 🚴 127km</b>
-	<p style="font-family: Verdana;font-size: 12px; text-align: left;">✦ Drawsko Pom. ✦ Świdwin ✦ Sławoborze ✦ Gościno ✦ Kołobrzeg ✦ Łobez</p>	
+	<p style="font-family: Verdana;font-size: 12px; text-align: left;">Drawsko Pom. ⭢ Świdwin ⭢ Sławoborze ⭢ Gościno ⭢ Kołobrzeg ⭢ 🚈 ⭢ Łobez</p>	
   <hr style="margin: 8px 0;">
 
  
@@ -971,7 +971,7 @@
 	</div>
 	<div class="gallery-name">🇵🇱 Kołobrzeg</b>
 	</div>
-	<div class="gallery-description">✦ 2020 🚴</b>
+	<div class="gallery-description">✦ 2020 <span style="font-style: normal;">🚴</span> <br> <span style="font-style: normal;">🗼</span> +26m Latarnia Morska</b>
 	</div>
 	<div>
 	<hr>
@@ -1194,6 +1194,10 @@ document.addEventListener('DOMContentLoaded', () => {
       closeLightbox();
     }
   });
+  
+  lightboxImg.addEventListener('click', () => {
+    showNextImage("left");
+  });
 
   // Klawiatura: ← → Esc
   document.addEventListener('keydown', (e) => {
@@ -1249,6 +1253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxDesc.textContent = description;
   }
 });
+
 
 </script>
 
