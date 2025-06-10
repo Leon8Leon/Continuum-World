@@ -955,7 +955,7 @@
 	</div>
 	<hr>
 	<b style="font-family: Verdana;font-size: 24px; text-align: center;">🇵🇱 Złocieniec - Kołobrzeg 🚴 142km</b>
-	<p style="font-family: Verdana;font-size: 12px; text-align: left;">✦ Złocieniec ✦ Świdwin ✦ Brojce ✦ Trzebiatów ✦ Grzybowo ✦ Kołobrzeg ✦ Drawsko Pom. | ✦ Drawski Park Krajobrazowy</p>	
+	<p style="font-family: Verdana;font-size: 12px; text-align: left; margin: 2px 0;">✦ Złocieniec ✦ Świdwin ✦ Brojce ✦ Trzebiatów ✦ Grzybowo ✦ Kołobrzeg ✦ Drawsko Pom. | ✦ Drawski Park Krajobrazowy</p>	
   <hr style="margin: 8px 0;">
 
  
@@ -971,7 +971,7 @@
 	</div>
 	<div class="gallery-name">🇵🇱 Kołobrzeg</b>
 	</div>
-	<div class="gallery-description">✦ 2021 🚴</b>
+	<div class="gallery-description">✦ 2021 <span style="font-style: normal;">🚴</span></b>
 	</div>
 	<div>
 	<hr>
@@ -1112,54 +1112,79 @@
 
   
 shapes.forEach(shape => {
-  const style = styles[shape.mode] || {}; // zabezpieczenie jeśli brak stylu
+  const style = styles[shape.mode] || {};
   let layer;
+
   if (shape.type === "polygon") {
     layer = L.polygon(shape.coordinates, style).addTo(map);
   } else if (shape.type === "polyline") {
     layer = L.polyline(shape.coordinates, style).addTo(map);
   }
-  if (layer && shape.popup) {
+
+  if (!layer) return;
+
+  const originalStyle = {
+    color: style.color || 'blue',
+    weight: style.weight || 3
+  };
+
+  let isPopupPinned = false;
+  let isPopupHovered = false;
+  let isLayerHovered = false;
+
+  if (shape.popup) {
     layer.bindPopup(shape.popup);
   }
-    if (layer) {
-    const originalStyle = {
+
+  // Usuń otwieranie popup na mouseover
+  layer.on('mouseover', function (e) {
+    isLayerHovered = true;
+    this.setStyle({
       color: style.color || 'blue',
-      weight: style.weight || 3
-    };
-
-    let isPopupPinned = false; // Czy kliknięto?
-
-    if (shape.popup) {
-      layer.bindPopup(shape.popup);
-    }
-
-    layer.on('mouseover', function (e) {
-      this.setStyle({
-        color: style.color || 'blue',
-        weight: originalStyle.weight + 2
-      });
-      if (!isPopupPinned && shape.popup) {
-        this.openPopup(e.latlng);
-      }
+      weight: originalStyle.weight + 2
     });
+    // Nie otwieramy popup tutaj
+  });
 
-    layer.on('mouseout', function () {
-      this.setStyle(originalStyle);
-      if (!isPopupPinned && shape.popup) {
+  layer.on('mouseout', function () {
+    isLayerHovered = false;
+    setTimeout(() => {
+      if (!isPopupPinned && !isPopupHovered) {
         this.closePopup();
       }
-    });
+    }, 150);
+    this.setStyle(originalStyle);
+  });
 
-    layer.on('click', function (e) {
-      isPopupPinned = true;
-      this.openPopup(e.latlng);
-    });
+  layer.on('click', function (e) {
+    isPopupPinned = true;
+    this.openPopup(e.latlng);
+  });
 
-    layer.on('popupclose', function () {
-      isPopupPinned = false;
-    });
-  }
+  layer.on('popupclose', function () {
+    isPopupPinned = false;
+    isPopupHovered = false;
+  });
+
+  layer.on('popupopen', function () {
+    setTimeout(() => {
+      const popupEl = this.getPopup().getElement();
+      if (!popupEl) return;
+
+      popupEl.addEventListener("mouseenter", () => {
+        isPopupHovered = true;
+      });
+
+      popupEl.addEventListener("mouseleave", () => {
+        isPopupHovered = false;
+        setTimeout(() => {
+          if (!isLayerHovered && !isPopupPinned) {
+            this.closePopup();
+          }
+        }, 150);
+      });
+    }, 0);
+  });
 });
 
 </script>

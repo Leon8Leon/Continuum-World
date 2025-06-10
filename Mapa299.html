@@ -923,7 +923,6 @@
 
  
   <div style="display: flex; justify-content: Left; align-items: center;background: #EEEEEE">									
-  
 								<a href="index.html" class="route-buttonRok">
 								<span class="button-text">2025</span>
 								<div class="tooltip">
@@ -939,10 +938,10 @@
 	</div>
 	<hr>
 	<b style="font-family: Verdana;font-size: 24px; text-align: top;">🇩🇰 🇸🇪 🇩🇪 🇵🇱 Kopenhaga 2025 - Podróż poślubna</b><br>
-	<div style="display: flex; justify-content: Left; align-items: center;background: #EEEEEE">
-	<div><p style="font-family: Verdana;font-size: 12px; text-align: left;">✦&nbsp;Poznań&nbsp;</p></div>
-	<div><p style="font-family: Verdana;font-size: 12px; text-align: left;">✦&nbsp;Odensa&nbsp;</p></div>
-	<div><p style="font-family: Verdana;font-size: 12px; text-align: left;">✦&nbsp;Kopenhaga&nbsp;</p></div>
+	<div style="display: flex; justify-content: Left; align-items: center;background: #EEEEEE; margin: 2px 0;">
+	<div><p style="font-family: Verdana;font-size: 12px; text-align: left; margin: 2px 0;">✦&nbsp;Poznań&nbsp;</p></div>
+	<div><p style="font-family: Verdana;font-size: 12px; text-align: left; margin: 2px 0;">✦&nbsp;Odensa&nbsp;</p></div>
+	<div><p style="font-family: Verdana;font-size: 12px; text-align: left; margin: 2px 0;">✦&nbsp;Kopenhaga&nbsp;</p></div>
 	<div>
 	<a href="Mapa299K.html" class="route-buttonYellowLong">
 	<span class="button-text;"><b style="font-family: Verdana; font-style: italic;">299.K</b></span>
@@ -951,9 +950,9 @@
 	</div>
 	</a>
 	</div>
-	<div><p style="font-family: Verdana;font-size: 12px; text-align: left;">✦&nbsp;Malmo&nbsp;</p></div>
-	<div><p style="font-family: Verdana;font-size: 12px; text-align: left;">✦&nbsp;Gedser&nbsp;</p></div>
-	<div><p style="font-family: Verdana;font-size: 12px; text-align: left;">✦&nbsp;Rostock&nbsp;</p></div>
+	<div><p style="font-family: Verdana;font-size: 12px; text-align: left; margin: 2px 0;">&nbsp;✦&nbsp;Malmo&nbsp;</p></div>
+	<div><p style="font-family: Verdana;font-size: 12px; text-align: left; margin: 2px 0;">✦&nbsp;Gedser&nbsp;</p></div>
+	<div><p style="font-family: Verdana;font-size: 12px; text-align: left; margin: 2px 0;">✦&nbsp;Rostock&nbsp;</p></div>
 	</div>
 	<hr style="margin: 8px 0;">							
   
@@ -1275,13 +1274,80 @@
 	[55.60938085614903,13.00137519836426]]}
 	];
    shapes.forEach(shape => {
-    const style = styles[shape.mode] || {}; // zabezpieczenie jeśli brak stylu
-    if (shape.type === "polygon") {
-      L.polygon(shape.coordinates, style).addTo(map);
-    } else if (shape.type === "polyline") {
-      L.polyline(shape.coordinates, style).addTo(map);
-    }
+  const style = styles[shape.mode] || {};
+  let layer;
+
+  if (shape.type === "polygon") {
+    layer = L.polygon(shape.coordinates, style).addTo(map);
+  } else if (shape.type === "polyline") {
+    layer = L.polyline(shape.coordinates, style).addTo(map);
+  }
+
+  if (!layer) return;
+
+  const originalStyle = {
+    color: style.color || 'blue',
+    weight: style.weight || 3
+  };
+
+  let isPopupPinned = false;
+  let isPopupHovered = false;
+  let isLayerHovered = false;
+
+  if (shape.popup) {
+    layer.bindPopup(shape.popup);
+  }
+
+  // Usuń otwieranie popup na mouseover
+  layer.on('mouseover', function (e) {
+    isLayerHovered = true;
+    this.setStyle({
+      color: style.color || 'blue',
+      weight: originalStyle.weight + 2
+    });
+    // Nie otwieramy popup tutaj
   });
+
+  layer.on('mouseout', function () {
+    isLayerHovered = false;
+    setTimeout(() => {
+      if (!isPopupPinned && !isPopupHovered) {
+        this.closePopup();
+      }
+    }, 150);
+    this.setStyle(originalStyle);
+  });
+
+  layer.on('click', function (e) {
+    isPopupPinned = true;
+    this.openPopup(e.latlng);
+  });
+
+  layer.on('popupclose', function () {
+    isPopupPinned = false;
+    isPopupHovered = false;
+  });
+
+  layer.on('popupopen', function () {
+    setTimeout(() => {
+      const popupEl = this.getPopup().getElement();
+      if (!popupEl) return;
+
+      popupEl.addEventListener("mouseenter", () => {
+        isPopupHovered = true;
+      });
+
+      popupEl.addEventListener("mouseleave", () => {
+        isPopupHovered = false;
+        setTimeout(() => {
+          if (!isLayerHovered && !isPopupPinned) {
+            this.closePopup();
+          }
+        }, 150);
+      });
+    }, 0);
+  });
+});
 </script>
 <hr> 
 

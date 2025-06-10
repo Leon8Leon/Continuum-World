@@ -955,7 +955,7 @@
 	</div>
 	<hr>
 	<b style="font-family: Verdana;font-size: 24px; text-align: center;">🇵🇱 Drawsko Pom. - Kołobrzeg 🚴 127km</b>
-	<p style="font-family: Verdana;font-size: 12px; text-align: left;">✦ Drawsko Pom. ✦ Świdwin ✦ Sławoborze ✦ Gościno ✦ Kołobrzeg ✦ Łobez</p>	
+	<p style="font-family: Verdana;font-size: 12px; text-align: left; margin: 2px 0;">✦ Drawsko Pom. ✦ Świdwin ✦ Sławoborze ✦ Gościno ✦ Kołobrzeg ✦ Łobez</p>	
   <hr style="margin: 8px 0;">
 
  
@@ -971,7 +971,7 @@
 	</div>
 	<div class="gallery-name">🇵🇱 Kołobrzeg</b>
 	</div>
-	<div class="gallery-description">✦ 2020 <span style="font-style: normal;">🚴</span> | <span style="font-style: normal;">🗼</span> +26m Latarnia Morska</b>
+	<div class="gallery-description">✦ 2020 <span style="font-style: normal;">🚴</span> <span style="font-style: normal;">|</span> <span style="font-style: normal;">🗼</span> +26m Latarnia Morska</b>
 	</div>
 	<div>
 	<hr>
@@ -1104,14 +1104,81 @@
 {"type":"polyline",mode:"train-polyline","coordinates":[[54.182215500361906,15.572776794433596],[54.18080906652576,15.584964752197267],[54.17769464994048,15.592517852783205],[54.169957826141776,15.61311721801758],[54.15880219559611,15.636634826660158],[54.15387668102739,15.653285980224611],[54.123707687557825,15.81962585449219],[54.12109200655318,15.828723907470705],[54.11686632693763,15.835247039794924],[54.11364647233556,15.838680267333986],[54.07668745106591,15.875587463378908],[54.07165144282945,15.87730407714844],[54.06097308488957,15.877647399902346],[54.050291980895,15.878334045410158],[54.043035325116975,15.883827209472658],[54.03597902820531,15.891380310058596],[54.03234960906978,15.908889770507814],[54.02448478064424,15.952835083007814],[54.02145945055238,15.971374511718752],[54.016820183675655,15.977554321289062],[54.008347143840815,15.978240966796877],[53.98858346379703,15.974464416503908],[53.96546460737445,15.973262786865236],[53.92978863401376,15.985450744628908],[53.91563641667147,15.990943908691408],[53.902086228891754,15.98991394042969],[53.89460140514306,15.97892761230469],[53.8816515173908,15.964851379394533],[53.87132920301246,15.956611633300783],[53.86120681324477,15.942535400390627],[53.85452469418085,15.930862426757814],[53.847638970585606,15.91197967529297],[53.83710567271949,15.89103698730469],[53.83001446087679,15.872840881347658],[53.822111410478506,15.850868225097658],[53.817044568358966,15.836448669433596],[53.81359876575972,15.824775695800783],[53.809949960089575,15.802803039550783],[53.807517246512624,15.792846679687502],[53.80042102553352,15.78563690185547],[53.77121250772278,15.76641082763672],[53.76390720080708,15.76091766357422],[53.75903628998618,15.74718475341797],[53.75193186557528,15.732421875000002],[53.74462320390872,15.719032287597658],[53.735485588822755,15.702209472656252],[53.72817406622726,15.677490234375002],[53.725330352899846,15.667877197265627],[53.715579018463515,15.653114318847658],[53.70846724499951,15.644531250000002],[53.70318343499537,15.63835144042969],[53.697085906672754,15.631141662597658],[53.68915779913331,15.634231567382814],[53.683464903698585,15.645217895507814],[53.68061816735776,15.651741027832033],[53.675534230997755,15.65654754638672],[53.67105985940756,15.658264160156252],[53.66088906568985,15.650367736816408],[53.64503129301574,15.63732147216797],[53.63902711542688,15.63182830810547],[53.63678805076475,15.62753677368164]
 ]},
 	];
-   shapes.forEach(shape => {
-    const style = styles[shape.mode] || {}; // zabezpieczenie jeśli brak stylu
-    if (shape.type === "polygon") {
-      L.polygon(shape.coordinates, style).addTo(map);
-    } else if (shape.type === "polyline") {
-      L.polyline(shape.coordinates, style).addTo(map);
-    }
+  shapes.forEach(shape => {
+  const style = styles[shape.mode] || {};
+  let layer;
+
+  if (shape.type === "polygon") {
+    layer = L.polygon(shape.coordinates, style).addTo(map);
+  } else if (shape.type === "polyline") {
+    layer = L.polyline(shape.coordinates, style).addTo(map);
+  }
+
+  if (!layer) return;
+
+  const originalStyle = {
+    color: style.color || 'blue',
+    weight: style.weight || 3
+  };
+
+  let isPopupPinned = false;
+  let isPopupHovered = false;
+  let isLayerHovered = false;
+
+  if (shape.popup) {
+    layer.bindPopup(shape.popup);
+  }
+
+  // Usuń otwieranie popup na mouseover
+  layer.on('mouseover', function (e) {
+    isLayerHovered = true;
+    this.setStyle({
+      color: style.color || 'blue',
+      weight: originalStyle.weight + 2
+    });
+    // Nie otwieramy popup tutaj
   });
+
+  layer.on('mouseout', function () {
+    isLayerHovered = false;
+    setTimeout(() => {
+      if (!isPopupPinned && !isPopupHovered) {
+        this.closePopup();
+      }
+    }, 150);
+    this.setStyle(originalStyle);
+  });
+
+  layer.on('click', function (e) {
+    isPopupPinned = true;
+    this.openPopup(e.latlng);
+  });
+
+  layer.on('popupclose', function () {
+    isPopupPinned = false;
+    isPopupHovered = false;
+  });
+
+  layer.on('popupopen', function () {
+    setTimeout(() => {
+      const popupEl = this.getPopup().getElement();
+      if (!popupEl) return;
+
+      popupEl.addEventListener("mouseenter", () => {
+        isPopupHovered = true;
+      });
+
+      popupEl.addEventListener("mouseleave", () => {
+        isPopupHovered = false;
+        setTimeout(() => {
+          if (!isLayerHovered && !isPopupPinned) {
+            this.closePopup();
+          }
+        }, 150);
+      });
+    }, 0);
+  });
+});
 </script>
 <hr> 
 
