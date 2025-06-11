@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,14 @@
   	<script src="https://cdn.jsdelivr.net/npm/leaflet-omnivore@0.4.1/dist/leaflet-omnivore.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gpxparser@1.2.0/dist/gpxparser.min.js"></script>
   	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+	<link rel="stylesheet" href="style.css">
   
     <title>Mapa z markerami</title>
     <style>
-        #map {
-            height: 85vh; /* Pełna wysokość okna przeglądarki */
-            width: 95%;
-        }
+        #map.mapxl {
+		height: 85vh;
+		width: 95%;
+    }
       
  		.custom-text {
             display: none; /* Domyślnie ukryte */ 
@@ -90,349 +92,7 @@
         	 
         }
       
-  /* Uniwersalny styl przycisku Podstawowy*/
-        .route-button {
-			width: 24px;
-			height: 12px;
-			background-color: #ffd700;					
-			border: 2px solid #000000;
-			border-radius: 5px;
-			display: inline-flex; /* Upewnij się, że mieści się w linii */
-			align-items: center;
-			justify-content: center;
-			font-weight: bold;
-			font-size: 12px; /* dostosuj do wysokości */
-			cursor: pointer;
-			position: relative;
-			text-decoration: none;
-			color: black;
-			overflow: visible;
-			vertical-align: baseline; /* lub baseline */
-			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
-			font-COLOR: BLACK;
-			
-        }
-		
-		.route-button .button-text {
-    z-index: 1;
-    position: relative;
-    color: black;
-}
 
-        .route-button .tooltip {
-            display: none;
-            position: absolute;
-            top: -40px;
-            left: 50%;
-            transform: translate(-50%);
-            width: auto;
-			max-width: 600px;
-            padding: 5px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            z-index: 100;
-			color: black;
-			white-space: nowrap;
-			
-        }
-
-        .route-button .tooltip img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .route-button:hover .tooltip {
-            display: block;
-        }
- 
-  /* Uniwersalny styl przycisku None*/
-        .route-buttonNone {
-			width: 24px;
-			height: 12px;
-			background-color: #eeeeee;					
-			border: 2px solid #000000;
-			border-radius: 5px;
-			display: inline-flex; /* Upewnij się, że mieści się w linii */
-			align-items: center;
-			justify-content: center;
-			font-weight: bold;
-			font-size: 12px; /* dostosuj do wysokości */
-			cursor: pointer;
-			position: relative;
-			text-decoration: none;
-			color: black;
-			overflow: visible;
-			vertical-align: baseline; /* lub baseline */
-			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
-			font-COLOR: BLACK;
-			
-        }
-		
-		.route-buttonNone .button-text {
-    z-index: 1;
-    position: relative;
-    color: black;
-}
-
-        .route-buttonNone .tooltip {
-            display: none;
-            position: absolute;
-            top: -40px;
-            left: 50%;
-            transform: translate(-50%);
-            width: auto;
-			max-width: 600px;
-            padding: 5px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            z-index: 100;
-			color: black;
-			white-space: nowrap;
-			
-        }
-
-        .route-buttonNone .tooltip img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .route-buttonNone:hover .tooltip {
-            display: block;
-        }
- 
- 
-  /* Uniwersalny styl przycisku Zielony*/
-        .route-buttonGreen {
-			width: 24px;
-			height: 12px;
-			background-color: #00cc66;					
-			border: 2px solid #000000;
-			border-radius: 5px;
-			display: inline-flex; /* Upewnij się, że mieści się w linii */
-			align-items: center;
-			justify-content: center;
-			font-weight: bold;
-			font-size: 12px; /* dostosuj do wysokości */
-			cursor: pointer;
-			position: relative;
-			text-decoration: none;
-			color: black;
-			overflow: visible;
-			vertical-align: baseline; /* lub baseline */
-			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
-			font-COLOR: BLACK;
-			
-        }
-		
-		.route-buttonGreen .button-text {
-    z-index: 1;
-    position: relative;
-    color: black;
-}
-
-        .route-buttonGreen .tooltip {
-            display: none;
-            position: absolute;
-            top: -40px;
-            left: 50%;
-            transform: translate(-50%);
-            width: auto;
-			max-width: 600px;
-			padding: 5px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            z-index: 100;
-			color: black;
-			white-space: nowrap;
-			
-        }
-
-        .route-buttonGreen .tooltip img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .route-buttonGreen:hover .tooltip {
-            display: block;
-        }
-		
-		/* Uniwersalny styl przycisku ZielonySzeroki*/
-        .route-buttonGreenLong {
-			width: 50px;
-			height: 12px;
-			background-color: #00cc66;					
-			border: 2px solid #000000;
-			border-radius: 5px;
-			display: inline-flex; /* Upewnij się, że mieści się w linii */
-			align-items: center;
-			justify-content: center;
-			font-weight: bold;
-			font-size: 12px; /* dostosuj do wysokości */
-			cursor: pointer;
-			position: relative;
-			text-decoration: none;
-			color: black;
-			overflow: visible;
-			vertical-align: baseline; /* lub baseline */
-			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
-			font-COLOR: BLACK;
-			
-        }
-		
-		.route-buttonGreenLong .button-text {
-    z-index: 1;
-    position: relative;
-    color: black;
-}
-
-/* Uniwersalny styl przycisku Podstawowy czyli ŻółtyDługi*/
-        .route-buttonYellowLong {
-			width: 50px;
-			height: 12px;
-			background-color: #ffd700;					
-			border: 2px solid #000000;
-			border-radius: 5px;
-			display: inline-flex; /* Upewnij się, że mieści się w linii */
-			align-items: center;
-			justify-content: center;
-			font-weight: bold;
-			font-size: 12px; /* dostosuj do wysokości */
-			cursor: pointer;
-			position: relative;
-			text-decoration: none;
-			color: black;
-			overflow: visible;
-			vertical-align: baseline; /* lub baseline */
-			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
-			font-COLOR: BLACK;
-			
-        }
-		
-		.route-buttonYellowLong .button-text {
-    z-index: 1;
-    position: relative;
-    color: black;
-}
-
-        .route-buttonYellowLong .tooltip {
-            display: none;
-            position: absolute;
-            top: -40px;
-            left: 50%;
-            transform: translate(-50%);
-            width: auto;
-			max-width: 600px;
-            padding: 5px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            z-index: 100;
-			color: black;
-			white-space: nowrap;
-			
-        }
-
-        .route-buttonYellowLong .tooltip img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .route-buttonYellowLong:hover .tooltip {
-            display: block;
-        }
-
-        .route-buttonGreenLong .tooltip {
-            display: none;
-            position: absolute;
-            top: -40px;
-            left: 50%;
-            transform: translate(-50%);
-            width: auto;
-			max-width: 600px;
-			padding: 5px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            z-index: 100;
-			color: black;
-			white-space: nowrap;
-			
-        }
-
-        .route-buttonGreenLong .tooltip img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .route-buttonGreenLong:hover .tooltip {
-            display: block;
-        }
- 
- /* Uniwersalny styl przycisku Złoty*/
-        .route-buttonGold {
-			width: 24px;
-			height: 12px;
-			background-color: #00cc66  ;					
-			border: 2px solid #000000;
-			border-radius: 5px;
-			display: inline-flex; /* Upewnij się, że mieści się w linii */
-			align-items: center;
-			justify-content: center;
-			font-weight: bold;
-			font-size: 12px; /* dostosuj do wysokości */
-			cursor: pointer;
-			position: relative;
-			text-decoration: none;
-			color: black;
-			overflow: visible;
-			vertical-align: baseline; /* lub baseline */
-			line-height: 1; /* opcjonalnie, dla wyrównania tekstu */
-			font-COLOR: BLACK;
-			
-        }
-		
-		.route-buttonGold .button-text {
-    z-index: 1;
-    position: relative;
-    color: black;
-}
-
-        .route-buttonGold .tooltip {
-            display: none;
-            position: absolute;
-            top: -40px;
-            left: 50%;
-            transform: translate(-50%);
-            width: auto;
-			max-width: 600px;
-            padding: 5px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-            z-index: 100;
-			color: black;
-			white-space: nowrap;
-			
-        }
-
-        .route-buttonGold .tooltip img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .route-buttonGold:hover .tooltip {
-            display: block;
-        }
- 
     </style>
   
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -461,11 +121,11 @@
   		<label><input type="checkbox" id="year2025" value="2025" checked> Rok 2025  </label>
         <label><input type="checkbox" id="year1900" value="1900" unchecked> Budowy  </label>
     
-  <div id="map"></div>
+  <div id="map" class="mapxl"></div>
     <input type="checkbox" id="toggleOpacity" />
     <label for="toggleOpacity">Zmień przezroczystość</label>
   
-    <div id="map"></div>
+    
 
     <script>
        var map = L.map('map').setView([52.4064, 16.9252], 5); // Ustawienie widoku mapy

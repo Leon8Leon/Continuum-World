@@ -3648,6 +3648,12 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
         					✦&nbsp;🏠
      						</div>
     						</div>
+							<a href="mapa001.html" class="route-button">
+								<span class="button-text">188</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg">
+								</div>
+								</a>
                             <hr><b style='font-size:10px;'><p style='text-align: justify; margin: 0'>Park Cytadela | Góra Morasko 154m | rez. Meteoryt Morasko  | jez. Maltańskie | jez. Rusałka | jez. Strzeszyńskie |
                             jez. Kierskie | rz. Warta | Ostrów Tumski | Katedra Poznańska św. Piota i Pawła | Kościół św. Antoniego Padewskiego | Pałac Cesarski | Park im. Mickiewicza |
                             Stary Rynek | Poznański Ratusz i Koziołki Poznańskie | Stary Browar | Plac Kolegiacki | Plac Wolności | Kolej 'Maltanka' | Most Jordana ❤️  </p></b>
