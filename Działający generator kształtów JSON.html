@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rysowanie figur na mapie</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+  <script src="https://unpkg.com/leaflet.geodesic"></script>
+  <style>
+    #map { height: 600px; }
+    #controls { margin: 10px 0; font-family: sans-serif; }
+    #coords { white-space: pre; background: #f4f4f4; padding: 10px; border: 1px solid #ddd; max-height: 300px; overflow: auto; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Rysowanie figur na mapie</h1>
+  <div id="controls">
+    <label>Przezroczystość: <input id="opacity" type="range" min="0" max="1" step="0.1" value="0.5"></label>
+    <label>Kolor wypełnienia: <input id="fillColor" type="color" value="#008000"></label>
+    <label>Grubość krawędzi: <input id="borderWidth" type="range" min="1" max="10" value="2"></label>
+    <label>Kolor krawędzi: <input id="borderColor" type="color" value="#000000"></label>
+    <label>Przezroczystość krawędzi: <input id="borderOpacity" type="range" min="0" max="1" step="0.1" value="1"></label>
+  </div>
+  <div id="map"></div>
+  <button id="copyBtn">Kopiuj kod</button>
+  <div id="coords"></div>
+
+  <script>
+    var map = L.map('map').setView([46.5, 8], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18 }).addTo(map);
+    var drawnItems = new L.FeatureGroup().addTo(map);
+
+    // Dodajemy nowy typ linii geodezyjnej
+    L.Draw.GeodesicPolyline = L.Draw.Polyline.extend({
+      initialize: function(map, options) {
+        this.type = "geodesic";
+        L.Draw.Feature.prototype.initialize.call(this, map, options);
+      },
+      _onMouseUp: function(e) {
+        if (!this._mouseDownOrigin) return;
+        this.addVertex(e.latlng);
+        if (this._markers.length >= 2) {
+          this._finishShape();
+        }
+      },
+      _finishShape: function() {
+        var latlngs = this._poly.getLatLngs();
+        var geodesicLine = L.geodesic([latlngs], { ...getStyle() });
+        drawnItems.addLayer(geodesicLine);
+        this._map.fire(L.Draw.Event.CREATED, { layer: geodesicLine, layerType: "geodesic" });
+      }
+    });
+
+    // Dodajemy nową kontrolkę rysowania
+    var drawControl = new L.Control.Draw({
+      edit: { featureGroup: drawnItems },
+      draw: {
+        polygon: true, rectangle: true, circle: true, polyline: true, 
+        marker: false, circlemarker: false,
+        geodesic: { shapeOptions: { color: '#ff0000', weight: 2 } } // Nowa opcja geodezyjna
+      }
+    });
+    map.addControl(drawControl);
+
+    // Funkcja zwracająca aktualne parametry stylu
+    function getStyle() {
+      return {
+        fillOpacity: +opacity.value, fillColor: fillColor.value,
+        color: borderColor.value, weight: +borderWidth.value, opacity: +borderOpacity.value
+      };
+    }
+
+    function updateShapes() {
+      drawnItems.eachLayer(layer => layer.setStyle?.(getStyle()));
+      updateOutput();
+    }
+
+    function updateOutput() {
+      let shapes = [];
+      drawnItems.eachLayer(layer => {
+        let shape = { type: layer.options.geodesic ? "geodesic" : layer instanceof L.Polygon ? "polygon" : layer instanceof L.Rectangle ? "rectangle" : layer instanceof L.Circle ? "circle" : "polyline", style: getStyle() };
+        if (layer instanceof L.Circle) shape.center = [layer.getLatLng().lat, layer.getLatLng().lng], shape.radius = layer.getRadius();
+        else shape.coordinates = layer.getLatLngs().flat().map(pt => [pt.lat, pt.lng]);
+        shapes.push(shape);
+      });
+      coords.innerText = JSON.stringify(shapes);
+    }
+
+    // Obsługa zdarzeń rysowania
+    map.on(L.Draw.Event.CREATED, e => {
+      let layer = e.layer.setStyle(getStyle());
+      drawnItems.addLayer(layer);
+      updateOutput();
+    });
+
+    document.querySelectorAll('#controls input').forEach(el => el.addEventListener('input', updateShapes));
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(coords.innerText).then(() => alert("Kod skopiowany!")).catch(err => alert("Błąd kopiowania: " + err));
+    });
+
+  </script>
+</body>
+</html>
