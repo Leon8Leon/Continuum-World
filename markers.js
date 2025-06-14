@@ -6783,10 +6783,15 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       
       };
 
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
 // Inicjalizacja mapy 1 z kontrolą zoomu kółkiem
 const map = L.map('map', {
   scrollWheelZoom: false,  // domyślnie zoom kółkiem wyłączony
   touchZoom: true,         // zoom gestem na mobile włączony
+  dragging: !isTouchDevice,   // blokada przesuwania jednym palcem na touch
+  tap: false,                 // poprawia działanie na urządzeniach mobilnych
+  twoFingerDrag: true         // pozwala przesuwać mapę dwoma palcami na touch
 });
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -6834,6 +6839,9 @@ map.on('wheel', function(e) {
 const map2 = L.map('map2', {
   scrollWheelZoom: false,
   touchZoom: true,
+  dragging: !isTouchDevice,
+  tap: false,
+  twoFingerDrag: true
 });
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
