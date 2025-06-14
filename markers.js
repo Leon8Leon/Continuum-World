@@ -6783,7 +6783,11 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       
       };
 
-const map = L.map('map');
+// Inicjalizacja mapy 1 z kontrolą zoomu kółkiem
+const map = L.map('map', {
+  scrollWheelZoom: false,  // domyślnie zoom kółkiem wyłączony
+  touchZoom: true,         // zoom gestem na mobile włączony
+});
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
@@ -6816,8 +6820,21 @@ if (typeof additionalCities !== "undefined") {
   }
 }
 
-// Inicjalizacja mapy 2
-const map2 = L.map('map2');
+// Zoom kółkiem tylko po Ctrl (map1)
+map.on('wheel', function(e) {
+  if (e.originalEvent.ctrlKey) {
+    map.scrollWheelZoom.enable();
+  } else {
+    map.scrollWheelZoom.disable();
+  }
+});
+
+
+// Inicjalizacja mapy 2 z kontrolą zoomu kółkiem
+const map2 = L.map('map2', {
+  scrollWheelZoom: false,
+  touchZoom: true,
+});
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
@@ -6836,7 +6853,7 @@ for (const city in markers) {
 }
 
 if (bounds2.length) {
-  map2.fitBounds(bounds2); // ← poprawna mapa i poprawne bounds
+  map2.fitBounds(bounds2);
 }
 
 if (typeof additionalCities2 !== "undefined") {
@@ -6849,3 +6866,12 @@ if (typeof additionalCities2 !== "undefined") {
       .bindPopup(m.name);
   }
 }
+
+// Zoom kółkiem tylko po Ctrl (map2)
+map2.on('wheel', function(e) {
+  if (e.originalEvent.ctrlKey) {
+    map2.scrollWheelZoom.enable();
+  } else {
+    map2.scrollWheelZoom.disable();
+  }
+});
