@@ -6783,29 +6783,27 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       
       };
 
-// Inicjalizacja mapy
 const map = L.map('map');
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const bounds = [];
+const bounds1 = [];
 
 for (const city in markers) {
   if (typeof visibleCities !== "undefined" && !visibleCities.includes(city)) continue;
 
   const m = markers[city];
-  const marker = L.marker([m.lat, m.lng], { icon: m.icon })
+  L.marker([m.lat, m.lng], { icon: m.icon })
     .addTo(map)
     .bindPopup(m.name);
-  bounds.push([m.lat, m.lng]);
+  bounds1.push([m.lat, m.lng]);
 }
 
-if (bounds.length) {
-  map.fitBounds(bounds);
+if (bounds1.length) {
+  map.fitBounds(bounds1);
 }
-
 
 if (typeof additionalCities !== "undefined") {
   for (const city of additionalCities) {
@@ -6814,6 +6812,40 @@ if (typeof additionalCities !== "undefined") {
     const m = markers[city];
     L.marker([m.lat, m.lng], { icon: m.icon })
       .addTo(map)
+      .bindPopup(m.name);
+  }
+}
+
+// Inicjalizacja mapy 2
+const map2 = L.map('map2');
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map2);
+
+const bounds2 = [];
+
+for (const city in markers) {
+  if (typeof visibleCities2 !== "undefined" && !visibleCities2.includes(city)) continue;
+
+  const m = markers[city];
+  L.marker([m.lat, m.lng], { icon: m.icon })
+    .addTo(map2)
+    .bindPopup(m.name);
+  bounds2.push([m.lat, m.lng]);
+}
+
+if (bounds2.length) {
+  map2.fitBounds(bounds2); // ← poprawna mapa i poprawne bounds
+}
+
+if (typeof additionalCities2 !== "undefined") {
+  for (const city of additionalCities2) {
+    if (!markers[city]) continue;
+
+    const m = markers[city];
+    L.marker([m.lat, m.lng], { icon: m.icon })
+      .addTo(map2)
       .bindPopup(m.name);
   }
 }

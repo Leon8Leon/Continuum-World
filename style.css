@@ -18,6 +18,16 @@
 
 }
 
+
+#map2.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
 #map.mappanoramic{
   flex: 1;                   
   height: 400px;
