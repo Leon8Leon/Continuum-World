@@ -4924,6 +4924,12 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								<div class="tooltip">
 								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg - Koszalin">
 								</div>
+								</a>&nbsp;
+								<a href="mapa241.html" class="route-button">
+								<span class="button-text">241</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Kołobrzeg - Mielno">
+								</div>
 								</a>
 								</div>
 								✦ 2012 🚴`, icon: redDotIconSmall6 },
@@ -4956,6 +4962,12 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								<span class="button-text">231</span>
 								<div class="tooltip">
 								<img src="" alt=" 🇵🇱 Drawsko Pom. - Kołobrzeg - Koszalin">
+								</div>
+								</a>&nbsp;
+								<a href="mapa241.html" class="route-button">
+								<span class="button-text">241</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Kołobrzeg - Mielno">
 								</div>
 								</a>
 								</div>	
