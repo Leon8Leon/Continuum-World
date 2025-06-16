@@ -3060,7 +3060,17 @@ DrawskiParkKrajobrazowy: 		{ lat: 53.621613354229204,      lng:     16.186352356
 								<img src="" alt=" 🇵🇱 Złocieniec - Kołobrzeg">
 								</div>
 								</a>
-								</div>✦ 2020 🚗|🚴<b style='font-size:10px;'>(wiele)</b><br>✦ 2013 🚴`, icon: greenDotIcon12 },									
+								</div>✦ 2020 🚗|🚴<b style='font-size:10px;'>(wiele)</b>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: greenDotIcon12 },									
 PszczewskiParkKrajobrazowy: 	{ lat: 52.444725673980734,    lng:     15.779888593959464, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
 								<b style='font-size:18px;'> 🇵🇱 Pszczewski Park Krajobrazowy</b><br>Polska, woj. Lubuskie
@@ -3574,7 +3584,17 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	Piła: 					{ lat: 53.1517, lng: 16.7386, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/POL_Pi%C5%82a_COA_1.svg/800px-POL_Pi%C5%82a_COA_1.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Piła </b><br>Polska, woj. Wielkopolskie</div>
-                                <hr> ✦ 2023 🚴 <br>✦ 2022 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2021 🚴 <br>✦ 2020 🚴 <br>✦ 2019 🚴 <br>✦ 2018 🚴 <br>✦ 2017 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2013 🚴<b style='font-size:10px;'>x2</b> <hr> Park na wyspie | Rezerwat Kuźnik `, icon: redDotIcon },
+                                <hr> ✦ 2023 🚴 <br>✦ 2022 🚴<b style='font-size:10px;'>x2</b> <br>✦ 2021 🚴 <br>✦ 2020 🚴 <br>✦ 2019 🚴 <br>✦ 2018 🚴 <br>✦ 2017 🚴<b style='font-size:10px;'>x2</b> 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴<b style='font-size:10px;'>x2</b></p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								<hr> Park na wyspie | Rezerwat Kuźnik `, icon: redDotIcon },
       		RezerwatKuźnik: 	{ lat: 53.19647, lng: 16.74385, name: "<b style='font-size:16px;'> 🇵🇱 Rezerwat Kuźnik", icon: DiamondGreen20 },
       	Kaczory: 				{ lat: 53.10206808871952, lng: 16.883706371180725, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/POL_gmina_Kaczory_COA_1.svg/800px-POL_gmina_Kaczory_COA_1.svg.png" style="height:60px;">
@@ -3603,7 +3623,17 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	Szydłowo: 				{ lat: 53.16239520533619, lng:  16.612923960572743, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
 								<b style='font-size:18px;'> 🇵🇱 Szydłowo</b><br>Polska, woj. Wielkopolskie
-								<hr> ✦ 2017 🚴 <br>✦ 2013 🚴`, icon: redDotIconSmall6 },
+								<hr> ✦ 2017 🚴 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconSmall6 },
       	// pleszewski	Pleszew	Chocz	Dobrzyca									Czermin	Gizałki	Gołuchów
       	Pleszew: 				{ lat: 51.8962862043387, lng: 17.786598806070437, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/POL_Pleszew_COA.svg/800px-POL_Pleszew_COA.svg.png" style="height:60px;">
@@ -4610,7 +4640,17 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
         Tychowo: 				{ lat: 53.92861054208756, lng: 16.259413324808477, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_gmina_Tychowo_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Tychowo</b><br>Polska, woj. Zachodniopomorskie
-								<hr> ✦ 2013 🚴`, icon: redDotIconSmall },
+								<hr> 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconSmall },
       	// choszczeński	Choszczno	Drawno	Pełczyce	Recz								Bierzwnik	Krzęcin
       	Choszczno: 				{ lat: 53.16887992947242, lng:  15.419348867885956, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/POL_Choszczno_COA.svg/800px-POL_Choszczno_COA.svg.png" style="height:60px;">
@@ -4671,7 +4711,17 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
       	Czaplinek: 				{ lat: 53.558094615996424, lng: 16.234106210733128, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/595px-POL_Czaplinek_COA_1.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Czaplinek</b><br>Polska, woj. Zachodniopomorskie
-								<hr> ✦ 2021 🚴 <br> ✦ 2020 🚴 <br> ✦ 2020 🚗<b style='font-size:10px;'>x2</b> <br> ✦ 2013 🚴`, icon: redDotIconSmall },
+								<hr> ✦ 2021 🚴 <br> ✦ 2020 🚴 <br> ✦ 2020 🚗<b style='font-size:10px;'>x2</b>
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconSmall },
       		StareDrawsko:		{ lat: 53.60091942107233, lng: 16.195555619906273, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
 								<b style='font-size:16px;'> 🇵🇱 Stare Drawsko</b><br>Polska, woj. Zachodniopomorskie
@@ -4932,7 +4982,16 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								</div>
 								</a>
 								</div>
-								✦ 2012 🚴`, icon: redDotIconSmall6 },
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconSmall6 },
       	// koszaliński	Koszalin	Bobolice	Mielno	Polanów	Sianów							Będzino	Biesiekierz	Manowo	Świeszyno
         Koszalin: 				{ lat: 54.19429859587909, lng: 16.17239086342426, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/POL_Koszalin_COA.svg/1024px-POL_Koszalin_COA.svg.png" style="height:60px;">
@@ -4947,7 +5006,16 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								</div>
 								</a>
 								</div>								
-								✦ 2013 🚴`, icon: redDotIconsurplus },
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconsurplus },
       	Bobolice: 				{ lat: 53.954736399229915, lng: 16.58622749762067, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Bobolice_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Bobolice</b><br>Polska, woj. Zachodniopomorskie
@@ -4971,11 +5039,44 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
 								</div>
 								</a>
 								</div>	
-								✦ 2012 🚴`, icon: redDotIconSmall },    
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconSmall }, 
+		Łazy: 					{ lat: 54.30827705166749,  lng:   16.19609722284844, name: `<p style='text-align: center; margin: 0'>
+								<img src="" style="height:0px;">
+								<b style='font-size:18px;'> 🇵🇱 Łazy</b><br>Polska, woj. Zachodniopomorskie
+								<hr> 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconSmall6 },								
       	Świeszyno: 				{ lat: 54.121510047158296, lng:  16.169496006184886, name: `<p style='text-align: center; margin: 0'>
 								<img src="" style="height:0px;">
-								<b style='font-size:18px;'> 🇵🇱 Gościno</b><br>Polska, woj. Zachodniopomorskie
-								<hr> ✦ 2013 🚴`, icon: redDotIconSmall6 },
+								<b style='font-size:18px;'> 🇵🇱 Świeszyno</b><br>Polska, woj. Zachodniopomorskie
+								<hr> 
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIconSmall6 },
       	// łobeski	Łobez	Dobra	Resko	Węgorzyno								Radowo Małe
       	Łobez: 					{ lat: 53.6390323274686, lng: 15.621402529891055, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/POL_%C5%81obez_COA.svg/800px-POL_%C5%81obez_COA.svg.png" style="height:60px;">
@@ -5157,7 +5258,17 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
         Wałcz: 					{ lat: 53.27330707515599, lng: 16.475186304972286, name: `<hr><div style="background-color: #FFFFCC; padding: 5px;"><p style='text-align: center; margin: 0'>
         						<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Wa%C5%82cz_COA.svg.png" style="height:60px;">
                                 <br><b style='font-size:20px;'> 🇵🇱 Wałcz </b><br>Polska, woj. Zachodniopomorskie</div>
-                                <hr> ✦ 2020 🚴<br> ✦ 2017 🚴<br> ✦ 2013 🚴`, icon: redDotIcon10 },
+                                <hr> ✦ 2020 🚴<br> ✦ 2017 🚴
+								<div style="display: flex; justify-content: align-items: center; margin-bottom: 0px;">
+								<p style='text-align: left; margin: 0'>✦ 2013 🚴</p>&nbsp;
+								<a href="mapa062.html" class="route-button">
+								<span class="button-text">62</span>
+								<div class="tooltip">
+								<img src="" alt=" 🇵🇱 Piła - Koszalin - Kołobrzeg">
+								</div>
+								</a>
+								</div>
+								`, icon: redDotIcon10 },
       	Mirosławiec: 			{ lat: 53.342592718857475, lng:  16.089980342537263, name: `<p style='text-align: center; margin: 0'>
 								<img src="https://raw.githubusercontent.com/Leon8Leon/Obrazy_Udostepnione/refs/heads/main/POL_Miros%C5%82awiec_COA.svg.png" style="height:60px;">
 								<br><b style='font-size:18px;'> 🇵🇱 Mirosławiec</b><br>Polska, woj. Zachodniopomorskie
@@ -6917,7 +7028,6 @@ MałaFatra: 						{ lat: 49.21225552651149,       lng:      18.975937641753998, 
      	ZaporaWisłaCzarne2:   		{ lat: 49.615208096137074,   lng:   18.921891655138147, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora Wisła Czarne </b><hr>✦ 2012 🚴 ", icon: DiamondYellow20 },
       	ZaporaCzorsztyn1:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 }, 
      	ZaporaCzorsztyn2:   		{ lat: 49.41983938333086,   lng:  20.321661664399578, name: "<p style='text-align: center; margin: 0'><b style='font-size:16px;'> 🇵🇱 Zapora wodna <br> na Zbiorniku Czorsztyńskim </b><hr>✦ 2003 🚌 ", icon: DiamondYellow20 },
-      
       
       
         
