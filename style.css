@@ -28,6 +28,97 @@
 
 }
 
+#map3.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+#map4.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+
+#map5.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+#map6.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+#map7.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+#map8.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+#map9.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+#map10.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+#map11.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+#map12.mapsmall {
+  height: 460px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
 #map.mappanoramic{
   flex: 1;                   
   height: 400px;
@@ -74,15 +165,28 @@
 }
 
 /* Główne zdjęcie */
+/* Główne zdjęcie */
 .main-photo {
 
   width: 360px;
   height: auto;
-  max-height: 80%;
+  max-height: 62%;
+  min-height: 270px;
   object-fit: contain;
   margin: 0 auto 5px auto;
   padding-top: 5px;
 }
+
+.large-photo {
+
+  width: 500px;
+  height: auto;
+  max-height: 90%;
+  object-fit: contain;
+  margin: 0 auto 5px auto;
+  padding-top: 5px;
+}
+
 
 /* Opis zdjęcia */
 .photo-description {

@@ -7134,3 +7134,102 @@ map2.on('wheel', function(e) {
     map2.scrollWheelZoom.disable();
   }
 });
+
+
+// Inicjalizacja mapy 3 z kontrolą zoomu kółkiem
+const map3 = L.map('map3', {
+  scrollWheelZoom: false,
+  touchZoom: true,
+  dragging: !isTouchDevice,
+  tap: false,
+  twoFingerDrag: true
+});
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map3);
+
+const bounds3 = [];
+
+for (const city in markers) {
+  if (typeof visibleCities3 !== "undefined" && !visibleCities3.includes(city)) continue;
+
+  const m = markers[city];
+  L.marker([m.lat, m.lng], { icon: m.icon })
+    .addTo(map3)
+    .bindPopup(m.name);
+  bounds3.push([m.lat, m.lng]);
+}
+
+if (bounds3.length) {
+  map3.fitBounds(bounds3);
+}
+
+if (typeof additionalCities3 !== "undefined") {
+  for (const city of additionalCities3) {
+    if (!markers[city]) continue;
+
+    const m = markers[city];
+    L.marker([m.lat, m.lng], { icon: m.icon })
+      .addTo(map3)
+      .bindPopup(m.name);
+  }
+}
+
+// Zoom kółkiem tylko po Ctrl (map3)
+map3.on('wheel', function(e) {
+  if (e.originalEvent.ctrlKey) {
+    map3.scrollWheelZoom.enable();
+  } else {
+    map3.scrollWheelZoom.disable();
+  }
+});
+
+// Inicjalizacja mapy 4 z kontrolą zoomu kółkiem
+const map4 = L.map('map4', {
+  scrollWheelZoom: false,
+  touchZoom: true,
+  dragging: !isTouchDevice,
+  tap: false,
+  twoFingerDrag: true
+});
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map4);
+
+const bounds4 = [];
+
+for (const city in markers) {
+  if (typeof visibleCities4 !== "undefined" && !visibleCities4.includes(city)) continue;
+
+  const m = markers[city];
+  L.marker([m.lat, m.lng], { icon: m.icon })
+    .addTo(map4)
+    .bindPopup(m.name);
+  bounds4.push([m.lat, m.lng]);
+}
+
+if (bounds4.length) {
+  map4.fitBounds(bounds4);
+}
+
+if (typeof additionalCities4 !== "undefined") {
+  for (const city of additionalCities4) {
+    if (!markers[city]) continue;
+
+    const m = markers[city];
+    L.marker([m.lat, m.lng], { icon: m.icon })
+      .addTo(map4)
+      .bindPopup(m.name);
+  }
+}
+
+// Zoom kółkiem tylko po Ctrl (map4)
+map4.on('wheel', function(e) {
+  if (e.originalEvent.ctrlKey) {
+    map4.scrollWheelZoom.enable();
+  } else {
+    map4.scrollWheelZoom.disable();
+  }
+});
